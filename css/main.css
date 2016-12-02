@@ -47,9 +47,12 @@ ul.posts li {
 .header_link {
     color: #FF5555;
 }
+.header_link:hover {
+    color: #F00FCB
+}
 .footer_link {
     color: #656565;
 }
 .footer_link:hover {
-    color: #FF5555;
+    color: #F00FCB;
 }
