@@ -31,15 +31,22 @@ p {
     margin-left:10px;
 }
 footer {
-    border-top: 1px solid #d5d5d5;
+    border-top: 1px solid #FF5555;
     font-size: .8em;
 }
-
 ul.posts { 
     margin: 20px auto 40px; 
     font-size: 1.5em;
 }
-
 ul.posts li {
     list-style: none;
+}
+
+
+/*Colors*/
+.orange {
+    color: #FF5555;
+}
+.gray {
+    color: #
 }
