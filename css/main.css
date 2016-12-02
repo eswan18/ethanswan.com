@@ -14,10 +14,11 @@ nav ul li, footer ul li {
 }
 a {
     text-decoration: none;
-    color: #F00FCB;
+    color: #FF5555;
 }
 a:hover {
     text-decoration: underline;
+    color: #F00FCB;
 }
 h1 {
     font-size: 3em;
@@ -47,12 +48,6 @@ ul.posts li {
 .header_link {
     color: #FF5555;
 }
-.header_link:hover {
-    color: #F00FCB
-}
 .footer_link {
     color: #656565;
-}
-.footer_link:hover {
-    color: #F00FCB;
 }
