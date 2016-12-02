@@ -31,7 +31,7 @@ p {
     margin-left:10px;
 }
 footer {
-    border-top: 1px solid #FF5555;
+    border-top: 1px solid #D5D5D5;
     font-size: .8em;
 }
 ul.posts { 
@@ -43,10 +43,13 @@ ul.posts li {
 }
 
 
-/*Colors*/
-.orange {
+/* Header and Footer */
+.header_link {
     color: #FF5555;
 }
-.gray {
-    color: #
+.footer_link {
+    color: #656565;
+}
+.footer_link:hover {
+    color: #FF5555;
 }
