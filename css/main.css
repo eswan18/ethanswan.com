@@ -1,18 +1,10 @@
+/***********/
+/* General */
+/***********/
 body {
     background-color: #EEEEEE;
     margin: 60px auto;
     width: 70%;
-}
-nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
-    list-style: none;
-    font-weight: bold;
-}
-nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
-    font-size: 1.5em;
 }
 a {
     text-decoration: none;
@@ -32,23 +24,39 @@ p {
     margin-right:10px;
     margin-left:10px;
 }
+
+/*********************/
+/* Header and Footer */
+/*********************/
 footer {
     border-top: 1px solid #D5D5D5;
     font-size: .8em;
 }
+nav ul, footer ul {
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    padding: 0px;
+    list-style: none;
+    font-weight: bold;
+}
+nav ul li, footer ul li {
+    display: inline;
+    margin-right: 20px;
+    font-size: 1.5em;
+}
+nav ul li a {
+    color: #FF5555;
+}
+footer ul li a {
+    color: #656565;
+}
+
+/*********/
+/* Posts */
+/*********/
 ul.posts { 
     margin: 20px auto 40px; 
     font-size: 1.5em;
 }
 ul.posts li {
     list-style: none;
-}
-
-
-/* Header and Footer */
-.header_link {
-    color: #FF5555;
-}
-.footer_link {
-    color: #656565;
 }
