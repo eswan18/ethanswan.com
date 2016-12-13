@@ -3,8 +3,11 @@
 /***********/
 body {
     background-color: #EEEEEE;
-    margin: 60px auto;
+    margin: 40px auto;
     width: 70%;
+}
+.container {
+    margin: 0px 200px;
 }
 a {
     text-decoration: none;
@@ -15,9 +18,10 @@ a:hover {
 }
 h1 {
     font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-family:'Avenir', 'Helvetica', 'Arial', 'Sans-Serif';
 }
 p {
+    font-family: Avenir;
     font-size: 1.5em;
     line-height: 1.4em;
     color: #333;
@@ -33,7 +37,7 @@ footer {
     font-size: .8em;
 }
 nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-family:'Avenir', 'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
     list-style: none;
     font-weight: bold;
