@@ -8,7 +8,7 @@
 		<body>
 			<nav>
 	    		<ul>
-				<li style="padding: .3em 1em; border: 2px solid black;"><a href="/" class="header_link">ethan swan</a></li>
+				<li style="padding: 5px; border: 2px solid black;"><a href="/" class="header_link">ethan swan</a></li>
 	        		<li><a href="/" class="header_link">home</a></li>
 	        		<li><a href="/resume.html" class="header_link">resume</a></li>
 	        		<!-- <li><a href="/feed" class="header_link">feed</a></li> -->

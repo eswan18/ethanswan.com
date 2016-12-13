@@ -12,5 +12,16 @@ title: Ethan Swan
 		<p>Additionally, I am interested in politics and political history, sports (particularly the NBA), and economics.</p>
 		<p>If you're interested in my work, check out my <a href="https://github.com/eswan18">github</a> to see some of my recent personal projects.</p>
 	</div>
+
+	<div style="clear:both; float:left;">
+		{% for post in site.posts %}
+			<div class="post_preview">
+				<h3 class="post_listing">
+					{{ post.date | date_to_string }} <a href="{{ post.url }}" title="{{ post.title}}"> {{ post.title }} </a>
+				</h3>
+				{{ post.content }}
+			</div>
+		{% endfor %}
+	</div>
 </div>
 <!-- /.blurb -->
