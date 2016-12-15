@@ -1,6 +1,9 @@
 /***********/
 /* General */
 /***********/
+* {
+    font-family:'Avenir', 'Helvetica', 'Arial', 'Sans-Serif';
+}
 body {
     background-color: #EEEEEE;
     margin: 40px auto;
@@ -16,15 +19,7 @@ a {
 a:hover {
     color: #F00FCB;
 }
-h1 {
-    font-size: 3em;
-    font-family:'Avenir', 'Helvetica', 'Arial', 'Sans-Serif';
-}
-h3 {
-    font-family:'Avenir', 'Helvetica', 'Arial', 'Sans-Serif';
-}
 p {
-    font-family: 'Avenir';
     font-size: 1.5em;
     line-height: 1.4em;
     color: #333;
