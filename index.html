@@ -11,10 +11,14 @@ title: ethanswan
 					{{ post.date | date_to_string }}
 				</h3>
 				<h1>
-					<a href="{{ post.url }}" title="{{ post.title}}"> {{ post.title }} </a>
+					<a href="{{ post.url }}" title="{{ post.title }}"> {{ post.title }} </a>
 				</h1>
-				{{ post.content }}
+				<p>
+					{{ post.excerpt | remove: '<p>' | remove: '</p>' }} <br>
+					<a href="{{ post.url }}" title="{{ post.title }}">read more...</a>
+				</p>
 			</div>
+			<br>
 		{% endfor %}
 	</div>
 
