@@ -6,26 +6,59 @@
 			<link rel="stylesheet" type="text/css" href="/css/main.css">
 		</head>
 		<body>
-			<nav>
-				<ul>
-					<li><a href="/" class="header_link">home</a></li>
-					<li><a href="/me.html" class="header_link">me</a></li>
-				</ul>
-			</nav>
-			<div style="height:2px;width:100%">
-				<div style="background-color:#000000;height:2px;width:50%;"/>
+			<!-- CENTRAL CONTAINER -->
+			<div class="container" style="float:left; clear:both;">
+				<!-- NAV BAR, ETC -->
+				<nav>
+					<ul>
+						<li><a href="/" class="header_link">home</a></li>
+						<li><a href="/me.html" class="header_link">me</a></li>
+					</ul>
+				</nav>
+				<div style="height:2px;width:100%">
+					<div style="background-color:#000000;height:2px;width:50%;"/>
+				</div>
+				<br>
+				<!-- /NAV BAR, ETC -->
+			
+	
+				<!-- CONTENT-DIVIDING TABLE-->
+				<table><tr>
+				<td class="left_content">
+					<div id="recent_posts">
+						{% for post in site.posts %}
+							<recent_post_title>
+								<a href="{{ post.url }}">{{ post.title }}</a>
+								<br>
+							</recent_post_title>
+							<recent_post_date>
+								{{ post.date | date_to_string }}
+								<br>
+							</recent_post_date>
+							<br>
+							{% if forloop.index >= 3 %}
+								{% break %}
+							{% endif %}
+						{% endfor %}
+					</div>
+				</td>
+				<td class="middle_content">
+					{{ content }}
+				</td>
+				<td class="right_content">
+				</td>
+				</tr></table>
+				<!-- /CONTENT-DIVIDING TABLE-->
+
+				
+				<footer style="clear:both;">
+					<ul>
+						<li><a href="mailto:ethanpswan@gmail.com" class="footer_link">email me</a></li>
+						<li><a href="https://github.com/eswan18" class="footer_link">my github</a></li>
+					</ul>
+				</footer>
+				
 			</div>
-			<br>
-			<div class="container" style="float:left;clear:both;">
-			
-			{{ content }}
-			
-			</div><!-- /.container -->
-			<footer style="clear:both;">
-	    		<ul>
-	        		<li><a href="mailto:ethanpswan@gmail.com" class="footer_link">email me</a></li>
-	        		<li><a href="https://github.com/eswan18" class="footer_link">my github</a></li>
-			</ul>
-			</footer>
+			<!-- /CENTRAL CONTAINER -->
 		</body>
 	</html>

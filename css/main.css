@@ -6,11 +6,12 @@
 }
 body {
     background-color: #EEEEEE;
-    margin: 40px auto;
-    width: 70%;
+    margin: 40px 40px;
 }
 .container {
-    margin: 0px 200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 a {
     text-decoration: none;
@@ -25,6 +26,22 @@ p {
     color: #333;
     margin-right:10px;
     margin-left:10px;
+}
+
+/**************************/
+/* Content-dividing Table */
+/**************************/
+td.left_content {
+    width: 25%;
+}
+td.middle_content {
+    width: 50%;
+}
+td.right_content {
+    width: 25%;
+}
+td {
+    vertical-align: top;
 }
 
 /*********************/
@@ -61,4 +78,11 @@ ul.posts {
 }
 ul.posts li {
     list-style: none;
+}
+
+recent_post_title {
+    font-size: 1.6em;
+}
+recent_post_date {
+    font-size: 1em;
 }
