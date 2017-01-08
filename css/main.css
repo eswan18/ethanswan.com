@@ -29,6 +29,10 @@ p {
     margin-right:10px;
     margin-left:10px;
 }
+h1#page_header {
+    float:left;
+    position:relative;
+}
 #blurb {
     float: left;
 }
