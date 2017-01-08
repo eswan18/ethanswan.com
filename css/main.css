@@ -29,8 +29,11 @@ p {
     margin-right:10px;
     margin-left:10px;
 }
-blurb {
+#blurb {
     float: left;
+}
+#main_content {
+    clear: both;
 }
 
 /**************************/
@@ -85,7 +88,6 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
-
 recent_post_title {
     font-size: 1.6em;
 }
