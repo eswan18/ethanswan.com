@@ -7,7 +7,7 @@
 		</head>
 		<body>
 			<!-- CENTRAL CONTAINER -->
-			<div class="container" style="float:left; clear:both;">
+			<div class="container">
 				<!-- NAV BAR, ETC -->
 				<nav>
 					<ul>
@@ -26,6 +26,7 @@
 				<table><tr>
 				<td class="left_content">
 					<div id="recent_posts">
+						<h1>Recent Posts</h1>
 						{% for post in site.posts %}
 							<recent_post_title>
 								<a href="{{ post.url }}">{{ post.title }}</a>
@@ -51,7 +52,7 @@
 				<!-- /CONTENT-DIVIDING TABLE-->
 
 				
-				<footer style="clear:both;">
+				<footer>
 					<ul>
 						<li><a href="mailto:ethanpswan@gmail.com" class="footer_link">email me</a></li>
 						<li><a href="https://github.com/eswan18" class="footer_link">my github</a></li>

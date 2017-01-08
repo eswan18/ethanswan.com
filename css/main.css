@@ -12,6 +12,8 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+    float: left;
+    clear: both;
 }
 a {
     text-decoration: none;
@@ -26,6 +28,9 @@ p {
     color: #333;
     margin-right:10px;
     margin-left:10px;
+}
+blurb {
+    float: left;
 }
 
 /**************************/
@@ -50,6 +55,7 @@ td {
 footer {
     border-top: 1px solid #D5D5D5;
     font-size: .8em;
+    clear: both;
 }
 nav ul, footer ul {
     font-family:'Avenir', 'Helvetica', 'Arial', 'Sans-Serif';
@@ -86,3 +92,4 @@ recent_post_title {
 recent_post_date {
     font-size: 1em;
 }
+
