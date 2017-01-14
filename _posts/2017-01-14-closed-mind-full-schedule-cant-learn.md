@@ -3,6 +3,7 @@ layout: post
 title: "Closed Minds. Full Schedules. Can't Learn."
 date: 2017-01-14
 author: "Ethan Swan"
+excerpt: "For as long as I can remember, I didn’t like school. I didn’t hate it either, but it was always a drag. Grade school was somewhat tolerable, but adolescent awkwardness hit in junior high (switching to a new school didn’t help) and I can remember dreading each day. Then in high school, I came home every evening with a litany of complaints, usually about teachers and classwork and - more than anything else - just plain boredom. Though I loved my time in college, I skipped as much class as anyone. There were just too many sports to play, too many friends to keep up with, too many outside interests and projects that I wanted to pursue on my own. Lectures and labs were an unfortunate necessity, and for most courses, they were to be avoided when possible." 
 ---
 
 ## [Don't Know What You Got Till It's Gone](https://youtu.be/tvtJPs8IDgU)
