@@ -23,15 +23,20 @@ a:hover {
     color: #F00FCB;
 }
 p {
-    font-size: 1.5em;
+    font-size: 1.2em;
     line-height: 1.4em;
     color: #333;
     margin-right:10px;
     margin-left:10px;
 }
-h1#page_header {
+p.meta {
+    font-size: 1em;
+}
+h1.page_header {
     float:left;
     position:relative;
+    font-size: 3em;
+    margin-top: 0;
 }
 #blurb {
     float: left;
