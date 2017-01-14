@@ -103,4 +103,6 @@ recent_post_title {
 recent_post_date {
     font-size: 1em;
 }
-
+div.post {
+    clear: both;
+}
