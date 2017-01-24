@@ -106,3 +106,14 @@ recent_post_date {
 div.post {
     clear: both;
 }
+
+/****************/
+/* Coffee Shops */
+/****************/
+table#coffee_shops_table {
+    border-spacing: 10px;
+}
+th {
+    font-style: bold;
+    border-bottom: 1px solid black;
+}
