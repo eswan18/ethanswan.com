@@ -112,6 +112,10 @@ div.post {
 /****************/
 table#coffee_shops_table {
     border-spacing: 10px;
+    text-align: center;
+}
+table#coffee_shops_table td:nth-child(2) {
+    text-align: left;
 }
 th {
     font-style: bold;
