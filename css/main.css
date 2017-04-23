@@ -37,6 +37,10 @@ h1.page_header {
     position:relative;
     font-size: 3em;
     margin-top: 0;
+    clear: both;
+}
+h2.page_subheader {
+    clear: both;
 }
 #blurb {
     float: left;
