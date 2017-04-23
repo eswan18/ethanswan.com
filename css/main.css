@@ -121,3 +121,12 @@ th {
     font-style: bold;
     border-bottom: 1px solid black;
 }
+
+
+/******************/
+/* Things I Like  */
+/******************/
+div.things_i_like_col {
+    float: left;
+    padding: 0em 3em;
+}
