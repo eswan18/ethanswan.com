@@ -1,0 +1,26 @@
+---
+layout: default
+title: eswan18 - Home
+---
+<div class="blurb">
+
+	<div>
+		{% for post in site.posts %}
+			<div class="post_preview">
+				<h3>
+					{{ post.date | date_to_string }}
+				</h3>
+				<h1>
+					<a href="{{ post.url }}" title="{{ post.title }}"> {{ post.title }} </a>
+				</h1>
+				<p>
+					{{ post.excerpt | strip_html }} <br>
+					<a href="{{ post.url }}" title="{{ post.title }}" class="read_more">read more...</a>
+				</p>
+			</div>
+			<br>
+		{% endfor %}
+	</div>
+
+</div>
+<!-- /.blurb -->
