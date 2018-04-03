@@ -2,4 +2,4 @@
 
 This is Ethan Swan's Personal Website.
 
-Link: [eswan18.github.io](http://eswan18.github.io)
+Link: [ethanswan.com](http://ethanswan.com)
