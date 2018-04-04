@@ -114,14 +114,15 @@ div.post {
 /****************/
 /* Coffee Shops */
 /****************/
-table#coffee_shops_table {
+.coffee_shops table {
     border-spacing: 10px;
     text-align: center;
 }
-table#coffee_shops_table td:nth-child(2) {
+.coffee_shops td:nth-child(2) {
     text-align: left;
+    width: 70%;
 }
-th {
+.coffee_shops th {
     font-style: bold;
     border-bottom: 1px solid black;
 }
