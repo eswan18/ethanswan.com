@@ -55,16 +55,20 @@ h2.page_subheader {
 /* Content-dividing Table */
 /**************************/
 td.left_content {
-    width: 10%;
+    width: 20%;
 }
 td.middle_content {
-    width: 50%;
+    width: 60%;
 }
 td.right_content {
-    width: 25%;
+    width: 20%;
 }
 td {
     vertical-align: top;
+}
+
+td.left_rec_content, td.right_rec_content {
+    width: 10%;
 }
 
 /*********************/
@@ -137,3 +141,4 @@ td.things_i_like_col {
     width: 45%;
     padding: 0em 3em;
 }
+

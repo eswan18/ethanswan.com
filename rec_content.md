@@ -1,83 +1,57 @@
 ---
-layout: default
+layout: rec_content
 title: Ethan Swan - Recommended Content
 ---
-<div class="blurb">
-	<h1 class="page_header">Other Things I Like</h1>
 
-	<div id="main_content">
-        <table>
-            <!-- Podcasts Column -->
-            <td id="recommended_podcasts" class="things_i_like_col">
-                <h2><u>Podcasts</u></h2>
-                <h4>Politics</h4>
-                <dl>
-                    <dt><a href="https://fivethirtyeight.com/tag/politics-podcast/">FiveThirtyEight Politics</a></dt>
-                    <dd>Nate Silver, Clare Malone, Harry Enten, and other FiveThirtyEight staff analyze the current political climate with a focus on quantitative measures.</dd>
-                </dl>
-                <h4>Tech</h4>
-                <dl>
-                    <dt><a href="http://atp.fm">Accidental Tech Podcast</a></dt>
-                    <dd>John Siracusa, Marco Arment, and Casey Liss talk about the tech world generally and Apple specifically.</dd>
-                    <dt><a href="https://www.relay.fm/clockwise">Clockwise</a></dt>
-                    <dd>A rotating cast of guests discusses tech news.</dd>
-                    <dt><a href="https://talkpython.fm/">Talk Python To Me</a></dt>
-                    <dd>An interview-based podcast with guests from all around the Python programming world.</dd>
-                </dl>
-                <h4>Economics, Sociology, & General Knowledge</h4>
-                <dl>
-                    <dt><a href="http://freakonomics.com/archive/">Freakonomics Radio</a></dt>
-                    <dd>Steve Levitt and Stephen Dubner examine non-economic phenomena through the lens of incentive systems.</dd>
-                    <dt><a href="http://www.hellointernet.fm/">Hello Internet</a></dt>
-                    <dd>YouTube content creators CGP Grey and Brady Haran talk about absolutely everything.</dd>
-                    <dt><a href="http://www.econtalk.org/">EconTalk</a></dt>
-                    <dd>Economist Russ Roberts interviews various guests about trends and theories in modern economics.</dd>
-                </dl>
-                <h4>NBA</h4>
-                <dl>
-                    <dt><a href="http://www.espn.com/espnradio/podcast/archive/_/id/10528553">The Lowe Post</a></dt>
-                    <dd>Zach Lowe, far and away my favorite sportswriter, dissects current NBA topics with various guests.</dd>
-                </dl>
-                <h4>Other</h4>
-                <dl>
-                    <dt><a href="http://www.tonykornheisershow.com">The Tony Kornheiser Show</a></dt>
-                    <dd>Tony Kornheiser, of Pardon the Interruption fame, hosts a daily radio show that has been running for more than 25 years.</dd>
-                    <dt><a href="http://www.welcometonightvale.com">Welcome to Night Vale</a></dt>
-                    <dd>This Lovecraftian comedy is a parody of an old time radio show.</dd>
-                </dl>
-            </td>
+# Other Things That I Like
 
-            <!-- Blogs Column -->
-            <td id="recommended_blogs_and_books" class="things_i_like_col">
-                <h2><u>Blogs</u></h2>
-                <dl>
-                    <dt><a href="http://www.fivethirtyeight.com">FiveThirtyEight</a></dt>
-                    <dd>FiveThirtyEight provides news and commentary with a data-oriented approach.</dd>
-                    <dt><a href="https://stratechery.com">Stratechery</a></dt>
-                    <dd>Ben Thompson explains recent tech news in his own unique way, with his <em>Aggregation Theory</em> as a lens.</dd>
-                </dl>
 
-                <h2><u>Books</u></h2>
-                <dl>
-                    <dt><a href="https://en.wikipedia.org/wiki/The_Signal_and_the_Noise">
-                        The Signal and the Noise<br>
-                        <em>Nate Silver</em>
-                    </a></dt>
-                    <dd>Silver details his Bayesian approach to understanding the world, using several pertinent world events as case studies.</dd>
-                    <dt><a href="https://en.wikipedia.org/wiki/Sapiens:_A_Brief_History_of_Humankind">
-                        Sapiens: A Brief History of Humankind<br>
-                        <em>Yuval Noah Harrari</em>
-                    </a></dt>
-                    <dd>Harrari follows humans throughout history and explains their societal development.</dd>
-                    <dt><a href="https://en.wikipedia.org/wiki/The_Book_of_Basketball">
-                        The Book of Basketball: The NBA According to the Sports Guy<br>
-                        <em>Bill Simmons</em>
-                    </a></dt>
-                    <dd>Simmons covers the history of the NBA and ranks the greatest NBA players, keeping the dialogue humorous throughout.</dd>
-                </dl>
-            </td>
-        </table>
-    </div>
+## Podcasts
+### Politics
+[FiveThirtyEight Politics](https://fivethirtyeight.com/tag/politics-podcast/)
+-- Nate Silver, Clare Malone, Harry Enten, and other FiveThirtyEight staff analyze the current political climate with a focus on quantitative measures.
 
-</div>
-<!-- /.blurb -->
+### Tech
+[Accidental Tech Podcast](http://atp.fm)
+-- John Siracusa, Marco Arment, and Casey Liss talk about the tech world generally and Apple specifically.
+
+### Economics, Sociology, & General Knowledge
+[Freakonomics Radio](http://freakonomics.com/archive/)
+-- Steve Levitt and Stephen Dubner examine non-economic phenomena through the lens of incentive systems.
+
+[Hello Internet](http://www.hellointernet.fm/)
+-- YouTube content creators CGP Grey and Brady Haran talk about absolutely everything.
+
+[EconTalk](http://www.econtalk.org/)
+-- Economist Russ Roberts interviews various guests about trends and theories in modern economics.
+
+### NBA
+[The Lowe Post](http://www.espn.com/espnradio/podcast/archive/_/id/10528553)
+-- Zach Lowe, perhaps America's best sportswriter, dissects current NBA topics with various guests.
+
+### Other
+[The Tony Kornheiser Show](http://www.tonykornheisershow.com)
+-- Tony Kornheiser, of *Pardon the Interruption* fame, hosts a daily radio show that has been running for more than 25 years.
+
+[Welcome to Night Vale](http://www.welcometonightvale.com)
+-- This Lovecraftian comedy is a parody of an old time radio show.
+<br><br>
+
+        
+## Blogs
+[FiveThirtyEight](http://www.fivethirtyeight.com)
+-- FiveThirtyEight provides data-centric analysis across politics, sports, science, economics, and culture.
+
+[Stratechery](https://stratechery.com)
+-- Ben Thompson explains recent tech news in his own unique way, with his *Aggregation Theory* as a lens.
+<br><br>
+
+## Books
+[The Signal and the Noise](https://en.wikipedia.org/wiki/The_Signal_and_the_Noise") -- *Nate Silver*
+-- Silver details his Bayesian approach to understanding the world, using several pertinent world events as case studies.
+
+[Sapiens: A Brief History of Humankind](https://en.wikipedia.org/wiki/Sapiens:_A_Brief_History_of_Humankind) --*Yuval Noah Harrari*
+-- Harrari follows humans throughout history and explains their societal development.
+
+[The Book of Basketball: The NBA According to the Sports Guy](https://en.wikipedia.org/wiki/The_Book_of_Basketball) -- *Bill Simmons*
+-- Simmons covers the history of the NBA and ranks the greatest NBA players, keeping the dialogue humorous throughout.
