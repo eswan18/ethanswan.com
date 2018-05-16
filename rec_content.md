@@ -69,7 +69,7 @@ title: Ethan Swan - Recommended Content
                         <em>Yuval Noah Harrari</em>
                     </a></dt>
                     <dd>Harrari follows humans throughout history and explains their societal development.</dd>
-                    <dt><a href=https://en.wikipedia.org/wiki/The_Book_of_Basketball">
+                    <dt><a href="https://en.wikipedia.org/wiki/The_Book_of_Basketball">
                         The Book of Basketball: The NBA According to the Sports Guy<br>
                         <em>Bill Simmons</em>
                     </a></dt>

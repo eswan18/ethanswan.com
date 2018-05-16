@@ -32,10 +32,12 @@ p {
 p.meta {
     font-size: 1em;
 }
+h1 {
+    font-size: 3em;
+}
 h1.page_header {
     float:left;
     position:relative;
-    font-size: 3em;
     margin-top: 0;
     clear: both;
 }
