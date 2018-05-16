@@ -6,16 +6,15 @@ title: Ethan Swan - Recommended Content
 # Other Things That I Like
 
 
-## Podcasts
-### Politics
+## Podcasts: Politics
 [FiveThirtyEight Politics](https://fivethirtyeight.com/tag/politics-podcast/)
 -- Nate Silver, Clare Malone, Harry Enten, and other FiveThirtyEight staff analyze the current political climate with a focus on quantitative measures.
 
-### Tech
+## Podcasts: Tech
 [Accidental Tech Podcast](http://atp.fm)
 -- John Siracusa, Marco Arment, and Casey Liss talk about the tech world generally and Apple specifically.
 
-### Economics, Sociology, & General Knowledge
+## Podcasts: Economics, Sociology, & General Knowledge
 [Freakonomics Radio](http://freakonomics.com/archive/)
 -- Steve Levitt and Stephen Dubner examine non-economic phenomena through the lens of incentive systems.
 
@@ -25,18 +24,17 @@ title: Ethan Swan - Recommended Content
 [EconTalk](http://www.econtalk.org/)
 -- Economist Russ Roberts interviews various guests about trends and theories in modern economics.
 
-### NBA
+## Podcasts: NBA
 [The Lowe Post](http://www.espn.com/espnradio/podcast/archive/_/id/10528553)
 -- Zach Lowe, perhaps America's best sportswriter, dissects current NBA topics with various guests.
 
-### Other
+## Podcasts: Other
 [The Tony Kornheiser Show](http://www.tonykornheisershow.com)
 -- Tony Kornheiser, of *Pardon the Interruption* fame, hosts a daily radio show that has been running for more than 25 years.
 
 [Welcome to Night Vale](http://www.welcometonightvale.com)
 -- This Lovecraftian comedy is a parody of an old time radio show.
 <br><br>
-
         
 ## Blogs
 [FiveThirtyEight](http://www.fivethirtyeight.com)
