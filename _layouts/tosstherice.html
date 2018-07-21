@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>{{ page.title }}</title>
+			<!-- link to main stylesheet -->
+			<link rel="stylesheet" type="text/css" href="/css/main.css">
+			<!-- Load JQuery -->
+			<script src='https://code.jquery.com/jquery-latest.min.js'></script>
+		</head>
+		<body>
+			<!-- CENTRAL CONTAINER -->
+			<div class="container">
+				<!-- NAV BAR, ETC -->
+				<nav>
+					<ul>
+						<li><a href="/" class="header_link">About Me</a></li>
+						<li><a href="/coffee_shops.html" class="header_link">Coffee Shops</a>
+						<li><a href="/rec_content.html" class="header_link">Recommended Content</a>
+                        <li><a href="/tosstherice" class="header_link">Fernando and Libby's Wedding!</a>
+					</ul>
+				</nav>
+				<div style="height:2px;width:100%">
+					<div style="background-color:#000000;height:2px;width:50%;"/>
+				</div>
+				<br>
+				<!-- /NAV BAR, ETC -->
+			
+	
+				<!-- CONTENT-DIVIDING TABLE-->
+				<table><tr>
+				
+                    <td class="left_content">
+                    </td>
+
+                    <td class="middle_content">
+                        {{ content }}
+                    </td>
+
+                    <td class="right_content">
+                    </td>
+
+				</tr></table>
+				<!-- /CONTENT-DIVIDING TABLE-->
+
+				
+				<footer>
+					<ul>
+						<li><a href="mailto:ethanpswan@gmail.com" class="footer_link">Email Me</a></li>
+						<li><a href="https://github.com/eswan18" class="footer_link">My GitHub</a></li>
+					</ul>
+				</footer>
+				
+			</div>
+			<!-- /CENTRAL CONTAINER -->
+		</body>
+	</html>

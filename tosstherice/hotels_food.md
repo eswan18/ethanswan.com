@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: tosstherice
 title: Toss the Rice! Hotels & Food
 ---
 
@@ -7,8 +7,9 @@ title: Toss the Rice! Hotels & Food
 
 ## Hotel Blocks
 - **Drury Inn & Suites Grand Rapids**
-    - *8 minutes from Gerald R. Ford International Airport*
-    - **Address**: *5175 28th Street SE Grand Rapids, MI 49512 / (616) 942-8511*
+    - *8 minutes from Gerald R. Ford International Airport and 5 minutes from the reception*
+    - **Address**: 5175 28th Street SE Grand Rapids, MI 49512
+    - **Phone**: (616) 942-8511
     - Call in and book for "Schichtel/Garcia wedding", use the group number 2347947, or follow this link:
     [https://www.druryhotels.com/bookandstay/newreservation/?groupno=2347947](https://www.druryhotels.com/bookandstay/newreservation/?groupno=2347947)
 - Check back soon for hotel blocks near Downtown Grand Rapids!

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: tosstherice
 title: Toss the Rice! Fernando and Libby Are Getting Married
 ---
 
