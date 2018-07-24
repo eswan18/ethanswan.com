@@ -10,8 +10,7 @@ title: Toss the Rice! Hotels & Food
     - *8 minutes from Gerald R. Ford International Airport and 5 minutes from the reception*
     - **Address**: 5175 28th Street SE Grand Rapids, MI 49512
     - **Phone**: (616) 942-8511
-    - Call in and book for "Schichtel/Garcia wedding", use the group number 2347947, or follow this link:
-    [https://www.druryhotels.com/bookandstay/newreservation/?groupno=2347947](https://www.druryhotels.com/bookandstay/newreservation/?groupno=2347947)
+    - Call in and book for "Schichtel/Garcia wedding", use the group number 2347947, or follow [this link](https://www.druryhotels.com/bookandstay/newreservation/?groupno=2347947).
 - Check back soon for hotel blocks near Downtown Grand Rapids!
 
 ## Food Options
@@ -19,7 +18,7 @@ title: Toss the Rice! Hotels & Food
 
 - **Herman's Boy** (Bagels and Coffee)
     - *2 min from the ceremony* - 220 Northland Dr NE, Rockford MI 49341
-    - Bagels, coffee, other delicious things. Libby recommends and Eggel on ultimate bagel with cheddar cheese and a bacon or a pecan roll.
+    - Bagels, coffee, other delicious things. Libby recommends an Eggel on ultimate bagel with cheddar cheese and a bacon or a pecan roll.
 - **Corner Bar**
     - *3 min from the cermony* - 31 N Main St, Rockford, MI 49341
     - Renowned hot dog establishment in downtown Rockford.
