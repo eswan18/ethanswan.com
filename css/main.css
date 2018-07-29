@@ -35,12 +35,6 @@ p.meta {
 h1 {
     font-size: 3em;
 }
-h1.page_header {
-    float:left;
-    position:relative;
-    margin-top: 0;
-    clear: both;
-}
 h2.page_subheader {
     clear: both;
 }
@@ -107,17 +101,16 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
-recent_post_title {
-    font-size: 1.6em;
+h1.post_header {
+    font-size: 2em;
 }
-recent_post_date {
-    font-size: 1em;
-}
-div.post {
-    clear: both;
+span.post-excerpt {
+    font-style: italic;
+    font-size: .9em;
 }
 a.post-link {
-    font-size: 2em;
+    font-weight: bold;
+    font-size: 1.5em;
 }
 
 /****************/

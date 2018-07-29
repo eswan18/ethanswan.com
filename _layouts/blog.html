@@ -7,8 +7,9 @@ layout: default
     {% for post in site.posts %}
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         {{ post.date | date: date_format}}:<br>
-        <b><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></b>
-        <em>{{ post.excerpt }}</em>
+        <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        <span class="post-excerpt">{{ post.excerpt }}</span>
+        <br>
     {% endfor %}
 </div>
 
