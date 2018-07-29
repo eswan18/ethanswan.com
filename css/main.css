@@ -116,6 +116,9 @@ recent_post_date {
 div.post {
     clear: both;
 }
+a.post-link {
+    font-size: 2em;
+}
 
 /****************/
 /* Coffee Shops */

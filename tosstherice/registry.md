@@ -1,5 +1,5 @@
 ---
-layout: tosstherice
+layout: default
 title: Toss the Rice! Registry
 ---
 

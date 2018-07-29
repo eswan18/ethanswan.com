@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<h1>Blog</h1>
+<div class="blog">
+    {% for post in site.posts %}
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {{ post.date | date: date_format}}:<br>
+        <b><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></b>
+        <em>{{ post.excerpt }}</em>
+    {% endfor %}
+</div>
+
