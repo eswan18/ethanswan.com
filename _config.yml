@@ -1,3 +1,8 @@
 name: Ethan Swan
 markdown: kramdown
 permalink: /feed/:year/:month/:day/:title
+
+
+collections:
+  coffee_shops:
+    output: true

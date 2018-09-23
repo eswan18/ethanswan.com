@@ -9,26 +9,30 @@ Ranking Cincinnati coffee shops has allowed me to pursue 2 of my favorite hobbie
 The following are arranged in alphabetical order.
 <br><br>
 
-| Coffee Shop | Description | Accepts Apple Pay | WiFi Quality | Rating (0-9) |
-| - | - | - |
-| [Awakenings](http://www.awakeningscoffeeandwine.com/) | Awakenings (or AWAKENINGS as their website screams) is a coffee and wine bar on Hyde Park Square. The interior has a pleasant wooden aesthetic, and the coffee is pretty good. However, the place is fairly expensive, doesn't accept Apple Pay, and has a serious paucity of electrical outlets accessible from the tables. Overall, a fairly unremarkable coffee shop. | N | 😐 | 5 |
-| - | - | - |
-| [Brick Coffee Company](https://brickcoffee.co/) | Brick is a small coffee shop in Norwood, Ohio. The interior is well-lit and clean, the wifi is usually more than adequate, and the coffee is both reasonable and very good. It's also open normal hours every day, which few nice coffee shops can say. Power outlets are easy to come by. In almost all ways, Brick sets the bar.<br><br>What keeps Brick from a 10/10? Chair comfort. Coffee shop entrepreneurs, please hear me: narrow, hard seating is a serious detriment. That said, Brick is the best coffee shop I've visited in Cincinnati. | Y | 🙂 | 9 |
-| - | - | - |
-| [Carabello Coffee](https://www.carabellocoffee.com/) | People have recommended Carabello to me since I moved to Cincinnati. Maybe it's not fair, but this local obsession with the place definitely affected my experience there. It is indeed good -- lots of seating and a ton of drink options (even a coffee cocktail selection). But the \*background\* music is too loud and the place is very busy, and honestly the coffee just isn't one of my favorites. It's also very high up on the pretentiousness scale, which is a personal turn off. Still, Carabello is a safe choice and offers some amenities you just can't find elsewhere. | N | 🙂 | 7 |
-| - | - | - |
-| [Coffee Emporium](https://www.coffee-emporium.com/) | While in most aspects Coffee Emporium is an above average coffee shop, its stunningly terrible internet situation is simply too much to overcome. At the Hyde Park location, you are allotted wifi in 45 minute increments, as if internet were a finite commodity. But not only are you subjected to cyberspace rationing, the wifi speed is so bad that you would be better off tethering to your phone.<br><br>There is more I could say about Coffee Emporium, and most of it is positive. But it doesn't matter because a place without internet is basically the wilderness. | N | 😱 | 2 |
-| - | - | - |
-| Covington Coffee | Unexpectedly reasonably-priced for a non-chain, Covington Coffee is a very small shop just off Route 71 in Northern Kentucky. The ambience is great, although I have found the employees can occasionally be a bit too chatty for me to concentrate. The internet speeds have always been good enough for me, and the coffee is good; in fact, if you're the kind of person that cares, you can watch your barista meticulously prepare your coffee in in ways that can't possibly improve the flavor but may justify your opinion of yourself as someone who "knows coffee". Covington Coffee's limited weekend hours are the major drawback; I have twice shown up on Sunday afternoons to find the place closed, having shifted its hours since the last time I visited.<br><br>Update: Yelp now reports Covington Coffee as permanently closed. Turns out that being open when you're supposed to be open is important. | ? | 🙂 | 7 |
-| - | - | - |
-| [Deeper Roots](https://www.deeperrootscoffee.com/) | Once a subject of my scorn, Deeper Roots has improved the comfort of its seating situation dramatically and vaulted back into good coffee shop territory. It has some of the best coffee in Cincinnati, but unfortunately also the air of a place that thinks it has good coffee. I find the place kind of stuffy and the coffee descriptions to be so dramatic they're hard to take seriously. Another drawback is the constant in-and-out traffic the place attracts, which is very distracting. Worse, the place is so small that I have several times visited and found no available seating -- a serious issue.<br><br>Still, good coffee, good seating, and good wifi is a strong enough combination to cancel out the drawbacks, so Deeper Roots comes out overall to be a very average coffee shop (average is okay!).| Y | 🙂 | 6 |
-| - | - | - |
-| [Hyde Perk](https://www.hydeperkcoffee.com/) | Formerly known as Kidd Coffee, Hyde Perk is set between a mediterranean restaurant and an escape room. It's less than 3 minutes by foot from my apartment, so I feel obligated to walk there. I don't really like walking, so that's a bit of a drawback.<br><br>I find the ambience and chair comfort to be HP's strong suit. On the other hand, it's too expensive and I am a little worried that the new name is an hommage to Friends (*Central Perk*), arguably the worst TV show I have consumed in entirety. If Hyde Perk lowers its prices and is reincarnated as [Café Nervosa](http://thecheersfrasier.wikia.com/wiki/Caf%C3%A9_Nervosa), it can expect a better rating next time. | Y | 🙂 | 6 |
-| - | - | - |
-| [Lookout Joe](http://www.lookoutjoe.com/) | Lookout Joe was one of my first Cincinnati favorites. It sits on Mount Lookout Square, which means both a nice atmosphere and free parking. The coffee is good, the wifi is not, and the seating is limited. Lookout Joe is the rare coffee shop that offers a good option for standing while working; it has several high tables, and high stools if sitting is more your style. This, along with the outdoor tables, makes Lookout Joe the winner of the seating variety category.<br><br>But coffee shops are about more than seating, and this one gets dinged on a few other measures (but not that many). Lookout Joe can get a bit busy, and the regular short visits of passersby are a regular distraction. The spotty wifi is a real problem, and I find something about the atmosphere sometimes strikes me as a little dingy. Still, Lookout Joe is a good option that I would recommend. | N | 🙁 | 6 |
-| - | - | - |
-| [Panera](https://www.panerabread.com/en-us/home.html) | You know what you're getting with Panera. There's usually space, the hours are good, the coffee is cheap and pretty decent, and the environment is generally friendly -- few things are more relaxing than being surrounded by old people. Plus, free refills!<br><br>Unfortunately, you also know what you're getting in internet speeds: it might be faster to walk to your ISP and back than to wait for a big webpage to load. And the pastries are usually a disappointment.<br><br>If internet speed isn't a priority, Panera is a fine option. But who are we kidding? Internet speed is *the* priority. | ? | ☹️  | 4 |
-| - | - | - |
-| [Sidewinder](http://www.sidewindercoffee.com/) | While it isn't one of the coffee shops that Cincinnati natives typically recommend, Sidewinder is an outstanding cafe. It's located in Northside, right next to a cheese shop. Talk about prime location!<br><br>Sidewinder has pretty good coffee, above-average chairs, and generally decent ambience; I do find it a little overpriced, though. It would probably score as a solid 6 except for its best feature - outrageously good wifi. As a millenial, all I care about is internet speed and avocado toast, and Sidewinder offers at least one of those things (it also serves food, so maybe both in the future!). As a place to sit and be seriously productive, it's very hard to beat Sidewinder. | ? | 😍 | 8 |
-| - | - | - |
-| [Starbucks](https://www.starbucks.com/) | #starbs will efficiently serve you some moderately burned or bitter coffee for a nominal fee, and then provide you with mediocre internet. On the plus side, locations are consistently clean and hours are good.<br><br>But overcrowding sometimes pushes you to less-than-ideal locations, and good luck in the inevitable passive-aggressive staring contest with the guy next to you who also needs to use that one power outlet. | Y | 😐 | 5 |
+<table>
+<!--Headers-->
+<tr>
+<th>Coffee Shop</th>
+<th>Description</th>
+<th>Accepts Apple Pay</th>
+<th>WiFi Quality</th>
+<th>Rating (0-9)</th>
+</tr>
+<!--One row per coffee shop-->
+{% for shop in site.coffee_shops %}
+<tr>
+    {% if shop.link %}
+        <td><a href="{{ shop.link }}">{{ shop.name }}</a></td>
+    {% else %}
+        <td>{{ shop.name }}</td>
+    {% endif %}
+    <!--The content comes in with <p> tags that mess up formatting. Remove-->
+    {% assign newcontent=shop.content | markdownify | replace: '<p>', '' %}
+    {% assign newcontent=newcontent | replace: '</p>', '' %}
+    <td>{{ newcontent }}</td>
+    <td>{{ shop.apple_pay }}</td>
+    <td>{{ shop.wifi }}</td>
+    <td>{{ shop.rating }}</td>
+</tr>
+{% endfor %}
+</table>
