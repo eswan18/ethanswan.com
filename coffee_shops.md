@@ -3,9 +3,10 @@ layout: coffee_shops
 title: Ethan Swan - Coffee Shops
 ---
 
-# Coffee Shops
+# Cincinnati Coffee Shops
 
-Ranking Cincinnati coffee shops has allowed me to pursue 2 of my favorite hobbies: visiting local cafés and complaining about things.
+Ranking local coffee shops has allowed me to pursue two of my favorite hobbies: visiting cafés and complaining about things.
+
 The following are arranged in alphabetical order.
 <br><br>
 
