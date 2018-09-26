@@ -7,7 +7,7 @@ title: Ethan Swan - Coffee Shops
 
 Ranking local coffee shops has allowed me to pursue two of my favorite hobbies: visiting cafés and complaining about things.
 
-The following are arranged in alphabetical order.
+The following are arranged from highest- to lowest-rated.
 <br><br>
 
 <table>
@@ -20,7 +20,8 @@ The following are arranged in alphabetical order.
 <th>Rating (0-9)</th>
 </tr>
 <!--One row per coffee shop-->
-{% for shop in site.coffee_shops %}
+{% assign shops = site.coffee_shops | sort: 'rating' %}
+{% for shop in shops reversed %}
 <tr>
     {% if shop.link %}
         <td><a href="{{ shop.link }}">{{ shop.name }}</a></td>
