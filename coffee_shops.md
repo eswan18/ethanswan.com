@@ -24,7 +24,7 @@ The following are arranged from highest- to lowest-rated.
 {% for shop in shops reversed %}
 <tr>
     {% if shop.link %}
-        <td><a href="{{ shop.link }}">{{ shop.name }}</a></td>
+        <td><b><a href="{{ shop.link }}">{{ shop.name }}</a></b></td>
     {% else %}
         <td>{{ shop.name }}</td>
     {% endif %}
