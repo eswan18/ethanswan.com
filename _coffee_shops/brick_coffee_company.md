@@ -6,7 +6,7 @@ wifi: 🙂
 rating: 7
 ---
 
-Brick is a small coffee shop in Norwood, Ohio.
+Brick is a small coffee shop in Norwood.
 The interior is well-lit and clean, the wifi is usually more than adequate, and the coffee options are both reasonable and very good.
 Power outlets are easy to come by.
 <br><br>
