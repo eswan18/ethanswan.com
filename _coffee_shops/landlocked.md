@@ -22,5 +22,5 @@ Making this (already very bad) situation worse, the stools and benches are just 
 No cushion, no divots.
 Humans are made to sit, not stack flat.
 <br><br>
-This critical problem frustrates me all the more because Landlocked might be my favorite coffee shop in Cincinnati if it had good seating.
+This critical problem frustrates me all the more because Landlocked might be my favorite coffee shop in Cincinnati if it had remotely tolerable seating.
 But I can't stay for more than about 45 minutes without developing acute back pain, so it just isn't a viable option.
