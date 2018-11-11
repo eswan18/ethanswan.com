@@ -4,6 +4,8 @@ date: 2018-11-11
 title: Setting Up Raspberry Pis (the Full Version)
 ---
 
+<img src="/images/rpi3.jpg" style="width:100%;"/>
+
 I've set up three Raspberry Pis over the last two days.
 By *set up*, I mean I burned the disk image to the SD card, got the Pi connected to the network and open to SSH, installed the tools I'm going to want every time, etc.
 Basically, make it just another identical worker node.
