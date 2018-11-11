@@ -2,6 +2,7 @@ name: Ethan Swan
 markdown: kramdown
 permalink: /feed/:year/:month/:day/:title
 
+excerpt_separator: <!--more-->
 
 collections:
   coffee_shops:

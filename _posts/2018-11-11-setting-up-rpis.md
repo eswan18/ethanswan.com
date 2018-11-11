@@ -4,7 +4,7 @@ date: 2018-11-11
 title: Setting Up Raspberry Pis (the Full Version)
 ---
 
-<img src="/images/rpi3.jpg" style="width:100%;"/>
+<center><img src="/images/rpi3.jpg"/></center>
 
 I've set up three Raspberry Pis over the last two days.
 By *set up*, I mean I burned the disk image to the SD card, got the Pi connected to the network and open to SSH, installed the tools I'm going to want every time, etc.
@@ -15,6 +15,7 @@ In fact, two of the installs I did were on Pis I'd owned for a while; I just wan
 So after the first two this weekend took me a lot longer than they should have, I realized it was about time I documented my process and made it repeatable.
 Most internet tutorials get you through just a few things: burning the card and connecting to wifi, maybe along with enabling SSH if you're lucky (and until this week I'd never found how to configure WiFi and SSH without direct physical access to the Pi).
 If I were going to write down the setup steps anyway, I figured I might as well add them on this blog in case others find them useful.
+<!--more-->
 
 To follow along, you'll need a Unix system and minimal experience with the command line.
 I use a Mac, so the commands I use to prepare the SD card may be slightly different from those on a Linux system.
@@ -53,7 +54,7 @@ Don't insert your SD card yet; we'll do that shortly.
 
 First, download the newest image of Raspbian from [here](https://www.raspberrypi.org/downloads/raspbian/).
 Currently, the download options on the page look like this:
-<img src="/images/raspbian_downloads.png" style="width:100%"/>
+<center><img src="/images/raspbian_downloads.png"/></center>
 It's up to you whether you want the desktop version or lite version; I prefer lite because I almost exclusively use my Pis via SSH (and admittedly I don't much like the Raspbian desktop anyway).
 The lite version is smaller and will make the install faster, and in theory you can always install the other components of the desktop version later.
 Download the zip version and unzip it, which should result in a file ending in `.img`.
@@ -183,7 +184,7 @@ sudo raspi-config
 ```
 If prompted for your password, enter *raspberry* again.
 Your terminal will change to look something like this:
-<img src="/images/raspi-config.png" style="width:100%"/>
+<center><img src="/images/raspi-config.png"/></center>
 
 We're going to use this to configure some basic stuff.
 

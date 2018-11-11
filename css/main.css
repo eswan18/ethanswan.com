@@ -44,10 +44,15 @@ h2.page_subheader {
 #main_content {
     clear: both;
 }
-/*.highlighter-rouge {
-    background-color: #EEF;
-    margin: 2px;
-}*/
+div.post img {
+    padding: 20px;
+    width: 80%;
+}
+.post-excerpt img {
+    padding: 20px;
+    width: 50%;
+    text-align: center;
+}
 
 /****************/
 /* Code Styling */
