@@ -192,8 +192,8 @@ We're going to use this to configure some basic stuff.
 First off, for some reason Raspbian seems to ship with a UK locale set by default, which you can test by typing \<shift\>+3 at some point.
 It will produce the £ character instead of #.
 To fix the locale, go to Localisation Options -> Change Locale.
-In the list that appears, scroll down to the `EN_UK` option that is checked and use \<space\> to uncheck it.
-Then scroll to the `EN_US.UTF-8` option and use \<space\> to check it.
+In the list that appears, scroll down to the `EN_GB` option that is checked and use \<space\> to uncheck it.
+Then scroll to the `EN_US.UTF-8 UTF-8` option and use \<space\> to check it.
 Press \<enter\> to continue.
 
 The next screen should prompt you between `C.UTF-8` and `en_US.UTF-8`.
