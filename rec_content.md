@@ -17,6 +17,9 @@ title: Ethan Swan - Recommended Content
 **[Accidental Tech Podcast](http://atp.fm)** (Podcast)
 -- John Siracusa, Marco Arment, and Casey Liss talk about the tech world generally and Apple specifically.
 
+**[Computerphile](https://www.youtube.com/user/Computerphile)** (YouTube Channel)
+-- This channel features video interviews with a variety of domain experts on a variety of computer topics.
+
 ## Economics, Sociology, & General Knowledge
 **[FiveThirtyEight](http://www.fivethirtyeight.com)** (Website)
 -- FiveThirtyEight provides data-centric analysis across politics, sports, science, economics, and culture.
