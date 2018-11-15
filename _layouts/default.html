@@ -8,6 +8,11 @@
 			<script src='https://code.jquery.com/jquery-latest.min.js'></script>
 			<!-- Load scripts -->
 			<script src='/js/std.js'></script>
+            <script>
+                req = new XMLHttpRequest();
+                req.open("GET", "http://int.ethanswan.com:5000/page_hit", false);
+                req.send(null);
+            </script>
 		</head>
 		<body>
 			<!-- CENTRAL CONTAINER -->
