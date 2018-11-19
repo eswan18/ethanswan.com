@@ -10,19 +10,12 @@ layout: default
         <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
         <div class="post-excerpt">
             {% if post.image %}
-            {% comment %} Desktop version {% endcomment %}
-                <div class="desktop-only">
-                <table class="desktop-only"><tr>
+                <table><tr>
                     <td colspan="1">
                         <a href="{{ post.url | relative_url }}"><img src="{{ post.image }}"/>
                     </a></td>
                     <td colspan="2"><p>{{ post.excerpt | strip_html }}</p></td>
                 </tr></table>
-                </div>
-            {% comment %} Mobile version {% endcomment %}
-                <div class="mobile-only">
-                    <p>{{ post.excerpt | strip_html }}</p>
-                </div>
             {% else %}
                 <p>{{ post.excerpt | strip_html }}</p>
             {% endif %}
