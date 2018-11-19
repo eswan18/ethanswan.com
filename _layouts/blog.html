@@ -11,7 +11,9 @@ layout: default
         <div class="post-excerpt">
             {% if post.image %}
                 <table><tr>
-                    <td colspan="1"><img src="{{ post.image }}"/></td>
+                    <td colspan="1">
+                        <a href="{{ post.url | relative_url }}"><img src="{{ post.image }}"/>
+                    </a></td>
                     <td colspan="2"><p>{{ post.excerpt | strip_html }}</p></td>
                 </tr></table>
             {% else %}
