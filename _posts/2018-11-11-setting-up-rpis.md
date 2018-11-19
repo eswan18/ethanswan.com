@@ -2,6 +2,7 @@
 layout: post
 date: 2018-11-11
 title: Setting Up Raspberry Pis (the Full Version)
+image: "/images/rpi3.jpg"
 ---
 
 <center><img src="/images/rpi3.jpg"/></center>

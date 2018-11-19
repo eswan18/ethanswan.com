@@ -49,9 +49,14 @@ div.post img {
     width: 80%;
 }
 .post-excerpt img {
-    padding: 20px;
-    width: 50%;
-    text-align: center;
+    width: 100%;
+}
+.post-excerpt table {
+    width: 100%;
+    table-layout: fixed;
+}
+.post-excerpt table td {
+    padding: 5px;
 }
 
 /****************/
