@@ -1,7 +1,8 @@
 ---
 layout: default
 ---
-<p class="meta">{{ page.date | date_to_string }}</p>
+{%- assign date_format = site.minima.date_format | default: "%Y/%m/%-d" -%}
+<p class="meta">{{ page.date | date: date_format }}</p>
 <h1 class="post_header">{{ page.title }}</h1>
 
 <div class="post">
