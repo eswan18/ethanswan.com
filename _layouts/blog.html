@@ -12,10 +12,10 @@ layout: default
             {% if post.image %}
                 <table><tr>
                     <td colspan="1"><img src="{{ post.image }}"/></td>
-                    <td colspan="2">{{ post.excerpt | strip_html }}</td>
+                    <td colspan="2"><p>{{ post.excerpt | strip_html }}</p></td>
                 </tr></table>
             {% else %}
-                {{ post.excerpt }}
+                <p>{{ post.excerpt | strip_html }}</p>
             {% endif %}
         </div>
         <br>
