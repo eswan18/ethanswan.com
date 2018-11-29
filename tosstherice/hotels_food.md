@@ -4,6 +4,7 @@ title: Toss the Rice! Hotels & Food
 ---
 
 # Places to Stay and Eat in the Area
+<center><img src="picture2.jpeg" style="width:50%"/></center>
 
 ## Hotel Blocks
 - **Drury Inn & Suites Grand Rapids**
@@ -11,7 +12,16 @@ title: Toss the Rice! Hotels & Food
     - **Address**: 5175 28th Street SE Grand Rapids, MI 49512
     - **Phone**: (616) 942-8511
     - Call in and book for "Schichtel/Garcia wedding", use the group number 2347947, or follow [this link](https://www.druryhotels.com/bookandstay/newreservation/?groupno=2347947).
-- Check back soon for hotel blocks near Downtown Grand Rapids!
+- **DoubleTree by Hilton Grand Rapids Airport**
+    - *7 minutes from Gerald R. Ford International Airport and 7 minutes from the reception*
+    - **Address**: 4747 28th St. SE Grand Rapids, MI 49512
+    - **Phone**: (616) 957-9072
+    - Call in and book for “Schichtel/Garcia wedding” or follow [this link](https://secure3.hilton.com/en_US/dt/reservation/book.htm?inputModule=HOTEL&ctyhocn=GRRAIDT&spec_plan=CDTSGW&arrival=20190503&departure=20190505&cid=OM,WW,HILTONLINK,EN,DirectLink&fromId=HILTONLINKDIRECT).
+- **Amway Grand Plaza Hotel** (Downtown)
+    - *19 minutes from Gerald R. Ford International Airport and 16 minutes from the reception*
+    - **Address**:187 Monroe Ave NW, Grand Rapids, MI 49503
+    - **Phone**: (800) 253-3590
+    - Call in and book for “Schichtel/Garcia wedding” or follow [this link](https://book.passkey.com/e/49745695).
 
 ## Food Options
 ### <u>Near the Ceremony</u>
