@@ -40,24 +40,24 @@ title: Toss the Rice! Hotels & Food
 
 #### *Ice Cream*
 - **Furniture City Creamery**
-    - *6 min drive from Homewood Suites Downtown* - 958 Cherry St SE, Grand Rapids MI 49506
+    - *6 min drive from Amway Grand Plaza* - 958 Cherry St SE, Grand Rapids MI 49506
 - **Jersey Junction**
-    - *12 min drive from Homewood Suites Downtown* - 652 Croswell Ave SE, East Grand Rapids MI 49506
+    - *12 min drive from Amway Grand Plaza* - 652 Croswell Ave SE, East Grand Rapids MI 49506
 - **Spoonlickers** (Frozen Yogurt)
-    - *4 min drive from Homewood Suites Downtown* - 616 Fulton W, Grand Rapids, MI 49504
+    - *4 min drive from Amway Grand Plaza* - 616 Fulton W, Grand Rapids, MI 49504
 - **Pinkie's Ice Cream and Desserts**
-    - *15 min drive from Drury Inn* -1127 Wealthy St. SE, Grand Rapids, MI 49506
+    - *15 min drive from Drury Inn* - 1127 Wealthy St. SE, Grand Rapids, MI 49506
 
 
 
 #### *Not Ice Cream*
 - **Ferris Coffee**
-    - *194 feet from Homewood Suites Downtown* - 40 Pearl Ave NW, Grand Rapids MI 49503
+    - *194 feet from Amway Grand Plaza* - 40 Pearl Ave NW, Grand Rapids MI 49503
 - **Yesterdog** (Hot Dogs served until 2:30 AM!)
-    - *10 min from Homewood Suites Downtown* - 1505 Wealthy St SE, Grand Rapids MI 49506
+    - *10 min from Amway Grand Plaza* - 1505 Wealthy St SE, Grand Rapids MI 49506
 - **Donkey Taqueria** (Google Maps calls it a "happening Mexican joint... features an extensive tequila menu")
-    - *8 min from Homewood Suites Downtown* - 665 Wealthy St, Grand Rapids MI 49503
+    - *8 min from Amway Grand Plaza* - 665 Wealthy St, Grand Rapids MI 49503
 - **Founder's Brewing Co.**
-    - *4 min Uber/14 min walk from Homewood Suites Downtown* - 235 Grandville Ave SW, Grand Rapids MI 46503
+    - *4 min Uber/14 min walk from Amway Grand Plaza* - 235 Grandville Ave SW, Grand Rapids MI 46503
 
 [Back to wedding home page](/tosstherice)
