@@ -1,12 +1,11 @@
 ---
 name: Sidewinder
 link: http://www.sidewindercoffee.com/
-apple_pay: "?"
+apple_pay: N
 wifi: 😍
 rating: 8
 ---
 
-Our champion!
 While it isn’t one of the coffee shops that Cincinnati natives typically recommend, Sidewinder is an outstanding cafe.
 It’s located in Northside, right next to a now-closed cheese shop.
 Talk about prime location!
