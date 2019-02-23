@@ -127,6 +127,7 @@ footer {
     border-top: 1px solid #D5D5D5;
     font-size: .8em;
     clear: both;
+    color: #656565;
 }
 nav ul, footer ul {
     font-family:'Avenir', 'Helvetica', 'Arial', 'Sans-Serif';
