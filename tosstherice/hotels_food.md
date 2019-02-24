@@ -28,7 +28,7 @@ title: Toss the Rice! Hotels & Food
 
 - **Herman's Boy** (Bagels and Coffee)
     - *2 min from the ceremony* - 220 Northland Dr NE, Rockford MI 49341
-    - Bagels, coffee, other delicious things. Libby recommends an Eggel on ultimate bagel with cheddar cheese and a bacon or a pecan roll.
+    - Bagels, coffee, other delicious things. Libby recommends an Eggel on ultimate bagel with cheddar cheese and bacon or a pecan roll.
 - **Corner Bar**
     - *3 min from the cermony* - 31 N Main St, Rockford, MI 49341
     - Renowned hot dog establishment in downtown Rockford.
