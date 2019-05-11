@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: page
 title: About Me
 ---
 
-![Ethan Headshot](images/ethan_headshot_smiling.gif){:height="330px" width="220px"}
+{% include figure.html image="images/ethan_headshot_smiling.gif" position="left" width="220" height="330" %}
+{% if site.hello %}![Ethan Headshot](images/ethan_headshot_smiling.gif){:height="330px" width="220px"} {% endif %}
 I'm a data scientist on the talent development team at <a href="http://www.8451.com">84.51˚</a>.
 On the side, I contribute to [The Syntact Project](http://syntactproject.com) as an editor, writer, and podcaster.
 My background is in computer science, but my interests also include political science, economics, and the NBA.
