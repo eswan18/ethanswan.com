@@ -1,10 +1,17 @@
-name: Ethan Swan
-markdown: kramdown
-permalink: /feed/:year/:month/:day/:title
-theme: alembic-jekyll-theme
+# Taken from Alembic repo on Github:
+# Site configuration
+# 1. Files excluded from Jekyll builds
+# 2. Installed Gems
+# 3. Gem settings
+# 4. Jekyll settings
+# 5. Collections
+# 6. Jekyll collections settings
+# 7. Site settings
+# 8. Site favicons & manifest icons
+# 9. Site navigation
 
-excerpt_separator: <!--more-->
 
+# 1. Files excluded from Jekyll builds
 exclude:
 - README.md
 - LICENSE
@@ -13,6 +20,33 @@ exclude:
 - Gemfile.lock
 - vendor
 
+# 3. Gem settings
+markdown: kramdown
+
+# 4. Jekyll settings
+theme: alembic-jekyll-theme
+permalink: /feed/:year/:month/:day/:title
+excerpt_separator: <!--more-->
+
+# 5. Collections
 collections:
   coffee_shops:
+    title: "Coffee Shops"
     output: true
+    description: "The coffee shops of Cincinnati"
+
+# 7. Site settings
+encoding: utf-8 # Make sure the encoding is right
+title: "ethanswan.com"
+baseurl: ""
+name: Ethan Swan
+repo: "https://github.com/eswan18/eswan18.github.io"
+email: "ethanpswan@gmail.com"
+
+# 9. Site navigation
+social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
+  Twitter: https://twitter.com/eswan18
+  LinkedIn: https://www.linkedin.com/in/ethanpswan
+  GitHub: https://github.com/eswan18
+  link: https://ethanswan.com
+  RSS: /feed.xml
