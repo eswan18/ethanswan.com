@@ -5,6 +5,14 @@ theme: alembic-jekyll-theme
 
 excerpt_separator: <!--more-->
 
+exclude:
+- README.md
+- LICENSE
+- CNAME
+- Gemfile
+- Gemfile.lock
+- vendor
+
 collections:
   coffee_shops:
     output: true
