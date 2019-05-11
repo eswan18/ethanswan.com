@@ -1,6 +1,7 @@
 name: Ethan Swan
 markdown: kramdown
 permalink: /feed/:year/:month/:day/:title
+theme: alembic-jekyll-theme
 
 excerpt_separator: <!--more-->
 
