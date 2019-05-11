@@ -1,0 +1,27 @@
+---
+title: false
+styles: true
+---
+
+@import "alembic";
+
+/****************/
+/* Coffee Shops */
+/****************/
+table.coffee-shops {
+    border-spacing: 10px;
+    text-align: center;
+}
+table.coffee-shops td {
+    vertical-align: top;
+    padding: 1em .3em;
+}
+table.coffee-shops td:nth-child(2) {
+    text-align: left;
+    width: 70%;
+}
+table.coffee-shops th {
+    font-weight: bold;
+    border-bottom: 1px solid black;
+    vertical-align: bottom;
+}
