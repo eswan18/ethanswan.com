@@ -3,8 +3,9 @@ layout: page
 title: Recommended Content
 ---
 
-I use my second twitter account, [@content_ious](https://twitter.com/content_ious), to tweet the best articles and podcast episodes I find.
-Below are the content sources that most reliably provoke my thoughts.
+I use my second twitter account, [@content_ious](https://twitter.com/content_ious), to tweet the best articles and podcast episodes I find (along with any content I produce myself).
+I've also listed here the content sources that most reliably provoke my thoughts.
+
 
 ### Politics
 **[FiveThirtyEight Politics](https://fivethirtyeight.com/tag/politics-podcast/)** (Podcast)
@@ -43,3 +44,6 @@ Below are the content sources that most reliably provoke my thoughts.
 
 **[The Tony Kornheiser Show](http://www.tonykornheisershow.com)** (Podcast)
 -- Tony Kornheiser, of *Pardon the Interruption* fame, hosts a daily radio show that has been running for more than 25 years.
+
+
+<a class="twitter-timeline" href="https://twitter.com/content_ious?ref_src=twsrc%5Etfw">Tweets by content_ious</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
