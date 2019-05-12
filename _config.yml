@@ -20,8 +20,14 @@ exclude:
 - Gemfile.lock
 - vendor
 
+# 2. Installed Gems
+plugins:
+  - jekyll-paginate
+
 # 3. Gem settings
 markdown: kramdown
+paginate: 5
+paginate_path: /blog/page:num
 
 # 4. Jekyll settings
 theme: alembic-jekyll-theme
