@@ -13,9 +13,9 @@ The following are arranged from highest- to lowest-rated.
 <tr>
 <th>Coffee Shop</th>
 <th>Description</th>
-<th>Accepts Apple Pay</th>
-<th>WiFi Quality</th>
-<th>Rating (0-10)</th>
+<th>Apple Pay?</th>
+<th>WiFi</th>
+<th>Rating</th>
 </tr>
 <!--One row per coffee shop-->
 {% assign shops = site.coffee_shops | sort: 'rating' %}

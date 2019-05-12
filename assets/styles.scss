@@ -24,4 +24,8 @@ table.coffee-shops th {
     font-weight: bold;
     border-bottom: 1px solid black;
     vertical-align: bottom;
+    padding: .1em;
+}
+table.coffee-shops td:nth-child(n+3) {
+    text-align: center;
 }

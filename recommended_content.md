@@ -21,9 +21,6 @@ Below are the content sources that most reliably provoke my thoughts.
 **[FiveThirtyEight](http://www.fivethirtyeight.com)** (Website)
 -- FiveThirtyEight provides data-centric analysis across politics, sports, science, economics, and culture.
 
-**[Freakonomics Radio](http://freakonomics.com/archive/)** (Podcast)
--- Steve Levitt and Stephen Dubner examine non-economic phenomena through the lens of incentive systems.
-
 **[EconTalk](http://www.econtalk.org/)** (Podcast)
 -- Economist Russ Roberts interviews various guests about trends and theories in modern economics.
 
@@ -46,6 +43,3 @@ Below are the content sources that most reliably provoke my thoughts.
 
 **[The Tony Kornheiser Show](http://www.tonykornheisershow.com)** (Podcast)
 -- Tony Kornheiser, of *Pardon the Interruption* fame, hosts a daily radio show that has been running for more than 25 years.
-
-**[Welcome to Night Vale](http://www.welcometonightvale.com)** (Podcast)
--- This Lovecraftian comedy is a parody of an old time radio show.
