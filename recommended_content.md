@@ -3,6 +3,9 @@ layout: page
 title: Recommended Content
 ---
 
+I use my second twitter account, [@content_ious](https://twitter.com/content_ious), to tweet the best articles and podcast episodes I find.
+Below are the content sources that most reliably provoke my thoughts.
+
 ### Politics
 **[FiveThirtyEight Politics](https://fivethirtyeight.com/tag/politics-podcast/)** (Podcast)
 -- Nate Silver, Clare Malone, Micah Cohen, and other FiveThirtyEight staff analyze the current political climate with a focus on quantitative measures.
@@ -10,9 +13,6 @@ title: Recommended Content
 ### Tech
 **[Stratechery](https://stratechery.com)** (Website)
 -- Ben Thompson explains recent tech news in his own unique way, with his *Aggregation Theory* as a lens.
-
-**[Accidental Tech Podcast](http://atp.fm)** (Podcast)
--- John Siracusa, Marco Arment, and Casey Liss talk about the tech world generally and Apple specifically.
 
 **[Computerphile](https://www.youtube.com/user/Computerphile)** (YouTube Channel)
 -- This channel features video interviews with a variety of domain experts on a variety of computer topics.

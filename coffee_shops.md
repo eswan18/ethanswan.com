@@ -3,7 +3,7 @@ layout: page
 title: Coffee Shop Ratings
 ---
 
-Ranking local coffee shops has allowed me to pursue two of my favorite hobbies: visiting cafés and complaining about things.
+Reviewing local coffee shops has allowed me to pursue two of my favorite hobbies: visiting cafés and complaining about things.
 
 The following are arranged from highest- to lowest-rated.
 <br><br>
