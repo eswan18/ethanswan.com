@@ -22,15 +22,26 @@ exclude:
 
 # 2. Installed Gems
 plugins:
-  - jekyll-paginate
+- jekyll-sitemap
+- jekyll-mentions
+- jekyll-paginate
+- jekyll-seo-tag
+- jekyll-redirect-from
+- jekyll-default-layout
+- jekyll-feed
+- jekyll-commonmark
+- jekyll-include-cache
+- jemoji
 
 # 3. Gem settings
 markdown: kramdown
 paginate: 5
 paginate_path: /blog/page:num
+sass:
+  style: compressed
+  sass_dir: _sass
 
 # 4. Jekyll settings
-theme: alembic-jekyll-theme
 permalink: /feed/:year/:month/:day/:title
 excerpt_separator: <!--more-->
 
@@ -42,11 +53,13 @@ collections:
     description: "The coffee shops of Cincinnati"
 
 # 7. Site settings
+#theme: alembic-jekyll-theme
 encoding: utf-8 # Make sure the encoding is right
 title: "ethanswan.com"
 baseurl: ""
 name: Ethan Swan
 repo: "https://github.com/eswan18/eswan18.github.io"
+repository: "eswan18/eswan18.github.io"
 email: "ethanpswan@gmail.com"
 
 # 9. Site navigation
