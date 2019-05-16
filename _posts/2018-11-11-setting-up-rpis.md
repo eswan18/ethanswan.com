@@ -5,7 +5,7 @@ categories:
 - Tutorials
 - Technology
 title: Setting Up Raspberry Pis (the Full Version)
-image: "/images/rpi3.jpg"
+preview_image: "/images/rpi3.jpg"
 ---
 
 <center><img src="/images/rpi3.jpg"/></center>

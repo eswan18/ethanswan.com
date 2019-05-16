@@ -7,8 +7,14 @@
 
             <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
             {% include post-meta.html %}
-            {{ page.excerpt | markdownify | truncatewords: 60 }}
-
+            <div class="post-excerpt">
+              {% if page.preview_image %}
+                <a href="{{ site.baseurl}}{{ page.url }}">
+                  <img class="preview-image" src="{{ page.preview_image }}"/>
+                </a>
+              {% endif %}
+              {{ page.excerpt | strip_html | truncatewords: 60 }}
+            </div>
           </article>
         </li>
       {% endfor %}
@@ -24,6 +30,9 @@
 
             <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
             {% include post-meta.html %}
+            {% if page.preview_image %}
+            <img class="preview-image" src="{{ page.preview_image }}"/>
+            {% endif %}
             {{ page.excerpt | markdownify | truncatewords: 60 }}
 
           </article>

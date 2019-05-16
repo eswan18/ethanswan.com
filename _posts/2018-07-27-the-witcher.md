@@ -4,7 +4,7 @@ date: 2018-07-27
 categories:
 - Gaming
 title: A Non-Gamer Takes on The Witcher 3
-image: "/images/witcher_3_welcome.jpg"
+preview_image: "/images/witcher_3_welcome.jpg"
 ---
 
 <center><img alt="Witcher 3 Welcome" src="/images/witcher_3_welcome.jpg"/></center>
