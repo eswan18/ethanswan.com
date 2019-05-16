@@ -12,6 +12,10 @@ layout: default
     {% include post-meta.html %}
     {{ content }}
 
+    {% if page.external_link %}
+    <center><a class="external-link" href="{{ page.external_link }}">Link</a></center>
+    {% endif %}
+
     {% include nav-share.html %}
 
     {% include post-comments.html %}

@@ -14,7 +14,12 @@
                 </a>
               {% endif %}
               {{ page.excerpt | strip_html | truncatewords: 60 }}
+              {% if page.external_link %}
+                <br>
+                <center><a class="external-link" href="{{ page.external_link }}">Link</a></center>
+              {% endif %}
             </div>
+            <div class="post-excerpt-divider"></div>
           </article>
         </li>
       {% endfor %}
