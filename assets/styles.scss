@@ -35,6 +35,13 @@ table.coffee-shops td:nth-child(n+3) {
 .article--post h2 {
     font-size: 1.5em;
 }
+/* Images in posts */
+.article--post img {
+    border: 1px solid gray;
+    padding: 5px;
+}
+/* Images in post previews */
+/* MUST be after the above (images in posts) */
 img.preview-image {
     border: 1px solid $linkColour;
     padding: 5px;
