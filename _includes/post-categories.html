@@ -9,7 +9,21 @@
           <article class="article  article--post  typeset">
             <h3><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h3>
             {% include post-meta.html %}
-            {{ page.excerpt | truncatewords: 60 | markdownify }}
+            <div class="post-excerpt">
+              {% if page.preview_image %}
+                <a href="{{ site.baseurl}}{{ page.url }}">
+                  <img class="preview-image" src="{{ page.preview_image }}"/>
+                </a>
+              {% endif %}
+              {{ page.excerpt | strip_html | truncatewords: 60 }}
+              {% if page.external_link %}
+                <br>
+                <center><a class="external-link" href="{{ page.external_link }}">Link</a></center>
+              {% endif %}
+            </div>
+            {% unless forloop.last %}
+            <div class="post-excerpt-divider"></div>
+            {% endunless %}
           </article>
         </li>
       {% endfor %}
