@@ -51,6 +51,11 @@ collections:
     title: "Coffee Shops"
     output: true
     description: "The coffee shops of Cincinnati"
+  courses:
+    title: "Training Courses"
+    output: true
+    description: "sdf"
+
 
 # 7. Site settings
 #theme: alembic-jekyll-theme
@@ -76,9 +81,10 @@ favicons: # Favicons are also used in the manifest file. Syntax is 'size: path'
 # 9. Site navigation
 navigation_header:
   Blog: /
+  Training: /training/
   About Me: /about_me/
-  Coffee Shops: /coffee_shops/
   Recommended Content: /recommended_content/
+  Coffee Shops: /coffee_shops/
 social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
   Twitter: https://twitter.com/eswan18
   LinkedIn: https://www.linkedin.com/in/ethanpswan

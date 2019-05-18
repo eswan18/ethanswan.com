@@ -30,7 +30,7 @@ table.coffee-shops td:nth-child(n+3) {
     text-align: center;
 }
 /****************/
-/* Posts */
+/* Posts        */
 /****************/
 .article--post h2 {
     font-size: 1.5em;
@@ -53,4 +53,24 @@ div.post-excerpt-divider {
 }
 a.external-link {
     text-align: center;
+}
+/****************/
+/* Training     */
+/****************/
+table.training-courses {
+    max-width: 100%;
+    border: 1px solid gray;
+    display: table;
+}
+table.training-courses td {
+    vertical-align: top;
+    padding: 1em;
+}
+td.course-name, td.course-upcoming-date {
+    background-color: gray;
+    color: white;
+    text-align: center;
+}
+td.course-content ol {
+    padding: 0em 0em 0em 2em;
 }
