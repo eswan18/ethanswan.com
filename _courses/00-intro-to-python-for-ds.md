@@ -1,6 +1,8 @@
 ---
 name: Introduction to Python for Data Science
+subtitle: "In partnership with the University of Cincinnati Center for Business Analytics"
 upcoming-date: May 16 and 17, 2019
+materials-link: https://github.com/uc-python/intro-python-datasci
 ---
 This short course provides a gentle, hands-on introduction to the Python programming language for data science applications. You will learn the fundamentals of Python as a language and how to work with data using the pandas library.
 
