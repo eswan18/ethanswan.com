@@ -1,7 +1,7 @@
 ---
 name: Introduction to Python for Data Science
 subtitle: "In partnership with the University of Cincinnati Center for Business Analytics"
-upcoming-date: May 16 and 17, 2019
+upcoming-date: September 12 and 13, 2019
 materials-link: https://github.com/uc-python/intro-python-datasci
 ---
 This is a two-day course that provides a gentle, hands-on introduction to the Python programming language for data science applications.
