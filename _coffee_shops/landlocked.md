@@ -1,7 +1,7 @@
 ---
 name: Landlocked Social House
 link: http://landlockedsocialhouse.com/
-apple_pay: Y
+apple_pay: true
 wifi: 😍
 rating: 3
 ---

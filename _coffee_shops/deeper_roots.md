@@ -1,7 +1,7 @@
 ---
 name: Deeper Roots
 link: https://www.deeperrootscoffee.com/
-apple_pay: Y
+apple_pay: true
 wifi: 🙂
 rating: 6
 ---

@@ -1,7 +1,7 @@
 ---
 name: Hyde Perk
 link: https://www.hydeperkcoffee.com/
-apple_pay: Y
+apple_pay: true
 wifi: 🙂
 rating: 5
 ---

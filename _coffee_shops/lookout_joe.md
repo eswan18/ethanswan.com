@@ -1,7 +1,7 @@
 ---
 name: Lookout Joe
 link: http://www.lookoutjoe.com/
-apple_pay: Y
+apple_pay: true
 wifi: 🙁
 rating: 7
 ---

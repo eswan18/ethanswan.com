@@ -1,7 +1,7 @@
 ---
 name: Sidewinder
 link: http://www.sidewindercoffee.com/
-apple_pay: N
+apple_pay: false
 wifi: 😍
 rating: 8
 ---

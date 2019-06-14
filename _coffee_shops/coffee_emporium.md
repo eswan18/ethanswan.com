@@ -1,7 +1,7 @@
 ---
 name: Coffee Emporium
 link: https://www.coffee-emporium.com/
-apple_pay: N
+apple_pay: false
 wifi: 😱
 rating: 2
 ---

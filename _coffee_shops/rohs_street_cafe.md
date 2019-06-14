@@ -1,7 +1,7 @@
 ---
 name: Rohs Street Cafe
 link: https://www.rohsstreetcafe.com/
-apple_pay: Y
+apple_pay: true
 wifi: 🙁
 rating: 5
 ---

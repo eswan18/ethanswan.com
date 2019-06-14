@@ -8,32 +8,55 @@ Reviewing local coffee shops has allowed me to pursue two of my favorite hobbies
 The following are arranged from highest- to lowest-rated.
 <br><br>
 
-<table class="coffee-shops">
-<!--Headers-->
-<tr>
-<th>Coffee Shop</th>
-<th>Description</th>
-<th>Apple Pay?</th>
-<th>WiFi</th>
-<th>Rating</th>
-</tr>
-<!--One row per coffee shop-->
 {% assign shops = site.coffee_shops | sort: 'rating' %}
 {% for shop in shops reversed %}
+<div class="coffee-shop">
+<table>
 <tr>
+<th colspan="3">
     {% if shop.link %}
-        <td><b><a href="{{ shop.link }}">{{ shop.name }}</a></b></td>
+        <h3><b><a href="{{ shop.link }}">{{ shop.name }}</a></b></h3>
     {% else %}
-        <td>{{ shop.name }}</td>
+        <h3>{{ shop.name }}</h3>
     {% endif %}
+</th>
+</tr><tr>
+<td colspan="3" class="coffee-shop-desc">
     <!--The content comes in with <p> tags that mess up formatting. Remove-->
     {% assign newcontent=shop.content | markdownify | replace: '<p>', '' %}
     {% assign newcontent=newcontent | replace: '</p>', '' %}
-    <td>{{ newcontent }}</td>
-    <td>{{ shop.apple_pay }}</td>
-    <td>{{ shop.wifi }}</td>
-    <td>{{ shop.rating }}</td>
+    {{ newcontent }}
+</td>
+</tr><tr>
+<td class="coffee-shop-attr">
+  <span class="coffee-shop-attr-name">
+    Apple Pay
+  </span>
+  <br>
+  <span class="coffee-shop-attr-value">
+    {% if shop.apple_pay %}Yes{% else %}No{% endif %}
+  </span>
+</td>
+<td class="coffee-shop-attr">
+  <span class="coffee-shop-attr-name">
+    WiFi
+  </span>
+  <br>
+  <span class="coffee-shop-attr-value">
+    {{ shop.wifi }}
+  </span>
+</td>
+<td class="coffee-shop-attr">
+  <span class="coffee-shop-attr-name">
+    Overall Rating
+  </span>
+  <br>
+  <span class="coffee-shop-attr-value">
+    {{ shop.rating }}
+  </span>
+</td>
 </tr>
-{% endfor %}
 </table>
-
+</div>
+{% endfor %}
+<br>

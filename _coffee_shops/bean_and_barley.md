@@ -1,7 +1,7 @@
 ---
 name: Bean and Barley
 link: https://beanandbarley.co
-apple_pay: Y
+apple_pay: true
 wifi: 😍
 rating: 10
 ---

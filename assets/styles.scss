@@ -29,6 +29,29 @@ table.coffee-shops th {
 table.coffee-shops td:nth-child(n+3) {
     text-align: center;
 }
+.coffee-shop {
+    margin: 3em 1em;
+    clear: both;
+}
+.coffee-shop > table {
+    table-layout: fixed;
+}
+.coffee-shop > table th {
+    text-align: center;
+}
+.coffee-shop > table td {
+    text-align: center;
+}
+.coffee-shop > table td.coffee-shop-desc {
+    text-align: left;
+    padding: 1em;
+}
+span.coffee-shop-attr-name {
+    font-size: 0.7em;
+}
+span.coffee-shop-attr-value {
+    font-size: 1.5em;
+}
 /****************/
 /* Posts        */
 /****************/

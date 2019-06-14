@@ -1,7 +1,7 @@
 ---
 name: Starbucks
 link: https://www.starbucks.com/
-apple_pay: Y
+apple_pay: true
 wifi: 😐
 rating: 7
 ---

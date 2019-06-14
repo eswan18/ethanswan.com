@@ -1,7 +1,7 @@
 ---
 name: Carabello
 link: https://www.carabellocoffee.com/
-apple_pay: Y
+apple_pay: true
 wifi: 🙂
 rating: 3
 ---
