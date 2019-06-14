@@ -17,7 +17,7 @@ title: Training
 </tr><tr>
 <td class="course-upcoming-date">
   {% if course.materials-link %}
-  {% include button.html text="Link to Materials" link=course.materials-link %}
+  {% include button.html text="Link to Materials" link=course.materials-link icon="github" %}
   <br>
   {% endif %}
   Next Session: {{ course.upcoming-date }}
