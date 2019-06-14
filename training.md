@@ -16,10 +16,11 @@ title: Training
 <td class="course-content">{{ course.content | markdownify }}</td>
 </tr><tr>
 <td class="course-upcoming-date">
-  Next Session: {{ course.upcoming-date }}
   {% if course.materials-link %}
-  <br><a href="{{ course.materials-link }}" target="_blank">Link to Materials</a>
+  {% include button.html text="Link to Materials" link=course.materials-link %}
+  <br>
   {% endif %}
+  Next Session: {{ course.upcoming-date }}
 </td>
 </tr></table>
 <br>
