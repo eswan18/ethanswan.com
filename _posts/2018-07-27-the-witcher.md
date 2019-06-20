@@ -4,10 +4,10 @@ date: 2018-07-27
 categories:
 - Gaming
 title: A Non-Gamer Takes on The Witcher 3
-preview_image: "/images/witcher_3_welcome.jpg"
+preview_image: "/images/posts/witcher_3_welcome.jpg"
 ---
 
-<center><img alt="Witcher 3 Welcome" src="/images/witcher_3_welcome.jpg"/></center>
+<center><img alt="Witcher 3 Welcome" src="/images/posts/witcher_3_welcome.jpg"/></center>
 
 In March, I finally built a computer for the first time.
 I think this qualified as a seminal moment in the life of a young geek.
@@ -18,7 +18,7 @@ I'm not a gamer, so this was my first foray into the world of PC RPGs (Role Play
 It was a glorious, incredibly high-definition experience.
 <!--more-->
 
-<center><img alt="Witcher 3 Fighting" src="/images/witcher_3_fighting.jpg"/></center>
+<center><img alt="Witcher 3 Fighting" src="/images/posts/witcher_3_fighting.jpg"/></center>
 
 Before launching into my thoughts, some quick background might be useful.
 The Witcher is an adventure game based on a [series of seven books](https://en.wikipedia.org/wiki/The_Witcher) by Polish author Andrzej Sapkowski.
@@ -34,7 +34,7 @@ Not only did I have the advantage of a high-end GPU, but I was also using a 27-i
 My previous experience with modern video games, largely from the PS3, paled in comparison to the game quality in this setup.
 Despite some flaws in gameplay itself, I found the game experience incredibly immersive.
 
-<center><img alt="Witcher 3 Forest" src="/images/witcher_3_forest.jpg"/></center>
+<center><img alt="Witcher 3 Forest" src="/images/posts/witcher_3_forest.jpg"/></center>
 
 So as you've probably gathered, my reviews of "gaming on a gaming rig" are glowing.
 In fact, I think the experience of an RPG on a setup like this is so unexpectedly engrossing that almost anyone would appreciate it.

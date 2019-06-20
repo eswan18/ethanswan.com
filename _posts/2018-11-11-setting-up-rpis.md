@@ -5,10 +5,10 @@ categories:
 - Tutorials
 - Technology
 title: Setting Up Raspberry Pis (the Full Version)
-preview_image: "/images/rpi3.jpg"
+preview_image: "/images/posts/rpi3.jpg"
 ---
 
-<center><img src="/images/rpi3.jpg"/></center>
+<center><img src="/images/posts/rpi3.jpg"/></center>
 
 I've set up three Raspberry Pis over the last two days.
 By *set up*, I mean I burned the disk image to the SD card, got the Pi connected to the network and open to SSH, installed the tools I'm going to want every time, etc.
@@ -58,7 +58,7 @@ Don't insert your SD card yet; we'll do that shortly.
 
 First, download the newest image of Raspbian from [here](https://www.raspberrypi.org/downloads/raspbian/).
 Currently, the download options on the page look like this:
-<center><img src="/images/raspbian_downloads.png"/></center>
+<center><img src="/images/posts/raspbian_downloads.png"/></center>
 It's up to you whether you want the desktop version or lite version; I prefer lite because I almost exclusively use my Pis via SSH (and admittedly I don't much like the Raspbian desktop anyway).
 The lite version is smaller and will make the install faster, and in theory you can always install the other components of the desktop version later.
 Download the zip version and unzip it, which should result in a file ending in `.img`.
@@ -188,7 +188,7 @@ sudo raspi-config
 ```
 If prompted for your password, enter *raspberry* again.
 Your terminal will change to look something like this:
-<center><img src="/images/raspi-config.png"/></center>
+<center><img src="/images/posts/raspi-config.png"/></center>
 
 We're going to use this to configure some basic stuff.
 
