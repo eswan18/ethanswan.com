@@ -23,6 +23,10 @@ title: Courses
   {% include button.html text="Link to Materials" link=course.materials-link icon="github" %}
   <br>
   {% endif %}
+  {% if course.page-link %}
+  {% include button.html text="Course Page" link=course.page-link %}
+  <br>
+  {% endif %}
   Next Session: {{ course.upcoming-date }}
 </td>
 </tr></table>
