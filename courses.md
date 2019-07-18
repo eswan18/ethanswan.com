@@ -7,6 +7,9 @@ title: Courses
 {% for course in site.courses %}
 <table class="training-courses"><tr>
 <td class="course-name">
+  {% if course.type %}
+  <h6>{{ course.type }}</h6>
+  {% endif %}
   <h4>{{ course.name }}</h4>
   {% if course.subtitle %}
   <br><i>{{ course.subtitle }}</i>
