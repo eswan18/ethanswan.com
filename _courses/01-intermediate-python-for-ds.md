@@ -1,7 +1,7 @@
 ---
 name: Intermediate Python for Data Science
 subtitle: "In partnership with the University of Cincinnati Center for Business Analytics"
-upcoming-date: June 27 and 28, 2019
+upcoming-date: October 31 and November 1, 2019
 materials-link: https://github.com/uc-python/intermediate-python-datasci
 ---
 This is a two-day course that provides more detailed coverage of how programming with Python can make working with data easier, while diving deeper into the Python data science ecosystem.

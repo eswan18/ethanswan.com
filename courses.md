@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Training
+title: Courses
 ---
 
 

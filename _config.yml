@@ -79,10 +79,10 @@ favicons: # Favicons are also used in the manifest file. Syntax is 'size: path'
 # 9. Site navigation
 navigation_header:
   Blog: /
-  Training: /training/
-  About Me: /about_me/
+  Courses: /courses/
   Recommended Content: /recommended_content/
   Coffee Shops: /coffee_shops/
+  About Me: /about_me/
 social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
   Twitter: https://twitter.com/eswan18
   LinkedIn: https://www.linkedin.com/in/ethanpswan
