@@ -38,6 +38,8 @@ The intended schedule is below.
 ### Course Agenda
 Class sessions will be structured as 110 minutes of lecture, a 10-minute break, and 110 minutes of lab.
 Additional breaks will be given if time permits.
+
+*Exact course agenda is coming soon.*
 - Session 1
   - Lecture:
   - Lab:
