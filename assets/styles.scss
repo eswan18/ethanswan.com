@@ -6,6 +6,12 @@ styles: true
 @import "alembic";
 
 /****************/
+/* General      */
+/****************/
+table td {
+  min-width: 8em;
+}
+/****************/
 /* Coffee Shops */
 /****************/
 table.coffee-shops {
