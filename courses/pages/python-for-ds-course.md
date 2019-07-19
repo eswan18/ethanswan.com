@@ -4,7 +4,7 @@ title: Python for Data Science
 ---
 
 A 7-week, 2-credit hour course focused on using Python for data science.
-Topics include data wrangling, interaction with data sources, visualiation, running scripts, the Python ecosystem, functions, and modeling.
+Topics include data wrangling, interaction with data sources, visualization, running scripts, the Python ecosystem, functions, and modeling.
 
 ### Primary Objectives
 1. Expose students to the Python data science ecosystem's libraries, capabilities, and vocabularly.

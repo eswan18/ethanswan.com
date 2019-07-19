@@ -7,7 +7,7 @@ page-link: /courses/pages/python-for-ds-course
 ---
 ##### Description
 This is a 7-week, 2-credit hour course focused on using Python for data science.
-Topics include data wrangling, interaction with data sources, visualiation, running scripts, the Python ecosystem, functions, and modeling.
+Topics include data wrangling, interaction with data sources, visualization, running scripts, the Python ecosystem, functions, and modeling.
 
 ##### Objectives
 1. Expose students to the Python data science ecosystem's libraries, capabilities, and vocabularly.
