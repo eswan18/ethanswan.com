@@ -18,6 +18,15 @@ The one-day bootcamp begins at 8am and finishes at 5pm or a little earlier.
 Materials can be found in the notebooks folder of the [*Intro to Python for Data Science* repository](https://github.com/uc-python/intro-python-datasci).
 The intended schedule is below.
 
+{% comment %}
+Super hack! I need to style [only] this particulary table but it's generated from a markdown file. This approach is stylistically terrible for a variety of reasons -- but it works.
+{% endcomment %}
+<style>
+table td{
+  border-top: 1px solid lightgray;
+}
+</style>
+
 | Time        | Content                                                              |  Materials | 
 |-------------|----------------------------------------------------------------------|------------|
 | 8:00-8:15   | Introduction of your instructor; overview of the day's agenda        |            |
@@ -35,6 +44,7 @@ The intended schedule is below.
 | 4:15-5:00   | Questions, Discussion, and Review                                    |       |
 
 <br>
+
 ### Course Agenda
 Class sessions will be structured as 110 minutes of lecture, a 10-minute break, and 110 minutes of lab.
 Additional breaks will be given if time permits.
