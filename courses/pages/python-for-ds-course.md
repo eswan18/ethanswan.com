@@ -14,6 +14,18 @@ Topics include data wrangling, interaction with data sources, visualization, run
 5. Expose students to modeling via scikit-learn and discuss the fundamentals of building models in Python.
 6. Teach students how and when to teach themselves, through a discussion of widely-available Python resources.
 
+### Pre-work
+I try to limit pre-work as much as possible, but having Python, Jupyter, and the relevant packages installed is an unavoidable necessity.
+Below are instructions to do so via Anaconda (a popular Python distribution):
+1. Visit the Anaconda download page
+2. Select your appropriate operating system
+3. Click the "Download" button for Python 3.7 - this will begin to download the Anaconda installer
+4. Open the installer when the download completes, and then follow the prompts. If you are prompted about installing PyCharm, elect not to do so.
+5. Once installed, open the Anaconda Navigator and launch a Jupyter Notebook to ensure it works.
+6. Follow the package installation instructions to ensure pandas and seaborn packages are installed.
+
+I would also suggest, but not mandate, reading [the preface](https://jakevdp.github.io/PythonDataScienceHandbook/00.00-preface.html) and [Chapter 1](https://jakevdp.github.io/PythonDataScienceHandbook/01.00-ipython-beyond-normal-python.html) of the Python Data Science Handbook for an overview of data science and to gain familiarity with the Python environment and Jupyter notebooks.
+
 ### Bootcamp Agenda
 The one-day bootcamp begins at 8am and finishes at 5pm or a little earlier.
 Materials can be found in the notebooks folder of the [*Intro to Python for Data Science* repository](https://github.com/uc-python/intro-python-datasci).
@@ -50,24 +62,24 @@ table td{
 Class sessions will be structured as 110 minutes of lecture, a 10-minute break, and 110 minutes of lab.
 Additional breaks will be given if time permits.
 
-- Session 1: **Refresher on Python and DataFrames; Importing and Exporting Beyond CSVs; Reshaping and Melting**
-  - Lab:
-  - Homework:
-- Session 2: **Control Flow; Functions; the `DataFrame.apply` Method**
-  - Lab:
-  - Homework:
-- Session 3: **Modeling and Feature Engineering**
-  - Lab:
-  - Homework:
-- Session 4: **Conda Environments; the Python REPL; Running Non-interactive Scripts**
-  - Lab:
-  - Homework:
-- Session 5: **Visualization with Seaborn and Matplotlib**
-  - Lab:
-  - Homework:
-- Session 6: **Object-oriented Programming; Deep-dive on Pandas DataFrames**
-  - Lab:
-  - Homework:
-- Session 7: **Bonus Topics -- Flask and RESTful APIs; Version Control with Git and GitHub; Python Packaging**
-  - Lab:
-  - Homework: None
+- *Session 1*: **Refresher on Python and DataFrames; Importing and Exporting Beyond CSVs; Reshaping and Melting**
+  - *Supplemental Reading*: [The Python Data Science Handbook, starting at the beginning of Chapter 3 up to and including Pivot Tables](https://jakevdp.github.io/PythonDataScienceHandbook/03.00-introduction-to-pandas.html)
+  - *Lab*:
+- *Session 2*: **Control Flow; Functions; the `DataFrame.apply` Method**
+  - *Supplemental Reading*:
+  - *Lab*:
+- *Session 3*: **Modeling and Feature Engineering**
+  - *Supplemental Reading*: [The Python Data Science Handbook, Chapter 5](https://jakevdp.github.io/PythonDataScienceHandbook/05.00-machine-learning.html)
+  - *Lab*:
+- *Session 4*: **Conda Environments; the Python REPL; Running Non-interactive Scripts**
+  - *Supplemental Reading*:
+  - *Lab*:
+- *Session 5*: **Visualization with Seaborn and Matplotlib**
+  - *Supplemental Reading*: [The Python Data Science Handbook, Chapter 4](https://jakevdp.github.io/PythonDataScienceHandbook/04.00-introduction-to-matplotlib.html)
+  - *Lab*:
+- *Session 6*: **Classes and Objects in Python; Deep-dive on Pandas DataFrames**
+  - *Supplemental Reading*: [The Python Data Science Handbook, from Vectorized String Operations to the end of the Chapter 3](https://jakevdp.github.io/PythonDataScienceHandbook/03.10-working-with-strings.html); [The Python Data Science Handbook, Chapter 2](https://jakevdp.github.io/PythonDataScienceHandbook/02.00-introduction-to-numpy.html)
+  - *Lab*:
+- *Session 7*: **Bonus Topics -- Flask and RESTful APIs; Version Control with Git and GitHub; Python Packaging**
+  - *Supplemental Reading*:
+  - *Lab*:
