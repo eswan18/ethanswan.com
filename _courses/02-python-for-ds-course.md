@@ -14,5 +14,6 @@ Topics include data wrangling, interaction with data sources, visualization, run
 2. Build students' proficiency in the core data wrangling skills: importing data, reshaping data, transforming data, and exporting data.
 3. Develop students' ability to use Python within both interactive (Jupyter, REPL) and non-interactive (scripts) environments.
 4. Explore various methods of producing output in Python: plotting, exporting various data formats, converting notebooks to static files as deliverables, and writing to a SQL database.
-5. Teach students how and when to teach themselves, through a discussion of widely-available Python resources.
+5. Expose students to modeling via scikit-learn and discuss the fundamentals of building models in Python.
+6. Teach students how and when to teach themselves, through a discussion of widely-available Python resources.
 

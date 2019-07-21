@@ -11,7 +11,8 @@ Topics include data wrangling, interaction with data sources, visualization, run
 2. Build students' proficiency in the core data wrangling skills: importing data, reshaping data, transforming data, and exporting data.
 3. Develop students' ability to use Python within both interactive (Jupyter, REPL) and non-interactive (scripts) environments.
 4. Explore various methods of producing output in Python: plotting, exporting various data formats, converting notebooks to static files as deliverables, and writing to a SQL database.
-5. Teach students how and when to teach themselves, through a discussion of widely-available Python resources.
+5. Expose students to modeling via scikit-learn and discuss the fundamentals of building models in Python.
+6. Teach students how and when to teach themselves, through a discussion of widely-available Python resources.
 
 ### Bootcamp Agenda
 The one-day bootcamp begins at 8am and finishes at 5pm or a little earlier.
@@ -29,7 +30,7 @@ table td{
 
 | Time        | Content                                                              |  Materials | 
 |-------------|----------------------------------------------------------------------|------------|
-| 8:00-8:15   | Introduction of your instructor; overview of the day's agenda        |            |
+| 8:00-8:15   | Introduction of Your Instructor; Overview of the Day's Agenda        |            |
 | 8:15-8:45   | Basics of Python and Jupyter                                         | [Notebook 1](https://github.com/uc-python/intro-python-datasci/blob/master/notebooks/01-Python-and-Jupyter.ipynb) |
 | 8:45-9:30   | Python Fundamentals                                                  | [Notebook 2](https://github.com/uc-python/intro-python-datasci/blob/master/notebooks/02-Fundamentals.ipynb) |
 | 9:30-10:15  | The Mental Model of Python                                           | [Notebook 3](https://github.com/uc-python/intro-python-datasci/blob/master/notebooks/03-Packages-Modules-Function.ipynb) |
@@ -49,32 +50,24 @@ table td{
 Class sessions will be structured as 110 minutes of lecture, a 10-minute break, and 110 minutes of lab.
 Additional breaks will be given if time permits.
 
-*Exact course agenda is coming soon.*
-- Session 1
-  - Lecture:
+- Session 1: **Refresher on Python and DataFrames; Importing and Exporting Beyond CSVs; Reshaping and Melting**
   - Lab:
   - Homework:
-- Session 2
-  - Lecture:
+- Session 2: **Control Flow; Functions; the `DataFrame.apply` Method**
   - Lab:
   - Homework:
-- Session 3
-  - Lecture:
+- Session 3: **Modeling and Feature Engineering**
   - Lab:
   - Homework:
-- Session 4
-  - Lecture:
+- Session 4: **Conda Environments; the Python REPL; Running Non-interactive Scripts**
   - Lab:
   - Homework:
-- Session 5
-  - Lecture:
+- Session 5: **Visualization with Seaborn and Matplotlib**
   - Lab:
   - Homework:
-- Session 6
-  - Lecture:
+- Session 6: **Object-oriented Programming; Deep-dive on Pandas DataFrames**
   - Lab:
   - Homework:
-- Session 7
-  - Lecture:
+- Session 7: **Bonus Topics -- Flask and RESTful APIs; Version Control with Git and GitHub; Python Packaging**
   - Lab:
-  - Homework:
+  - Homework: None
