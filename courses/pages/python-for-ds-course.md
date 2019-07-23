@@ -67,6 +67,9 @@ Additional breaks will be given if time permits.
   - *Lab*:
 - *Session 2*: **Control Flow; Functions; the `DataFrame.apply` Method**
   - *Supplemental Reading*:
+    - Functions: [How to Think Like a Computer Scientist, Chapter 4](http://openbookproject.net/thinkcs/python/english3e/functions.html)
+    - Conditionals: [How to Think Like a Computer Scientist, Sections 5.1-5.8](http://openbookproject.net/thinkcs/python/english3e/conditionals.html)
+    - Iteration: [How to Think Like a Computer Scientist, Sections 7.1-7.4](http://openbookproject.net/thinkcs/python/english3e/iteration.html)
   - *Lab*:
 - *Session 3*: **Modeling and Feature Engineering**
   - *Supplemental Reading*: [The Python Data Science Handbook, Chapter 5](https://jakevdp.github.io/PythonDataScienceHandbook/05.00-machine-learning.html)
@@ -78,7 +81,10 @@ Additional breaks will be given if time permits.
   - *Supplemental Reading*: [The Python Data Science Handbook, Chapter 4](https://jakevdp.github.io/PythonDataScienceHandbook/04.00-introduction-to-matplotlib.html)
   - *Lab*:
 - *Session 6*: **Classes and Objects in Python; Deep-dive on Pandas DataFrames**
-  - *Supplemental Reading*: [The Python Data Science Handbook, from Vectorized String Operations to the end of the Chapter 3](https://jakevdp.github.io/PythonDataScienceHandbook/03.10-working-with-strings.html); [The Python Data Science Handbook, Chapter 2](https://jakevdp.github.io/PythonDataScienceHandbook/02.00-introduction-to-numpy.html)
+  - *Supplemental Reading*:
+    - Classes and Objects: [How to Think Like a Computer Scientist, Sections 15.1-15.5, 15.8-15.11](http://openbookproject.net/thinkcs/python/english3e/classes_and_objects_I.html)
+    - Numpy arrays: [The Python Data Science Handbook, Chapter 2](https://jakevdp.github.io/PythonDataScienceHandbook/02.00-introduction-to-numpy.html)
+    - DataFrames: [The Python Data Science Handbook, from Vectorized String Operations to the end of the Chapter 3](https://jakevdp.github.io/PythonDataScienceHandbook/03.10-working-with-strings.html)
   - *Lab*:
 - *Session 7*: **Bonus Topics -- Flask and RESTful APIs; Version Control with Git and GitHub; Python Packaging**
   - *Supplemental Reading*:
