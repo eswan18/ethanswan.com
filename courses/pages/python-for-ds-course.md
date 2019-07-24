@@ -63,7 +63,7 @@ Class sessions will be structured as 110 minutes of lecture, a 10-minute break, 
 Additional breaks will be given if time permits.
 
 - *Session 1*: **Refresher on Python and DataFrames; Importing and Exporting Beyond CSVs; Reshaping and Melting**
-  - *Supplemental Reading*: [The Python Data Science Handbook, starting at the beginning of Chapter 3 up to and including Pivot Tables](https://jakevdp.github.io/PythonDataScienceHandbook/03.00-introduction-to-pandas.html)
+  - *Supplemental Reading*: [The Python Data Science Handbook, starting at the beginning of Chapter 3 up to and including the "Pivot Tables" section](https://jakevdp.github.io/PythonDataScienceHandbook/03.00-introduction-to-pandas.html)
   - *Lab*:
 - *Session 2*: **Control Flow; Functions; the `DataFrame.apply` Method**
   - *Supplemental Reading*:
@@ -76,6 +76,8 @@ Additional breaks will be given if time permits.
   - *Lab*:
 - *Session 4*: **Conda Environments; the Python REPL; Running Non-interactive Scripts**
   - *Supplemental Reading*:
+    - Conda: [This contrast of Conda and Pip, in function and usage](https://www.anaconda.com/understanding-conda-and-pip/)
+    - The Python REPL and Python scripts: [This post on Real Python, up to the "Using importlib and imp" section](https://realpython.com/run-python-scripts/)
   - *Lab*:
 - *Session 5*: **Visualization with Seaborn and Matplotlib**
   - *Supplemental Reading*: [The Python Data Science Handbook, Chapter 4](https://jakevdp.github.io/PythonDataScienceHandbook/04.00-introduction-to-matplotlib.html)
@@ -84,8 +86,10 @@ Additional breaks will be given if time permits.
   - *Supplemental Reading*:
     - Classes and Objects: [How to Think Like a Computer Scientist, Sections 15.1-15.5, 15.8-15.11](http://openbookproject.net/thinkcs/python/english3e/classes_and_objects_I.html)
     - Numpy arrays: [The Python Data Science Handbook, Chapter 2](https://jakevdp.github.io/PythonDataScienceHandbook/02.00-introduction-to-numpy.html)
-    - DataFrames: [The Python Data Science Handbook, from Vectorized String Operations to the end of the Chapter 3](https://jakevdp.github.io/PythonDataScienceHandbook/03.10-working-with-strings.html)
+    - DataFrames: [The Python Data Science Handbook, from the "Vectorized String Operations" section to the end of the Chapter 3](https://jakevdp.github.io/PythonDataScienceHandbook/03.10-working-with-strings.html)
   - *Lab*:
-- *Session 7*: **Bonus Topics -- Flask and RESTful APIs; Version Control with Git and GitHub; Python Packaging**
+- *Session 7*: **Bonus Topics -- Flask and RESTful APIs; Version Control with Git and GitHub; Python Packaging** (as time allows)
   - *Supplemental Reading*:
+    - Version Control: [Atlassian's Explanation of Version Control](https://www.atlassian.com/git/tutorials/what-is-version-control)
+    - Git: [The "Version Control with Git" section of Atlassian's Explanation of Git](https://www.atlassian.com/git/tutorials/what-is-git#version-control-with-git)
   - *Lab*:
