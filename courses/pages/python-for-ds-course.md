@@ -93,3 +93,8 @@ Additional breaks will be given if time permits.
     - Version Control: [Atlassian's Explanation of Version Control](https://www.atlassian.com/git/tutorials/what-is-version-control)
     - Git: [The "Version Control with Git" section of Atlassian's Explanation of Git](https://www.atlassian.com/git/tutorials/what-is-git#version-control-with-git)
   - *Lab*:
+
+### Course Grading
+- 30% Assignments (Completion-based, 5% each)
+- 10% Final Exam
+- 60% Course Project
