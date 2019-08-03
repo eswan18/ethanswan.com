@@ -6,25 +6,13 @@ title: Python for Data Science
 A 7-week, 2-credit hour course focused on using Python for data science.
 Topics include data wrangling, interaction with data sources, visualization, running scripts, the Python ecosystem, functions, and modeling.
 
-### Primary Objectives
-1. Expose students to the Python data science ecosystem's libraries, capabilities, and vocabularly.
-2. Build students' proficiency in the core data wrangling skills: importing data, reshaping data, transforming data, and exporting data.
-3. Develop students' ability to use Python within both interactive (Jupyter, REPL) and non-interactive (scripts) environments.
-4. Explore various methods of producing output in Python: plotting, exporting various data formats, converting notebooks to static files as deliverables, and writing to a SQL database.
-5. Expose students to modeling via scikit-learn and discuss the fundamentals of building models in Python.
-6. Teach students how and when to teach themselves, through a discussion of widely-available Python resources.
-
-### Pre-work
-I try to limit pre-work as much as possible, but having Python, Jupyter, and the relevant packages installed is an unavoidable necessity.
-Below are instructions to do so via Anaconda (a popular Python distribution):
-1. Visit the Anaconda download page
-2. Select your appropriate operating system
-3. Click the "Download" button for Python 3.7 - this will begin to download the Anaconda installer
-4. Open the installer when the download completes, and then follow the prompts. If you are prompted about installing PyCharm, elect not to do so.
-5. Once installed, open the Anaconda Navigator and launch a Jupyter Notebook to ensure it works.
-6. Follow the package installation instructions to ensure pandas and seaborn packages are installed.
-
-I would also suggest, but not mandate, reading [the preface](https://jakevdp.github.io/PythonDataScienceHandbook/00.00-preface.html) and [Chapter 1](https://jakevdp.github.io/PythonDataScienceHandbook/01.00-ipython-beyond-normal-python.html) of the Python Data Science Handbook for an overview of data science and to gain familiarity with the Python environment and Jupyter notebooks.
+### Page Contents<br>
+[Bootcamp Agenda](#bootcamp-agenda)<br>
+[Course Objectives](#primary-objectives)<br>
+[Course Pre-work](#pre-work)<br>
+[Course Agenda](#course-agenda)<br>
+[Course Grading](#course-grading)<br>
+[Course Project](#course-project)<br>
 
 ### Bootcamp Agenda
 The one-day bootcamp begins at 8am and finishes at 5pm or a little earlier.
@@ -57,6 +45,26 @@ table td{
 | 4:15-5:00   | Questions, Discussion, and Review                                    |       |
 
 <br>
+
+### Primary Objectives
+1. Expose students to the Python data science ecosystem's libraries, capabilities, and vocabularly.
+2. Build students' proficiency in the core data wrangling skills: importing data, reshaping data, transforming data, and exporting data.
+3. Develop students' ability to use Python within both interactive (Jupyter, REPL) and non-interactive (scripts) environments.
+4. Explore various methods of producing output in Python: plotting, exporting various data formats, converting notebooks to static files as deliverables, and writing to a SQL database.
+5. Expose students to modeling via scikit-learn and discuss the fundamentals of building models in Python.
+6. Teach students how and when to teach themselves, through a discussion of widely-available Python resources.
+
+### Pre-work
+I try to limit pre-work as much as possible, but having Python, Jupyter, and the relevant packages installed is an unavoidable necessity.
+Below are instructions to do so via Anaconda (a popular Python distribution):
+1. Visit the Anaconda download page
+2. Select your appropriate operating system
+3. Click the "Download" button for Python 3.7 - this will begin to download the Anaconda installer
+4. Open the installer when the download completes, and then follow the prompts. If you are prompted about installing PyCharm, elect not to do so.
+5. Once installed, open the Anaconda Navigator and launch a Jupyter Notebook to ensure it works.
+6. Follow the package installation instructions to ensure pandas and seaborn packages are installed.
+
+I would also suggest, but not mandate, reading [the preface](https://jakevdp.github.io/PythonDataScienceHandbook/00.00-preface.html) and [Chapter 1](https://jakevdp.github.io/PythonDataScienceHandbook/01.00-ipython-beyond-normal-python.html) of the Python Data Science Handbook for an overview of data science and to gain familiarity with the Python environment and Jupyter notebooks.
 
 ### Course Agenda
 Class sessions will be structured as 110 minutes of lecture, a 10-minute break, and 110 minutes of lab.
@@ -98,3 +106,5 @@ Additional breaks will be given if time permits.
 - 30% Assignments (Completion-based, 5% each)
 - 10% Final Exam
 - 60% Course Project
+
+### Course Project
