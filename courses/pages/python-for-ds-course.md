@@ -108,3 +108,61 @@ Additional breaks will be given if time permits.
 - 60% Course Project
 
 ### Course Project
+60% of the course grade is based on a final project: **apply the data science skills covered in the course (and optionally, beyond what's covered) to real datasets.**
+The project work must include data wrangling and the creation of a deliverable to explain the group's findings.
+Students may complete the project alone or in teams of up to four;
+however, larger groups will be held to a higher standard.
+
+##### Data
+Teams must use at least two datasets (and more is better!) in their project.
+The data used is at each team's discretion, but I highly recommend selecting data from a domain in which your team has interest and/or expertise, as domain knowledge is an important aspect of using data science in industry -- and it will make the project more enjoyable.
+
+Some suggested data sets:
+- World economic data, such as [this](https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG?view=chart).
+- Something from the FiveThirtyEight [website data](https://data.fivethirtyeight.com) or [GitHub repo](https://github.com/fivethirtyeight/data).
+- Anything else you can find on the internet, within reasonable ethical boundaries. It's straightforward to find [CSVs of baby names over time](https://github.com/hadley/data-baby-names/blob/master/baby-names.csv) or an [API to fetch NBA data](https://github.com/swar/nba_api). You could even scrape a website using Python (see packages like Scrapy and BeautifulSoup). Acquiring the data via an API or scraping will net you extra points, as those are beyond the scope of what we discussed in this course.
+
+##### Rubric
+The project grading system allows for a great deal of flexibility on the students' side.
+Teams earn points by completing tasks on the below list.
+For an individual worker (team of 1), a 100% grade requires 25 points from the list.
+Every additional team member increases the required points by for;
+for example, a team of 3 has 2 extra participants and so must earn 33 (=25 + 2*4) points to earn 100%.
+
+Team Size    | Pts for 100%             | ... for 90% | ... for 80%
+-------------|--------------------------|-------------|-------------
+1            | 25                       | 22.5        | 20
+2            | 29                       | 26.5        | 23.5
+3            | 33                       | 30          | 26.5
+4            | 37                       | 33.5        | 30
+
+<br>
+
+Points | Task
+-------|-----
+      | **Data Acquisition**
+**2** | Acquire a dataset from the internet
+**1** | For **each** dataset acquired and used beyond the first (max 3 additional)
+**2** | Create a dataset yourself to work with other data you found online; e.g. a mapping of state abbreviations to state names.
+|
+      | **Wrangling**
+**4** | Use at least one join
+**3** | Melt and/or reshape your data
+|
+      | **Modeling**
+**1** | For **every** linear model trained and used in your project
+**2** | For **every** nonlinear model trained and used in your project
+|
+      |**Deliverables**
+**0.5**| For **every** statistical metric (mean, median, mode) included in your final deliverable(s)
+**2** | For **each** plot included in your final deliverable(s)
+|
+      | **Meta**
+**10**| Version control your code using a public GitHub repository (easy points -- this makes it infinitely easier for me to grade)
+**Up to 5** | Points at the instructor's discreation, based on overall impressiveness of the project
+|
+      | **Stretch Goals (topics not included in the course)**
+**4** | Pull data from a web-based API
+**6** | Scrape data from a website
+**3** | Create a web dashboard using Dash
+**5** | Train and use a neural network
