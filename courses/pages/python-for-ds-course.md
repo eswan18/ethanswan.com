@@ -1,50 +1,19 @@
 ---
 layout: page
-title: Python for Data Science
+title: Python for Data Science Course
 ---
 
 A 7-week, 2-credit hour course focused on using Python for data science.
 Topics include data wrangling, interaction with data sources, visualization, running scripts, the Python ecosystem, functions, and modeling.
 
+If you are looking for information on the associated bootcamp, click [here](/courses/pages/python-for-ds-bootcamp).
+
 ### Page Contents<br>
-[Bootcamp Agenda](#bootcamp-agenda)<br>
-[Course Objectives](#primary-objectives)<br>
-[Course Pre-work](#pre-work)<br>
-[Course Agenda](#course-agenda)<br>
-[Course Grading](#course-grading)<br>
-[Course Project](#course-project)<br>
-
-### Bootcamp Agenda
-The one-day bootcamp begins at 8am and finishes at 5pm or a little earlier.
-Materials can be found in the notebooks folder of the [*Intro to Python for Data Science* repository](https://github.com/uc-python/intro-python-datasci).
-The intended schedule is below.
-
-{% comment %}
-Super hack! I need to style [only] this particulary table but it's generated from a markdown file. This approach is stylistically terrible for a variety of reasons -- but it works.
-{% endcomment %}
-<style>
-table td{
-  border-top: 1px solid lightgray;
-}
-</style>
-
-| Time        | Content                                                              |  Materials | 
-|-------------|----------------------------------------------------------------------|------------|
-| 8:00-8:15   | Introduction of Your Instructor; Overview of the Day's Agenda        |            |
-| 8:15-8:45   | Basics of Python and Jupyter                                         | [Notebook 1](https://github.com/uc-python/intro-python-datasci/blob/master/notebooks/01-Python-and-Jupyter.ipynb) |
-| 8:45-9:30   | Python Fundamentals                                                  | [Notebook 2](https://github.com/uc-python/intro-python-datasci/blob/master/notebooks/02-Fundamentals.ipynb) |
-| 9:30-10:15  | The Mental Model of Python                                           | [Notebook 3](https://github.com/uc-python/intro-python-datasci/blob/master/notebooks/03-Packages-Modules-Function.ipynb) |
-| 10:15-10:30 | Break                                                                |            |
-| 10:30-11:00 | Importing and Exporting Data                                         | [Notebook 4](https://github.com/uc-python/intro-python-datasci/blob/master/notebooks/04-Importing-Data.ipynb), [Notebook 11](https://github.com/uc-python/intro-python-datasci/blob/master/notebooks/11-Exporting-Data.ipynb) |
-| 11:00-11:45 | Selecting and Filtering Data                                         | [Notebook 5](https://github.com/uc-python/intro-python-datasci/blob/master/notebooks/05-Selecting-and-Filtering.ipynb) |
-| 11:45-1:15  | Lunch                                                                |            |
-| 1:15-2:00   | Manipulating Columns                                                 | [Notebook 6](https://github.com/uc-python/intro-python-datasci/blob/master/notebooks/06-Manipulating-Columns.ipynb) |
-| 2:00-3:00   | Summarizing Data                                                     | [Notebook 8](https://github.com/uc-python/intro-python-datasci/blob/master/notebooks/08-Summarizing-Data.ipynb) |
-| 3:00-3:15   | Break                                                                |              |
-| 3:15-4:15   | Summarizing Data by Group                                            | [Notebook 9](https://github.com/uc-python/intro-python-datasci/blob/master/notebooks/09-Summarizing-Grouped-Data.ipynb) |
-| 4:15-5:00   | Questions, Discussion, and Review                                    |       |
-
-<br>
+[Objectives](#primary-objectives)<br>
+[Pre-work](#pre-work)<br>
+[Agenda](#course-agenda)<br>
+[Grading](#course-grading)<br>
+[Final Project](#course-project)<br>
 
 ### Primary Objectives
 1. Expose students to the Python data science ecosystem's libraries, capabilities, and vocabularly.
@@ -103,13 +72,14 @@ Additional breaks will be given if time permits.
   - *Lab*: Coming Soon
 
 ### Course Grading
-- 30% Assignments (Completion-based, 5% each)
-- 10% Final Exam
-- 60% Course Project
+- **30%** Assignments -- *completion-based, 5% each*
+- **15%** Final Exam
+- **5%** Class Participation -- *asking at least two questions during or after class, in total throughout the course*
+- **50%** Course Project -- *see below*
 
 ### Course Project
-60% of the course grade is based on a final project: **apply the data science skills covered in the course (and optionally, beyond what's covered) to real datasets.**
-The project work must include data wrangling and the creation of a deliverable to explain the group's findings.
+50% of the course grade is based on a final project: **apply the data science skills covered in the course (and optionally, beyond what's covered) to real datasets.**
+The project must include data wrangling and the creation of a deliverable to explain the group's findings.
 Students may complete the project alone or in teams of up to four;
 however, larger groups will be held to a higher standard.
 
@@ -124,45 +94,8 @@ Some suggested data sets:
 
 ##### Rubric
 The project grading system allows for a great deal of flexibility on the students' side.
-Teams earn points by completing tasks on the below list.
-For an individual worker (team of 1), a 100% grade requires 25 points from the list.
-Every additional team member increases the required points by for;
-for example, a team of 3 has 2 extra participants and so must earn 33 (=25 + 2*4) points to earn 100%.
+Teams earn points by completing tasks from a list, with different tasks worth various point values based primarily on two things:
+the difficulty and how integral the task is to the data science workflow.
+Larger teams are expected to earn more points for an equivalent grade.
 
-Team Size    | Pts for 100%             | ... for 90% | ... for 80%
--------------|--------------------------|-------------|-------------
-1            | 25                       | 22.5        | 20
-2            | 29                       | 26.5        | 23.5
-3            | 33                       | 30          | 26.5
-4            | 37                       | 33.5        | 30
-
-<br>
-
-Points | Task
--------|-----
-      | **Data Acquisition**
-**2** | Acquire a dataset from the internet
-**1** | For **each** dataset acquired and used beyond the first (max 3 additional)
-**2** | Create a dataset yourself to work with other data you found online; e.g. a mapping of state abbreviations to state names.
-|
-      | **Wrangling**
-**4** | Use at least one join
-**3** | Melt and/or reshape your data
-|
-      | **Modeling**
-**1** | For **every** linear model trained and used in your project
-**2** | For **every** nonlinear model trained and used in your project
-|
-      |**Deliverables**
-**0.5**| For **every** statistical metric (mean, median, mode) included in your final deliverable(s)
-**2** | For **each** plot included in your final deliverable(s)
-|
-      | **Meta**
-**10**| Version control your code using a public GitHub repository (easy points -- this makes it infinitely easier for me to grade)
-**Up to 5** | Points at the instructor's discreation, based on overall impressiveness of the project
-|
-      | **Stretch Goals (topics not included in the course)**
-**4** | Pull data from a web-based API
-**6** | Scrape data from a website
-**3** | Create a web dashboard using Dash
-**5** | Train and use a neural network
+See the [course rubric page](/courses/rubrics/python-for-ds-course-final-project) for complete details of how projects will be graded.
