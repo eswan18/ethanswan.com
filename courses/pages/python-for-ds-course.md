@@ -16,7 +16,7 @@ If you are looking for information on the associated bootcamp, click [here](/cou
 [Final Project](#course-project)<br>
 
 ### Primary Objectives
-1. Expose students to the Python data science ecosystem's libraries, capabilities, and vocabularly.
+1. Expose students to the Python data science ecosystem's libraries, capabilities, and vocabulary.
 2. Build students' proficiency in the core data wrangling skills: importing data, reshaping data, transforming data, and exporting data.
 3. Develop students' ability to use Python within both interactive (Jupyter, REPL) and non-interactive (scripts) environments.
 4. Explore various methods of producing output in Python: plotting, exporting various data formats, converting notebooks to static files as deliverables, and writing to a SQL database.
