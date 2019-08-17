@@ -81,7 +81,7 @@ navigation_header:
   Blog: /
   Courses: /courses/
   Recommended Content: /recommended_content/
-  Coffee Shops: /coffee_shops/
+  Coffee Shop Ratings: /coffee_shop_ratings/
   About Me: /about_me/
 social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
   Twitter: https://twitter.com/eswan18
