@@ -54,7 +54,7 @@ collections:
   courses:
     title: "Training Courses"
     output: true
-    description: "sdf"
+    description: "Courses I Teach"
 
 
 # 7. Site settings

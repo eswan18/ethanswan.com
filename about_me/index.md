@@ -4,15 +4,15 @@ title: About Me
 ---
 
 {% include figure.html image="/images/sitewide/ethan_headshot_smiling.gif" position="left" width="220" height="330" %}
-{% if site.hello %}![Ethan Headshot](images/sitewide/ethan_headshot_smiling.gif){:height="330px" width="220px"} {% endif %}
-I'm a Cincinnat-based data scientist specializing in technology on the talent development team at <a href="http://www.8451.com">84.51˚</a>, the marketing analytics agency of Kroger.
-On the side, I teach Python courses at the University of Cincinnati and do some freelance data science consulting.
+I'm a Cincinnati-based data scientist and technology specialist. I work on the talent development team at <a href="http://www.8451.com">84.51˚</a>, the marketing analytics agency of Kroger.
+I also teach Python courses at the University of Cincinnati as an adjunct professor and do some freelance data science consulting.
 
-I got my MBA and BS in computer science at Notre Dame, but my interests also include economics, political science, and the NBA.
-In my free time, I like running, pickup sports, and many [many](/rec_content.html) podcasts.
 I contribute to [The Syntact Project](http://syntactproject.com) as an editor, writer, and podcaster --
-find my contributions [here](http://syntactproject.com/contributors/ethan_swan.html) --
-and enjoy dabbling in occasional tech projects, some of which I blog about [here](/).
+find my contributions [here](http://syntactproject.com/contributors/ethan_swan.html).
+I occasionally dabble in personal projects as well, which usually involve Raspberry Pis, Python, or both.
+I blog about some of those projects [here](/).
+
+In my free time, I like run, play pickup sports, and listen to many, [many](/rec_content.html) podcasts.
 
 
 
