@@ -39,7 +39,7 @@ I would also suggest, but not mandate, reading [the preface](https://jakevdp.git
 Class sessions will be structured as 110 minutes of lecture, a 10-minute break, and 110 minutes of lab.
 Additional breaks will be given if time permits.
 
-- *Session 1*: **Refresher on Python and DataFrames; Importing and Exporting Beyond CSVs; Reshaping and Melting**
+- *Session 1*: **Refresher on Python and DataFrames; Importing and Exporting Beyond CSVs; Grouping, Reshaping, and Melting**
   - *Supplemental Reading*: [The Python Data Science Handbook, starting at the beginning of Chapter 3 up to and including the "Pivot Tables" section](https://jakevdp.github.io/PythonDataScienceHandbook/03.00-introduction-to-pandas.html)
   - *Lab*: Coming Soon
 - *Session 2*: **Control Flow; Functions; the `DataFrame.apply` Method**
@@ -51,7 +51,7 @@ Additional breaks will be given if time permits.
 - *Session 3*: **Modeling and Feature Engineering**
   - *Supplemental Reading*: [The Python Data Science Handbook, Chapter 5](https://jakevdp.github.io/PythonDataScienceHandbook/05.00-machine-learning.html)
   - *Lab*: Coming Soon
-- *Session 4*: **Conda Environments; the Python REPL; Running Non-interactive Scripts**
+- *Session 4*: **Conda; the Python REPL; Running Scripts**
   - *Supplemental Reading*:
     - Conda: [This contrast of Conda and Pip, in function and usage](https://www.anaconda.com/understanding-conda-and-pip/)
     - The Python REPL and Python scripts: [This post on Real Python, up to the "Using importlib and imp" section](https://realpython.com/run-python-scripts/)
@@ -59,7 +59,7 @@ Additional breaks will be given if time permits.
 - *Session 5*: **Visualization with Seaborn and Matplotlib**
   - *Supplemental Reading*: [The Python Data Science Handbook, Chapter 4](https://jakevdp.github.io/PythonDataScienceHandbook/04.00-introduction-to-matplotlib.html)
   - *Lab*: Coming Soon
-- *Session 6*: **Classes and Objects in Python; Deep-dive on Pandas DataFrames**
+- *Session 6*: **Classes and Objects; Deep-dive on DataFrames**
   - *Supplemental Reading*:
     - Classes and Objects: [How to Think Like a Computer Scientist, Sections 15.1-15.5, 15.8-15.11](http://openbookproject.net/thinkcs/python/english3e/classes_and_objects_I.html)
     - Numpy arrays: [The Python Data Science Handbook, Chapter 2](https://jakevdp.github.io/PythonDataScienceHandbook/02.00-introduction-to-numpy.html)
