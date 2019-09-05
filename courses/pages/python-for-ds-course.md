@@ -44,17 +44,18 @@ Additional breaks will be given if time permits.
 
 - *Session 1*: **Refresher on Python and DataFrames**
   - *Supplemental Reading*: [The Python Data Science Handbook, starting at the beginning of Chapter 3 up to and including the "Pivot Tables" section](https://jakevdp.github.io/PythonDataScienceHandbook/03.00-introduction-to-pandas.html)
-- *Session 2*: **Importing and Exporting Beyond CSVs; Grouping and Reshaping; Control Flow**
+- *Session 2*: **Importing and Exporting Beyond CSVs; Grouping and Reshaping**
+  - *Supplemental Reading*: Refer to Session 1 reading
+- *Session 3*: **Control Flow; Functions; the `DataFrame.apply` Method**
   - *Supplemental Reading*:
     - Conditionals: [How to Think Like a Computer Scientist, Sections 5.1-5.8](http://openbookproject.net/thinkcs/python/english3e/conditionals.html)
     - Iteration: [How to Think Like a Computer Scientist, Sections 7.1-7.4](http://openbookproject.net/thinkcs/python/english3e/iteration.html)
-- *Session 3*: **Functions; the `DataFrame.apply` Method**
-  - *Supplemental Reading*: [How to Think Like a Computer Scientist, Chapter 4](http://openbookproject.net/thinkcs/python/english3e/functions.html)
+    - Functions: [How to Think Like a Computer Scientist, Chapter 4](http://openbookproject.net/thinkcs/python/english3e/functions.html)
 - *Session 4*: **Modeling and Feature Engineering**
   - *Supplemental Reading*: [The Python Data Science Handbook, Chapter 5](https://jakevdp.github.io/PythonDataScienceHandbook/05.00-machine-learning.html)
 - *Session 5*: **Visualization with Seaborn and Matplotlib**
   - *Supplemental Reading*: [The Python Data Science Handbook, Chapter 4](https://jakevdp.github.io/PythonDataScienceHandbook/04.00-introduction-to-matplotlib.html)
-- *Session 6*: **Version Control with Git and GitHub; High-level Discussion Python Packaging and APIs** (as time allows)
+- *Session 6*: **Version Control with Git and GitHub; High-level Discussion of Python Packaging and APIs** (as time allows)
   - *Supplemental Reading*:
     - Version Control: [Atlassian's Explanation of Version Control](https://www.atlassian.com/git/tutorials/what-is-version-control)
     - Git: [The "Version Control with Git" section of Atlassian's Explanation of Git](https://www.atlassian.com/git/tutorials/what-is-git#version-control-with-git)
