@@ -9,7 +9,7 @@ Topics include data wrangling, interaction with data sources, visualization, run
 If you are looking for information on the associated bootcamp, click [here](/courses/pages/python-for-ds-bootcamp).
 
 ### Links
-[Lecture Slides](https://www.dropbox.com/sh/5hwwqbfx3fep4z5/AADMJTxKB0_ZmSBnt8s8GDaOa?dl=0) | [Labs](https://www.dropbox.com/sh/qyob4c7lmmwlvxo/AADs0aIMezKmE_BTsuk6TbH1a?dl=0)
+[Lecture Slides](https://www.dropbox.com/sh/5hwwqbfx3fep4z5/AADMJTxKB0_ZmSBnt8s8GDaOa?dl=0) | [Labs](https://www.dropbox.com/sh/qyob4c7lmmwlvxo/AADs0aIMezKmE_BTsuk6TbH1a?dl=0) | [Lab Solutions](https://github.com/uc-python/python-for-ds-course/tree/master/lab_solutions)
 
 ### Page Contents<br>
 [Objectives](#primary-objectives)<br>
