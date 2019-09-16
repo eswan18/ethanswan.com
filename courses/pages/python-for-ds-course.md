@@ -51,10 +51,10 @@ Additional breaks will be given if time permits.
     - Conditionals: [How to Think Like a Computer Scientist, Sections 5.1-5.8](http://openbookproject.net/thinkcs/python/english3e/conditionals.html)
     - Iteration: [How to Think Like a Computer Scientist, Sections 7.1-7.4](http://openbookproject.net/thinkcs/python/english3e/iteration.html)
     - Functions: [How to Think Like a Computer Scientist, Chapter 4](http://openbookproject.net/thinkcs/python/english3e/functions.html)
-- *Session 4*: **Modeling and Feature Engineering**
-  - *Supplemental Reading*: [The Python Data Science Handbook, Chapter 5](https://jakevdp.github.io/PythonDataScienceHandbook/05.00-machine-learning.html)
-- *Session 5*: **Visualization with Seaborn and Matplotlib**
+- *Session 4*: **Visualization with Seaborn and Matplotlib**
   - *Supplemental Reading*: [The Python Data Science Handbook, Chapter 4](https://jakevdp.github.io/PythonDataScienceHandbook/04.00-introduction-to-matplotlib.html)
+- *Session 5*: **Modeling and Feature Engineering**
+  - *Supplemental Reading*: [The Python Data Science Handbook, Chapter 5](https://jakevdp.github.io/PythonDataScienceHandbook/05.00-machine-learning.html)
 - *Session 6*: **Version Control with Git and GitHub; High-level Discussion of Python Packaging and APIs** (as time allows)
   - *Supplemental Reading*:
     - Version Control: [Atlassian's Explanation of Version Control](https://www.atlassian.com/git/tutorials/what-is-version-control)
