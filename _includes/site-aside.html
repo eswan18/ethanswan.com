@@ -1,21 +1,26 @@
 <aside class="aside  typeset  aside--{{ include.align | default: 'right' }}">
 
-  {% if page.layout == "post" %}
-    <section class="section  section--related-posts">
-      {% include post-related.html %}
+  {% if page.layout == "post" or page.layout == "page" %}
+    <section class="section  section--recent-posts">
+      {% include post-recent.html %}
+      {% unless page.hide-social %}
+        <h3>More from Ethan</h3>
+        {% include nav-social.html %}
+      {% endunless %}
     </section>
 
-  {% elsif page.layout == "page" or page.layout == "home" or page.layout == "blog" %}
-    <section class="section  section--description">
-      <h3>About this site</h3>
-      <p>{{ site.description }}</p>
-      {% include nav-social.html %}
-    </section>
-
-  {% elsif page.layout == "categories" %}
+  {% elsif page.layout == "categories" or page.layout == "blog" %}
     <section class="section  section--category-index">
-      <h3>Index</h3>
+      {% if page.layout == "blog" %}
+        <h3>By Category</h3>
+      {% elsif page.layout == "categories" %}
+        <h3>Category Index</h3>
+      {% endif %}
       {% include nav-categories.html %}
+      {% unless page.hide-social %}
+        <h3>More from Ethan</h3>
+        {% include nav-social.html %}
+      {% endunless %}
     </section>
 
   {% endif %}

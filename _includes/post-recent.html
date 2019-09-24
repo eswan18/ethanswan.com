@@ -1,0 +1,13 @@
+<h3>Recent Posts</h3>
+<ul class="list  list--posts">
+  {% for page in site.posts limit: 3 %}
+    <li class="item  item--post">
+      <article class="article  article--post  typeset">
+
+        <h6><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h6>
+        {% include post-meta.html %}
+
+      </article>
+    </li>
+  {% endfor %}
+</ul>

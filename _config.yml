@@ -87,5 +87,12 @@ social_links: # Appears in sidebar. Set the urls then uncomment and comment out 
   Twitter: https://twitter.com/eswan18
   LinkedIn: https://www.linkedin.com/in/ethanpswan
   GitHub: https://github.com/eswan18
-  link: https://ethanswan.com
-  RSS: /feed.xml
+RSS: /feed.xml
+
+# 10. Default Frontmatter
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      aside: True

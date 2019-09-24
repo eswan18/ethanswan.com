@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About Me
+hide-social: True
 ---
 
 {% include figure.html image="/images/sitewide/ethan_headshot_smiling.gif" position="left" width="220" height="330" %}

@@ -6,13 +6,13 @@ layout: default
 
 <main class="main  container">
 
+
   <div class="content">
 
     <article class="article  article--page  typeset">
 
       {% assign collectiondata = site.collections | where: "label", page.collectionpage | first %}
       <h1>Blog Posts</h1>
-      <p>Find posts indexed by category <a href="/categories">here</a>.</p>
     </article>
 
     {% include post-list.html %}

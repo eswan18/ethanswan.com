@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Courses
+aside: False
 ---
 
 
