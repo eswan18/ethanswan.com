@@ -1,0 +1,10 @@
+<nav class="nav nav--shops">
+  <ul class="list  list--coffee-shops">
+    {% assign shops = site.coffee_shops | sort: 'rating' %}
+    {% for shop in shops reversed %}
+      <li class="item  item--shop">
+          <a href="/coffee_shop_ratings/#{{ shop.name | slugify }}">{{ shop.name }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

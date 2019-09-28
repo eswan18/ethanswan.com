@@ -9,6 +9,12 @@
           {% include nav-social.html %}
         {% endunless %}
       </section>
+    {% elsif page.aside-type == "coffee-shops" %}
+      {% include nav-coffee-shops.html %}
+      {% unless page.hide-social %}
+        <h3>More from Ethan</h3>
+        {% include nav-social.html %}
+      {% endunless %}
     {% else %}
       <section class="section  section--recent-posts">
         {% include post-recent.html %}

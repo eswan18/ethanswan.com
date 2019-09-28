@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Coffee Shop Ratings
+aside-type: coffee-shops
 ---
 
 Reviewing local coffee shops has allowed me to pursue two of my favorite hobbies: visiting cafés and complaining about things.
@@ -10,7 +11,7 @@ The following are arranged from highest- to lowest-rated.
 
 {% assign shops = site.coffee_shops | sort: 'rating' %}
 {% for shop in shops reversed %}
-<div class="coffee-shop">
+<div class="coffee-shop" id="{{ shop.name | slugify }}">
 <table>
 <tr>
 <th colspan="3">
