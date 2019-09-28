@@ -4,7 +4,7 @@
     <li class="item  item--post">
       <article class="article  article--post  typeset">
         <h6><a href="/courses/#{{ course.name | slugify }}">{{ course.name }}</a></h6>
-        {{ course.type }}: {{ course.upcoming-date }}        
+        <small class="small course-meta">{{ course.type }} &middot; {{ course.upcoming-date }}</small>
 
       </article>
     </li>
