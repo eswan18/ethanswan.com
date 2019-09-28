@@ -1,13 +1,23 @@
 <aside class="aside  typeset  aside--{{ include.align | default: 'right' }}">
 
   {% if page.layout == "post" or page.layout == "page" %}
-    <section class="section  section--recent-posts">
-      {% include post-recent.html %}
-      {% unless page.hide-social %}
-        <h3>More from Ethan</h3>
-        {% include nav-social.html %}
-      {% endunless %}
-    </section>
+    {% if page.aside-type == "courses" %}
+       <section class="section  section--upcoming-courses">
+        {% include upcoming-courses.html %}
+        {% unless page.hide-social %}
+          <h3>More from Ethan</h3>
+          {% include nav-social.html %}
+        {% endunless %}
+      </section>
+    {% else %}
+      <section class="section  section--recent-posts">
+        {% include post-recent.html %}
+        {% unless page.hide-social %}
+          <h3>More from Ethan</h3>
+          {% include nav-social.html %}
+        {% endunless %}
+      </section>
+    {%endif %}
 
   {% elsif page.layout == "categories" or page.layout == "blog" %}
     <section class="section  section--category-index">

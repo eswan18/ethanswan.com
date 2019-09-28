@@ -1,13 +1,12 @@
 ---
 layout: page
 title: Courses
-aside: False
 ---
 
 
 {% for course in site.courses %}
 <table class="training-courses"><tr>
-<td class="course-name">
+<td class="course-name" id="{{ course.name | slugify }}">
   {% if course.type %}
   <h6>{{ course.type }}</h6>
   {% endif %}
