@@ -2,7 +2,7 @@
 name: Intermediate Python for Data Science
 type: Workshop
 subtitle: "In partnership with the University of Cincinnati Center for Business Analytics"
-upcoming-date: October 31 and November 1, 2019
+upcoming-date: Spring 2020
 materials-link: https://github.com/uc-python/intermediate-python-datasci
 ---
 ##### Description
