@@ -8,6 +8,16 @@
           <span class="book--author">by {{ book.author }}</span>
           {{ book.content | markdownify }}
 
+          <center>
+              Worth reading?<br>
+              <span class="book--read-it">
+                  {% if book.worth-reading %}
+                  Yes
+                  {% else %}
+                  No
+                  {% endif %}
+              </span>
+          </center>
           <hr>
   
         </article>
