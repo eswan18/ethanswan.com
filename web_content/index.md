@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Recommended Content
+title: Web Content
 ---
 
-I use my second twitter account, [@content_ious](https://twitter.com/content_ious), to tweet the best articles and podcast episodes I find (along with any content I produce myself).
-I've also listed here the content sources that most reliably provoke my thoughts.
+Below I've listed my favorite content on the internet.
+I also use my second twitter account, [@content_ious](https://twitter.com/content_ious), to tweet the best articles and podcast episodes I find (along with any content I produce myself).
 
 
 ### Podcasts
@@ -58,9 +58,6 @@ And I have a lot of faith in their journalistic standards, which I can't say abo
 
 **[Sapiens: A Brief History of Humankind](https://en.wikipedia.org/wiki/Sapiens:_A_Brief_History_of_Humankind)**
 -- Harrari follows humans throughout history and explains their societal development.
-
-**[The Book of Basketball: The NBA According to the Sports Guy](https://en.wikipedia.org/wiki/The_Book_of_Basketball)**
--- Bill Simmons covers the history of the NBA and ranks the greatest NBA players, keeping the dialogue humorous throughout.
 
 
 <a class="twitter-timeline" href="https://twitter.com/content_ious?ref_src=twsrc%5Etfw">Tweets by content_ious</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
