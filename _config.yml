@@ -54,7 +54,11 @@ collections:
   courses:
     title: "Training Courses"
     output: true
-    description: "Courses I Teach"
+    description: "Courses I teach"
+  books:
+    title: "Books"
+    output: false
+    description: "Books I've read"
 
 
 # 7. Site settings

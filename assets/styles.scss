@@ -130,3 +130,21 @@ td.course-name, td.course-upcoming-date, td.course-name h4, td.course-name h6 {
 article ol, article ul {
     padding: 0em 0em 0em 2em;
 }
+/****************/
+/* Books        */
+/****************/
+article.article--book > p {
+    font-size: 0.8em;
+    line-height: 1.5;
+    margin-bottom: 0.5em;
+}
+span.book--title {
+    font-style: italic;
+}
+span.book--author {
+    font-size: 80%;
+}
+article.article--book > hr {
+    padding-bottom: 2rem;
+    padding-top: 0.5rem;
+}

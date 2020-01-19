@@ -1,0 +1,17 @@
+<section class="section  typeset">
+  <ul class="list  list--posts">
+    {% for book in site.books %}
+      <li class="item  item--book">
+        <article class="article  article--book">
+  
+          <span class="book--title">{{ book.title }}</span>
+          <span class="book--author">by {{ book.author }}</span>
+          {{ book.content | markdownify }}
+
+          <hr>
+  
+        </article>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

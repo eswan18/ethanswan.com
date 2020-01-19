@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+{% include site-header.html %}
+
+<main class="main  container">
+
+
+  <div class="content">
+
+    <article class="article  article--page  typeset">
+
+      <h1>Books</h1>
+      <p>As a way both to hold myself accountable (read more, etc. etc.) and to share my thoughts on what I've read, I leave some thoughts here on each book I finish.</p>
+
+      <h5>Currently Reading</h5>
+      <p><span class="book--title">How To: Absurd Scientific Advice for Common Real-World Problems</span>
+      <br><span class="book--author">by Randall Munroe</span></p>
+    </article>
+    <hr>
+
+    {% include book-list.html %}
+
+  </div>
+
+  {% if page.aside == true %}{% include site-aside.html %}{% endif %}
+
+</main>
+
+{% include site-footer.html %}
