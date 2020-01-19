@@ -30,13 +30,29 @@ At this point, it's (thankfully) only nominally about sports.
 Hard to beat the quality of the inside jokes and listener mail, and it's actually become a good way for me to keep up with current events I otherwise would never even hear about (e.g. British Royal Family shenanigans).
 
 **[The Lowe Post](http://www.espn.com/espnradio/podcast/archive/_/id/10528553)**
--- Obviously I'd only recommend this to basketball fans, but Zach Lowe is clearly the best sportswriter I've ever read.
+-- Obviously I'd only recommend this to basketball fans, but Zach Lowe is clearly the best sportswriter I've read.
 He embraces analytics but still talks about the importance of hard-to-measure factors, and just as importantly he has a good sense of humar.
 As an NBA nerd, this is a great listen.
 
 <hr>
 
-### Web
+### Newsletters
+**[Benedict Evans' Newsletter](https://www.ben-evans.com/)**
+-- Benedict Evans, formerly of VC firm Andreesen Horowitz, summarizes what's happened in the tech industry that week and occasionally includes a self-written blog post.
+Excellent, thoughtful coverage. Breadth over depth.
+
+**[Normcore Tech](https://vicki.substack.com)**
+-- Vicki Boykis, a data science consultant, considers an aspect of the technology industry and goes deep on its problems or unintended consequences.
+Depth over breadth.
+
+**[Python Weekly](https://www.pythonweekly.com)**
+-- The best programming newsletter I read by a wide margin.
+Usually has a few articles worth reading and a list of notable open source projects.
+For a power Python user, very worthwhile.
+
+<hr>
+
+### Sites
 **[Alex Danco](https://alexdanco.com)**
 -- Frankly I know almost nothing about who Alex Danco is, but his blog on technology and finance is top-notch. Great analysis of topical issues backed by real knowledge of the industry and of tech.
 
@@ -51,13 +67,5 @@ Rarely a page-turner, but rational analysis on controversial topics is hard to c
 And I have a lot of faith in their journalistic standards, which I can't say about many other outlets.
 
 <hr>
-
-### Books
-**[The Signal and the Noise](https://en.wikipedia.org/wiki/The_Signal_and_the_Noise")**
--- Silver details his Bayesian approach to understanding the world, using several pertinent world events as case studies.
-
-**[Sapiens: A Brief History of Humankind](https://en.wikipedia.org/wiki/Sapiens:_A_Brief_History_of_Humankind)**
--- Harrari follows humans throughout history and explains their societal development.
-
 
 <a class="twitter-timeline" href="https://twitter.com/content_ious?ref_src=twsrc%5Etfw">Tweets by content_ious</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
