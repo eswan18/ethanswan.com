@@ -2,7 +2,6 @@
 title: "Apple Confidential 2.0: The Definitive History of the World's Most Colorful Company"
 author: "Owen Linzmayer"
 date: 2019-12-24
-worth-reading: true
 ---
 This book was published well before Apple became what we know it as today: the iPod had just become popular and the iPhone didn't even exist.
 That makes this book really refreshing because it doesn't have the hindsight bias of anything published in the iPhone era.
