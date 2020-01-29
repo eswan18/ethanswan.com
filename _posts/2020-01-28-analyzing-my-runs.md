@@ -46,15 +46,15 @@ Adding a line of best fit to this chart reveals that the relationship between di
 
 Intrigued by this (non-)relationship, I tried modeling my speed more rigorously. I hypothesized that the information about the runs that would be most predictive would be distance traveled, date, and whether the run was indoor or outdoor.
 
-I iterated through several different modeling approaches (code[here](https://github.com/eswan18/fitness/blob/master/Modeling.ipynb)) and eventually found the most predictive approach to be transforming the date of the run into the *days until the next April 1* – because my annual half marathon was usually around then. Obviously I'm omitting a fair amount of banging-my-head-against-the-wall during this process, but with that new variable I built a somewhat predictive regression.
+I iterated through several different modeling approaches (code [here](https://github.com/eswan18/fitness/blob/master/Modeling.ipynb)) and eventually found the most predictive approach to be transforming the date of the run into the *days until the next April 1* – because my annual half marathon was usually around then. Obviously I'm omitting a fair amount of banging-my-head-against-the-wall during this process, but with that new variable I built a somewhat predictive regression.
 
 Of course, my main interest in the model was inferential; I'll never be in a situation where I need to predict how fast I'll be running. Well, never say *never*, but that doesn't seem terribly useful. Instead, I'd like to see how these factors affect my speed.
 
 ![Running Model Coefficients](/images/posts/running_model_coefficients.png)
 
 Basically, the model said my "base" pace was 8.2 minutes/mile, but:
-- Running indoors cut about 1.2 minutes per mile off my time
-- Running an additional mile added about 0.03 minutes per mile to my time (about 0.6 seconds)
+- Running indoors cut about 1.2 minutes per mile off my time.
+- Running an additional mile added about 0.03 minutes per mile to my time (about 0.6 seconds).
 - The more days until the coming April 1, the slower I ran – very slightly. 90 days away that would add .006 minutes/mile (0.37 seconds), 180 days away would add 0.012 minutes/mile (0.75 seconds), and 365 days away that would add 0.025 minutes/mile (1.5 seconds).
 
 What's all that mean? Running farther or at different times of the year really has had very little impact on my speed; running indoors is by far the most substantial. Why? I have some suspicions.
