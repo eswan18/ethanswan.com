@@ -3,7 +3,7 @@ layout: post
 date: 2019-05-13
 categories:
 - "8451"
-- Technology
+- technology
 title: Linux for Data Scientists, Part 1
 external_link: https://www.8451.com/forward-thinking/automation-at-8451
 ---

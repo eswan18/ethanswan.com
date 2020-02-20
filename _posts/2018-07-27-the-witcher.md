@@ -2,7 +2,7 @@
 layout: post
 date: 2018-07-27
 categories:
-- Gaming
+- gaming
 title: A Non-Gamer Takes on The Witcher 3
 preview_image: "/images/posts/witcher_3_welcome.jpg"
 ---

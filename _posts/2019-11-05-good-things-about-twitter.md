@@ -2,6 +2,7 @@
 layout: post
 date: 2019-11-05
 categories:
+- reflection
 title: On the Good Things About Twitter
 ---
 

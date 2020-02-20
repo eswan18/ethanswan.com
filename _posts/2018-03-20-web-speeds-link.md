@@ -2,7 +2,8 @@
 layout: post
 date: 2018-03-20
 categories:
-- The Syntact Project
+- technology
+- syntact-project
 title: Web Speeds Trends
 external_link: http://www.syntactproject.com/2018/03/20/web-speed-trends.html
 ---
