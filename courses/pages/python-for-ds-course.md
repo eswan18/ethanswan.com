@@ -41,9 +41,9 @@ I would also suggest, but not mandate, reading [the preface](https://jakevdp.git
 Class sessions will be structured as 110 minutes of lecture, a 10-minute break, and 110 minutes of lab.
 Additional breaks will be given if time permits.
 
-##### Session 1: Refresher on Python and DataFrames; Importing and Exporting Beyond CSVs
+##### Session 1: Refresher on Python and DataFrames; Importing and Exporting; Joining
 - *Supplemental Reading*: [The Python Data Science Handbook, starting at the beginning of Chapter 3 up to and including the "Pivot Tables" section](https://jakevdp.github.io/PythonDataScienceHandbook/03.00-introduction-to-pandas.html)
-- *Lab*: Lab 01, Lab 02
+- *Lab*: Lab 01, Lab 02, Lab 04
 - *Project Work*: None
 - *Due*: None
 
@@ -51,7 +51,7 @@ Additional breaks will be given if time permits.
 - *Supplemental Reading*:
   - Conditionals: [How to Think Like a Computer Scientist, Sections 5.1-5.8](http://openbookproject.net/thinkcs/python/english3e/conditionals.html)
   - Iteration: [How to Think Like a Computer Scientist, Sections 7.1-7.4](http://openbookproject.net/thinkcs/python/english3e/iteration.html)
-- *Lab*: Lab 04, Lab 05, Lab 06
+- *Lab*: Lab 05, Lab 06, Lab 07
 - *Project Work*: Look over the [project rubric](/courses/rubrics/python-for-ds-course-final-project). Decide on a topic/dataset. Choose a partner if you want one.
 - *Due*: Last week's lab.
 
@@ -60,7 +60,7 @@ Additional breaks will be given if time permits.
   - Functions: [How to Think Like a Computer Scientist, Chapter 4](http://openbookproject.net/thinkcs/python/english3e/functions.html)
   - Version Control: [Atlassian's Explanation of Version Control](https://www.atlassian.com/git/tutorials/what-is-version-control)
   - Git: [The "Version Control with Git" section of Atlassian's Explanation of Git](https://www.atlassian.com/git/tutorials/what-is-git#version-control-with-git)
-- *Lab*: Lab 07, Lab 08, Lab 09
+- *Lab*: Lab 08, Lab 09
 - *Project Work*: Pull your data. Push your project code so far to GitHub.
 - *Due*: Last week's lab.
 
