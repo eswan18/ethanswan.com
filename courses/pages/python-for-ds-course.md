@@ -33,7 +33,15 @@ Below are instructions to do so via Anaconda (a popular Python distribution):
 2. Click the "Download" button for Python 3.7 - this will begin to download the Anaconda installer.
 3. Open the installer when the download completes, and then follow the prompts. If you are prompted about installing PyCharm, elect not to do so.
 4. Once installed, open the Anaconda Navigator and launch a Jupyter Notebook to ensure it works.
-5. Follow the package installation instructions to ensure pandas and seaborn packages are installed.
+5. Follow the package installation instructions to ensure the following packages are installed:
+  - pandas
+  - seaborn
+  - altair
+  - scikit-learn
+  - requests
+  - tensorflow
+  - keras
+  - gensim
 
 I would also suggest, but not mandate, reading [the preface](https://jakevdp.github.io/PythonDataScienceHandbook/00.00-preface.html) and [Chapter 1](https://jakevdp.github.io/PythonDataScienceHandbook/01.00-ipython-beyond-normal-python.html) of the Python Data Science Handbook for an overview of data science and to gain familiarity with the Python environment and Jupyter notebooks.
 
