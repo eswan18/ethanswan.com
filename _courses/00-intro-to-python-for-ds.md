@@ -2,7 +2,7 @@
 name: Introduction to Python for Data Science
 type: Workshop
 subtitle: "In partnership with the University of Cincinnati Center for Business Analytics"
-upcoming-date: Spring 2020
+upcoming-date: April 30 and May 1, 2020
 materials-link: https://github.com/uc-python/intro-python-datasci
 ---
 ##### Description

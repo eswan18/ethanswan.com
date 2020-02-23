@@ -2,7 +2,7 @@
 name: Python for Data Science
 type: Course (2 Credit Hours)
 subtitle: "In partnership with the University of Cincinnati"
-upcoming-date: Spring 2019, 2nd Half
+upcoming-date: Spring 2020
 page-link: /courses/pages/python-for-ds-course
 ---
 ##### Description
