@@ -101,7 +101,7 @@ No one will pay attention if I teach before the final, so we'll reserve the firs
 
 ### Course Grading
 - **30%** Assignments -- *completion-based, 5% each*
-- **20%** Final Exam
+- **15%** Final Exam
 - **5%** Course Project Check-in -- *have code in a GitHub repo that imports your data, due at the beginning of session 5*
 - **50%** Course Project -- *see below*
 
