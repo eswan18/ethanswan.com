@@ -1,7 +1,6 @@
 ---
 name: Advanced Python for Data Science
 type: Workshop
-subtitle: "In partnership with the University of Cincinnati Center for Business Analytics"
 upcoming-date: TBD
 materials-link: https://github.com/uc-python/advanced-python-datasci
 ---
