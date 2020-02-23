@@ -41,45 +41,66 @@ I would also suggest, but not mandate, reading [the preface](https://jakevdp.git
 Class sessions will be structured as 110 minutes of lecture, a 10-minute break, and 110 minutes of lab.
 Additional breaks will be given if time permits.
 
-##### Session 1: Refresher on Python and DataFrames
+##### Session 1: Refresher on Python and DataFrames; Importing and Exporting Beyond CSVs
 - *Supplemental Reading*: [The Python Data Science Handbook, starting at the beginning of Chapter 3 up to and including the "Pivot Tables" section](https://jakevdp.github.io/PythonDataScienceHandbook/03.00-introduction-to-pandas.html)
 - *Lab*: Lab 01, Lab 02
+- *Project Work*: None
+- *Due*: None
 
-##### Session 2: Importing and Exporting Beyond CSVs; Grouping and Reshaping
-- *Supplemental Reading*: Refer to Session 1 reading
-- *Lab*: Lab 04, Lab 05, Lab 06
-
-##### Session 3: Control Flow; Functions; the `DataFrame.apply` Method
+##### Session 2: Grouping and Reshaping; Control Flow; Introduction of Final Project
 - *Supplemental Reading*:
   - Conditionals: [How to Think Like a Computer Scientist, Sections 5.1-5.8](http://openbookproject.net/thinkcs/python/english3e/conditionals.html)
   - Iteration: [How to Think Like a Computer Scientist, Sections 7.1-7.4](http://openbookproject.net/thinkcs/python/english3e/iteration.html)
-  - Functions: [How to Think Like a Computer Scientist, Chapter 4](http://openbookproject.net/thinkcs/python/english3e/functions.html)
-- *Lab*: Lab 07, Lab 08, Lab 09
+- *Lab*: Lab 04, Lab 05, Lab 06
+- *Project Work*: Look over the [project rubric](/courses/rubrics/python-for-ds-course-final-project). Decide on a topic/dataset. Choose a partner if you want one.
+- *Due*: Last week's lab.
 
-##### Session 4: Visualization with Seaborn and Matplotlib
-- *Supplemental Reading*: [The Python Data Science Handbook, Chapter 4](https://jakevdp.github.io/PythonDataScienceHandbook/04.00-introduction-to-matplotlib.html)
-- *Lab*: Lab 10
-
-##### Session 5: Modeling and Feature Engineering
-- *Supplemental Reading*: [The Python Data Science Handbook, Chapter 5](https://jakevdp.github.io/PythonDataScienceHandbook/05.00-machine-learning.html)
-- *Lab*: Lab 11
-
-##### Session 6: Version Control with Git and GitHub; High-level Discussion of Python Packaging and APIs** (as time allows)
+##### Session 3: Functions; Applying Functions to Data; Version Control with Git and GitHub.
 - *Supplemental Reading*:
+  - Functions: [How to Think Like a Computer Scientist, Chapter 4](http://openbookproject.net/thinkcs/python/english3e/functions.html)
   - Version Control: [Atlassian's Explanation of Version Control](https://www.atlassian.com/git/tutorials/what-is-version-control)
   - Git: [The "Version Control with Git" section of Atlassian's Explanation of Git](https://www.atlassian.com/git/tutorials/what-is-git#version-control-with-git)
+- *Lab*: Lab 07, Lab 08, Lab 09
+- *Project Work*: Pull your data. Push your project code so far to GitHub.
+- *Due*: Last week's lab.
+
+##### Session 4: Visualization with Matplotlib, Seaborn, and Altair
+This class *may* be taught remotely, TBD.
+- *Supplemental Reading*: [The Python Data Science Handbook, Chapter 4](https://jakevdp.github.io/PythonDataScienceHandbook/04.00-introduction-to-matplotlib.html)
+- *Lab*: Lab 10
+- *Project Work*: Clean your data. Commit and push that code. Send Ethan your GitHub repo with code that imports your data.
+- *Due*: Last week's lab.
+
+##### Session 5: Classical Modeling and Feature Engineering; Deep Learning and NLP Tools (High-level)
+- *Supplemental Reading*: [The Python Data Science Handbook, Chapter 5](https://jakevdp.github.io/PythonDataScienceHandbook/05.00-machine-learning.html)
+- *Lab*: Lab 11
+- *Project Work*: Start your modeling process.
+- *Due*: Last week's lab. **Project Check-in**.
+
+##### Session 6: Topics I Wish We Had Time for
+Spark, Requests & APIs, Docker, Cloud Computing
+
+n.b. Ethan will be traveling for PyCon, so this session will be taught remotely, but our TA will be available in the classroom for those who want in-person help. Videocall technology TBD.
+- *Supplemental Reading*: None
 - *Lab*: None -- work on your project
+- *Project Work*: Finish your project!
+- *Due*: Last week's lab.
 
 ##### Session 7: Final Exam; Student-suggested Topics
-Obviously no one will pay attention if I teach before the final, so we'll reserve the first two hours of class for the test and then the remaining time for Q&A and fun topics.
+No one will pay attention if I teach before the final, so we'll reserve the first two hours of class for the test and then the remaining time for Q&A and fun topics.
+- *Due*: **Final Project (due the Sunday before class)**
+
 
 ### Course Grading
 - **30%** Assignments -- *completion-based, 5% each*
 - **20%** Final Exam
+- **5%** Course Project Check-in -- *have code in a GitHub repo that imports your data, due at the beginning of session 5*
 - **50%** Course Project -- *see below*
 
 ### Course Project
-50% of the course grade is based on a final project: **apply the data science skills covered in the course (and optionally, beyond what's covered) to real datasets.**
+The final project requires students to **apply the data science skills covered in the course (and optionally, beyond what's covered) to real datasets.**
+
+A total of 55% of the course grade is related to the final project.
 The project must include data wrangling and the creation of a deliverable to explain the findings.
 Students may complete the project alone or in teams of two;
 however, groups of two will need to earn more points to score the same grade as an individual (more details in [rubric](/courses/rubrics/python-for-ds-course-final-project)).
@@ -93,10 +114,12 @@ Some suggested data sets:
 - Something from the FiveThirtyEight [website data](https://data.fivethirtyeight.com) or [GitHub repo](https://github.com/fivethirtyeight/data).
 - Anything else you can find on the internet, within reasonable ethical boundaries. It's straightforward to find [CSVs of baby names over time](https://github.com/hadley/data-baby-names/blob/master/baby-names.csv) or an [API to fetch NBA data](https://github.com/swar/nba_api). You could even scrape a website using Python (see packages like [Scrapy](https://scrapy.org) and [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)). Acquiring the data via an API or scraping will net you extra points, as those are beyond the scope of what we discussed in this course.
 
-##### Rubric
-The project grading system allows for a great deal of flexibility on the students' side.
-Teams earn points by completing tasks from a list, with different tasks worth various point values based primarily on two things:
+##### Grading Details
+The first project-related grade is the Check-in, due for Session 5. You must show that you have a GitHub repo with code in it that imports your data and does some data wrangling -- joining, filtering, cleaning, etc.
+This is worth 5% of your course grade, so take advantage of the easy points.
+
+The other 50 percentage points come from your final submission, and are graded via the [rubric](/courses/rubrics/python-for-ds-course-final-project).
+This rubric for a great deal of flexibility on your side.
+Points are earned by completing tasks from the list, with different tasks worth various point values based primarily on two things:
 the difficulty and how integral the task is to the data science workflow.
 Larger teams are expected to earn more points for an equivalent grade.
-
-See the [course rubric page](/courses/rubrics/python-for-ds-course-final-project) for complete details of how projects will be graded.
