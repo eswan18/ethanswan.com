@@ -16,7 +16,7 @@ Below is a fairly comprehensive list of the tech I use regularly.
 I hope to make *State of the Tools* an annual tradition.
 
 ## Hardware
-- **iPhone XS Max**
+- **iPhone Xs Max** – My iPhone deserves to be the first item in this list. Screen time tells me I use it about 2 hours a day on average, a number which (I often say to my [Walden Ponding](https://breakingsmart.substack.com/p/against-waldenponding) friends, winkingly) should really be higher.
 - **MacBook Pro** – 16", late 2016
 - **iPad Pro** – early 2018, pre-USB-C.
 - **Desktop Ubuntu Workstation, with Windows Dualbooted**
