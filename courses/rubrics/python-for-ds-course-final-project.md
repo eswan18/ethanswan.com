@@ -21,13 +21,13 @@ h5 {
 </style>
 
 #### Points Necessary by Team Size
-For an individual worker (team of 1), a 100% grade requires 25 earned points.
-For a team of two, a 100% grade requires 35 points.
+For an individual worker (team of 1), a 100% grade requires 34 earned points.
+For a team of two, a 100% grade requires 42 points.
 
 Team Size    | Pts for 100%             | ... for 90% | ... for 80%
 -------------|--------------------------|-------------|-------------
-1            | 25                       | 22.5        | 20
-2            | 35                       | 31.5        | 28
+1            | 34                       | 31          | 27.5
+2            | 42                       | 38          | 34
 
 <br>
 
@@ -46,7 +46,8 @@ Points | Max | Task
 Points | Max | Task
 :-----:|:---:|------
 **4**  |  4  | Use at least one join
-**3**  |  3  | Melt and/or reshape your data
+**3**  |  3  | Group by, melt, or reshape your data
+**1**  |  2  | `apply` a function to your data.
 
 ##### Modeling
 
@@ -69,7 +70,7 @@ Points | Max | Task
 
 Points | Task
 :-----:|-----
- **4** | Pull data from a web-based API (I recommend the [Requests library](https://requests.readthedocs.io/en/master/#))
- **5** | Scrape data from a website using [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) and/or [Scrapy](https://scrapy.org).
- **5** | Create a web dashboard using [Dash](https://dash.plot.ly).
- **4** | Correctly train and make predictions using a neural network (I recommend [Keras](https://scrapy.org)).
+ **3** | Pull data from a web-based API (I recommend the [Requests library](https://requests.readthedocs.io/en/master/#))
+ **6** | Scrape data from a website using [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) and/or [Scrapy](https://scrapy.org).
+ **7** | Create a web dashboard using [Dash](https://dash.plot.ly).
+ **5** | Correctly train and make predictions using a neural network (I recommend [Keras](https://scrapy.org)).
