@@ -85,8 +85,8 @@ This class *may* be taught remotely, TBD.
 - *Project Work*: Start your modeling process.
 - *Due*: Last week's lab. **Project Check-in**.
 
-##### Session 6: Topics I Wish We Had Time for
-Spark, Requests & APIs, Docker, Cloud Computing
+##### Session 6: Topics I Wish We Had More Time for
+Conda, Python Package Ecosystem, Spark, Requests & APIs, Docker, Cloud Computing
 
 n.b. Ethan will be traveling for PyCon, so this session will be taught remotely, but our TA will be available in the classroom for those who want in-person help. Videocall technology TBD.
 - *Supplemental Reading*: None
