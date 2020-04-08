@@ -75,13 +75,13 @@ Additional breaks will be given if time permits.
   - Version Control: [Atlassian's Explanation of Version Control](https://www.atlassian.com/git/tutorials/what-is-version-control)
   - Git: [The "Version Control with Git" section of Atlassian's Explanation of Git](https://www.atlassian.com/git/tutorials/what-is-git#version-control-with-git)
   - Visualization with Matplotlib and Seaborn: [The Python Data Science Handbook, Chapter 4](https://jakevdp.github.io/PythonDataScienceHandbook/04.00-introduction-to-matplotlib.html)
-- *Lab*: Lab 09, Lab 10
+- *Lab*: Lab 09, Lab 11
 - *Project Work*: Clean your data. Commit and push that code. Send Ethan your GitHub repo with code that imports your data.
 - *Due*: Last week's lab.
 
 ##### Session 5: Classical Modeling and Feature Engineering; Deep Learning and NLP Tools (High-level)
 - *Supplemental Reading*: [The Python Data Science Handbook, Chapter 5](https://jakevdp.github.io/PythonDataScienceHandbook/05.00-machine-learning.html)
-- *Lab*: Lab 11
+- *Lab*: Lab 12
 - *Project Work*: Start your modeling process.
 - *Due*: Last week's lab. **Project Check-in**.
 
