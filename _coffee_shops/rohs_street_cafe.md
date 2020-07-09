@@ -1,5 +1,6 @@
 ---
 name: Rohs Street Cafe
+city: Cincinnati
 link: https://www.rohsstreetcafe.com/
 apple_pay: true
 wifi: 🙁

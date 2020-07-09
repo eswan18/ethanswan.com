@@ -1,6 +1,6 @@
 <nav class="nav nav--coffee-shops">
   <ul class="list  list--coffee-shops">
-    {% assign shops = site.coffee_shops | sort: 'rating' %}
+    {% assign shops = site.coffee_shops | where:'city',page.city | sort: 'rating' %}
     {% for shop in shops reversed %}
       {% unless last_shop.rating == shop.rating%}
         <div class="subsection-divider">

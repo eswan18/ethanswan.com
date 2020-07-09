@@ -1,5 +1,6 @@
 ---
 name: Sidewinder
+city: Cincinnati
 link: http://www.sidewindercoffee.com/
 apple_pay: false
 wifi: 😍

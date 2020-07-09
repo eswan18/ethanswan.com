@@ -1,5 +1,6 @@
 ---
 name: Deeper Roots
+city: Cincinnati
 link: https://www.deeperrootscoffee.com/
 apple_pay: true
 wifi: 🙂

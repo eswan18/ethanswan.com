@@ -1,5 +1,6 @@
 ---
 name: Bean and Barley
+city: Cincinnati
 link: https://beanandbarley.co
 apple_pay: true
 wifi: 😍

@@ -87,7 +87,8 @@ navigation_header:
   Courses: /courses/
   Web Content: /web_content/
   Books: /books/
-  Coffee Shop Ratings: /coffee_shop_ratings/
+  Cincinnati Coffee Shops: /coffee_shop_ratings/cincinnati
+  Chicago Coffee Shops: /coffee_shop_ratings/chicago
   About Me: /about_me/
 social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
   Twitter: https://twitter.com/eswan18
