@@ -7,11 +7,16 @@ aside-type: coffee-shops
 
 I moved to Chicago in the summer of 2020, and that brought a lot of life changes.
 One thing that hasn't changed is my habit of visiting and critiquing coffee shops.
+However, in the throes of Coronavirus quarantine, my priorities have shifted considerably -- mostly toward good coffee and service, with less emphasis on seating, aesthetic, and wifi, for obvious reasons.
 
 The following are arranged from highest- to lowest-rated.
 <br><br>
 
-{% assign shops = site.coffee_shops | where:"city","Chicago" | sort: 'rating' %}
+{% comment %}
+  This should all be moved to an includes file -- it's identical
+  to what's in the other page file.
+{% endcomment %}
+{% assign shops = site.coffee_shops | where:"city",page.city | sort: 'rating' %}
 {% for shop in shops reversed %}
 <div class="coffee-shop" id="{{ shop.name | slugify }}">
 <table>

@@ -11,7 +11,7 @@ To pass the time, I reviewed local coffee shops based on my .... unusual .... cr
 The following are arranged from highest- to lowest-rated.
 <br><br>
 
-{% assign shops = site.coffee_shops | where:"city","Cincinnati" | sort: 'rating' %}
+{% assign shops = site.coffee_shops | where:"city",page.city | sort: 'rating' %}
 {% for shop in shops reversed %}
 <div class="coffee-shop" id="{{ shop.name | slugify }}">
 <table>

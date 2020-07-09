@@ -10,7 +10,7 @@
         </div>
       {% endunless %}
       <li class="item  item--shop">
-          <a href="/coffee_shop_ratings/#{{ shop.name | slugify }}">{{ shop.name }}</a>
+          <a href="/coffee_shop_ratings/{{page.city}}/#{{ shop.name | slugify }}">{{ shop.name }}</a>
           <span class="coffee-shop-attributes">
             {{ shop.wifi }}
           </span>
