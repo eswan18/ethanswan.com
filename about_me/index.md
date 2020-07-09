@@ -5,7 +5,8 @@ hide-social: True
 ---
 
 {% include figure.html image="/images/sitewide/ethan_headshot_smiling.gif" position="left" width="220" height="330" %}
-I'm a Cincinnati-based data scientist and technology specialist. I work on the talent development team at <a href="http://www.8451.com">84.51˚</a>, the marketing analytics agency of Kroger.
+I'm a Chicago-based data scientist and technology specialist.
+I work on the internal tools team within the data science function at <a href="http://www.8451.com">84.51˚</a>, the marketing analytics agency of Kroger.
 I also teach [Python workshops and courses](/courses) at the University of Cincinnati and do some freelance data science consulting.
 
 In my free time, I like to run, read, and listen to podcasts.
