@@ -1,7 +1,7 @@
 ---
 name: Intermediate Python for Data Science
 type: Workshop
-upcoming-date: June 25 and 26, 2020 (Tentative)
+upcoming-date: TBD
 materials-link: https://github.com/uc-python/intermediate-python-datasci
 ---
 ##### Description

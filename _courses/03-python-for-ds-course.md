@@ -3,6 +3,7 @@ name: Python for Data Science
 type: Course (2 Credit Hours)
 upcoming-date: Spring 2020
 page-link: /courses/pages/python-for-ds-course
+hidden: yes
 ---
 ##### Description
 This is a 7-week, 2-credit hour course focused on using Python for data science.

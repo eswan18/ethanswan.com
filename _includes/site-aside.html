@@ -2,8 +2,8 @@
 
   {% if page.layout == "post" or page.layout == "page" %}
     {% if page.aside-type == "courses" %}
-       <section class="section  section--upcoming-courses">
-        {% include upcoming-courses.html %}
+       <section class="section  section--upcoming-sessions">
+        {% include upcoming-sessions.html %}
         {% unless page.hide-social %}
           <h3>More from Ethan</h3>
           {% include nav-social.html %}

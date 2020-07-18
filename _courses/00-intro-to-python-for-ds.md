@@ -1,7 +1,7 @@
 ---
 name: Introduction to Python for Data Science
 type: Workshop
-upcoming-date: April 30 and May 1, 2020
+upcoming-date: July 28 & 30, August 4 & 6, 2020
 materials-link: https://github.com/uc-python/intro-python-datasci
 ---
 ##### Description

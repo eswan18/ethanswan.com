@@ -83,13 +83,13 @@ logo: '/assets/logos/logo_light@96px.jpeg'
 
 # 9. Site navigation
 navigation_header:
-  Blog: /
-  Courses: /courses/
-  Web Content: /web_content/
-  Books: /books/
-  Cincinnati Coffee Shops: /coffee_shop_ratings/cincinnati
-  Chicago Coffee Shops: /coffee_shop_ratings/chicago
+  Home: /
+  Workshops and Courses: /courses/
+  Office Hours: /office_hours/
+  Blog: /blog/
   About Me: /about_me/
+  Favorite Content: /content/
+  Whimsy: /whimsy/
 social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
   Twitter: https://twitter.com/eswan18
   LinkedIn: https://www.linkedin.com/in/ethanpswan
