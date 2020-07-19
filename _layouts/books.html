@@ -1,27 +1,10 @@
 ---
-layout: default
+layout: page
 ---
 
-{% include site-header.html %}
+        {{ content }}
+        <br>
+        <h4>Past Reads</h4>
+        <br>
 
-<main class="main  container">
-
-
-  <div class="content">
-
-    <article class="article  article--page  typeset">
-      {{ content }}
-      <br>
-      <h4>Past Reads</h4>
-      <br>
-    </article>
-
-    {% include book-list.html %}
-
-  </div>
-
-  {% if page.aside == true %}{% include site-aside.html %}{% endif %}
-
-</main>
-
-{% include site-footer.html %}
+      {% include book-list.html %}
