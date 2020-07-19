@@ -87,7 +87,6 @@ navigation_header:
   Workshops and Courses: /courses/
   Office Hours: /office_hours/
   Blog: /blog/
-  About Me: /about_me/
   Favorite Content: /content/
   Whimsy: /whimsy/
 social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired

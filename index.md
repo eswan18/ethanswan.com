@@ -1,8 +1,19 @@
 ---
 layout: page
 title: Welcome!
-feature_text: Welcome!
-feature_image: /images/sitewide/logo_dark_bg.jpg
 ---
 
-I'm
+{% include figure.html image="/images/sitewide/ethan_headshot_smiling.gif" position="left" width="220" height="330" %}
+I'm a Chicago-based data scientist and technology specialist.
+I build internal packages and other tech tools as part of the ecosystem team at <a href="http://www.8451.com">84.51˚</a>, the marketing analytics agency of Kroger.
+I'm passionate about technical tooling and technology education.
+
+Outside of work, I teach [Python workshops and courses](/courses/), offer private [office hours](/office_hours/) to help with data science tools, and do some freelance data science consulting.
+If you're interested in any of these services, please reach out to me by email, at [ethanpswan@gmail.com](mailto:ethanpswan@gmail.com).
+
+In my free time, I like to run, read, and listen to podcasts.
+I even make [a podcast of my own](https://premature-optimization.pinecast.co).
+I occasionally dabble in personal projects as well, which usually involve Raspberry Pis, Python, or both.
+I blog about some of those projects [here](/).
+
+
