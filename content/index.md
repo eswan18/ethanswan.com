@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Web Content
+title: Favorite Content
 ---
 
 Below I've listed my favorite content on the internet.
@@ -37,13 +37,15 @@ As an NBA nerd, this is a great listen.
 <hr>
 
 ### Newsletters
+**[Money Stuff](http://link.mail.bloombergbusiness.com/join/4wm/moneystuff-signup)**
+-- Finance isn't my field, but even for a casual reader, this newsletter is sometimes hard to put down.
+The author hits a few relevant news items of the day and explains them.
+It may not sounds like it would lend itself to enjoyable writing, but I find Levine's style the best of anyone I read.
+
 **[Benedict Evans' Newsletter](https://www.ben-evans.com/)**
 -- Benedict Evans, formerly of VC firm Andreesen Horowitz, summarizes what's happened in the tech industry that week and occasionally includes a self-written blog post.
 Excellent, thoughtful coverage. Breadth over depth.
 
-**[Normcore Tech](https://vicki.substack.com)**
--- Vicki Boykis, a data science consultant, considers an aspect of the technology industry and goes deep on its problems or unintended consequences.
-Depth over breadth.
 
 **[Python Weekly](https://www.pythonweekly.com)**
 -- The best programming newsletter I read by a wide margin.
@@ -60,11 +62,6 @@ For a power Python user, very worthwhile.
 -- Ben Thompson analyzes recent tech news each week.
 Usually he picks one big story about a major tech company and discusses why it makes sense (or doesn't) given their strategy.
 Thompson particularly likes to view things through Aggregation Theory, an idea he's developed about how certain tech firms serve as connectors between supply and demand and thus capture an enormous amount of leverage in an industry.
-
-**[FiveThirtyEight](http://www.fivethirtyeight.com)**
--- FiveThirtyEight provides data-centric analysis across politics, sports, science, economics, and culture.
-Rarely a page-turner, but rational analysis on controversial topics is hard to come by.
-And I have a lot of faith in their journalistic standards, which I can't say about many other outlets.
 
 <hr>
 
