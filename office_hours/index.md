@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Office Hours
+aside-type: courses
 ---
 
 I offer private “technology office hours” to help with topics such as Python, Linux, Git, and other tech that comes up in the data science workflow.
