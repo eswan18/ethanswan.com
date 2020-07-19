@@ -9,11 +9,9 @@ I build internal packages and other tech tools as part of the ecosystem team at 
 I'm passionate about technical tooling and technology education.
 
 Outside of work, I teach [Python workshops and courses](/courses/), offer private [office hours](/office_hours/) to help with data science tools, and do some freelance data science consulting.
-If you're interested in any of these services, please reach out to me by email, at [ethanpswan@gmail.com](mailto:ethanpswan@gmail.com).
+If you're interested in any of these services, please reach out to me by email at [ethanpswan@gmail.com](mailto:ethanpswan@gmail.com).
 
 In my free time, I like to run, read, and listen to podcasts.
 I even make [a podcast of my own](https://premature-optimization.pinecast.co).
-I occasionally dabble in personal projects as well, which usually involve Raspberry Pis, Python, or both.
+Occasionally I dabble in personal projects as well, which usually involve Raspberry Pis, Python, or both.
 I blog about some of those projects [here](/).
-
-
