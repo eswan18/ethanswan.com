@@ -2,27 +2,18 @@
 
   {% if page.layout == "post" or page.layout == "page" %}
     {% if page.aside-type == "courses" %}
+
        <section class="section  section--upcoming-sessions">
         {% include upcoming-sessions.html %}
-        {% unless page.hide-social %}
-          <h3>More from Ethan</h3>
-          {% include nav-social.html %}
-        {% endunless %}
       </section>
+
     {% elsif page.aside-type == "coffee-shops" %}
       <h3>Coffee Shop Index</h3>
       {% include nav-coffee-shops.html %}
-      {% unless page.hide-social %}
-        <h3>More from Ethan</h3>
-        {% include nav-social.html %}
-      {% endunless %}
+
     {% else %}
       <section class="section  section--recent-posts">
         {% include post-recent.html %}
-        {% unless page.hide-social %}
-          <h3>More from Ethan</h3>
-          {% include nav-social.html %}
-        {% endunless %}
       </section>
     {%endif %}
 
@@ -34,10 +25,6 @@
         <h3>Category Index</h3>
       {% endif %}
       {% include nav-categories.html %}
-      {% unless page.hide-social %}
-        <h3>More from Ethan</h3>
-        {% include nav-social.html %}
-      {% endunless %}
     </section>
 
   {% endif %}

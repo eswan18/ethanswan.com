@@ -15,3 +15,17 @@ In my free time, I like to run, read, and listen to podcasts.
 I even make [a podcast of my own](https://premature-optimization.pinecast.co).
 Occasionally I dabble in personal projects as well, which usually involve Raspberry Pis, Python, or both.
 I blog about some of those projects [here](/).
+
+<br>
+
+<table><tr>
+<td>
+  {% include button.html text="Twitter" link="https://twitter.com/eswan18" icon="twitter" %}
+</td><td>
+  {% include button.html text="LinkedIn" link="https://linkedin.com/in/ethanpswan" icon="linkedin" %}
+</td><td>
+  {% include button.html text="GitHub" link="https://github.com/eswan18" icon="github" %}
+</td>
+</tr> </table>
+
+<br><br>
