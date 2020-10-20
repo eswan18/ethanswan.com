@@ -4,4 +4,4 @@ title: Books
 ---
 
 #### Currently Reading
-*The Pragmatic Programmer* by David Thomas and Andrew Hunt
+*Code: The Hidden Language of Computer Hardware and Software* by Charles Petzold
