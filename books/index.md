@@ -4,4 +4,4 @@ title: Books
 ---
 
 #### Currently Reading
-TBD
+*The Big Short: Inside the Doomsday Machine* by Michael Lewis
