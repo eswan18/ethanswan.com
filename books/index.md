@@ -4,4 +4,4 @@ title: Books
 ---
 
 #### Currently Reading
-*The Big Short: Inside the Doomsday Machine* by Michael Lewis
+*So Good They Can't Ignore You: Why Skills Trump Passion in the Quest for Work You Love* by Cal Newport
