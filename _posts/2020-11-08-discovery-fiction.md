@@ -11,7 +11,7 @@ excerpt: "I recently discovered and binged the Ben, Ben and Blue podcast. The ho
 I recently discovered and binged the *Ben, Ben and Blue* podcast.
 The hosts all work in STEM education to some degree, and while that topic isn't explicitly the focus of the show, it comes up a lot.
 
-In one episode (I'll post the link if/when I find it), [Grant Sanderson](https://www.3blue1brown.com/about) (one of the hosts) talks about how it's tempting to teach new ideas by recapping the actual discovery of the concept as it happened.
+In one episode, [Grant Sanderson](https://www.3blue1brown.com/about) (one of the hosts) [talks about](https://www.benbenandblue.com/episodes/2017/10/20/bbb-6-whats-next-for-ben-eater) how it's tempting to teach new ideas by recapping the actual discovery of the concept as it happened.
 For example, I don't know the exact details of the creation of the internet, but you could imagine an explanation that walks through the journey of universities wanting some kind of decentralized communication protocol, and how that effort was funded by government money with the justification that it could be useful for national defense.
 Then introduce Tim Berners-Lee and HTTP, and then how that evolved to support more complexity.
 And throughout, pepper in the relevant innovations in security and compression as they happened chronologically.
@@ -19,7 +19,7 @@ And throughout, pepper in the relevant innovations in security and compression a
 Unfortunately, the actual history of how a technology or concept came to be is full of rabbit holes and distractions for learners. In understanding the modern internet, knowing the funding model, the early implementations, the evolution of security protocols, etc. just isn't necessary.
 These things are interesting to people who already have some knowledge, sure, but aren't helpful in conveying the essence of the internet.
 
-Grant coins the term **discovery fiction** to describe a simpler way of explaining a concept; a story that isn't actually what occurred in the creation or discovery of an idea, but a more curated set of questions and problems that lead you to the solution more quickly.
+Grant brings up the term **discovery fiction** to describe a simpler way of explaining a concept; a story that isn't actually what occurred in the creation or discovery of an idea, but a more curated set of questions and problems that lead you to the solution more quickly.
 
 In the case of the internet, a much more elegant framing might be something like the following: Say we want to build a computer network. How can we connect together computers of different types in different places in a way that they'll be able to send and receive text? That can lead naturally to the essence of something like internet protocol and HTTP. And then with that established, how might we use such a system to send visual things, like the layout of web pages? Well, a text language for defining such layouts would be great, and that brings us to HTML.
 
