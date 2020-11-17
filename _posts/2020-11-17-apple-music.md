@@ -21,7 +21,7 @@ I never did find a way to control Amazon Echos around my house using the Apple M
 It may be possible but apparently isn't obvious, and I really appreciate that ability.
 
 As a point in favor of Apple Music, its interface really does feel nice.
-It feels more native that Spotify's, and as an Apple user it's very easy to intuit some of the visual metaphors.
+It feels more native than Spotify's, and as an Apple user it's very easy to intuit some of the visual metaphors.
 However, I found much more of the UI real estate was dedicated to unpersonalized recommendations – artists and genres I'd never considering listening to.
 While I could imagine Apple pitching this as "human curation", I just found it useless;
 I don't have any interest in music picked for the average person.
@@ -35,7 +35,7 @@ After you get through queued songs and back into the original mix, skipping back
 This is obviously a very specific case, but it's always bugged me, as sometimes I queue a song, listen to it, start the next one, and then want to rewind to the queued one I just played and hear it again – but that's not possible.
 Apple Music seems to handle this "correctly" (i.e. the way I like it).
 
-Still, Apple Music's rewinding and pleasant interface were not enough to overcome its overall inferiority.
+Still, Apple Music's rewinding and pleasant interface were not enough to overcome its inferior recommendations.
 The only major point in its favor was that you can play Apple Music from the Apple Watch even when your phone isn't nearby, which is ideal for running.
 And then [Spotify announced standalone support for the Apple Watch](https://www.macrumors.com/2020/11/03/spotify-apple-watch-standalone-streaming/), thus putting the nail in Apple Music's coffin.
 It's truly difficult to believe that Apple charges as much for its service as Spotify does ($10/month) – Spotify seems like the more mature product, has far more users and loyalty, and appears significantly ahead in music recommendation.
