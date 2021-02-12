@@ -1,8 +1,7 @@
 ---
 name: Introduction to Python for Data Science
 type: Workshop
-upcoming-date: January 2021
-signup-link: https://web.cvent.com/event/c1045ad5-9030-422c-9e5c-33362a9fea4e/summary
+upcoming-date: August 2021
 materials-link: https://github.com/uc-python/intro-python-datasci
 ---
 ##### Description

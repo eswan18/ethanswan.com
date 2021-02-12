@@ -1,7 +1,7 @@
 ---
 name: Advanced Python for Data Science
 type: Workshop
-upcoming-date: TBD
+upcoming-date: June 2021
 materials-link: https://github.com/uc-python/advanced-python-datasci
 ---
 ##### Description
