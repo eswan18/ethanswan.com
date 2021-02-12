@@ -34,7 +34,7 @@ title: Workshops and Courses
     <br>
     {% endif %}
     {% if course.signup-link %}
-    {% include button.html text="Sign Up" link="{{ course.signup-link }}" %}
+    {% include button.html text="Sign Up" link=course.signup-link %}
     <br>
     {% endif %}
     Next Session: {{ course.upcoming-date }}
