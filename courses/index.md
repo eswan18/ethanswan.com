@@ -34,7 +34,7 @@ title: Workshops and Courses
     <br>
     {% endif %}
     {% if course.signup-link %}
-    {% include button.html text="Sign Up" link="https://web.cvent.com/event/e9c1c3aa-f668-48a3-b495-1eb7673332a1/summary" %}
+    {% include button.html text="Sign Up" link="{{ course.signup-link }}" %}
     <br>
     {% endif %}
     Next Session: {{ course.upcoming-date }}
