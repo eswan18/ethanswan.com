@@ -1,0 +1,14 @@
+name: Continuous Integration
+
+on: push
+
+jobs:
+  test:
+    name: Test
+    runs-on: netlify/build:xenial
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      - name: lets see
+        run: |
+          ls && pwd
