@@ -5,7 +5,8 @@ on: push
 jobs:
   test:
     name: Test
-    runs-on: netlify/build:xenial
+    container:
+      image: netlify/build:xenial
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
