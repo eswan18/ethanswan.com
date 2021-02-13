@@ -7,6 +7,7 @@ jobs:
     name: Test
     container:
       image: netlify/build:xenial
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
