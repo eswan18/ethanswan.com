@@ -4,17 +4,20 @@ title: Welcome!
 ---
 
 {% include figure.html image="/images/sitewide/ethan_headshot_smiling.gif" position="left" width="220" height="330" %}
-I'm a Chicago-based data scientist and technology specialist.
-I build internal packages and other tech tools as part of the ecosystem team at <a href="http://www.8451.com">84.51˚</a>, the marketing analytics agency of Kroger.
-I'm passionate about technical tooling and technology education.
+I'm a Chicago-based data scientist, technology specialist, and teacher.
 
-Outside of work, I teach [Python workshops and courses](/courses/), offer private [office hours](/office_hours/) to help with data science tools, and do some freelance data science consulting.
-If you're interested in any of these services, please reach out to me by email at [ethanpswan@gmail.com](mailto:ethanpswan@gmail.com).
+Most of my time is spent at <a href="http://www.8451.com">84.51˚</a>, the marketing analytics agency of Kroger.
+There, as a member of the Advanced Programming and Technology Solutions team, I build internal packages and other tech tools to enable other data scientists to work faster and more efficiently.
 
-In my free time, I like to run, read, and listen to podcasts.
+I'm also an adjunct instructor at the University of Cincinnati, where I teach workshops and courses on Python's applications in data science.
+You can see all the offerings, along with descriptions and the date of next delivery, [here](/courses/).
+
+Beyond my formal work, I offer private [office hours](/office_hours/) to help with data science tools and do some freelance data science consulting.
+If you're interested in these services, please reach out to me by email at [ethanpswan@gmail.com](mailto:ethanpswan@gmail.com).
+
+In my free time, I consume myriad podcasts and newsletters, and keep track of my favorites [here](/content/).
 I even make [a podcast of my own](https://premature-optimization.pinecast.co).
-Occasionally I dabble in personal projects as well, which usually involve Raspberry Pis, Python, or both.
-I blog about some of those projects [here](/).
+Occasionally I dabble in [personal coding projects](https://github.com/eswan18) as well, and I blog about some of those projects [here](/).
 
 <br>
 
