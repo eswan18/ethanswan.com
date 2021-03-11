@@ -115,20 +115,21 @@ a.external-link {
 /****************/
 table.training-courses {
     max-width: 100%;
-    border: 1px solid gray;
     display: table;
 }
 table.training-courses td {
     vertical-align: top;
-    padding: 1em;
+    padding: 0.2em;
 }
-td.course-name, td.course-upcoming-date, td.course-name h4, td.course-name h6 {
-    background-color: gray;
-    color: white;
+td.course-title, td.course-upcoming-date {
     text-align: center;
 }
-article ol, article ul {
+td.course-content li {
     padding: 0em 0em 0em 2em;
+    font-size: 0.9em;
+}
+span.course-name {
+    font-size: 2em;
 }
 /****************/
 /* Books        */
