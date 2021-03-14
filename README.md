@@ -8,3 +8,5 @@ Test locally with docker by cding into the repo and running:
 ```
 docker run -p 8080:4000 -v $(pwd):/site bretfisher/jekyll-serve
 ```
+
+The site will then be available at `localhost:8080` in your browser.
