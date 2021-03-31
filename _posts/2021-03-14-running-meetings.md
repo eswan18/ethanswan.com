@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2021-03-13
+date: 2021-03-14
 categories:
-- project-management
+- business
 title: "Running Better Meetings"
 ---
 
