@@ -1,8 +1,7 @@
 ---
 name: Intermediate Python for Data Science
 type: Workshop
-upcoming-date: March-April 2021
-signup-link: https://web.cvent.com/event/302335b9-7b67-4d79-9b41-490d16cb70cb/summary
+upcoming-date: TBD, likely Fall 2021
 materials-link: https://github.com/uc-python/intermediate-python-datasci
 ---
 This workshop builds on concepts taught in the introductory course (i.e. the basics of Python and its data science stack).
