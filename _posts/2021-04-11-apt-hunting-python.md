@@ -32,14 +32,16 @@ As you can see, I'm torn.
 There are pros and cons.
 Part of the trouble with decisions about moving is the uncertainty: yes, you tend to have a pretty good sense of how much you like your current domestic situation, but it's hard to know how it compares to the great unknown of apartments you *don't* live in.
 
-## Searching for Promising Listings
+## Turning to Zillow
 
 The easiest way to resolve some of this uncertainty is to systematically investigate apartments listings on a website like Zillow.
 Many questions boil down to some variant of "What combination of amenities can I get, in neighborhood X, at price point Y?".
-For me, in-unit laundry, a parking spot, and some outdoor space (a deck or patio) are top of the amenity list.
+For me, air conditioning, in-unit laundry, a parking spot, and some outdoor space (a deck or patio) are at the top of the amenity list.
+I want to know which of those I can get in an apartment within my budget, in each of the neighborhoods I'm considering.
+And -- importantly -- the apartments *also* have to meet a general standard of quality and attractiveness that I'm never going to be able to define in a search query.
 
-This is a hard problem, admittedly, to build a nice user interface around.
-Zillow actually does a pretty good job: you can view what's available in a given neighborhood within a certain price range, and even restrict results to those with certain amenities.
+This is admittedly a hard problem to build a nice user interface around.
+Zillow actually does a pretty good job: you can add filters to results using criteria like price range, neighborhood or geographic boundary, or set of amenities.
 
 *But* it's not quite the ideal way to understand my apartment options, for a few reasons:
 
@@ -47,11 +49,56 @@ Zillow actually does a pretty good job: you can view what's available in a given
 
 2. It's hard to express your interrelated preferences. Zillow makes it easy to create a blanket filter ("rent must be below x"), but there's no way to define something more nuanced. Maybe I'm willing to pay an extra $200 a month if the apartment has parking -- sure, I can raise my maximum price *and* require the place have parking, but I can't require the latter as a *condition* for the former. With location, it can be even more complicated; yes, I would be willing to consider a place outside of the neighborhood I want, but only if it were perfect in every other way.
 
-3. There's no simple way to export data and save it. You can "save" individual properties, but really Zillow just adds them to a list that you can find later in your browser. This lack of "data portability" is definitely the kind of thing that irks a programmer but no one else.
+3. While it's not exactly a problem with the interface, the lack of a simple way to export data and save it means that you can't just build your own spreadsheet of apartments -- which would be a good answer to the first two issues. Maybe this lack of "data portability" is something that would irk only a programmer, but it's frustrating.
 
-Fortunately, that same programmer sensibility can help solve all three issues.
+Fortunately, a dose of that same programmer sensibility can help solve all three issues.
 
 ## Web Scraping with Python
 
 ... is the title of [an excellent O'Reilly book](https://www.amazon.com/Web-Scraping-Python-Collecting-Modern/dp/1491985577) I finished recently.
-It's also a solution to some of my frustrations with apartment hunting.
+It's also a solution to some of my frustrations with the Zillow website.
+
+And if you came here looking for a technical article about Python, I promise you've found it at last.
+
+Using the [requests](http://docs.python-requests.org) library, it's not hard to interact with the Zillow website (or most other sites) from Python.
+The simplest way to do this is to send a "Get" request to `www.zillow.com` and save the content of its response.
+
+```python
+>>> import requests
+
+>>> response = requests.get('https://www.zillow.com')
+>>> page_content = response.content
+```
+
+Unfortunately, printing the response's content yields just a lot of HTML, which most humans aren't going to be able to understand very well.
+And that's where the [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) library comes in -- it helps you parse HTML by searching for certain tags or attributes.
+
+```python
+>>> from bs4 import BeautifulSoup
+
+>>> soup = BeautifulSoup(response.content, 'html.parser')
+```
+
+The resulting `soup` object supports a `.find` method that makes it fairly straightforward to look for certain things in the HTML code.
+For example, this code prints out the first image on the page.
+
+```python
+>>> soup.find('img')
+```
+```
+<img alt="Zillow" height="14" src="https://www.zillowstatic.com/static/logos/logo-65x14.png" width="65"/>
+```
+
+Of course, figuring out what elements of the page you want, and extracting information from those bits can be tricky.
+And we don't even know what page we want to pull from yet!
+Certainly the Zillow home page isn't going to automatically show Chicago apartments with in-unit laundry.
+Finding the right URL (which we sometimes call an "endpoint") and determining how to parse it is 90% of the work, at least.
+
+## Design and Planning
+
+Before jumping right in, let's think about how things are going to need to be structured.
+a) the components you need to build
+b) how the components fit together
+
+I'd be lying if I said I always spent enough time planning, but at least in this case I gave it some thought.
+
