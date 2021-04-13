@@ -59,6 +59,13 @@ Fortunately, a dose of that same programmer sensibility can help solve all three
 It's also a solution to some of my frustrations with the Zillow website.
 
 And if you came here looking for a technical article about Python, I promise you've found it at last.
+I'm not going to explain every aspect of the scraper I built; it's a lot of code and makes use of some intermediate-level features of Python itself, like type hints and packaging.
+But I'll walk through some of the interesting bits and try to keep the discussion at a level such that newcomers to web scraping should leave with a better understanding of how it works and how to get started.
+The only expected knowledge for the reader, from here on out, is basic Python.
+
+And if you want to peruse the code yourself, you can find it [here](https://github.com/eswan18/zillow_scraper).
+
+#### The Basics of "Scraping"
 
 Using the [requests](http://docs.python-requests.org) library, it's not hard to interact with the Zillow website (or most other sites) from Python.
 The simplest way to do this is to send a "Get" request to `www.zillow.com` and save the content of its response.
@@ -79,7 +86,7 @@ And that's where the [BeautifulSoup](https://www.crummy.com/software/BeautifulSo
 >>> soup = BeautifulSoup(response.content, 'html.parser')
 ```
 
-The resulting `soup` object supports a `.find` method that makes it fairly straightforward to look for certain things in the HTML code.
+The resulting `soup` object supports a `.find` method that makes it fairly straightforward to look for certain things in the HTML.
 For example, this code prints out the first image on the page.
 
 ```python
@@ -93,6 +100,9 @@ Of course, figuring out what elements of the page you want, and extracting infor
 And we don't even know what page we want to pull from yet!
 Certainly the Zillow home page isn't going to automatically show Chicago apartments with in-unit laundry.
 Finding the right URL (which we sometimes call an "endpoint") and determining how to parse it is 90% of the work, at least.
+
+## The Nitty-gritty
+
 
 ## Design and Planning
 
