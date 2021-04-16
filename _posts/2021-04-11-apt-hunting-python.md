@@ -4,7 +4,7 @@ date: 2021-04-10
 categories:
 - python
 title: "Apartment Hunting with Python"
-preview_image: "/images/apartment_score_distributions.png"
+preview_image: "/images/posts/apartment_score_distributions.png"
 ---
 
 I recently crossed the 9-month mark as a Chicago resident.
@@ -16,7 +16,7 @@ Two bedrooms, a back porch, a garage, and more grounded outlets than even a tech
 It's in Little Italy, which is not a popular choice for Chicago young professionals, but is comfortable and has a decent set of restaurants.
 I suspect that a similar unit in a more "hip" neighborhood might be out of my price range.
 And my real office (not my extra bedroom, which has been serving in that capacity since I moved here) is a 10-minute bike ride away.
-The north side, a potential relocation option, would bring with it a commute at least twice as long.
+The north side, home of many of those hip neighborhoods, would bring with it a commute at least twice as long.
 
 On the other hand, my primary motivation in moving to a big city was exploration and experience.
 I wanted to get to know Chicago, particularly its neighborhoods.
@@ -65,7 +65,7 @@ The only expected knowledge for the reader, from here on out, is basic Python.
 
 And if you want to peruse the code yourself, you can find it [here](https://github.com/eswan18/zillow_scraper).
 
-#### The Basics of "Scraping"
+## The Basics of "Scraping"
 
 Using the [requests](http://docs.python-requests.org) library, it's not hard to interact with the Zillow website (or most other sites) from Python.
 The simplest way to do this is to send a "Get" request to `www.zillow.com` and save the content of its response.
@@ -101,14 +101,125 @@ And we don't even know what page we want to pull from yet!
 Certainly the Zillow home page isn't going to automatically show Chicago apartments with in-unit laundry.
 Finding the right URL (which we sometimes call an "endpoint") and determining how to parse it is 90% of the work, at least.
 
-## The Nitty-gritty
+## The URL
 
+Scraping websites meant for humans can be a pain, but a bright side is that we can use our human brain to find shortcuts.
+Programmatically enter a search on the Zillow homepage seems likely to be hard; we'd have to get the page, parse through it to find the searchbar, enter "Chicago" as our location, locate the amenities checklist (to select things like washer/dryer), and then submit that search.
+A lot of effort would go into that.
+
+But, a far more elegant approach is to just conduct the search ourselves and save the URL of the results page.
+Then, as long as our search includes any apartment that could possibly meet our criteria, we can collect them all and do our filters later in the process.
+
+My Zillow search returned a URL that looked like this.
+```
+https://www.zillow.com/chicago-il/rentals/?searchQueryState=%7B%22pagination%22%3A%20%7B%7D%2C%20%22mapBounds%22%3A%20%7B%22west%22%3A%20-88.09607811914063%2C%20%22east%22%3A%20-87.36823388085938%2C%20%22south%22%3A%2041.217142667058575%2C%20%22north%22%3A%2042.444992337648856%7D%2C%20%22regionSelection%22%3A%20%5B%7B%22regionId%22%3A%2017426%2C%20%22regionType%22%3A%206%7D%5D%2C%20%22isMapVisible%22%3A%20false%2C%20%22filterState%22%3A%20%7B%22fsba%22%3A%20%7B%22value%22%3A%20false%7D%2C%20%22fsbo%22%3A%20%7B%22value%22%3A%20false%7D%2C%20%22nc%22%3A%20%7B%22value%22%3A%20false%7D%2C%20%22fore%22%3A%20%7B%22value%22%3A%20false%7D%2C%20%22cmsn%22%3A%20%7B%22value%22%3A%20false%7D%2C%20%22auc%22%3A%20%7B%22value%22%3A%20false%7D%2C%20%22pmf%22%3A%20%7B%22value%22%3A%20false%7D%2C%20%22pf%22%3A%20%7B%22value%22%3A%20false%7D%2C%20%22fr%22%3A%20%7B%22value%22%3A%20true%7D%2C%20%22ah%22%3A%20%7B%22value%22%3A%20true%7D%2C%20%22mf%22%3A%20%7B%22value%22%3A%20false%7D%2C%20%22manu%22%3A%20%7B%22value%22%3A%20false%7D%2C%20%22land%22%3A%20%7B%22value%22%3A%20false%7D%2C%20%22beds%22%3A%20%7B%22min%22%3A%202%7D%2C%20%22mp%22%3A%20%7B%22max%22%3A%203000%7D%2C%20%22price%22%3A%20%7B%22max%22%3A%20890941%7D%2C%20%22lau%22%3A%20%7B%22value%22%3A%20true%7D%2C%20%22doz%22%3A%20%7B%22value%22%3A%20%227%22%7D%7D%2C%20%22isListVisible%22%3A%20true%7D
+```
+
+Yikes.
+
+However, if you scan that string, you'll see some recognizable words like "mapBounds", "regionID", "value", and "false".
+In fact, all of these fall after the `?searchQueryState=` part of the URL.
+Mappings like this (`x=y`) after a question mark in a URL are called *parameters*, and typically indicate that the server is customizing the page you receieve based on those values.
+So my guess was that my whole search -- price, amenities, location -- was encoded in this string somehow, and passed as "searchQueryState" in this URL.
+
+After some googling, I discovered the `unquote` function in `urllib`...
+
+```python
+from urllib.parse import unquote
+unquote('https://www.zillow.com/chicago-il/rentals/?searchQueryState=%7B%22pagination%22%3A%20%7B%7D%2C%20%22mapBounds%22%3A%20%7B%22...')
+```
+```
+> 'https://www.zillow.com/chicago-il/rentals//?searchQueryState={"pagination": {}, "mapBounds": {"west": -88.09607811914063, "east": -87.36823388085938, "south": 41.217142667058575, "north": 42.444992337648856}, "regionSelection": [{"regionId": 17426, "regionType": 6}], "isMapVisible": false, "filterState": {"fsba": {"value": false}, "fsbo": {"value": false}, "nc": {"value": false}, "fore": {"value": false}, "cmsn": {"value": false}, "auc": {"value": false}, "pmf": {"value": false}, "pf": {"value": false}, "fr": {"value": true}, "ah": {"value": true}, "mf": {"value": false}, "manu": {"value": false}, "land": {"value": false}, "beds": {"min": 2}, "mp": {"max": 3000}, "price": {"max": 890941}, "lau": {"value": true}, "doz": {"value": "7"}}, "isListVisible": true}'
+```
+
+Our URL is actually hiding a nested structure that represents our search query!
+That's pretty cool.
+
+Now I don't know exactly what each parameter means in this case, but some are easy: `"doz"` is days on Zillow, which I required to be 7 or fewer.
+`"beds": {"min": 2}` indicates that I specified 2+ bedrooms.
+The best part is that now we can store the search as part of our Python code and construct the URL on the fly; we could even tweak our search parameters by just updating their value in the Python code.
+```python
+from urllib.parse import quote as url_quote
+import json
+import requests
+
+CHI_URL = "https://www.zillow.com/chicago-il/rentals/"
+query_state = {
+    "pagination": {},
+    "mapBounds": {
+        "west": -88.09607811914063,
+        "east": -87.36823388085938,
+        "south": 41.217142667058575,
+        "north": 42.444992337648856,
+    },
+    "regionSelection": [{"regionId": 17426, "regionType": 6}],
+    "isMapVisible": False,
+    "filterState": {
+        "fsba": {"value": False},
+        "fsbo": {"value": False},
+        "nc": {"value": False},
+        "fore": {"value": False},
+        "cmsn": {"value": False},
+        "auc": {"value": False},
+        "pmf": {"value": False},
+        "pf": {"value": False},
+        "fr": {"value": True},
+        "ah": {"value": True},
+        "mf": {"value": False},
+        "manu": {"value": False},
+        "land": {"value": False},
+        # Here begin the params I understand: beds, price, laundry, days on Zillow.
+        "beds": {"min": 2},
+        "mp": {"max": 3000},
+        "price": {"max": 890941},
+        "lau": {"value": True},
+        "doz": {"value": "7"},
+    },
+    "isListVisible": True,
+}
+# Turn the dictionary into a URL-safe string.
+formatted_q_state = url_quote(json.dumps(query_state))
+# Combine that string with the base URL for Chicago apartments on Zillow.
+final_url = f"{CHI_URL}/?searchQueryState={formatted_q_state}"
+
+# Fetch the page.
+response = requests.get(final_url)
+```
+
+The real code is [here](https://github.com/eswan18/zillow_scraper/blob/15f981ab81f65595f6c6a1e21e9eba48272684c3/zillow-scraper/scrape/zillow.py).
+It also has to deal with complications like [believable browser headers](https://github.com/eswan18/zillow_scraper/blob/15f981ab81f65595f6c6a1e21e9eba48272684c3/zillow-scraper/scrape/zillow.py#L9-L15), fetching [multiple pages of results](https://github.com/eswan18/zillow_scraper/blob/15f981ab81f65595f6c6a1e21e9eba48272684c3/zillow-scraper/scrape/zillow.py#L57-L58), and [maintaining cookies in a "session"](https://github.com/eswan18/zillow_scraper/blob/15f981ab81f65595f6c6a1e21e9eba48272684c3/zillow-scraper/scrape/__main__.py#L130) across all of those page requests.
+But if you're just here for the basics, those are rabbit holes you can easily skip for now.
+
+## Parsing Search Results
+
+So we know the URL that returns the properties we're intersted in, we know how to fetch pages as HTML, and we know (in principle) that we can parse those pages using BeautifulSoup.
+How do we actually do it?
+
+Well, the bad news is that there's a lot of tedious clicking around that goes into it.
+To start, I typically go to the page in my browser and right click on bits of text that I want my scraper to be able to find.
+The "Inspect Element" option brings up the page HTML in a separate pane and highlights what part of that code defines the element in question.
+In this case, I focused on parts of the page that contained information on price, rooms (beds/baths), and square footage.
+
+![Inspecting Zillow Elements](/images/posts/zillow-inspect-element.png)
+
+Here, you can see that I've found the HTML code corresponding to the info for the apartment on the right.
+```html
+<div class="list-card-info">...</div>
+```
+The `...` indicates that there is more content between the opening and closing `div` tags, but it's omitted here.
+
+As enterprising web scrapers, we're well on our way to getting the info we want.
+It's likely that all the search result properties are formatted similarly, so if we search the page for `div` elements that are of class `list-card-info`, we could potentially extract all the text inside and have basic attributes on each apartment.
+We could print all the text inside each div with that class, using BeautifulSoup, like so:
+```python
+for div in page.find("div", class_="list-card-info"):
+    print(div.text)
+```
+
+The [actual code](https://github.com/eswan18/zillow_scraper/blob/15f981ab81f65595f6c6a1e21e9eba48272684c3/zillow-scraper/scrape/__main__.py#L35-L81) is quite a bit longer; I went deeper than the `list-card-info` and looked for more HTML elements within it, in order to sort out what text was about bedrooms vs price vs square footage (and used some regexes for that purpose as well).
+But at a basic level, a lot of scraping is just about finding the element you want and extracting the text inside of it.
 
 ## Design and Planning
 
-Before jumping right in, let's think about how things are going to need to be structured.
-a) the components you need to build
-b) how the components fit together
 
-I'd be lying if I said I always spent enough time planning, but at least in this case I gave it some thought.
-
+ ... got request headers from here: https://medium.com/dev-genius/scraping-zillow-with-python-and-beautifulsoup-bbc7e581c218
