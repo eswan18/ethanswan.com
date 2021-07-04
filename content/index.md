@@ -10,7 +10,7 @@ I also use my second twitter account, [@content_ious](https://twitter.com/conten
 
 ## For Developers and Data Scientists
 
-**[Python Weekly](https://www.pythonweekly.com)**
+**[Python Weekly](https://www.pythonweekly.com)** (Newsletter)
 -- The best programming newsletter I read by a wide margin.
 Usually has a few articles worth reading and a list of notable open source projects.
 For a power Python user, very worthwhile.
