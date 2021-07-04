@@ -17,7 +17,7 @@ If you're interested in these services, please reach out to me by email at [etha
 
 In my free time, I consume myriad podcasts and newsletters, and keep track of my favorites [here](/content/).
 I even make [a podcast of my own](https://premature-optimization.pinecast.co).
-Occasionally I dabble in [personal coding projects](https://github.com/eswan18) as well, and I blog about some of those projects [here](/).
+Occasionally I dabble in [personal coding projects](https://github.com/eswan18) as well, and I [blog](/blog) about some of those projects.
 
 <br>
 
