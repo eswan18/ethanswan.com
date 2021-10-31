@@ -55,6 +55,10 @@ collections:
     title: "Training Courses"
     output: true
     description: "Courses I teach"
+  talks:
+    title: "Talks"
+    output: true
+    description: "Talks I've Given"
   books:
     title: "Books"
     output: false
@@ -84,7 +88,8 @@ logo: '/assets/logos/logo_light@96px.jpeg'
 # 9. Site navigation
 navigation_header:
   Home: /
-  Workshops and Courses: /courses/
+  Teaching: /courses/
+  Talks: /talks/
   Office Hours: /office_hours/
   Blog: /blog/
   Favorite Content: /content/
