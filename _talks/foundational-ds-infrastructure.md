@@ -10,6 +10,4 @@ layout: talk
 I spoke with 84.51˚ teammates Brad Boehmke and Gus Powers at PyData 2021, about what it takes to build internal tooling that effectively enables a large department of data scientists.
 The talk is fairly high-level and doesn't require too much technical background.
 
-The video will eventually be posted on YouTube, and at that point I'll link it here; in the meantime, you can look through the slides below.
-
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSofSZirKhkjLwQIlOSBKnxRPrFiiMjPjOyeZwxEV_uWR_4j0Bcq0cVr9Oeovm176RQeB50KDmXtgoc/embed?start=false&loop=false&delayms=30000" frameborder="0" width="100%" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vM26QPTOPVk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
