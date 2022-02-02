@@ -16,3 +16,5 @@ gem "jekyll-feed"
 gem "jekyll-commonmark"
 gem "jekyll-include-cache"
 gem "jemoji"
+
+gem "webrick", "~> 1.7"
