@@ -1,7 +1,6 @@
 ---
-name: Intermediate Python for Data Science
+title: Intermediate Python for Data Science
 type: Workshop
-upcoming-date: Spring/Summer 2022 TBD
 materials-link: https://github.com/uc-python/intermediate-python-datasci
 ---
 This workshop builds on concepts taught in the introductory course (i.e. the basics of Python and its data science stack).

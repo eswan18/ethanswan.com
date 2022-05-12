@@ -1,23 +1,37 @@
 <div class="course-overview-box">
-  <p><span class="course-overview-title">{{ include.title }}</span></p>
+  {% assign course = include.course %}
+  <p>
+    <span class="course-overview-title">{{ course.title }}</span>
+    {% if course.type %}
+    <span class="badge">{{ course.type }}</span><br>
+    {% endif %}
+  </p>
 
-
-
-  {% if include.materials-link %}
-  {% include button.html text="Course Materials" link=include.materials-link %}
+  {% if course.subtitle %}
+  <span class="course-overview-subtitle">{{ course.subtitle }}</span>
   {% endif %}
+  
+  <p><span class="course-overview-content">{{ course.content | markdownify }}</span></p>
 
-  {% if include.page-link %}
-  {% include button.html text="Course Page" link=include.page-link %}
-  {% endif %}
+  {% if course.materials-link or course.page-link or course.signup-link %}
+  <div class="course-links">
+    {% if course.materials-link %}
+    {% include button.html text="Course Materials" link=course.materials-link %}
+    {% endif %}
 
-  {% if include.signup-link %}
-  {% include button.html text="Sign Up" link=include.signup-link %}
-  {% endif %}
+    {% if course.page-link %}
+    {% include button.html text="Course Page" link=course.page-link %}
+    {% endif %}
 
-  {% if include.upcoming-date %}
-  <br>
-  Next Session:
-  {{ include.upcoming-date }}
+    {% if course.signup-link %}
+    {% include button.html text="Sign Up" link=course.signup-link %}
+    {% endif %}
+
+    {% if course.upcoming-date %}
+    <br>
+    Next Session:
+    {{ course.upcoming-date }}
+    {% endif %}
+  </div>
   {% endif %}
 </div>

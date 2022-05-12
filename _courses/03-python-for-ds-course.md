@@ -1,7 +1,6 @@
 ---
-name: Python for Data Science
+title: Python for Data Science
 type: Course (2 Credit Hours)
-upcoming-date: Spring 2020
 page-link: /courses/pages/python-for-ds-course
 hidden: yes
 ---

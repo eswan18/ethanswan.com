@@ -1,7 +1,6 @@
 ---
-name: Python for Web Scraping
+title: Python for Web Scraping
 type: Workshop
-upcoming-date: Not scheduled
 materials-link: https://github.com/uc-python/python-for-web-scraping
 ---
 This 3-week course covers the fundamentals of interacting with web sites using Python.
