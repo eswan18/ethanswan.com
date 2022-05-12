@@ -1,0 +1,23 @@
+<div class="course-overview-box">
+  <p><span class="course-overview-title">{{ include.title }}</span></p>
+
+
+
+  {% if include.materials-link %}
+  {% include button.html text="Course Materials" link=include.materials-link %}
+  {% endif %}
+
+  {% if include.page-link %}
+  {% include button.html text="Course Page" link=include.page-link %}
+  {% endif %}
+
+  {% if include.signup-link %}
+  {% include button.html text="Sign Up" link=include.signup-link %}
+  {% endif %}
+
+  {% if include.upcoming-date %}
+  <br>
+  Next Session:
+  {{ include.upcoming-date }}
+  {% endif %}
+</div>
