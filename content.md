@@ -8,21 +8,15 @@ I also use my second twitter account, [@content_ious](https://twitter.com/conten
 
 <hr>
 
-## For Developers and Data Scientists
+# Software Engineering and Data Science
 
 **[Python Weekly](https://www.pythonweekly.com)** (Newsletter)
 -- The best programming newsletter I read by a wide margin.
 Usually has a few articles worth reading and a list of notable open source projects.
 For a power Python user, very worthwhile.
 
-<hr>
+# Finance, Business, and Venture Capital
 
-## Other Interests
-
-<br>
-
-#### Finance, Business, and Venture Capital
-<br>
 **[Benedict Evans' Newsletter](https://www.ben-evans.com/)** (Newsletter)
 -- Benedict Evans, formerly of VC firm Andreesen Horowitz, summarizes what's happened in the tech industry that week and includes some of his own analysis.
 
@@ -34,8 +28,8 @@ The author hits a few relevant news items of the day and explains them, often fi
 -- Business strategy analysis, usually focusing on one of the big players in tech each week and some recent news about them.
 It seems targed at tech executives who want to understand the economics and strategy of the industry.
 
-#### Policy and Economics
-<br>
+# Policy and Economics
+
 **[Slow Boring](https://www.slowboring.com)** (Newsletter)
 -- Even though this newsletter comes daily, its topics are only sometimes topical.
 The author (Matt Yglesias) sends his analysis and opinions on whatever topic is on his mind.
@@ -51,8 +45,8 @@ Matt Yglesias, of Slow Boring (above), is one of the regulars.
 Economist Russ Roberts interviews various guests about their work, which is often in fields outside economics.
 Roberts comes at most issues with a strong free market perspective, and occasionally disagrees with his guests, but is always quick to point out that he could be wrong.
 
-#### NBA
-<br>
+# NBA
+
 **[Dunc'd On](http://nateduncannba.com)** (Podcast)
 -- Probably the most hardcore NBA-nerd content on the internet.
 The hosts produce roughly five hours of podcasts a week, going deep on both game analysis and salary cap minutae.

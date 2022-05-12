@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2020-11-08
-categories:
+tags:
 - education
 title: "Discovery Fiction"
 excerpt: "I recently discovered and binged the Ben, Ben and Blue podcast. The hosts all work in STEM education to some degree, and while that topic isn't explicitly the focus of the show, it comes up a lot. In one episode, Grant Sanderson (one of the hosts) talks about how it's teach new ideas by recapping the actual discovery of the concept as it happened."

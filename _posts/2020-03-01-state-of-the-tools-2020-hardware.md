@@ -1,10 +1,11 @@
 ---
 layout: post
 date: 2020-03-01
-categories:
+tags:
 - technology
 title: "State of the Tools 2020: Hardware"
-preview_image: "/images/posts/state-of-tools-2020-hardware.jpeg"
+thumbnail-img: "/images/posts/state-of-tools-2020-hardware.jpeg"
+cover-img: "/images/posts/state-of-tools-2020-hardware.jpeg"
 excerpt: "I spend a lot of time on meta-productivity: thinking about how to get work done better and faster. The majority of that thinking is around technology and specifically the tech tools I use. Maybe thinking about my workflow has returns large enough to offset the time it consumes in my life, but frankly it doesn't matter too much to me since life optimization is as much a hobby as an objective."
 ---
 

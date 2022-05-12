@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2018-06-19
-categories:
+tags:
 - syntact-project
 title: Buzzer Beaters and Cognitive Bias
 external_link: http://www.syntactproject.com/2018/06/19/buzzer-beaters-and-cognitive-bias.html

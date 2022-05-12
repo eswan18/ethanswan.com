@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2019-11-02
-categories:
+tags:
 - "8451"
 title: Scaling Data Science Across Python and R
 external_link: https://talkpython.fm/episodes/show/236/scaling-data-science-across-python-and-r

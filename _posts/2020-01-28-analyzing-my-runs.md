@@ -1,10 +1,11 @@
 ---
 layout: post
 date: 2020-01-28
-categories:
+tags:
 - fitness
+- python
 title: Analyzing My Runs
-preview_image: "/images/posts/running_speed_vs_distance.svg"
+thumbnail-img: "/images/posts/running_speed_vs_distance.svg"
 ---
 
 For a while now, I've been thinking about how interesting it would be to look at data on my running habits. Depending on the time of year and some other factors, I probably run 1-4 times a week, and I've been running semi-regularly since college.

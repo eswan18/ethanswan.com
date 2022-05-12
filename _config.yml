@@ -1,26 +1,13 @@
-# Taken from Alembic repo on Github:
-# Site configuration
-# 1. Files excluded from Jekyll builds
-# 2. Installed Gems
-# 3. Gem settings
-# 4. Jekyll settings
-# 5. Collections
-# 6. Jekyll collections settings
-# 7. Site settings
-# 8. Site favicons & manifest icons
-# 9. Site navigation
+title: "ethanswan.com"
+author: Ethan Swan
 
+social-network-links:
+  twitter: eswan18
+  linkedin: ethanpswan
+  github: eswan18
+  rss: true
+rss-description: Ethan Swan's Blog
 
-# 1. Files excluded from Jekyll builds
-exclude:
-- README.md
-- LICENSE
-- CNAME
-- Gemfile
-- Gemfile.lock
-- vendor
-
-# 2. Installed Gems
 plugins:
 - jekyll-sitemap
 - jekyll-mentions
@@ -33,19 +20,20 @@ plugins:
 - jekyll-include-cache
 - jemoji
 
-# 3. Gem settings
+# Jekyll options
 markdown: kramdown
+kramdown:
+  input: GFM
+excerpt_separator: <!--more-->
 paginate: 5
 paginate_path: /blog/page:num
+permalink: /feed/:year/:month/:day/:title
 sass:
   style: compressed
   sass_dir: _sass
 
-# 4. Jekyll settings
-permalink: /feed/:year/:month/:day/:title
-excerpt_separator: <!--more-->
 
-# 5. Collections
+# Collections
 collections:
   coffee_shops:
     title: "Coffee Shops"
@@ -65,17 +53,14 @@ collections:
     description: "Books I've read"
 
 
-# 7. Site settings
-#theme: alembic-jekyll-theme
+theme: beautiful-jekyll-theme
 encoding: utf-8 # Make sure the encoding is right
-title: "ethanswan.com"
 baseurl: ""
 name: Ethan Swan
 repo: "https://github.com/eswan18/eswan18.github.io"
 repository: "eswan18/eswan18.github.io"
 email: "ethanpswan@gmail.com"
 
-# 8. Site favicons & manifest icons
 favicons: # Favicons are also used in the manifest file. Syntax is 'size: path'
   16: '/assets/logos/logo_dark@16px.jpeg'
   32: '/assets/logos/logo_dark@32px.jpeg'
@@ -85,20 +70,23 @@ favicons: # Favicons are also used in the manifest file. Syntax is 'size: path'
   180: '/assets/logos/logo_dark@180px.jpeg'
 logo: '/assets/logos/logo_light@96px.jpeg'
 
+# Colors
+link-col: "#4dabe9"
+hover-col: "#206798"
+mobile-theme-col: "#4dabe9"
+navbar-col: "#ade8ff"
+
 # 9. Site navigation
-navigation_header:
+navbar-links:
   Home: /
-  Teaching: /courses/
-  Talks: /talks/
-  Office Hours: /office_hours/
-  Blog: /blog/
-  Favorite Content: /content/
-  Whimsy: /whimsy/
-social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
-  Twitter: https://twitter.com/eswan18
-  LinkedIn: https://www.linkedin.com/in/ethanpswan
-  GitHub: https://github.com/eswan18
-RSS: /feed.xml
+  Blog: /blog
+  Teaching:
+    - Courses: /courses
+    - Office Hours: /office_hours
+  Talks and Appearances:
+    - Conference Talks: /talks
+  Favorite Content: /content
+  Whimsy: /whimsy
 
 # 10. Default Frontmatter
 defaults:
@@ -112,3 +100,11 @@ defaults:
       path: "courses"
     values:
       aside-type: courses
+
+exclude:
+- README.md
+- LICENSE
+- CNAME
+- Gemfile
+- Gemfile.lock
+- vendor

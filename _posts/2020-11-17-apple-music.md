@@ -1,10 +1,9 @@
 ---
 layout: post
 date: 2020-11-17
-categories:
+tags:
 - technology
 title: "Apple Music Had Its Chance"
-excerpt: 
 ---
 
 With the announcement of [Apple One](https://www.apple.com/apple-one/) in September, I decided to reevaluate my loyalty to Spotify.

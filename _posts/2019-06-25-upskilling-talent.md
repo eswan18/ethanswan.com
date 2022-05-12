@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2019-06-25
-categories:
+tags:
 - "8451"
 title: Upskilling Talent Through Tech
 external_link: https://youtu.be/akZuZRgqDxc

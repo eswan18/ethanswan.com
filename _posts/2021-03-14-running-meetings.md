@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2021-03-14
-categories:
+tags:
 - business
 title: "Running Better Meetings"
 ---

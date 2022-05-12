@@ -1,13 +1,12 @@
 ---
 layout: post
 date: 2018-07-27
-categories:
+tags:
 - gaming
 title: A Non-Gamer Takes on The Witcher 3
-preview_image: "/images/posts/witcher_3_welcome.jpg"
+cover-img: "/images/posts/witcher_3_welcome.jpg"
+thumbnail-img: ""
 ---
-
-<center><img alt="Witcher 3 Welcome" src="/images/posts/witcher_3_welcome.jpg"/></center>
 
 In March, I finally built a computer for the first time.
 I think this qualified as a seminal moment in the life of a young geek.

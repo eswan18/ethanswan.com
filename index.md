@@ -1,9 +1,9 @@
 ---
 layout: page
 title: Welcome!
+subtitle: My Personal Website and Blog
 ---
 
-{% include figure.html image="/images/sitewide/ethan_headshot_smiling.gif" position="left" width="220" height="330" %}
 I'm Ethan, a Chicago-based software developer and teacher.
 
 I currently work as a fullstack engineer at <a href="https://www.reviewtrackers.com">ReviewTrackers</a>.
@@ -16,17 +16,3 @@ If you're interested in these services, please reach out to me by email at [etha
 In my free time, I consume more podcasts and newsletters than I really have time for, and keep track of my favorites [here](/content/).
 I even make [a podcast of my own](https://premature-optimization.pinecast.co).
 Occasionally I dabble in [personal coding projects](https://github.com/eswan18) and [blog](/blog) about some of them on this site.
-
-<br>
-
-<table><tr>
-<td>
-  {% include button.html text="Twitter" link="https://twitter.com/eswan18" icon="twitter" %}
-</td><td>
-  {% include button.html text="LinkedIn" link="https://linkedin.com/in/ethanpswan" icon="linkedin" %}
-</td><td>
-  {% include button.html text="GitHub" link="https://github.com/eswan18" icon="github" %}
-</td>
-</tr> </table>
-
-<br><br>

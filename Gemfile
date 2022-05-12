@@ -2,10 +2,10 @@
 
 source "https://rubygems.org"
 
-git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+#git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
-gem "jekyll", '>=3.8.5'
-gem "alembic-jekyll-theme"
+gem "jekyll" # The theme (below) requires a particular version of jekyll
+gem "beautiful-jekyll-theme", "5.0.0"
 gem "jekyll-sitemap"
 gem "jekyll-mentions"
 gem "jekyll-paginate"
@@ -16,5 +16,3 @@ gem "jekyll-feed"
 gem "jekyll-commonmark"
 gem "jekyll-include-cache"
 gem "jemoji"
-
-gem "webrick", "~> 1.7"

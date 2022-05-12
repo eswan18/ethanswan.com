@@ -1,10 +1,10 @@
 ---
 layout: post
 date: 2021-04-20
-categories:
+tags:
 - python
 title: "Apartment Hunting with Python"
-preview_image: "/images/posts/apartment_score_distributions.png"
+thumbnail-img: "/images/posts/apartment_score_distributions.png"
 ---
 
 I recently crossed the 9-month mark as a Chicago resident.
