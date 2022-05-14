@@ -17,12 +17,13 @@
 
   <div class="course-links">
     {% if course.materials-link or course.page-link or course.signup-link %}
+    Links:
     {% if course.materials-link %}
-    {% include button.html text="Course Materials" link=course.materials-link %}
+    {% include button.html text="Materials" link=course.materials-link %}
     {% endif %}
 
     {% if course.page-link %}
-    {% include button.html text="Course Page" link=course.page-link %}
+    {% include button.html text="Homepage" link=course.page-link %}
     {% endif %}
 
     {% if course.signup-link %}

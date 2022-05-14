@@ -1,3 +1,5 @@
+---
+---
 .course-overview-title {
     /* Allows the course-type badge to be squeezed right above. */
     margin-top: 0.1em;
@@ -29,8 +31,11 @@ div.course-links {
     text-align: center;
 }
 a.button {
-  font-size: 1.1em;
-  font-weight: normal;
-  margin: 1rem;
-  border: 1px solid #4dabe9;
+  font-size: 1em;
+  color: white;
+  margin: 1rem 0.4rem;
+  background-color: #404040;
+}
+a.button:hover {
+  background-color: {{ site.hover-col }}
 }
