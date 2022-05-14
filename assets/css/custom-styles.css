@@ -1,0 +1,11 @@
+.navbar-custom .avatar-container {
+  width: 2rem;
+}
+
+
+@media (min-width: 768px) {
+  .navbar-custom.top-nav-regular .avatar-container {
+    margin-top: 5rem;
+    width: 2.5rem;
+  }
+}

@@ -51,6 +51,7 @@ collections:
 
 
 theme: beautiful-jekyll-theme
+site-css: assets/css/custom-styles.css
 encoding: utf-8 # Make sure the encoding is right
 baseurl: ""
 name: Ethan Swan
@@ -66,6 +67,7 @@ favicons: # Favicons are also used in the manifest file. Syntax is 'size: path'
   144: '/assets/logos/logo_dark@144px.jpeg'
   180: '/assets/logos/logo_dark@180px.jpeg'
 logo: '/assets/logos/logo_light@96px.jpeg'
+avatar: '/assets/logos/logo_dark@144px.jpeg'
 
 # Colors
 link-col: "#4dabe9"
@@ -82,7 +84,7 @@ navbar-links:
     - Courses: /teaching/courses
     - Office Hours: /teaching/office_hours
   Talks and Appearances: /appearances
-  Whimsy: /whimsy
+  Nonsense: /nonsense
 
 # 10. Default Frontmatter
 defaults:
