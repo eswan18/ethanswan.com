@@ -73,8 +73,7 @@ avatar: '/assets/logos/logo_dark@144px.jpeg'
 link-col: "#4dabe9"
 hover-col: "#206798"
 mobile-theme-col: "#4dabe9"
-navbar-col: "#b1dbf2"
-navbar-border-col: "#040404"
+navbar-col: "#cde8f9"
 
 # 9. Site navigation
 navbar-links:
