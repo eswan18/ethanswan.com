@@ -1,5 +1,6 @@
 ---
 title: Python for Data Science
+subtitle: Offered through the University of Cincinnati's Lindner College of Business
 type: Course (2 Credit Hours)
 page-link: /courses/pages/python-for-ds-course
 hidden: yes
@@ -14,4 +15,3 @@ Topics include data wrangling, interaction with data sources, visualization, run
 4. Explore various methods of producing output in Python: plotting, exporting various data formats, converting notebooks to static files as deliverables, and writing to a SQL database.
 5. Expose students to modeling via scikit-learn and discuss the fundamentals of building models in Python.
 6. Teach students how and when to teach themselves, through a discussion of widely-available Python resources.
-

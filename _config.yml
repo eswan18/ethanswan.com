@@ -25,12 +25,9 @@ markdown: kramdown
 kramdown:
   input: GFM
 excerpt_separator: <!--more-->
-paginate: 5
+paginate: 8
 paginate_path: /blog/page:num
 permalink: /feed/:year/:month/:day/:title
-sass:
-  style: compressed
-  sass_dir: _sass
 
 
 # Collections
@@ -74,17 +71,19 @@ logo: '/assets/logos/logo_light@96px.jpeg'
 link-col: "#4dabe9"
 hover-col: "#206798"
 mobile-theme-col: "#4dabe9"
-navbar-col: "#ade8ff"
+navbar-col: "#b1dbf2"
+navbar-border-col: "#040404"
 
 # 9. Site navigation
 navbar-links:
   Home: /
   Blog: /blog
   Teaching:
-    - Courses: /courses
-    - Office Hours: /office_hours
+    - Courses: /teaching/courses
+    - Office Hours: /teaching/office_hours
   Talks and Appearances:
     - Conference Talks: /talks
+    - Appearances: /appearances
   Favorite Content: /content
   Whimsy: /whimsy
 

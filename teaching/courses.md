@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Workshops and Courses
+title: My Courses
+css: assets/custom-styles/course-overview-box.css
 ---
 {% for course in site.courses %}
 
@@ -11,7 +12,7 @@ title: Workshops and Courses
 {% else %}
 
   {% comment %}
-    This hacky if clause keeps us from including standalone pages in the courses folder (such as this file you're looking at) in the course list.
+    This hacky if clause keeps us from including standalone pages in the courses folder in the course list.
   {% endcomment %}
   {% if course.layout != "page" %}
   {% include course-overview-box.html course=course %}

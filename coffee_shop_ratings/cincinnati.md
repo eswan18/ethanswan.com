@@ -13,6 +13,7 @@ The following are arranged from highest- to lowest-rated.
 
 {% assign shops = site.coffee_shops | where:"city",page.city | sort: 'rating' %}
 {% for shop in shops reversed %}
+<br>
 <div class="coffee-shop" id="{{ shop.name | slugify }}">
 <table>
 <tr>
