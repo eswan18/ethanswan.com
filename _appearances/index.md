@@ -6,8 +6,8 @@ css: assets/custom-styles/appearance-overview-box.css
 
 Below you can find conference talks I've given and instances in which I've appeared on podcasts, etc.
 
-
-{% for appearance in site.appearances %}
+{% assign appearances = site.appearances | reverse %}
+{% for appearance in appearances %}
 
 {% if appearance.hidden %}
 

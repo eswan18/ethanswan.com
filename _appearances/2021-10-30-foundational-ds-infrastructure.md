@@ -9,7 +9,7 @@ links:
   YouTube: https://youtu.be/vM26QPTOPVk
 ---
 
-My talk with teammates Brad Boehmke and Gus Powers at PyData Global 2021, about what it takes to build internal tooling that effectively enables a large department of data scientists.
+My talk with teammates Brad Boehmke and Gus Powers about what it takes to build internal tooling that effectively enables a large department of data scientists.
 Fairly high-level and doesn't require too much technical background.
 <br><br>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vM26QPTOPVk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
