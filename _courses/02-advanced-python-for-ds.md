@@ -3,7 +3,8 @@ title: Advanced Python for Data Science
 subtitle: Offered through the University of Cincinnati's Center for Business Analytics
 type: Workshop
 upcoming-date: Fall 2022, TBD
-materials-link: https://github.com/uc-python/advanced-python-datasci
+links:
+  Materials: https://github.com/uc-python/advanced-python-datasci
 ---
 This is a two-day course that introduces how one can use Python for advanced machine learning applications.
 Most of the time will be spent working through example problems end-to-end in the classroom.

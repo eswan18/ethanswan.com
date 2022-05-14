@@ -2,7 +2,8 @@
 title: Python for Web Scraping
 subtitle: Offered through the University of Cincinnati's Lindner College of Business
 type: Workshop
-materials-link: https://github.com/uc-python/python-for-web-scraping
+links:
+  Materials: https://github.com/uc-python/python-for-web-scraping
 ---
 This 3-week course covers the fundamentals of interacting with web sites using Python.
 Students will learn how to fetch web pages and parse useful information out of HTML code.

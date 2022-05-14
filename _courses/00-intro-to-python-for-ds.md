@@ -3,7 +3,8 @@ title: Introduction to Python for Data Science
 subtitle: Offered through the University of Cincinnati's Center for Business Analytics
 type: Workshop
 upcoming-date: Fall 2022, TBD
-materials-link: https://github.com/uc-python/intro-python-datasci
+links:
+  Materials: https://github.com/uc-python/intro-python-datasci
 ---
 This course is an introduction to Python and its uses as a data analytics tool, requiring no previous Python experience.
 It begins with the core concepts of Python itself: data types, functions, and objects.

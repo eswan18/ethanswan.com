@@ -16,21 +16,13 @@
     {% endif %}
 
   <div class="course-links">
-    {% if course.materials-link or course.page-link or course.signup-link %}
     Links:
-    {% if course.materials-link %}
-    {% include button.html text="Materials" link=course.materials-link %}
-    {% endif %}
+    {% for link in course.links %}
+    {% assign link_name = link[0] %}
+    {% assign link_ref = link[1] %}
 
-    {% if course.page-link %}
-    {% include button.html text="Homepage" link=course.page-link %}
-    {% endif %}
-
-    {% if course.signup-link %}
-    {% include button.html text="Sign Up" link=course.signup-link %}
-    {% endif %}
-
+    {% include button.html text=link_name link=link_ref %}
+    {% endfor %}
     <br>
   </div>
-  {% endif %}
 </div>

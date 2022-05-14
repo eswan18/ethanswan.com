@@ -2,7 +2,8 @@
 title: Python for Data Science
 subtitle: Offered through the University of Cincinnati's Lindner College of Business
 type: Course (2 Credit Hours)
-page-link: /courses/pages/python-for-ds-course
+links:
+  Homepage: /courses/pages/python-for-ds-course
 hidden: yes
 ---
 This is a 7-week, 2-credit hour course focused on using Python for data science.
