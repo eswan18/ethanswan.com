@@ -40,10 +40,10 @@ collections:
     title: "Training Courses"
     output: true
     description: "Courses I teach"
-  talks:
-    title: "Talks"
+  appearances:
+    title: "Talks and Appearances"
     output: true
-    description: "Talks I've Given"
+    description: "Conference talks and appearances on podcasts, etc."
   books:
     title: "Books"
     output: false
@@ -81,9 +81,7 @@ navbar-links:
   Teaching:
     - Courses: /teaching/courses
     - Office Hours: /teaching/office_hours
-  Talks and Appearances:
-    - Conference Talks: /talks
-    - Appearances: /appearances
+  Talks and Appearances: /appearances
   Favorite Content: /content
   Whimsy: /whimsy
 
