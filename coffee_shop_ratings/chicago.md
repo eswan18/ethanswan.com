@@ -1,6 +1,7 @@
 ---
 layout: page
-title: "Coffee Shop Ratings: Chicago"
+title: Coffee Shop Ratings
+subtitle: Chicago
 city: Chicago
 aside-type: coffee-shops
 ---

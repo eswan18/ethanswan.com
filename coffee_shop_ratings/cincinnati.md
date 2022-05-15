@@ -1,6 +1,7 @@
 ---
 layout: page
-title: "Coffee Shop Ratings: Cincinnati"
+title: Coffee Shop Ratings
+subtitle: Cincinnati
 city: Cincinnati
 aside-type: coffee-shops
 ---
