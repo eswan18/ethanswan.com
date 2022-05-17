@@ -9,3 +9,11 @@
     width: 2.5rem;
   }
 }
+
+/* Fixes some janky footnote formatting. */
+:target:before {
+    content: "";
+    display: inline-block;
+    height: 50px;
+    margin: -50px 0 0;
+}
