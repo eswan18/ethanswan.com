@@ -4,13 +4,16 @@
     margin-top: 3rem;
     margin-bottom: 1rem;
 }
+.course-series-title {
+    text-align: center;
+}
 @media (max-width:799px) {
   .course-overview-box {
     margin-top: 2rem;
     margin-bottom: 0.5rem;
   }
   .course-overview-box .course-overview-title {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
 }
 @media (min-width:800px) {

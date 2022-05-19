@@ -17,7 +17,7 @@ layout: page
 
 {% for series in serieses %}
   <div class="course-series-container">
-  <h2> {{ series.name | default: "Other" }} </h2>
+  <h2 class="course-series-title"> {{ series.name | default: "Other" }} </h2>
   {% for course in series.items %}
     {% include course-overview-box.html course=course %}
   {% endfor %}
