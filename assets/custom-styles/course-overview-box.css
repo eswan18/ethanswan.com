@@ -4,11 +4,22 @@
     margin-top: 3rem;
     margin-bottom: 1rem;
 }
-.course-overview-box {
+@media (max-width:799px) {
+  .course-overview-box {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .course-overview-box .course-overview-title {
+    font-size: 1.5em;
+  }
+}
+@media (min-width:800px) {
+  .course-overview-box {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     display: grid;
     grid-template-columns: 22% 66% 22%;
+  }
 }
 .course-overview-box > div {
     margin: 0.5em;
