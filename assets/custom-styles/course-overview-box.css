@@ -1,18 +1,31 @@
 ---
 ---
-.course-overview-title {
-    /* Allows the course-type badge to be squeezed right above. */
-    margin-top: 0.1em;
+.course-series-container {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
 }
 .course-overview-box {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: grid;
+    grid-template-columns: 22% 66% 22%;
 }
-span.course-overview-subtitle {
-  font-family: sans-serif;
-  font-style: italic;
-  display: block;
+.course-overview-box > div {
+    margin: 0.5em;
+}
+.course-overview-box tr td {
+    border: 0px;
+}
+.course-overview-box p {
+    margin: 0.5em;
+}
+.course-overview-title {
+    text-align: center;
+    display: block
+}
+.course-next-session {
+    text-align: center;
+    font-size: 0.9em;
 }
 span.course-type {
   font-size: 0.9em;
@@ -21,8 +34,10 @@ span.course-type {
   text-transform: uppercase;
   margin-top: 0.4em;
   margin-bottom: 0.4em;
+  display: block;
 }
 .course-overview-content p {
+    font-size: 0.9em;
     text-align: left;
     /* Helps squeeze all the content together in the overview */
     margin: 0.5rem auto;
@@ -35,6 +50,8 @@ a.button {
   color: white;
   margin: 1rem 0.4rem;
   background-color: #404040;
+  display: block;
+  float: bottom;
 }
 a.button:hover {
   background-color: {{ site.hover-col }}

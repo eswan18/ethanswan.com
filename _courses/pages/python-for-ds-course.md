@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Python for Data Science Course
+hidden: true
 ---
 
 A 7-week, 2-credit hour course focused on using Python for data science.
