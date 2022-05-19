@@ -1,0 +1,25 @@
+---
+layout: page
+---
+
+{{ content }}
+
+{% comment %} I do not like this at all but liquid is very limited in how you can filter collections {% endcomment %}
+{% assign courses = '' | split: '' %}
+{% for course in site.courses %}
+  {% unless course.hidden %}
+    {% assign courses = courses | push: course %}
+  {% endunless %}
+{% endfor %}
+
+{% comment %} Please forgive past me for this pluralization of series, it was the only way. {% endcomment %}
+{% assign serieses = courses | group_by: "series" %}
+
+{% for series in serieses %}
+  <div class="course-series-container">
+  <h2> {{ series.name | default: "Other" }} </h2>
+  {% for course in series.items %}
+    {% include course-overview-box.html course=course %}
+  {% endfor %}
+  </div>
+{% endfor %}
