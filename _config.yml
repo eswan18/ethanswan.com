@@ -58,6 +58,7 @@ name: Ethan Swan
 repo: "https://github.com/eswan18/eswan18.github.io"
 repository: "eswan18/eswan18.github.io"
 email: "ethanpswan@gmail.com"
+gtag: "G-QE770R90GE"
 
 favicons: # Favicons are also used in the manifest file. Syntax is 'size: path'
   16: '/assets/logos/logo_dark@16px.jpeg'
