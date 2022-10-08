@@ -4,9 +4,12 @@ title: Welcome!
 subtitle: My Personal Website and Blog
 ---
 
+![Ethan](/images/sitewide/ethan_headshot_smiling.gif){: class="inline-one-third float-right mobile-no-show"}
+
 I'm Ethan, a Chicago-based technologist and teacher.
 
 My day job is as a developer at <a href="https://www.reviewtrackers.com">ReviewTrackers</a>, where I work across the full web stack but mostly focus on backend and ML engineering for our NLP applications.
+
 
 I also teach Python, both freelance and through the University of Cincinnati, where I'm an adjunct instructor.
 You can see what I teach [here](/teaching/courses/), and if you or your organization is interested in a class, please reach out.
