@@ -83,7 +83,7 @@ navbar-links:
   Teaching:
     - Courses: /teaching/courses
     - Office Hours: /teaching/office_hours
-  Talks and Appearances: /appearances
+  Appearances: /appearances
   Nonsense: /nonsense
 
 # 10. Default Frontmatter

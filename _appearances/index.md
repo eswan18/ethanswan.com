@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Talks and Appearances
+title: Speaking Appearances
 css: assets/custom-styles/appearance-overview-box.css
 ---
 
