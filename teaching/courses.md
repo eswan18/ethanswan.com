@@ -11,3 +11,6 @@ Where applicable, the upcoming sessions and signups links for those workshops ar
 I also offer private trainings for organizations.
 Class sizes are typically about 15, and most courses run between 1 and 2 full days.
 For details, including rates, please contact me by email: [ethanpswan@gmail.com](mailto:ethanpswan@gmail.com)
+
+Additionally, you can schedule ad hoc time with me.
+See the [Office Hours](/teaching/office_hours) page.

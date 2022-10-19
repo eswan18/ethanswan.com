@@ -80,9 +80,7 @@ navbar-col: "#cde8f9"
 navbar-links:
   Home: /
   Blog: /blog
-  Teaching:
-    - Courses: /teaching/courses
-    - Office Hours: /teaching/office_hours
+  Courses: /teaching/courses
   Appearances: /appearances
   Nonsense: /nonsense
 
