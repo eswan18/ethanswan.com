@@ -3,7 +3,7 @@ layout: page
 title: Office Hours
 ---
 
-I offer private office hours for issues related to software development and data science.
+I offer private office hours for issues related to software development and machine learning engineering.
 My primary expertise is Python and its ecosystem, but I can also help with Git, CI/CD systems, and some other related technologies.
 These sessions are held over video call, and you may bring specific questions (including code that you need help with) or general topics you’d like me to explain and discuss.
 
