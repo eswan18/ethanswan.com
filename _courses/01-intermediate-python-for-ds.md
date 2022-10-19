@@ -4,9 +4,7 @@ subtitle: Offered through the University of Cincinnati's Center for Business Ana
 type: Workshop
 series: Python for Data Science Series
 short-description: More coverage of data wrangling through conditionals and functions, along with a high-level introduction to building your own models. Also discusses the management of data science environments with Conda.
-upcoming-date: August 2022
 links:
-  Sign Up: https://web.cvent.com/event/a5103902-4e7e-46b9-a44d-77a16fa0f7d9/summary
   Materials: https://github.com/uc-python/intermediate-python-datasci
 ---
 This workshop builds on concepts taught in the introductory course (i.e. the basics of Python and its data science stack).

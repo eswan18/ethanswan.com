@@ -4,7 +4,6 @@ subtitle: Offered through the University of Cincinnati's Center for Business Ana
 short-description: An introduction to Python as a data analysis tool, focusing primarily on data wrangling via the `pandas` library. Includes both lecture and case study components.
 type: Workshop
 series: Python for Data Science Series
-upcoming-date: Fall 2022, TBD
 links:
   Materials: https://github.com/uc-python/intro-python-datasci
 ---
