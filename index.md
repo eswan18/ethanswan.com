@@ -4,7 +4,7 @@ title: Welcome!
 subtitle: My Personal Website and Blog
 ---
 
-![Ethan](/images/sitewide/ethan_headshot_smiling.gif){: class="inline-one-third float-right mobile-no-show"}
+![Ethan](/images/sitewide/ethan_talking.jpeg){: class="inline-one-half float-right mobile-no-show"}
 
 I'm Ethan, a Chicago-based technologist and teacher.
 
@@ -13,7 +13,7 @@ My day job is as a developer at <a href="https://www.reviewtrackers.com">ReviewT
 
 I also teach Python, both freelance and through the University of Cincinnati, where I'm an adjunct instructor.
 You can see what I teach [here](/teaching/courses/), and if you or your organization is interested in a class, please reach out.
-I offer consulting in data science and web development as well.
+I offer consulting in ML engineering and web development as well.
 
 Beyond my professional life, I like personal fitness, sports, video games, and occasional tech projects -- some of which I blog about on this site.
 As far as tech, I have a particular interest in the design of programming languages and compilers/interpreters.
