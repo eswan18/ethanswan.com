@@ -1,12 +1,20 @@
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;  
+}
+
 .navbar-custom .avatar-container {
   width: 2rem;
 }
-
 
 @media (min-width: 768px) {
   .navbar-custom.top-nav-regular .avatar-container {
     margin-top: 5rem;
     width: 2.5rem;
+  }
+  .mobile-only {
+    display: none;
   }
 }
 
@@ -20,12 +28,21 @@
 
 .inline-one-third {
   margin: 0.5em 1.5em;
-  width: 25%;
+  width: 24%;
+}
+
+.two-thirds {
+  width: 66%;
 }
 
 .inline-one-half {
   margin: 0.5em 1.5em;
-  width: 47%;
+  width: 48%;
+}
+
+.inline-two-thirds {
+  margin: 0.5em 1.5em;
+  width: 64%;
 }
 
 @media (max-width: 767px) {
