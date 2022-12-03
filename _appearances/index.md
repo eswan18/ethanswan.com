@@ -4,6 +4,8 @@ title: Speaking Appearances
 css: assets/custom-styles/appearance-overview-box.css
 ---
 
+![Ethan Speaking](/images/sitewide/ethan_speaking.jpeg)
+
 Below you can find conference talks I've given and instances in which I've appeared on podcasts, etc.
 
 {% assign appearances = site.appearances | reverse %}
