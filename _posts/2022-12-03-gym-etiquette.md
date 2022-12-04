@@ -42,26 +42,28 @@ Answering a call is fine, the gym is a busy place and one quick conversation isn
 1. **Equipment is available if unoccupied** -- The weightroom should be thought of as a number of discrete stations (machines, benches, racks, deadlift platforms), some of which are occupied and some of which aren't.
 With few exceptions, occupied stations are just completely off-limits.
 But you can always take an unoccupied one; if someone left for more than a few seconds and didn't leave any belongings, it's fair game.
-1. **Be clear about what station you're occupying** -- Don't stand ambiguously near a piece of equipment if you're not using it.
+1. **Be clear about what station you're occupying** -- Don't stand near a piece of equipment if you're not using it.
 Try to give the right cues to others about what station you're using.
-1. **Approaching station occupants** -- You are permitted to ask someone how many sets they have left at a station, but at casual gyms (unless the gym is crowded or this piece of equipment is exceptionally scarce) the current occupant may rightly be a bit annoyed.
-It is all but illegal to ask about "working in" between sets at a station.
-This is extremely annoying, both intrusive personally and disruptive to the set-by-set rhythm of a workout.
-If your gym is so crowded that this is the only way you'll get access to the station, I suppose it's unavoidable, but at that point you need a new gym or you should switch to home workouts.
-1. **Time limits** -- Rule #2 is automatically suspended if someone spends more than about 10 minutes at a station, which is actually pretty common at the big three (deadlift platform, squat rack, bench press).
-If someone is holding a station you want for 10 minutes, you really *ought* to at least ask how many sets are left.
-Once you've made it clear you're waiting, they have an obligation to finish up.
+1. **Approaching station occupants** -- You are permitted to ask someone how many sets they have left at a station, but if the gym isn't crowded and this piece of equipment isn't especially scarce, the current occupant may rightly be a bit annoyed.
+In my book, it should be all but illegal to ask about "working in" between sets at a station, though this varies gym-to-gym mostly based on how crowded it is.
+I find working in to be both intrusive personally and disruptive to the set-by-set rhythm of a workout, and would prefer to just work out in my apartment than deal with it.
+However, I know that some gyms are so packed that it's the only way to get equipment and is thus more accepted.
+If your gym is generally very crowded, my advice would be to observe the norms a bit and try to conform.
+1. **Time limits** -- Rule #3 is automatically suspended if someone spends more than about 10 minutes at a station, which is actually pretty common at the big three (deadlift platform, squat rack, bench press).
+If someone is holding a station you want for 10 minutes, you are more than justified in asking how many sets are left.
+It's the only way to make it clear that you're waiting, and at that point they have an obligation to finish up.
 That means that you too need to be mindful of when you're occuping a station for a long period.
-It's occasionally nice to do 15+ minutes of deadlifting or squatting[^1], but once you know someone's waiting, you should finish up and move on after 10 minutes are up.
+It's occasionally nice to do 15+ minutes of deadlifting or squatting[^1], but once you know someone is waiting, you should finish up and move on after 10 minutes are up.
 1. **Put away your weights** -- Don't ever leave weights loaded on a barbell after finishing.
-Not only is this rude (someone has to put those away eventually), but it makes it unclear if the station is open or someone just quickly stepped away to get a drink.
+Firstly, it's rude: someone has to put those away eventually, and not everyone is strong enough to remove a 45-pound plate.
+But almost as bad is that it makes it unclear if the station is available, wasting valuable gym-equipment resources.
 Leaving dumbbells on the floor is arguably worse, since it messes up traffic flow and is a tripping hazard.
 
 ### Noise
 
 1. **Noise from weights** -- While this is a somewhat contentious topic, I think the median view is that it's normal and acceptable to make a lot of noise when placing heavy weights back on the ground or in a rack.
 Upon finishing a set of squats, deadlifts, or bench press, you will naturally have to clang the barbell a bit.
-Deadlifts usually involved putting the weight down on the ground between reps.
+Deadlifts usually involve putting the weight down on the ground between reps.
 This too will be noisy, but as long as you're *placing* it (not dropping it), I think people are understanding.
 1. **Noise from grunting** -- Grunts are also contentious but I think the consensus is a little more negative.
 Be aware of how loud you're being; it can be easy to lose track if you have earphones in.
@@ -72,22 +74,25 @@ That is punishable by death, with no right to a jury.
 
 ### Spotting [^2]
 
-1. **Asking for a spot** -- I'll be honest, I don't know if there is a consensus opinion on this.
-Most strangers won't ask you for a spot, but I think most people would spot you if you asked.
+1. **Asking a stranger for a spot** -- I'll be honest, I don't know if there is a consensus opinion on this.
+Most strangers wouldn't ask you for a spot, but I think most people would spot you if you asked.
 I personally avoid asking for spots from strangers, but if you're going to do it, look for someone who appears experienced in the gym and is taking fairly long breaks between sets.
-Be nice, tell them it's only for one set (it had better only be one set), and mention your expected number and goal for reps.
-If you're asked to spot, you should accept as long as you're familiar with *how* to spot that exercise[^3].
+Be nice, tell them it's only for one set (it had better only be one set), and mention your expected number of reps.
+1. **Providing a spot to a stranger** -- If you're asked to spot, you should accept as long as you're familiar with *how* to spot that exercise[^3].
+A practical exception is if you honestly don't think you are strong enough to help with the weight.
+This is pretty unusual though, since the force you provide is going to *supplement* the force of the lifter -- which obviously should be enough to handle the majority of the load.
+But if someone is benching or squatting twice as much as you can, you may have to explain that unless they're trying to live on the edge, they need a stronger spotter.
 1. **Giving a good spot** -- Spotting well takes practice.
 Your goal as a spotter is to help *as little as possible* while also enabling the lifter to finish the rep(s).
 That means that you don't help until they are unable to move the weight on their own and their movement is at a near-complete stop.
-On the bench, the most common failure point is when the bar is a couple inches off the chest; there's another at the very top of the movement, when straightening arms.
+On the bench, the most common failure point is when the bar is a couple inches off the chest; there's another at the very top of the movement, when straightening the arms.
 There are two similar failure points for shoulder press.
 For squats, I think it actually depends on where the lifter gets the most power from (quads, hips, etc.).
-You should be watching for the lifter to fail and then applying just a little force to see if that's enough for them to finish the rep.
-If that's not enough, add more.
+In any case, you should be watching for the lifter to fail and then applying just a little force to see if that's enough for them to finish the rep.
+If it's not, add more.
 Between getting the timing right --
 you can't afford to be too late, the weight will drop, but too early is bad too since you're robbing them of a good rep --
-and applying the right amount of force, this is actually somewhat delicate.
+and applying the right amount of force, this requires some skill.
 As long you pay attention, though, you'll rapidly get better with practice.
 
 <br><br>
