@@ -6,7 +6,7 @@ tags:
 - python
 - programming languages
 title: The Basics of Exceptions in Python
-excerpt: ""
+excerpt: "Python's model of exceptions is quite similar to that of other popular object-oriented languages like Ruby, JavaScript, and Java. Errors flow differently than regular data; if not \"handled\", they rise up through the entire function stack and crash the program. Developers are encouraged to write code to anticipate those exceptions, handle them before everything explodes, and change the logic flow of the program accordingly."
 preview_image: ""
 ---
 
@@ -255,7 +255,6 @@ High quality libraries should raise meaningful exceptions for their calling code
 Robust applications must anticipate a variety of possible error conditions and recover gracefully from them when possible.
 With just `raise` and `try/except`, we're able to do that in Python.
 
-I covered a few more advanced topics about exceptions in a [separate post](/feed/2022/12/04/python-exceptions-bonus).
 <br><br>
 
 [^0]: I can't vouch for Java firsthand since I avoid it like the plague, but I did some research and it looks similar
