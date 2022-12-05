@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2022-12-03
+date: 2022-12-04
 tags:
 - tech
 - python
@@ -12,7 +12,9 @@ preview_image: ""
 
 *This post was originally meant to be part of my discussion of the Go programming language (link coming soon, when I finish it), but turned out to be extensive enough to justify its own post.*
 
-Python's model of exceptions is quite similar to other popular "modern" languages like Ruby, JavaScript, and Java (I can't vouch for Java firsthand since I avoid it like the plague, but I did some research and it looks similar).
+## Overview
+
+Python's model of exceptions is quite similar to other popular object-oriented languages like Ruby, JavaScript, and Java[^0].
 Errors flow differently than regular data; if not "handled", they rise up through the entire function stack and crash the program.
 Developers are encouraged to write code to anticipate those exceptions, handle them before everything explodes, and change the logic flow of the program accordingly.
 
@@ -22,7 +24,13 @@ Developers sometimes even create their own types of errors, to signal particular
 Errors can be thought of as objects and their types as classes that can be subclassed like any other class.
 But unlike other data, they follow a different path through the code, short-circuitiing functions all the way up the stack until handled.
 
-If that all sounds like gibberish to you, let's walk through an example, starting with how you'd signal an error in your own code.
+## Example
+
+If that all sounded like gibberish to you, let's walk through an example, starting with how you'd signal an error in your own code.
+
+### Raising Errors
+
+Let's write a toy function to divide two numbers, aware of the fact that dividing a number by 0 isn't permitted.
 
 ```python
 def divide(x, y):
@@ -66,7 +74,7 @@ No value is returned and the variable is never set.
 The error short-circuits the function before it returns anything.
 Returning a value and raising an error are mutually exclusive: a function either returns something or it errors.
 
-Errors, unlike return values, automatically rise through calling functions as well.
+Errors, unlike return values, automatically rise through calling functions as well (which is why you *raise* an error).
 For example, if `divide` is called within another function, the error will escalate through both layers and short-circuit the calling function as well.
 
 ```python
@@ -86,7 +94,9 @@ Exception: Can't divide by zero
 You can see what's called the "stack trace" of the error as it bubbles up from its origin (the `raise` line in `divide`) up through `calculate_percent` and finally into `<module>` (which is actually the Python REPL).
 Having a stack trace is extremely helpful; `divide` could be called multiple times in our program, but with this knowledge we can quickly understand the exact provenance of the error and know where to look in order to fix it.
 
-Even though errors in Python aren't *returned* per se, they can be "caught" in a variable through a mechanism called try/except blocks.
+### Handling Errors
+
+Errors aren't *returned* per se, but they can be "caught" in a variable through a mechanism called `try/except` blocks.
 
 ```python
 def calculate_percent(numerator, denominator):
@@ -108,7 +118,7 @@ Here, we "catch" the exception and prevent it from short-circuting this function
 If we run into an exception in the `try` block, Python switches execution over to the `except` block instead of propagating the error further.
 
 While `raw_quotient` still isn't defined, we as the programmer get a chance to take appropriate actions to rescue[^1] the program.
-In this case, we might decide that in the rare case where we encounter an error in division, it's safe to return 0% as long as we print a warning[^2].
+In this case, we might decide that in the rare case where we encounter an error in division, it's safe to return 0 as long as we print a warning[^2].
 The function returns a value and it's stored in the `pct` variable, which wouldn't have happened if we'd let the exception go unhandled.
 
 `except` blocks will catch any error in the corresponding `try` block, no matter how many functions deep.
@@ -157,10 +167,84 @@ Uh oh, ran into a divide-by-zero error: Can't divide by zero
 0
 ```
 
+Other types of errors will still cause our function to short-circuit though.
+
+```text
+>>> calculate_percent(5, 'abc')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 3, in calculate_percent
+  File "<stdin>", line 4, in divide
+TypeError: unsupported operand type(s) for /: 'int' and 'str'
+```
+
+Dividing an integer by a string is a `TypeError`, which isn't a `ZeroDivisionError`, so our function fails just the same as if we hadn't used `try/except` at all.
+
+Developers can chain multiple `except` clauses with different exception types, to take different actions depending on what went wrong.
+
+```python
+def calculate_percent(numerator, denominator):
+    try:
+        raw_quotient = divide(numerator, denominator)
+    except ZeroDivisionError:
+       print("Division by 0 is not supported; returning 0")
+       return 0
+    except TypeError:
+        print("It looks like you entered data types that can't be divided; returning 0")
+        return 0
+    except Exception as exc:
+        print("Uh oh, an error I didn't anticipate:", exc)
+        raise exc
+    return 100 * raw_quotient
+```
+
+A few things to notice here:
+1. Errors in the `try` block are checked against each `except` clause sequentially.
+The first one that matches is entered (and *only* that one). That means you need to list more specific errors before more general ones.
+So if we'd listed `except Exception` as the first case, even `ZeroDivisionError`s and `TypeError`s would fall into that block and skip the others, since they are subtypes of `Exception`.
+2. The `as exc` part of the exception clause isn't required.
+If it's not present, errors of that type will still fall into the following block, but the error object won't be stored in a variable for the developer to use.
+In the cases of `TypeError` and `ZeroDivisionError` error, we omimtted it, but we kept it in the general `Exception` case so we can print the error's text.
+3. Any error that isn't a `ZeroDivisionError` or a `TypeError` will be checked to see if it's an `Exception`, which is the most general class of error[^4], so this block will catch anything.
+Catching *all* types of exception (as we do with `exception Exception` here) is rarely a good idea[^5], though it's helpful to demonstrate how exceptions are matched against different clauses.
+4. Errors can be "re-raised", as we do here with `raise exc`.
+You may want an error to still propagate up the stack, but only after you take some other actions.
+Here, we print a special message before re-raising.
+
+Let's see our new code in action.
+
+```text
+>>> pct = calculate_percent(5, 10)
+>>> pct
+50.0
+```
+```text
+>>> pct = calculate_percent(5, 0)
+Division by 0 is not supported; returning 0
+>>> pct
+0
+```
+```text
+>>> pct = calculate_percent(5, 'abc')
+It looks like you entered data types that can't be divided; returning 0
+>>> pct
+0
+```
+
+Our code now gracefully handles "edge cases".
+And were we to encounter an unexpected error, it would still surface via the `except Exception` clause.
+
+### Wrap up
+
+While this is a toy example, these are the tools that real-world techniques use to manage errors.
+High quality libraries raise meaningful exceptions for their calling code to handle.
+Robust applications anticipate a variety of possible error conditions and recover gracefully from them when possible.
 
 
 
-
+[^0]: I can't vouch for Java firsthand since I avoid it like the plague, but I did some research and it looks similar
 [^1]: Interesting, in Ruby this block is actually called `rescue` instead of `except`.
 [^2]: To be clear, in production code, you would probably do something entirely different -- maybe discard this input if it's a data processing application, or return an error status if it's a Rest API. But you'd initiate those actions in the `except` block.
-[^3]: The experienced Python users following along will know that this is what happens by default if you try to divide a number by 0 in Python. We didn't need to do a check to see if the denominator was 0 because Python actually raises this error for us when appropriate.
+[^3]: Experienced Python users following along will know that this is what happens by default if you try to divide a number by 0 in Python. We didn't need to do a check to see if the denominator was 0 because Python actually raises this error for us when appropriate.
+[^4]: Not *technically* true, actually. There are certain errors in Python that aren't a subclass of `Exception`; it only covers ["all built-in, non-system-exiting exceptions"](https://docs.python.org/3/library/exceptions.html#Exception). Generally you shouldn't try to catch non-`Exception` based errors in your code because they're things like [`KeyboardInterrupt`](https://docs.python.org/3/library/exceptions.html#KeyboardInterrupt) -- things that aren't meant to be suppressed in most applications.
+[^5]: If an unforeseen error occurs in an application, you usually want to discover it and not allow it to pass silently through the system. That isn't absolute though: in some cases it may be more important that the program doesn't ever crash, so you might just log the error and move on.
