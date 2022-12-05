@@ -121,14 +121,13 @@ finally:
 parse(contents)
 ```
 
-In this example, if no error occurs, the file will be opened, read, and parsed.
-If we hit an error while trying to read the file though, the `finally` clause will close the file before Python crashes.
-The error will still cause the current interpreter session to exit, but not before `f.close()` is run.
+In this example, if no error occurs, the file will be opened, read, closed, and parsed.
+But if we hit an error while trying to read the file, the `finally` clause will close the file before Python crashes.
+The error will still cause the current interpreter session to exit early, but not before `f.close()` is run.
 
-`finally` is different from `except` in that it runs even if the `try` block finishes without error.
+The key point is that `finally` is different from `except` in that it runs even if the `try` block finishes without error.
+You can use both `except` and `finally` together to modify the same `try` block, which is occasionally useful.
 
-
-Before I end this section, I'm obligated to mention that there is a rarely-used `else` construct that's legal in `try/except` blocks as well.
-It's executed only if the `try` block completes without error, and happens before the `finally` clause.
+Before I end this section, I'm obligated to mention that there is a rarely-used `else` construct that's legal after `try` blocks as well.
+It's executed only if the `try` block completes without error, and happens before the `finally` clause, if there is one.
 When I first heard of it, I couldn't think of any possible use, but it has really come in handy a couple of times in my programming career.
-Something worth being aware of.
