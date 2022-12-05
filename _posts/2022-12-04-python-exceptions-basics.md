@@ -255,6 +255,7 @@ High quality libraries should raise meaningful exceptions for their calling code
 Robust applications must anticipate a variety of possible error conditions and recover gracefully from them when possible.
 With just `raise` and `try/except`, we're able to do that in Python.
 
+I cover a few more advanced topics about exceptions in a [separate post](/feed/2022/12/04/python-exceptions-bonus).
 <br><br>
 
 [^0]: I can't vouch for Java firsthand since I avoid it like the plague, but I did some research and it looks similar
