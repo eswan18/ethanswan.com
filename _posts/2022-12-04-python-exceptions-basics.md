@@ -240,7 +240,7 @@ While this is a toy example, these are the tools that real-world techniques use 
 High quality libraries raise meaningful exceptions for their calling code to handle.
 Robust applications anticipate a variety of possible error conditions and recover gracefully from them when possible.
 
-
+<br><br>
 
 [^0]: I can't vouch for Java firsthand since I avoid it like the plague, but I did some research and it looks similar
 [^1]: Interesting, in Ruby this block is actually called `rescue` instead of `except`.
