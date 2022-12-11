@@ -10,20 +10,20 @@ excerpt: ""
 preview_image: ""
 ---
 
-*This post is a followup to my article [The Basics of Exceptions in Python](/feed/2022/12/04/python-exceptions-basics), but this one should still make sense if you haven't read it.*
+*This post is a followup to my article [The Basics of Exceptions in Python](/feed/2022/12/04/python-exceptions-basics), but should make sense on its own as long as you are familiar with `raise` and `try/except`.*
 
 Let's cover a few more advanced aspects of the Python exception system.
 We'll move a bit faster and talk at a higher level than we did in the last post.
 
-Topics we'll be covering:
-- [Other Types of Errors](#other-types-of-errors)
+Topics we'll hit:
+- [More Python Built-in Exceptions](#more-python-built-in-exceptions)
 - [User-defined Exception Classes](#user-defined-exception-classes)
 - [Finally Blocks](#finally)
-- [Keeping `try` Blocks Small](#keeping-try-blocks-small)
+- [Keeping `try` Blocks Small](#keep-try-blocks-small)
 
 <br>
 
-## Other Types of Errors
+## More Python Built-in Exceptions
 
 In the last article we talked about a few specific classes of exceptions in Python, like `ZeroDivisionError` and `TypeError`.
 There are many built-in classes of exception in Python, enough that I didn't bother to count them when I checked the [docs](https://docs.python.org/3/library/exceptions.html).
@@ -77,7 +77,7 @@ __main__.EmptyFileError: file empty.txt has no contents
 
 Because our `EmptyFileError` is a subclass of `Exception`, it will match `except` blocks that check against either of those types.
 That's good, because users who use `except Exception` as a fallback case will still be able to catch our error there.
-But -- importantly -- users can now look for our new error specifically by writing `except EmptyFileError` after a `try` block.
+But (importantly!) users can now look for our new error specifically by writing `except EmptyFileError` after a `try` block.
 
 It can also make sense to subclass more specific errors.
 Say you're writing a distributed filesystem application.
@@ -89,6 +89,7 @@ class DistributedSystemFileNotFoundError(FileNotFoundError):
 ```
 
 As a subclass of `FileNotFoundError`, this exception would match `except` blocks checking for it.
+
 If `open_file` calls our distributed system, users could catch our custom error with the following code.
 
 ```python
@@ -101,20 +102,23 @@ def does_file_exist(path_to_file):
 ```
 
 Why check for `FileNotFoundError` instead of the more specific `DistributedSystemFileNotFoundError`?
-Maybe `open_file` can accept local file paths (like `file://home/user/file.txt`) *or* distributed filesystem paths (using a different URI scheme, like `dfs://path/to/file.txt`).
+
+Maybe `open_file` can accept *both* local file paths *and* distributed filesystem paths[^2].
 When receiving local paths, it would raise a `FileNotFoundError` if the file isn't there;
 when receiving distributed filesystem paths, it would raise `DistributedSystemFileNotFoundError`.
+Our `does_file_exist` function is able to gracefully handle both of these in the same `except` block, which is useful here because we want to take the same action either way.
 
-Our `does_file_exist` function is able to handle both of these in the same `except` block, which is useful here because we want to take the same action either way.
-But if calling code instead wanted to treat not-found issues differently when they occurred in the distributed filesystem, it could catch `DistributedSystemFileNotFoundError` specifically.
+But if for some reason calling code instead wanted to treat not-found issues differently when they occurred in the distributed filesystem, it could catch `DistributedSystemFileNotFoundError` specifically.
+Subtyping existing exceptions when it makes sense enables this flexibility.
 
-Since exceptions are classes like any other, you can add attributes or methods to your custom errors if you want.
+Since exceptions are classes like any other, you can also add attributes or methods to your custom errors if you want.
 That's sometimes handy, but simple subclassing as we saw above is often enough.
 
 ## Finally
 
-Up to this point we've only been using `try` and `except` in our error handling blocks.
-Given that's what we call them, it's no surprise those are the most important aspects of the construct, but there's also another: `finally`.
+Up to this point we've only been using `try` and `except` in our error handling code.
+Given that's what we call the construct, that's no surprise.
+However, there's another keyword you can use: `finally`.
 
 Code in the `finally` block executes after everything else in the construct finishes.
 That makes it a good candidate for "clean-up code" that needs to execute *no matter what*.
@@ -153,11 +157,120 @@ parse(contents)
 ### Else
 
 Before moving on from `finally`, I'm obligated to mention that there is a rarely-used `else` construct that's legal after `try` blocks as well.
-It's executed only if the `try` block completes without error, and happens before the `finally` clause, if there is one.
+It's executed only if the `try` block completes without error.
+That means that in situations where you use both `except` and `else`, exactly one of them will run.
+
+If used in conjunction with with a `finally` clause, the `else` clause runs first.
+
 When I first heard of it, I couldn't think of any possible use, but it has really come in handy a couple of times in my programming career.
+That said, I wracked my mind for an example and couldn't come up with one.
+It's not *that* useful.
 
 
-## Keeping `try` Blocks Small
-...
+## Keep `try` Blocks Small
+
+You should put as little code as possible in the `try` block of a `try/except`.
+This is stylistic advice, not a feature of Python, but worth mentioning all the same.
+
+Having more code than necessary in the `try` block can lead to accidentally catching errors you didn't mean to.
+
+Let's demonstrate thate by writing a quick script to copy one file to another.
+
+```python
+import sys
+
+if len(sys.argv) != 3:
+    print('usage: copyfile.py <fromfile> <tofile>')
+    sys.exit(1)
+from_filename = sys.argv[1]
+to_filename = sys.argv[2]
+
+try:
+    with open(from_filename, 'rt') as f_in:
+        contents = f_in.read()
+    with open(to_filename, 'rt') as f_out:
+        f_out.write(contents)
+except FileNotFoundError:
+    print(f"Error: fromfile '{from_filename}' must exist")
+    sys.exit(1)
+```
+
+Here we're getting two filenames from the user, via command line arguments, and then copying the contents of one into another.
+We wrap our copying code in a `try` block so that we can catch situations where the input file doesn't exist.
+That way we can print a nice, terse error for the user instead of subjecting them to a full Python traceback[^3].
+
+However, our code has a bug that might not be obvious.
+Let's try it out.
+
+We can check that if the input file doesn't exist, we get an error.
+
+```text
+$ python3 copyfile.py a.txt b.txt
+Error: file 'a.txt' doesn't exist
+```
+
+But if we create the input file with some text in it, things should work.
+```text
+$ echo "hello world" > a.txt
+$ python3 copyfile.py a.txt b.txt
+Error: file 'a.txt' doesn't exist
+```
+
+Huh? Why are we still getting our error?
+We know `a.txt` exists.
+
+It's because we made a small mistake in our script, opening our destination file with `open(to_filename, 'rt')`.
+`'rt'` is for *reading* text, even though we should be writing to this file.
+If Python tries to open a file for reading and it doesn't exist, it throws a `FileNotFoundError`.
+
+What makes this particularly confusing is that the code for writing was in our `try` block, so *any* `FileNotFoundError` led to us seeing the same error message.
+
+Yes, we had a bug, but having too much code in the `try` block made it harder to detect.
+
+Here's a better way.
+```python
+import sys
+
+if len(sys.argv) != 3:
+    print('usage: copyfile.py <fromfile> <tofile>')
+    sys.exit(1)
+from_filename = sys.argv[1]
+to_filename = sys.argv[2]
+
+try:
+    with open(from_filename, 'rt') as f_in:
+        contents = f_in.read()
+except FileNotFoundError:
+    print(f"Error: file '{from_filename}' doesn't exist")
+    sys.exit(1)
+
+with open(to_filename, 'wt') as f_out:
+    f_out.write(contents)
+```
+
+Now we have the bare minimum amount of code in the `try` block, avoiding false positives.
+
+The script works now, and if we made the same mistake (`'rt'` instead of `'wt'`), we'd get a much clearer error to help us track down the problem.
+
+```bash
+Traceback (most recent call last):
+  File "/Users/eswan18/Develop/ethanswan.com/copyfile.py", line 16, in <module>
+    with open(to_filename, 'rt') as f_out:
+FileNotFoundError: [Errno 2] No such file or directory: 'b.txt'
+```
+
+Here, we get a full traceback -- indicating that the exception didn't get caught in `try/except` -- along with the true error, noting that it was `b.txt` (not `a.txt`!) that we couldn't find.
+Knowing that Python tried to open our destination file might tip us off to the fact that we tried to *read* it instead of write it.
+
+`try` blocks should contain only the line or couple of lines that could produce an error.
+Additional logic belongs in the `finally` clause or outside the construct entirely.
+
+<br>
+
+---
+
+
 
 [^1]: If I had to choose, `EOFError` is probably the closest thing, but it's not really right.
+[^2]: An interface that supports multiple input sources is actually pretty common, and this is what [URIs]() are usually used for. A local file might be described as `file://path/to/file`. A system can use a different prefix to differentiate its type of files. Our hypothetical distributed filesystem might use "dfs", for example: `dfs://path/to/file`.
+[^3]: A nice CLI shouldn't expose the user to internals. Give clear, one-line error messages if possible.
