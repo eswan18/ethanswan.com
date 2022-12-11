@@ -218,7 +218,7 @@ A few other things to note:
 If we'd listed `except Exception` as the first case, even `ZeroDivisionError`s and `TypeError`s would fall into that block and skip the others, since they are subtypes of `Exception`.
 2. The `as exc` part of the exception clause isn't required.
 If it's not present, errors of that type will still fall into the following block, but the error object won't be stored in a variable for the developer to use.
-In the cases of `TypeError` and `ZeroDivisionError` error, we omimtted it, but we kept it in the general `Exception` case in order to print the error's text.
+In the cases of `TypeError` and `ZeroDivisionError` error, we omitted it, but we kept it in the general `Exception` case in order to print the error's text.
 3. `Exception` is the most general class of error[^4], so `except Exception` will catch anything.
 Catching *all* types of exception is helpful to demonstrate how exceptions are matched against different clauses, but rarely a good idea in real applications[^5].
 4. Errors can be "re-raised", as we do here with `raise exc`.
