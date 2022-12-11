@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2022-12-04
+date: 2022-12-10
 tags:
 - tech
 - python
@@ -13,7 +13,15 @@ preview_image: ""
 *This post is a followup to my article [The Basics of Exceptions in Python](/feed/2022/12/04/python-exceptions-basics), but this one should still make sense if you haven't read it.*
 
 Let's cover a few more advanced aspects of the Python exception system.
-We'll move a bit faster and talk at a higher level of abstraction than we did in the last post.
+We'll move a bit faster and talk at a higher level than we did in the last post.
+
+Topics we'll be covering:
+- [Other Types of Errors](#other-types-of-errors)
+- [User-defined Exception Classes](#user-defined-exception-classes)
+- [Finally Blocks](#finally)
+- [Keeping `try` Blocks Small](#keeping-try-blocks-small)
+
+<br>
 
 ## Other Types of Errors
 
@@ -37,10 +45,9 @@ They're a staple of high quality code, letting you signal errors that are specif
 However, creating them requires an understanding of OOP and is a bit of a leap from `raise` and `try/except`, so I thought it was better to move them here.
 
 Python exception types can be subclassed like any other class in Python.
-Maybe you're writing a function for parsing a file and empty files are invalid.
-You might look through the docs to find the right type of exception to use, but nothing fits very well.
-If I had to choose, `EOFError` is probably the closest thing, but it's not really right.
-A better alternative is to invent your own exception type.
+Maybe you're writing a function for parsing a file, and passing empty files to the function is invalid.
+You might look through the docs to find the right type of exception to use, but nothing fits very well[^1].
+In this case, the best option is to invent your own exception type.
 
 ```python
 class EmptyFileError(Exception):
@@ -54,8 +61,8 @@ def parse_file(filename):
     ... # If all is well, go on and parse the contents.
 ```
 
-Here, we create a new `EmptyFileError`.
-The body of the class has no contents, so it inherits all behavior from `Exception`.
+Here, we create a new `EmptyFileError` class.
+Its body has no contents, so it inherits all behavior from `Exception`.
 In our function, we instantiate and raise this custom error if the file's contents are empty.
 
 When we pass it the name of an empty file, our custom error is raised just like any other.
@@ -70,6 +77,7 @@ __main__.EmptyFileError: file empty.txt has no contents
 
 Because our `EmptyFileError` is a subclass of `Exception`, it will match `except` blocks that check against either of those types.
 That's good, because users who use `except Exception` as a fallback case will still be able to catch our error there.
+But -- importantly -- users can now look for our new error specifically by writing `except EmptyFileError` after a `try` block.
 
 It can also make sense to subclass more specific errors.
 Say you're writing a distributed filesystem application.
@@ -81,6 +89,7 @@ class DistributedSystemFileNotFoundError(FileNotFoundError):
 ```
 
 As a subclass of `FileNotFoundError`, this exception would match `except` blocks checking for it.
+If `open_file` calls our distributed system, users could catch our custom error with the following code.
 
 ```python
 def does_file_exist(path_to_file):
@@ -128,6 +137,27 @@ The error will still cause the current interpreter session to exit early, but no
 The key point is that `finally` is different from `except` in that it runs even if the `try` block finishes without error.
 You can use both `except` and `finally` together to modify the same `try` block, which is occasionally useful.
 
-Before I end this section, I'm obligated to mention that there is a rarely-used `else` construct that's legal after `try` blocks as well.
+```python
+f = open('file.txt')
+try:
+    contents = f.read()
+except Exception:
+    # If a file can't be read, just pretend the it was empty.
+    contents = ''
+finally:
+    f.close()
+
+parse(contents)
+```
+
+### Else
+
+Before moving on from `finally`, I'm obligated to mention that there is a rarely-used `else` construct that's legal after `try` blocks as well.
 It's executed only if the `try` block completes without error, and happens before the `finally` clause, if there is one.
 When I first heard of it, I couldn't think of any possible use, but it has really come in handy a couple of times in my programming career.
+
+
+## Keeping `try` Blocks Small
+...
+
+[^1]: If I had to choose, `EOFError` is probably the closest thing, but it's not really right.
