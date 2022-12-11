@@ -6,7 +6,7 @@ tags:
 - python
 - programming languages
 title: "Python Exceptions: Bonus Content"
-excerpt: ""
+excerpt: "Let's cover a few more advanced aspects of the Python exception system.  We'll move a bit faster and talk at a higher level than we did in the last post."
 preview_image: ""
 ---
 
