@@ -11,9 +11,9 @@
         {{ with .Params.embeddedImage }}
           {{ with resources.Get . }}
             <!-- this one is shown inline, on big screens.-->
-            <img src="{{ .RelPermalink }}" class="inline-one-half float-right mobile-no-show">
+            <p><img src="{{ .RelPermalink }}" class="inline-one-half float-right mobile-no-show"></p>
             <!-- this one is shown above, on small screens.-->
-            <img src="{{ .RelPermalink }}" class="mobile-only center-block two-thirds">
+            <p><img src="{{ .RelPermalink }}" class="mobile-only center-block two-thirds"></p>
           {{ end }}
         {{ end }}
 
