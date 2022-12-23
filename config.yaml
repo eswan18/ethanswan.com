@@ -6,7 +6,7 @@ params:
     - name: About
       link: /
     - name: Blog
-      link: /blog
+      link: /posts
     - name: Teaching
       link: /teaching
     - name: Nonsense

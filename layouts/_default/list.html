@@ -36,8 +36,8 @@
         {{.Content}}
       </div>
       <div>
-        {{ range first 10 .Site.RegularPages }}
-            {{ .Render "summary"}}
+        {{ range .Pages }}
+          {{ .Render "summary"}}
         {{ end }}
       </div>
     </main>
