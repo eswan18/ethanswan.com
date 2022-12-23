@@ -1,0 +1,8 @@
+baseURL: https://ethanswan.com/
+params:
+  AuthorName: EthanSwan
+  GitHubUsername: eswan18
+  Subtitle: Hugo is Absurdly Fast!
+permalinks:
+  posts: /feed/:year/:month/:day/:slug/
+title: ethanswan.com

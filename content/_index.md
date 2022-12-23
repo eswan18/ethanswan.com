@@ -2,11 +2,8 @@
 layout: page
 title: Welcome!
 subtitle: My Personal Website and Blog
+embedded-header-image: images/ethan_talking.jpeg
 ---
-
-![Ethan](/images/sitewide/ethan_talking.jpeg){: class="inline-one-half float-right mobile-no-show"}
-
-![Ethan](/images/sitewide/ethan_talking.jpeg){: class="mobile-only center-block two-thirds"}
 
 I'm Ethan, a Chicago-based technologist and teacher.
 
