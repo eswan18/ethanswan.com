@@ -51,10 +51,12 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-#dark-mode-status {
-  color: var(--primary-color);
-  font-weight: bold;
+.switch-container > .status {
+  color: var(--secondary-color);
   margin: 0.1em 0.5em;
+}
+#dark-mode-status {
+  font-weight: bold;
 }
 .switch-container > p {
   margin: 0.5em;
@@ -67,7 +69,9 @@ input:checked + .slider:before {
           <input type="checkbox" id="checkbox" />
           <div class="slider round"></div>
     </label>
-    <p class="status" id="dark-mode-status">OFF</p>
+    <div class="status">
+      <p id="dark-mode-status">OFF</p>
+    </div>
   </div>
 </div>
 
