@@ -10,6 +10,7 @@
       {{ $cssFile := path.Join "/" $cssDir $file.Name }}
       <link rel="stylesheet" href="{{ $cssFile }}">
     {{ end }}
+    {{ partial "includes.html" . }}
 <style>
 .main-container {
   display: flex;
