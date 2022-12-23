@@ -3,16 +3,16 @@
   --secondary-color: #EF6F6C;
   --font-color: #394053;
   --bg-color: #FAFFFD;
-  --heading-color: #8CB369;
+  --heading-color: #6C8448;
 }
 
 /* See article: https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8 */
 [data-theme="dark"] {
   --primary-color: #EB5160;
-  --secondary-color: #9A97F3;
-  --font-color: #B7999C;
+  --secondary-color: #B7999C;
+  --font-color: #DFE0E2;
   --bg-color: #071013;
-  --heading-color: #9A97F3;
+  --heading-color: #B8B8B8;
 }
 
 @media (min-width: 768px) {
@@ -44,5 +44,9 @@ a {
 }
 
 body {
-  background-color: var(--background-color);
+  background-color: var(--bg-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
 }

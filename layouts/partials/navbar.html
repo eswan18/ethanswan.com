@@ -1,0 +1,15 @@
+<style>
+    .header-navbar {
+        width: 100%;
+        border-bottom: 3px solid var(--secondary-color);
+    }
+</style>
+
+<nav class="header-navbar">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      {{ partial "darkModeSwitch.html" . }}
+</nav>
