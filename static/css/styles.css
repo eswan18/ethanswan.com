@@ -1,9 +1,10 @@
 :root {
-  --primary-color: #06AEF0;
-  --secondary-color: #EF6F6C;
+  --primary-color: #F28F3B;
+  --secondary-color: #468C98;
   --font-color: #394053;
-  --bg-color: #FAFFFD;
-  --heading-color: #6C8448;
+  --bg-color: #FDFFFC;
+  --heading-color: #468C98;
+  --alternate-bg-color: #F5F9E9;
 }
 
 /* See article: https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8 */

@@ -1,18 +1,32 @@
 <style>
-    .header-navbar {
-        display: flex;
-        width: 100%;
-        border-bottom: 3px solid var(--secondary-color);
-    }
-    .links {
-        flex: 1 0 auto;
-    }
-    .dark-mode-switch {
-        flex: 0 0 auto;
-        display: flex;
-        flex-flow: row;
-        align-content: flex-end;
-    }
+.header-navbar {
+    display: flex;
+    width: 100%;
+    border-bottom: 3px solid var(--secondary-color);
+}
+.header-navbar ul {
+    margin: 0.5em;
+    padding: 0em;
+}
+.header-navbar ul li {
+    display: inline-block;
+    padding: 0.5em;
+    margin: 0;
+}
+.header-navbar ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.links {
+    flex: 1 0 auto;
+}
+.dark-mode-switch {
+    flex: 0 0 auto;
+    display: flex;
+    flex-flow: row;
+    align-content: flex-end;
+}
 </style>
 
 <nav class="header-navbar">
@@ -20,7 +34,7 @@
         <ul>
           {{ range $navitem := .Site.Params.navbar.links }}
             {{ with $navitem }}
-              <li><a href="{{ .link }}">{{ .name }} </a></li>
+              <li><a href="{{ .link }}">{{ .name }}</a></li>
             {{ end }}
           {{ end }}
         </ul>

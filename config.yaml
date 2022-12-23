@@ -1,14 +1,12 @@
 baseURL: https://ethanswan.com/
 params:
   AuthorName: Ethan Swan
-  GitHubUsername: eswan18
-  Subtitle: Hugo is Absurdly Fast!
   navbar:
     links:
-    - name: Blog
-      link: /
     - name: About
-      link: /about
+      link: /
+    - name: Blog
+      link: /blog
     - name: Teaching
       link: /teaching
     - name: Nonsense
