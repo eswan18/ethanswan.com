@@ -1,5 +1,4 @@
 ---
-layout: page
 title: About Me
 embeddedImage: images/ethan_talking.jpeg
 ---
