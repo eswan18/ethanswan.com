@@ -18,6 +18,7 @@
     <main aria-role="main">
       <header class="header">
         <h1>{{.Title}}</h1>
+        <h2>(single)</h2>
         {{ with .Params.subtitle }}
         <span class="subtitle">{{.}}</span>
         {{ end }}
@@ -34,11 +35,6 @@
         {{ end }}
 
         {{.Content}}
-      </div>
-      <div>
-        {{ range first 10 .Site.RegularPages }}
-            {{ .Render "summary"}}
-        {{ end }}
       </div>
     </main>
   </div>
