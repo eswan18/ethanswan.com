@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Blog
+title: About
 embeddedImage: images/ethan_talking.jpeg
 ---
 
