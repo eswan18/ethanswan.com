@@ -1,15 +1,29 @@
 <style>
     .header-navbar {
+        display: flex;
         width: 100%;
         border-bottom: 3px solid var(--secondary-color);
+    }
+    .links {
+        flex: 1 0 auto;
+    }
+    .dark-mode-switch {
+        flex: 0 0 auto;
+        display: flex;
+        flex-flow: row;
+        align-content: flex-end;
     }
 </style>
 
 <nav class="header-navbar">
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      {{ partial "darkModeSwitch.html" . }}
+    <div class="links">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <div class="dark-mode-switch">
+        {{ partial "darkModeSwitch.html" . }}
+    </div>
 </nav>
