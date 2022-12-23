@@ -1,14 +1,22 @@
 {{ define "main" }}
     <main aria-role="main">
       <header class="header">
-        <h2>here</h2>
         <h1>{{.Title}}</h1>
         {{ with .Params.subtitle }}
         <span class="subtitle">{{.}}</span>
         {{ end }}
       </header>
       <div class="content">
-        {{ if 
+        <!-- this will include an image inline or at the top of the page if one is specified -->
+        {{ with .Params.embeddedImage }}
+          {{ with resources.Get . }}
+            <!-- this one is shown inline, on big screens.-->
+            <img src="{{ .RelPermalink }}" class="inline-one-half float-right mobile-no-show">
+            <!-- this one is shown above, on small screens.-->
+            <img src="{{ .RelPermalink }}" class="mobile-only center-block two-thirds">
+          {{ end }}
+        {{ end }}
+
         {{.Content}}
       </div>
       <div>

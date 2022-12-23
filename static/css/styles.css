@@ -1,0 +1,21 @@
+@media (min-width: 768px) {
+  .navbar-custom.top-nav-regular .avatar-container {
+    margin-top: 5rem;
+    width: 2.5rem;
+  }
+  .mobile-only {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .mobile-no-show {
+    display: none;
+  }
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;  
+}

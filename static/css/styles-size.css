@@ -1,0 +1,18 @@
+.inline-one-third {
+  margin: 0.5em 1.5em;
+  width: 24%;
+}
+
+.two-thirds {
+  width: 66%;
+}
+
+.inline-one-half {
+  margin: 0.5em 1.5em;
+  width: 48%;
+}
+
+.inline-two-thirds {
+  margin: 0.5em 1.5em;
+  width: 64%;
+}
