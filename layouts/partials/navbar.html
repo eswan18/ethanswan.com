@@ -18,9 +18,11 @@
 <nav class="header-navbar">
     <div class="links">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+          {{ range $navitem := .Site.Params.navbar.links }}
+            {{ with $navitem }}
+              <li><a href="{{ .link }}">{{ .name }} </a></li>
+            {{ end }}
+          {{ end }}
         </ul>
     </div>
     <div class="dark-mode-switch">
