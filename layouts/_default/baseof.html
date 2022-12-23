@@ -7,7 +7,7 @@
     {{ $cssDir := "css" }}
     {{ $cssDirFullPath := path.Join "static" $cssDir }}
     {{ range $file := readDir $cssDirFullPath }}
-      {{ $cssFile := path.Join $cssDir $file.Name }}
+      {{ $cssFile := path.Join "/" $cssDir $file.Name }}
       <link rel="stylesheet" href="{{ $cssFile }}">
     {{ end }}
   </head>
