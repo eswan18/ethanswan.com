@@ -1,7 +1,6 @@
 ---
 layout: page
-title: Welcome!
-subtitle: My Personal Website and Blog
+title: About
 embeddedImage: images/ethan_talking.jpeg
 ---
 
