@@ -6,37 +6,43 @@
       <span class="subtitle">{{.}}</span>
       {{ end }}
     </header>
-    <div class="content">
-      <!-- include an image inline if one is specified -->
-      {{ with .Params.embeddedImage }}
-        {{ partial "images/embeddedImage" . }}
-      {{ end }}
-      <!-- include a banner-style (100% width) image if one is specified -->
-      {{ with .Params.bannerImage }}
-        {{ partial "images/bannerImage" . }}
-      {{ end }}
-      {{.Content}}
-    </div>
-    <div>
-    {{ if .Params.showList }}
-      {{ range .Pages }}
-        {{ .Render "summary" }}
-      {{ end }}
-    {{ end }}
-    </div>
-    {{ if (isset .Params "seealso") }}
-      <div class="content-end">
-        <hr class="content-end-rule">
-        {{ with .Params.seeAlso }}
-          <div class="see-also-container" style="display: block; text-align: center;">
-            <p>See also:
-            {{ range $x := . }}
-              <a class="button caps" href="{{ .path }}">{{ .text }}</a>
-            {{ end }}
-            </p>
-          </div>
+    {{ block "mainContent" . }}
+      <div class="content">
+        <!-- include an image inline if one is specified -->
+        {{ with .Params.embeddedImage }}
+          {{ partial "images/embeddedImage" . }}
         {{ end }}
+        <!-- include a banner-style (100% width) image if one is specified -->
+        {{ with .Params.bannerImage }}
+          {{ partial "images/bannerImage" . }}
+        {{ end }}
+        {{.Content}}
       </div>
+    {{ end }}
+    {{ block "listContent" . }}
+      <div>
+      {{ if .Params.showList }}
+        {{ range .Pages }}
+          {{ .Render "summary" }}
+        {{ end }}
+      {{ end }}
+      </div>
+    {{ end }}
+    {{ block "postContent" . }}
+      {{ if (isset .Params "seealso") }}
+        <div class="content-end">
+          <hr class="content-end-rule">
+          {{ with .Params.seeAlso }}
+            <div class="see-also-container" style="display: block; text-align: center;">
+              <p>See also:
+              {{ range $x := . }}
+                <a class="button caps" href="{{ .path }}">{{ .text }}</a>
+              {{ end }}
+              </p>
+            </div>
+          {{ end }}
+        </div>
+      {{ end }}
     {{ end }}
   </main>
 </div>

@@ -1,7 +1,12 @@
 <article class="appearance-preview">
   <header>
-    <h2><a href='{{ .Permalink }}'> {{ .Title }}</a> </h2>
+    <h2><a href='{{ .Permalink }}'> {{ .Title }}</a></h2>
     <div class="appearance-meta">
+      {{ if hasPrefix .Params.appearanceType "Podcast" }}
+      <i class="fas fa-microphone"></i> &nbsp;
+      {{ else if hasPrefix .Params.appearanceType "Conference" }}
+      <i class="fa-solid fa-person-chalkboard"></i> &nbsp;
+      {{ end }}
       <span class="appearance-type">{{ .Params.appearanceType }}</span>
       &nbsp; {{ .Date.Format "2006-01-02" }} &nbsp; {{ .Params.where }} </div>
   </header>
