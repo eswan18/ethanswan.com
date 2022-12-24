@@ -9,7 +9,6 @@ thumbnail-img: "/images/posts/apartment_score_distributions.png"
 
 I recently crossed the 9-month mark as a Chicago resident.
 The time has come for a big decision: renew my lease, or make the move to a new apartment?
-<!--more-->
 
 I really like my current home.
 Two bedrooms, a back porch, a garage, and more grounded outlets than even a tech nerd like me could want.
@@ -23,6 +22,8 @@ I wanted to get to know Chicago, particularly its neighborhoods.
 Moving would offer me a change of location, unlocking many new walkable or bikable destinations.
 Additionally, none of my friends live near my current apartment; most are in various parts of the northern neighborhoods, while I live somewhat south and west of the Loop (the downtown area of Chicago).
 Seeing most friends requires a 15+ minute drive or 30+ minute train ride.
+
+<!--more-->
 
 ![Chicago Personal Landmarks](/images/posts/chicago-personal-landmarks.png)
 

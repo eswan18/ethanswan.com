@@ -9,9 +9,11 @@ thumbnail-img: "/images/posts/running_speed_vs_distance.svg"
 ---
 
 For a while now, I've been thinking about how interesting it would be to look at data on my running habits. Depending on the time of year and some other factors, I probably run 1-4 times a week, and I've been running semi-regularly since college.
-<!--more-->
+
 For the vast majority of that time, I've recorded my runs in Under Armour's MapMyRun app.
 It's a bit buggy and feels non-native, but it has a good Apple Watch app and collects the information I need fairly reliably.
+
+<!--more-->
 
 ## Getting the Data
 

@@ -2,7 +2,6 @@
 title: Crafting Interpreters
 thumbnail-img: /images/posts/crafting-interpreters-cover.png
 date: 2022-06-07
-excerpt: In January, during some time off between jobs, I started working through Crafting Interpreters by Robert Nystrom...  There aren't that many accessible books for programming language design and implementation, so discovering the book (and that it was free to read online!) was very exciting.
 ---
 
 In January, during some time off between jobs, I started working through [Crafting Interpreters](https://www.craftinginterpreters.com) by Robert Nystrom.
@@ -16,6 +15,8 @@ The author describes himself as having been "bitten by the language bug years ag
 I would say I was bitten by the language bug sometime last year, mostly as a result of getting deeper into the mechanics of Python's interpreter implementation.
 For most of 2021 I followed the [python-dev](https://mail.python.org/mailman3/lists/python-dev.python.org/)[^2] mailing list, where I lurked and consumed a lot of technical discussions that I mostly didn't understand.
 By the end of the year though, I was understanding more and more, and I was getting really curious about what it would be like to design and build a programming language myself.
+
+<!-- more -->
 
 I'm nowhere near the level of skill (or time commitment) needed to creating a new language, but Crafting Interpreters has been such a fun time.
 The book is divided into two parts: in the first part you're shown how to build an interpreter in Java[^3] for a toy language called Lox, and in the second part you build a compiler for the same language using C.

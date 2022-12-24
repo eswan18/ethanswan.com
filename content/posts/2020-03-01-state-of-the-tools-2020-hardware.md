@@ -6,7 +6,6 @@ tags:
 title: "State of the Tools 2020: Hardware"
 thumbnail-img: "/images/posts/state-of-tools-2020-hardware.jpeg"
 cover-img: "/images/posts/state-of-tools-2020-hardware.jpeg"
-excerpt: "I spend a lot of time on meta-productivity: thinking about how to get work done better and faster. The majority of that thinking is around technology and specifically the tech tools I use. Maybe thinking about my workflow has returns large enough to offset the time it consumes in my life, but frankly it doesn't matter too much to me since life optimization is as much a hobby as an objective."
 ---
 
 I spend a lot of time on meta-productivity: thinking about how to get work done better and faster.
@@ -16,6 +15,8 @@ Maybe thinking about my workflow has returns large enough to offset the time it 
 2019 was a pretty good year. I picked up quite a few new tools, but not so quickly or so often that I didn't get comfortable with the ones I cared about.
 Below is a fairly comprehensive list of the tech I use regularly.
 I hope to make *State of the Tools* an annual tradition, if for no other reason than to give my future self a record to look back on in future years.
+
+<!-- more -->
 
 This first post is just hardware.
 I'll publish another (longer) post on software in the near future.

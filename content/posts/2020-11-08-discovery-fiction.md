@@ -4,7 +4,6 @@ date: 2020-11-08
 tags:
 - education
 title: "Discovery Fiction"
-excerpt: "I recently discovered and binged the Ben, Ben and Blue podcast. The hosts all work in STEM education to some degree, and while that topic isn't explicitly the focus of the show, it comes up a lot. In one episode, Grant Sanderson (one of the hosts) talks about how it's teach new ideas by recapping the actual discovery of the concept as it happened."
 ---
 
 
@@ -15,6 +14,8 @@ In one episode, [Grant Sanderson](https://www.3blue1brown.com/about) (one of the
 For example, I don't know the exact details of the creation of the internet, but you could imagine an explanation that walks through the journey of universities wanting some kind of decentralized communication protocol, and how that effort was funded by government money with the justification that it could be useful for national defense.
 Then introduce Tim Berners-Lee and HTTP, and then how that evolved to support more complexity.
 And throughout, pepper in the relevant innovations in security and compression as they happened chronologically.
+
+<!-- more -->
 
 Unfortunately, the actual history of how a technology or concept came to be is full of rabbit holes and distractions for learners. In understanding the modern internet, knowing the funding model, the early implementations, the evolution of security protocols, etc. just isn't necessary.
 These things are interesting to people who already have some knowledge, sure, but aren't helpful in conveying the essence of the internet.

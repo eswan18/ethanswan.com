@@ -7,6 +7,8 @@ date: 2022-06-01
 Probably once a year, I end up back in the same discussion about timezones.
 I don't like timezones and apparently I bring that up a lot.
 
+<!-- more -->
+
 ## The Usual Griping
 
 Programmers' hatred for timezones is a bit of a meme.

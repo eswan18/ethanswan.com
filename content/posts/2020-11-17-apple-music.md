@@ -16,6 +16,8 @@ This led to me stumbling around the Apple Music interface without much of an ide
 I particularly missed the Discover Weekly and eventually happened upon Apple's "New Music Mix" and "Ethan Swan's Station".
 Both were passable and, considering how little historical data Apple Music had on me, gave some pretty good recommendations. But even over a month later, they hadn't improved much and didn't compare to my typical experience with Discover Weekly.
 
+<!-- more -->
+
 I never did find a way to control Amazon Echos around my house using the Apple Music app, as I can with Spotify.
 It may be possible but apparently isn't obvious, and I really appreciate that ability.
 

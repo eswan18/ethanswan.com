@@ -16,7 +16,9 @@ I own six Pis total (for now), so I've done this before, and I'll do it again.
 In fact, two of the installs I did were on Pis I'd owned for a while; I just wanted to wipe them and start fresh.
 
 So after the first two this weekend took me a lot longer than they should have, I realized it was about time I documented my process and made it repeatable.
+
 <!--more-->
+
 Most internet tutorials get you through just a few things: burning the card and connecting to wifi, maybe along with enabling SSH if you're lucky (and until this week I'd never found how to configure WiFi and SSH without direct physical access to the Pi).
 If I were going to write down the setup steps anyway, I figured I might as well add them on this blog in case others find them useful.
 

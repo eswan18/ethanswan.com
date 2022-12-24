@@ -2,12 +2,13 @@
 title: Too Good To Be True?
 thumbnail-img: /images/posts/tgtg-logo.png
 date: 2022-08-16
-excerpt: "The Too Good To Go app has been my fixation this summer..."
 ---
 
 The Too Good To Go app has been my fixation this summer. Since moving to a new neighborhood two months ago, I've picked up 43 surprise bags (all the more absurd because I didn't discover the app until two weeks after moving). Dramatically increasing my consumption of sandwiches and pastries wasn't in my original goals for the summer, but here we are. 
 
 Too Good To Go lists "bags" that restaurants will sell you at a steep discount, though their contents will be a surprise. You may get a basic description ("grocery bag"), but no more, and you have to reserve the bag well in advance, then arrive in the specified time slot – which is often pretty tight.
+
+<!-- more -->
 
 <center><img src="/images/posts/tgtg-savings.png" alt="Too Good To Go Savings"/></center>
 

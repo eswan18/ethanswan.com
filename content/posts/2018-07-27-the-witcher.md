@@ -15,6 +15,7 @@ I've enjoyed programming on my new "rig" quite a bit, but I also felt like it wo
 So in early June, I pulled the trigger on a nice GPU (an [EVGA GeForce GTX 1080](https://www.amazon.com/EVGA-GeForce-Support-Graphics-08G-P4-6286-KR/dp/B01GAI64GO)) and, on the advice of a friend, purchased *[The Witcher 3: Wild Hunt](http://thewitcher.com/en/witcher3)*.
 I'm not a gamer, so this was my first foray into the world of PC RPGs (Role Playing Games, for all you n000000bs out there).
 It was a glorious, incredibly high-definition experience.
+
 <!--more-->
 
 <center><img alt="Witcher 3 Fighting" src="/images/posts/witcher_3_fighting.jpg"/></center>
