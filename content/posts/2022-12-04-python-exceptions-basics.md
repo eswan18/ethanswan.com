@@ -5,6 +5,7 @@ tags:
 - tech
 - python
 - programming languages
+slug: python-exceptions-basics
 title: The Basics of Exceptions in Python
 excerpt: "Python's model of exceptions is quite similar to that of other popular object-oriented languages like Ruby, JavaScript, and Java. If not \"handled\", they rise up through the entire function stack and crash the program. Developers are encouraged to write code to anticipate those exceptions."
 preview_image: ""
