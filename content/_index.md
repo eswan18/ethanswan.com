@@ -1,6 +1,8 @@
 ---
 title: About Me
-embeddedImage: images/ethan_talking.jpeg
+embeddedImage:
+  alt: "Ethan Talking"
+  path: images/ethan_talking.jpeg
 ---
 
 I'm Ethan, a Chicago-based technologist and teacher.

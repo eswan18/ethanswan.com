@@ -9,20 +9,20 @@
     <div class="content">
       <!-- this will include an image inline or at the top of the page if one is specified -->
       {{ with .Params.embeddedImage }}
-        {{ with resources.Get . }}
+        {{ $alt := .alt }}
+        {{ with resources.Get .path }}
           <!-- this one is shown inline, on big screens.-->
-          <img src="{{ .RelPermalink }}" class="inline-one-half float-right mobile-no-show">
+          <img alt="{{ $alt }}" src="{{ .RelPermalink }}" class="inline-one-half float-right mobile-no-show">
           <!-- this one is shown above, on small screens.-->
-          <img src="{{ .RelPermalink }}" class="mobile-only center-block two-thirds">
+          <img alt="{{ $alt }}" src="{{ .RelPermalink }}" class="mobile-only center-block two-thirds">
         {{ end }}
       {{ end }}
-    
       {{.Content}}
     </div>
     <div>
     {{ if .Params.showList }}
       {{ range .Pages }}
-          {{ .Render "summary"}}
+          {{ .Render "summary" }}
       {{ end }}
     {{ end }}
     </div>
