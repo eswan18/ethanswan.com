@@ -1,6 +1,9 @@
 ---
 title: Teaching
 kind: list
+embeddedImage:
+  alt: Ethan Teaching
+  path: images/ethan_teaching.jpeg
 ---
 
 I’ve been teaching Python and related technologies professionally for over five years.
