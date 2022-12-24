@@ -4,8 +4,6 @@ date: 2022-12-03
 categories:
 - fitness
 title: Gym Etiquette 101
-excerpt: "When I first started going to the gym, I was self-conscious every second. There's a particular code of unwritten rules in the weightroom. Over the years I'd like to think I've picked up most of the \"rules\"."
-preview_image: ""
 ---
 
 When I first started going to the gym, I was self-conscious every second.
@@ -14,6 +12,8 @@ Having a mentor really helps, and without one, it's easy to be so uncomfortable 
 
 Over the years I'd like to think I've picked up most of the "rules".
 Here's a list I wish someone had given me when I was starting.
+
+<!--more--> 
 
 *n.b. This piece is a work-in-progress. I'm temporarily taking feedback from other gym-goers; send me any ideas for changes.*
 

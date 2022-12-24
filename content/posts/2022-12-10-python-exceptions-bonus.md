@@ -6,8 +6,6 @@ tags:
 - python
 - programming languages
 title: "Python Exceptions: Bonus Content"
-excerpt: "Let's cover a few more advanced aspects of the Python exception system.  We'll move a bit faster and talk at a higher level than we did in the last post."
-preview_image: ""
 ---
 
 *This post is a followup to my article [The Basics of Exceptions in Python](/feed/2022/12/04/python-exceptions-basics), but should make sense on its own as long as you are familiar with `raise` and `try/except`.*
@@ -21,6 +19,7 @@ Topics we'll hit:
 - [Finally Blocks](#finally)
 - [Keeping `try` Blocks Small](#keep-try-blocks-small)
 
+ <!--more--> 
 <br>
 
 ## More Python Built-in Exceptions

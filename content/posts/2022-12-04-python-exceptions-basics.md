@@ -7,13 +7,9 @@ tags:
 - programming languages
 slug: python-exceptions-basics
 title: The Basics of Exceptions in Python
-excerpt: "Python's model of exceptions is quite similar to that of other popular object-oriented languages like Ruby, JavaScript, and Java. If not \"handled\", they rise up through the entire function stack and crash the program. Developers are encouraged to write code to anticipate those exceptions."
-preview_image: ""
 ---
 
 *This post was originally meant to be a small part of my discussion of the Go programming language (coming soon) as a way of drawing contrast between Python and Go, but turned out to be extensive enough to justify its own post.*
-
-## Overview
 
 Python's model of exceptions is quite similar to that of other popular object-oriented languages like Ruby, JavaScript, and Java[^0].
 Errors flow differently than regular data; if not "handled", they rise up through the entire function stack and crash the program.
@@ -23,6 +19,8 @@ What exactly needs to be done in that "handling" step typically depends on what 
 Programmers can check the type of an error to determine what went wrong and react accordingly.
 Errors can be thought of as objects and their types as classes that can be subclassed like any other class.
 But unlike other data, they follow an error-specific path through the code, short-circuitiing functions all the way up the stack until handled.
+
+<!--more--> 
 
 ## Example
 
