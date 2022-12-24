@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Speaking Appearances
 css: assets/custom-styles/appearance-overview-box.css
 ---
