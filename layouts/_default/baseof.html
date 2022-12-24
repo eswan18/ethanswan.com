@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>{{ block "title" . }} {{ .Site.Title }} {{ end }}</title>
-    <!-- Include all CSS files in "static/css" -->
+    {{/* Include all CSS files in "static/css" */}} 
     {{ $cssDir := "css" }}
     {{ $cssDirFullPath := path.Join "static" $cssDir }}
     {{ range $file := readDir $cssDirFullPath }}
