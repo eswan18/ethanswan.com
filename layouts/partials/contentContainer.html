@@ -24,5 +24,19 @@
       {{ end }}
     {{ end }}
     </div>
+    {{ if (isset .Params "seealso") }}
+      <div class="content-end">
+        <hr class="content-end-rule">
+        {{ with .Params.seeAlso }}
+          <div class="see-also-container" style="display: block; text-align: center;">
+            <p>See also:
+            {{ range $x := . }}
+              <a class="button caps" href="{{ .path }}">{{ .text }}</a>
+            {{ end }}
+            </p>
+          </div>
+        {{ end }}
+      </div>
+    {{ end }}
   </main>
 </div>

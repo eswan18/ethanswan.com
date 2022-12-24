@@ -52,3 +52,25 @@ body {
 h1, h2, h3, h4, h5, h6 {
   color: var(--heading-color);
 }
+
+.caps {
+  text-transform: uppercase;
+}
+
+a.button {
+  font-size: 0.9em;
+  border: 2px solid var(--primary-color);
+  border-radius: 50em;
+  padding: 0.4em 0.8em;
+  margin: 0.5em;
+}
+
+.content-end {
+  width: 75%;
+  margin: auto;
+}
+
+hr.content-end-rule {
+  margin-top: 3em;
+  margin-bottom: 2em;
+}

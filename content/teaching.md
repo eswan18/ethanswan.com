@@ -4,6 +4,11 @@ kind: list
 embeddedImage:
   alt: Ethan Teaching
   path: images/ethan_teaching.jpeg
+seeAlso:
+  - text: Courses
+    link: "/courses"
+  - text: Office Hours
+    link: "/office_hours"
 ---
 
 I’ve been teaching Python and related technologies professionally for over five years.
