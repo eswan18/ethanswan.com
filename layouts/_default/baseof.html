@@ -11,21 +11,6 @@
       <link rel="stylesheet" href="{{ $cssFile }}">
     {{ end }}
     {{ partial "includes.html" . }}
-<style>
-.main-container {
-  display: flex;
-  flex-flow: row;
-}
-.left-sidebar, .right-sidebar {
-  flex: 1 1 auto;
-}
-.content-container {
-  flex: 0 1 50rem;
-}
-.content-container > main > .content {
-  margin-top: 1.5em;
-}
-</style>
   </head>
   <body>
     {{ partial "navbar.html" . }}
