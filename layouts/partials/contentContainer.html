@@ -9,13 +9,7 @@
     <div class="content">
       <!-- this will include an image inline or at the top of the page if one is specified -->
       {{ with .Params.embeddedImage }}
-        {{ $alt := .alt }}
-        {{ with resources.Get .path }}
-          <!-- this one is shown inline, on big screens.-->
-          <img alt="{{ $alt }}" src="{{ .RelPermalink }}" class="inline-one-half float-right mobile-no-show">
-          <!-- this one is shown above, on small screens.-->
-          <img alt="{{ $alt }}" src="{{ .RelPermalink }}" class="mobile-only center-block two-thirds">
-        {{ end }}
+        {{ partial "images/embeddedImage" . }}
       {{ end }}
       {{.Content}}
     </div>
