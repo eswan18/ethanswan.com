@@ -7,9 +7,13 @@
       {{ end }}
     </header>
     <div class="content">
-      <!-- this will include an image inline or at the top of the page if one is specified -->
+      <!-- include an image inline if one is specified -->
       {{ with .Params.embeddedImage }}
         {{ partial "images/embeddedImage" . }}
+      {{ end }}
+      <!-- include a banner-style (100% width) image if one is specified -->
+      {{ with .Params.bannerImage }}
+        {{ partial "images/bannerImage" . }}
       {{ end }}
       {{.Content}}
     </div>
