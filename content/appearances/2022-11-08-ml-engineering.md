@@ -1,8 +1,9 @@
 ---
 title: "ML Engineering: From Models to Value"
-type: Conference Talk
-where: University of Cincinnati Data Science Symposium
 date: 2022-11-08
+params:
+appearanceType: Conference Talk
+where: University of Cincinnati Data Science Symposium
 links:
   Conference Listing: https://business.uc.edu/centers-partnerships/business-analytics/events/data-science-symposium.html 
   Slides (PDF Version): https://www.dropbox.com/s/lqs47nvfx7ipatl/ML Engineering.pdf
