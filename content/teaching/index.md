@@ -9,6 +9,7 @@ seeAlso:
     link: "/courses"
   - text: Office Hours
     link: "/office_hours"
+listCollection: courses
 ---
 
 I’ve been teaching Python and related technologies professionally for over five years.

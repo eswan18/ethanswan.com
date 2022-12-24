@@ -25,6 +25,20 @@
         {{ range .Pages }}
           {{ .Render "summary" }}
         {{ end }}
+      {{/* Support listing a collection other than the one in the current directory */}}
+      {{ else if (isset .Params "listcollection") }}
+        {{ $selectedSectionName := .Params.listcollection }}
+        {{ $selectedSection := "" }}
+        {{ range $s := site.Sections }}
+          {{ if eq (lower $s.Name) $selectedSectionName }}
+            {{ $selectedSection = $s }}
+          {{ end}}
+        {{ end }}
+        {{ with $selectedSection }}
+          {{ range .Pages }}
+            {{ .Render "summary" }}
+          {{ end }}
+        {{ end }}
       {{ end }}
       </div>
     {{ end }}
