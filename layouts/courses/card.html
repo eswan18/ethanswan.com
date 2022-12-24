@@ -1,4 +1,5 @@
-<article class="appearance-preview">
+<div class="card">
+  <article class="appearance-preview">
     <header>
       <h2><a href='{{ .Permalink }}'> {{ .Title }}</a></h2>
       <div class="appearance-meta">
@@ -7,13 +8,13 @@
         {{ else if hasPrefix .Params.appearanceType "Conference" }}
         <i class="fa-solid fa-person-chalkboard"></i> &nbsp;
         {{ end }}
-        <span class="appearance-type">{{ .Params.appearanceType }}</span>
-        &nbsp; {{ .Date.Format "2006-01-02" }} &nbsp; {{ .Params.where }} </div>
+        <span class="course-type">{{ .Params.courseType }}</span>
     </header>
     <div class="post-summary">
-      {{ .Summary }}
+      {{/* .Summary */}}
     </div>
     <footer>
-    <a href='{{ .Permalink }}'><nobr>Read more →</nobr></a>
+    <a href='{{ .Permalink }}'><nobr>Details →</nobr></a>
     </footer>
   </article>
+</div>

@@ -2,7 +2,7 @@
 title: Introduction to Python for Data Science
 subtitle: Offered through the University of Cincinnati's Center for Business Analytics
 short-description: An introduction to Python as a data analysis tool, focusing primarily on data wrangling via the `pandas` library. Includes both lecture and case study components.
-type: Workshop
+courseType: Workshop
 series: Python for Data Science Series
 links:
   Materials: https://github.com/uc-python/intro-python-datasci

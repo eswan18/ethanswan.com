@@ -21,25 +21,28 @@
     {{ end }}
     {{ block "listContent" . }}
       <div>
-      {{ if .Params.showList }}
-        {{ range .Pages }}
-          {{ .Render "summary" }}
-        {{ end }}
-      {{/* Support listing a collection other than the one in the current directory */}}
-      {{ else if (isset .Params "listcollection") }}
-        {{ $selectedSectionName := .Params.listcollection }}
-        {{ $selectedSection := "" }}
-        {{ range $s := site.Sections }}
-          {{ if eq (lower $s.Name) $selectedSectionName }}
-            {{ $selectedSection = $s }}
-          {{ end}}
-        {{ end }}
-        {{ with $selectedSection }}
-          {{ range .Pages }}
-            {{ .Render "summary" }}
+        {{ $listSummaryType := .Params.listsummarytype | default "summary" }}
+        <div class="{{ $listSummaryType }}-container">
+          {{ if .Params.showList }}
+            {{ range .Pages }}
+              {{ .Render $listSummaryType }}
+            {{ end }}
+          {{/* Support listing a collection other than the one in the current directory */}}
+          {{ else if (isset .Params "listcollection") }}
+            {{ $selectedSectionName := .Params.listcollection }}
+            {{ $selectedSection := "" }}
+            {{ range $s := site.Sections }}
+              {{ if eq (lower $s.Name) $selectedSectionName }}
+                {{ $selectedSection = $s }}
+              {{ end}}
+            {{ end }}
+            {{ with $selectedSection }}
+              {{ range .Pages }}
+                {{ .Render $listSummaryType }}
+              {{ end }}
+            {{ end }}
           {{ end }}
-        {{ end }}
-      {{ end }}
+        </div>
       </div>
     {{ end }}
     {{ block "postContent" . }}
