@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Python for Data Science Bootcamp
-hidden: true
+courseType: Workshop
+unlisted: true
 ---
 
 The Python for Data Science Bootcamp is one-day training, beginning at 8am and finishing at 5pm or a little earlier.

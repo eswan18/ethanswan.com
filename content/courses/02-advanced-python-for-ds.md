@@ -3,7 +3,7 @@ title: Advanced Python for Data Science
 subtitle: Offered through the University of Cincinnati's Center for Business Analytics
 courseType: Workshop
 series: Python for Data Science Series
-short-description: A workshop for more experienced Python users. Half the time is spent on coding best practices (version control, code abstraction) and the other half on working through an ML modeling problem end-to-end.
+summary: A workshop for more experienced Python users. Half the time is spent on coding best practices (version control, code abstraction) and the other half on working through an ML modeling problem end-to-end.
 links:
   Materials: https://github.com/uc-python/advanced-python-datasci
 ---

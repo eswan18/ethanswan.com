@@ -1,20 +1,18 @@
-<div class="card">
-  <article class="appearance-preview">
-    <header>
-      <h2><a href='{{ .Permalink }}'> {{ .Title }}</a></h2>
-      <div class="appearance-meta">
-        {{ if hasPrefix .Params.appearanceType "Podcast" }}
-        <i class="fas fa-microphone"></i> &nbsp;
-        {{ else if hasPrefix .Params.appearanceType "Conference" }}
-        <i class="fa-solid fa-person-chalkboard"></i> &nbsp;
+{{ if not .Params.unlisted }}
+  <div class="card">
+    <article class="appearance-preview">
+      <header>
+        <h2><a href='{{ .Permalink }}'> {{ .Title }}</a></h2>
+        <div class="appearance-meta"></div>
+      </header>
+      <div class="post-summary">
+        {{ with .Params.summary }}
+          {{ . }}
         {{ end }}
-        <span class="course-type">{{ .Params.courseType }}</span>
-    </header>
-    <div class="post-summary">
-      {{/* .Summary */}}
-    </div>
-    <footer>
-    <a href='{{ .Permalink }}'><nobr>Details →</nobr></a>
-    </footer>
-  </article>
-</div>
+      </div>
+      <footer>
+      <a href='{{ .Permalink }}'><nobr>Details →</nobr></a>
+      </footer>
+    </article>
+  </div>
+{{ end }}

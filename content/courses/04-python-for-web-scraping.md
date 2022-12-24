@@ -3,7 +3,7 @@ title: Python for Web Scraping
 subtitle: Offered through the University of Cincinnati's Lindner College of Business
 courseType: Workshop
 category: Python
-short-description: A longer course targeted at people with Python experience who want to learn web scraping. Covers the basics of HTML and web requests, and gets hands-on with the `beautifulsoup` and `requests` libraries.
+summary: The basics of HTML and web requests for people who want to scrape websites and have prior Python experience.
 links:
   Materials: https://github.com/uc-python/python-for-web-scraping
 ---

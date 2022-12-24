@@ -22,6 +22,10 @@
     {{ block "listContent" . }}
       <div>
         {{ $listSummaryType := .Params.listsummarytype | default "summary" }}
+        {{ with .Params.listcollection }}
+          <br>
+          <h2>{{ title . }}</h2>
+        {{ end }}
         <div class="{{ $listSummaryType }}-container">
           {{ if .Params.showList }}
             {{ range .Pages }}
