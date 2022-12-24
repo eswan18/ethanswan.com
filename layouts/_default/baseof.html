@@ -17,9 +17,13 @@
     <div style="height: 2em; width: 100%;"></div>
     <div class="main-container">
       <div class="left-sidebar">
+        {{ block "left-sidebar" . }}
+        {{ end }}
       </div>
       {{ partial "contentContainer.html" . }}
       <div class="right-sidebar">
+        {{ block "right-sidebar" . }}
+        {{ end }}
       </div>
     </div>
     {{ partial "footer.html" . }}
