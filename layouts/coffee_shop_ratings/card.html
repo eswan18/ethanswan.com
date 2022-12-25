@@ -1,0 +1,26 @@
+{{ $page := . }}
+{{ if not .Params.unlisted }}
+  <div class="card coffee-shop-card">
+    <article class="coffee-shop-preview">
+      <header>
+        <div class="coffee-shop-header-container">
+          <div class="coffee-shop-meta">
+            <h3>{{ .Params.name }}</h3>
+            {{ with .Params.link }}
+              <p><a href='{{ . }}'><i class="fa-solid fa-link"></i>Link</a></p>
+            {{ end }}
+          </div>
+          <div class="coffee-shop-rating">
+            <h2>{{ .Params.rating }}</h2>
+          </div>
+        </div>
+      </header>
+      <div class="coffee-shop-summary">
+        {{ .Content }}
+      </div>
+      <footer>
+        apple pay etc
+      </footer>
+    </article>
+  </div>
+{{ end }}

@@ -1,6 +1,5 @@
 ---
 name: Carabello
-city: Cincinnati
 link: https://www.carabellocoffee.com/
 apple_pay: true
 wifi: 🙂

@@ -1,6 +1,5 @@
 ---
 name: Hyde Perk
-city: Cincinnati
 link: https://www.hydeperkcoffee.com/
 apple_pay: true
 wifi: 🙂

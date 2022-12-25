@@ -1,6 +1,5 @@
 ---
 name: Starbucks
-city: Cincinnati
 link: https://www.starbucks.com/
 apple_pay: true
 wifi: 😐

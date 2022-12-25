@@ -1,6 +1,5 @@
 ---
 name: Coffee Emporium
-city: Cincinnati
 link: https://www.coffee-emporium.com/
 apple_pay: false
 wifi: 😱

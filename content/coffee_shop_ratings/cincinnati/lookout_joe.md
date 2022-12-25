@@ -1,6 +1,5 @@
 ---
 name: Lookout Joe
-city: Cincinnati
 link: http://www.lookoutjoe.com/
 apple_pay: true
 wifi: 🙁
