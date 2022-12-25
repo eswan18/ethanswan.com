@@ -15,8 +15,6 @@ Here's a list I wish someone had given me when I was starting.
 
 <!--more--> 
 
-*n.b. This piece is a work-in-progress. I'm temporarily taking feedback from other gym-goers; send me any ideas for changes.*
-
 ## How to survive and not make a fool of yourself or offend people in a modern weightroom
 
 ### Hygeine, Apparel, Propriety, etc.
