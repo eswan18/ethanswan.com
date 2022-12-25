@@ -145,7 +145,7 @@ f = open('file.txt')
 try:
     contents = f.read()
 except Exception:
-    # If a file can't be read, just pretend the it was empty.
+    # If a file can't be read, just pretend it was empty.
     contents = ''
 finally:
     f.close()
