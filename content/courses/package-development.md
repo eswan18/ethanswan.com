@@ -1,7 +1,9 @@
 ---
 title: Python Package Development
-short-description: A workshop that goes deep on what makes a Python package and how you can build one yourself. Requires prior experience with Python but not with packaging. Students will build and test their own package as part of the class.
+summary: What makes a Python package and how you can build one yourself? We'll answer those questions together as we develop our own small Python library.
 courseType: Workshop
 status: In the Works
 category: Python
 ---
+
+What makes a Python package and how you can build one yourself? We'll answer those questions together as we develop our own small Python library. Requires prior experience with Python but not with packaging. 

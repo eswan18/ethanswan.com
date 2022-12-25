@@ -1,5 +1,5 @@
 ---
-title: Advanced Python for Data Science
+title: "Python for Data Science #3 – Advanced"
 subtitle: Offered through the University of Cincinnati's Center for Business Analytics
 courseType: Workshop
 series: Python for Data Science Series

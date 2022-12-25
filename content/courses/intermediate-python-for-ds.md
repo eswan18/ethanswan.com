@@ -1,9 +1,9 @@
 ---
-title: Intermediate Python for Data Science
+title: "Python for Data Science #2 – Intermediate"
 subtitle: Offered through the University of Cincinnati's Center for Business Analytics
 courseType: Workshop
 series: Python for Data Science Series
-summary: More coverage of data wrangling through conditionals and functions, along with a high-level introduction to building your own models. Also discusses the management of data science environments with Conda.
+summary: Builds on Intro to Python for DS. Covers control flow, functions, and an introduction to modeling with scikit-learn, along with basic environment management using [Conda](https://docs.conda.io/en/latest/).
 links:
   Materials: https://github.com/uc-python/intermediate-python-datasci
 ---

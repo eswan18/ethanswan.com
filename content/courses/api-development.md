@@ -1,6 +1,6 @@
 ---
-title: Basics of Python API Development
-short-description: A hands-on exploration of building a RESTful API with `fastapi`. Targeted at students who are comfortable with Python, but assumes no prior experience with web technologies. Ideal for people who want to build simple APIs as part of other work, such as data scientists.
+title: FastAPI Tutorial
+summary: Hands-on exploration of building a RESTful API with Python and [`fastapi`](https://fastapi.tiangolo.com). Meant for students who are comfortable with Python but have no experience with web development, such as data scientists.
 courseType: Workshop
 status: In the Works
 category: Python
