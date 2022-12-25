@@ -84,3 +84,8 @@ hr.content-end-rule {
   margin-top: 3em;
   margin-bottom: 2em;
 }
+
+.highlight pre {
+  padding: 1em;
+  font-size: 0.8em;
+}
