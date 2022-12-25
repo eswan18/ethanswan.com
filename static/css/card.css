@@ -15,5 +15,9 @@
 }
 
 .card-container .card article {
-    margin: 0;
+    margin: 5px 0 0 0;
+}
+
+.card-container .card h2 {
+    margin: auto;
 }
