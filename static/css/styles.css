@@ -84,3 +84,7 @@ hr.content-end-rule {
   margin-top: 3em;
   margin-bottom: 2em;
 }
+
+code {
+  font-size: 0.8em;
+}
