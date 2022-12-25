@@ -264,12 +264,6 @@ Knowing that Python tried to open our destination file might tip us off to the f
 `try` blocks should contain only the line or couple of lines that could produce an error.
 Additional logic belongs in the `finally` clause or outside the construct entirely.
 
-<br>
-
----
-
-
-
 [^1]: If I had to choose, `EOFError` is probably the closest thing, but it's not really right.
 [^2]: An interface that supports multiple input sources is actually pretty common, and this is what [URIs]() are usually used for. A local file might be described as `file://path/to/file`. A system can use a different prefix to differentiate its type of files. Our hypothetical distributed filesystem might use "dfs", for example: `dfs://path/to/file`.
 [^3]: A nice CLI shouldn't expose the user to internals. Give clear, one-line error messages if possible.
