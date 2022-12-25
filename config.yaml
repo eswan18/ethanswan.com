@@ -16,3 +16,6 @@ params:
 permalinks:
   posts: /feed/:year/:month/:day/:slug/
 title: ethanswan.com
+markup:
+  highlight:
+    noClasses: false
