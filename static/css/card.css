@@ -1,17 +1,17 @@
 .card-container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 2rem 2rem;
 }
 
 .card-container .card {
-    flex: 0 0 20rem;
+    flex: 1 0 18rem;
     height: 15rem;
     padding: 1rem 1rem;
-    box-shadow: 2px 2px 5px black;
-    margin: 1rem;
+    box-shadow: 2px 2px 5px var(--font-color);
     min-width: 0;
-    min-height: 0;
+    max-width: 23rem;
 }
 
 .card-container .card article {
