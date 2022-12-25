@@ -13,4 +13,11 @@
 
 .footnotes hr {
     margin: 3em 1em;
+    color: var(--secondary-color);
+}
+
+/* This applies to the label (e.g. "1.") of footnotes. */
+.footnotes li::marker {
+    color: var(--secondary-color);
+    font-weight: bold;
 }
