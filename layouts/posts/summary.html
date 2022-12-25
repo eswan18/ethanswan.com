@@ -2,7 +2,7 @@
     <header>
       <h2><a href='{{ .Permalink }}'> {{ .Title }}</a> </h2>
       <div class="post-meta">
-        <i class="fa-regular fa-calendar"></i>&nbsp;&nbsp;{{ .Date.Format "2006-01-02" }}
+        &nbsp;<i class="fa-regular fa-calendar"></i>&nbsp;&nbsp;{{ .Date.Format "2006-01-02" }}
         {{/* This is ... a lazy hack to avoid separate divs/spans and more CSS */}}
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <i class="fa-regular fa-file-lines"></i>&nbsp;&nbsp;~{{ .FuzzyWordCount }} words</div>

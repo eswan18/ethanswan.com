@@ -1,5 +1,5 @@
 .post-preview {
-    margin: 4em 2em;
+    margin: 3em 2em;
 }
 .post-preview h2 {
     margin: 0.5em 0;
@@ -20,4 +20,9 @@
 .footnotes li::marker {
     color: var(--secondary-color);
     font-weight: bold;
+}
+
+.highlight pre {
+  padding: 1em;
+  font-size: 0.8em;
 }
