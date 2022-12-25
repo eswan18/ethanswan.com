@@ -8,7 +8,7 @@
       <i class="fa-solid fa-person-chalkboard"></i> &nbsp;
       {{ end }}
       <span class="appearance-type">{{ .Params.appearanceType }}</span>
-      &nbsp; {{ .Date.Format "2006-01-02" }} &nbsp; {{ .Params.where }} </div>
+      &nbsp; <nobr>{{ .Date.Format "2006-01-02" }}</nobr> &nbsp; <nobr>{{ .Params.where }}</nobr> </div>
   </header>
   <div class="post-summary">
     {{ .Summary }}
