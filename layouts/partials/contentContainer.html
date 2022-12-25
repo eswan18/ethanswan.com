@@ -28,7 +28,11 @@
         {{ end }}
         <div class="{{ $listSummaryType }}-container">
           {{ if .Params.showList }}
-            {{ range .Pages }}
+            {{ $pages := .Pages }}
+            {{ with .Params.sort }}
+              {{ $pages = sort $pages .by .order }}
+            {{ end }}
+            {{ range $pages }}
               {{ .Render $listSummaryType }}
             {{ end }}
           {{/* Support listing a collection other than the one in the current directory */}}
@@ -41,6 +45,13 @@
               {{ end}}
             {{ end }}
             {{ with $selectedSection }}
+              {{ $pages := .Pages }}
+              {{ with .Params.sort }}
+                {{ $pages = sort $pages .by .order }}
+              {{ end }}
+              {{ range $pages }}
+                {{ .Render $listSummaryType }}
+              {{ end }}
               {{ range .Pages }}
                 {{ .Render $listSummaryType }}
               {{ end }}
