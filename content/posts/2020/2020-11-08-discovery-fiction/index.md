@@ -1,9 +1,10 @@
 ---
+title: "Discovery Fiction"
+slug: discovery-fiction
 layout: post
 date: 2020-11-08
 tags:
 - education
-title: "Discovery Fiction"
 ---
 
 

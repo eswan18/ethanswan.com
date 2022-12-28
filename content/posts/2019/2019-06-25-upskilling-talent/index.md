@@ -1,5 +1,6 @@
 ---
 layout: post
+slug: upskilling-talent
 date: 2019-06-25
 tags:
 - "8451"

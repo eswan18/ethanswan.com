@@ -1,9 +1,10 @@
 ---
+title: A Non-Gamer Takes on The Witcher 3
+slug: the-witcher
 layout: post
 date: 2018-07-27
 tags:
 - gaming
-title: A Non-Gamer Takes on The Witcher 3
 cover-img: "/images/posts/witcher_3_welcome.jpg"
 thumbnail-img: ""
 ---

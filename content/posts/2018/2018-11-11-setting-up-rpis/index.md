@@ -1,10 +1,11 @@
 ---
+title: Setting Up Raspberry Pis (the Full Version)
+slug: setting-up-rpis
 layout: post
 date: 2018-11-11
 tags:
 - tutorial
 - technology
-title: Setting Up Raspberry Pis (the Full Version)
 ---
 
 ![My Raspberry Pi](rpi3.jpg)

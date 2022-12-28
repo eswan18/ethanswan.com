@@ -1,9 +1,10 @@
 ---
+title: "Gross National Happiness: A Better Metric?"
+slug: gnh-link
 layout: post
 tags:
 - syntact-project
 date: 2019-02-11
-title: "Gross National Happiness: A Better Metric?"
 external_link: http://www.syntactproject.com/2019/02/11/gross-national-happiness.html
 ---
 

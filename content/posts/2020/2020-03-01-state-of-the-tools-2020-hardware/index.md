@@ -1,9 +1,10 @@
 ---
+title: "State of the Tools 2020: Hardware"
+slug: state-of-the-tools-2020-hardware
 layout: post
 date: 2020-03-01
 tags:
 - technology
-title: "State of the Tools 2020: Hardware"
 thumbnail-img: "state-of-tools-2020-hardware.jpeg"
 cover-img: "state-of-tools-2020-hardware.jpeg"
 ---

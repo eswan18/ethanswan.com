@@ -1,9 +1,10 @@
 ---
+title: P90X
+slug: p90x
 layout: post
 date: 2020-10-29
 tags:
 - fitness
-title: P90X
 subtitle: I Hate It, but I Love It
 thumbnail-img: "/images/posts/i-hate-it-but-i-love-it.jpg"
 ---

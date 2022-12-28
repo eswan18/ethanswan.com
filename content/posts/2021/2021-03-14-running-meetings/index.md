@@ -1,9 +1,10 @@
 ---
+title: "Running Better Meetings"
+slug: running-meetings
 layout: post
 date: 2021-03-14
 tags:
 - business
-title: "Running Better Meetings"
 ---
 
 In data science and engineering, technical skills are often the quickest way to early-career advancement – a new contributor who can write decent code is immediately an asset, in a way that a business-savvy developer with no coding ability is not. Companies often publicly espouse the benefits of softer skills, but that may not ring true in entry-level positions. In some technical fields, non-technical strengths can actually be viewed as *negatives* by peers, a betrayal of the ethos of the programmer.  And it's hard to separate effective navigation of the business – knowing the right people to ask, managing meetings and emails – from "playing politics", so the former can feel dishonorable by its association with the latter. Soft skills just aren't valued in the culture.

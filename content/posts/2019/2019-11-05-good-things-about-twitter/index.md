@@ -1,9 +1,10 @@
 ---
+title: On the Good Things About Twitter
+slug: good-things-about-twitter
 layout: post
 date: 2019-11-05
 tags:
 - reflection
-title: On the Good Things About Twitter
 ---
 
 Over the past few years, I have heard many people repeatedly note the downsides of Twitter, particularly its impact on our society. I don't agree with all of those criticisms, but some are legitimate and most deserve a serious discussion. This isn't that discussion, though.

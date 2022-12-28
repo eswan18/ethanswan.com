@@ -1,10 +1,11 @@
 ---
+title: Analyzing My Runs
+slug: analyzing-my-runs
 layout: post
 date: 2020-01-28
 tags:
 - fitness
 - python
-title: Analyzing My Runs
 thumbnail-img: "/images/posts/running_speed_vs_distance.svg"
 ---
 

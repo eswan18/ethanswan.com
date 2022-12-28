@@ -1,11 +1,12 @@
 ---
+title: "Python Exceptions: Bonus Content"
+slug: python-exceptions-bonus
 layout: post
 date: 2022-12-10
 tags:
 - tech
 - python
 - programming languages
-title: "Python Exceptions: Bonus Content"
 ---
 
 *This post is a followup to my article [The Basics of Exceptions in Python](/feed/2022/12/04/python-exceptions-basics), but should make sense on its own as long as you are familiar with `raise` and `try/except`.*

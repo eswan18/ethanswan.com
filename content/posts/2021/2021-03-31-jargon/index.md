@@ -1,9 +1,10 @@
 ---
+title: "There's More to Business Jargon than Meets the Eye"
+slug: jargon
 layout: post
 date: 2021-03-31
 tags:
 - business
-title: "There's More to Business Jargon than Meets the Eye"
 ---
 
 I suspect meetings at most American companies are full of jargon.

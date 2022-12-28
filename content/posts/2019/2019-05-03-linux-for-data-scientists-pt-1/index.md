@@ -1,10 +1,11 @@
 ---
+title: Linux for Data Scientists, Part 1
+slug: linux-for-data-scientists-pt-1
 layout: post
 date: 2019-05-13
 tags:
 - "8451"
 - technology
-title: Linux for Data Scientists, Part 1
 external_link: https://www.8451.com/forward-thinking/automation-at-8451
 ---
 

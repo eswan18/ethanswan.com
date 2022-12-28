@@ -1,9 +1,10 @@
 ---
+title: Scaling Data Science Across Python and R
+slug: scaling-data-science
 layout: post
 date: 2019-11-02
 tags:
 - "8451"
-title: Scaling Data Science Across Python and R
 external_link: https://talkpython.fm/episodes/show/236/scaling-data-science-across-python-and-r
 ---
 

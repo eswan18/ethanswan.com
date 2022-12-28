@@ -1,10 +1,10 @@
 ---
+title: "Apartment Hunting with Python"
+slug: apt-hunting-python
 layout: post
 date: 2021-04-20
 tags:
 - python
-title: "Apartment Hunting with Python"
-slug: "apt-hunting-python"
 thumbnail-img: "/images/posts/apartment_score_distributions.png"
 ---
 
