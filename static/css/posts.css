@@ -39,6 +39,11 @@
     border-collapse: separate;
 }
 
+.posts-content th {
+    border-bottom: 1px solid var(--font-color);
+}
+
+
 .posts-subhead {
     margin-bottom: 2em;
 }
