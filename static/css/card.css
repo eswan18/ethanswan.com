@@ -7,7 +7,7 @@
 
 .card-container .card {
     flex: 1 0 18rem;
-    height: 15rem;
+    height: 12rem;
     padding: 1rem 1rem;
     box-shadow: 2px 2px 5px var(--font-color);
     min-width: 0;
