@@ -3,12 +3,15 @@
     <h2><a href='{{ .Permalink }}'> {{ .Title }}</a></h2>
     <div class="appearance-meta">
       {{ if hasPrefix .Params.appearanceType "Podcast" }}
-      <i class="fas fa-microphone"></i> &nbsp;
+      &nbsp;<i class="fas fa-microphone"></i> &nbsp;&nbsp;
       {{ else if hasPrefix .Params.appearanceType "Conference" }}
-      <i class="fa-solid fa-person-chalkboard"></i> &nbsp;
+      &nbsp;<i class="fa-solid fa-person-chalkboard"></i> &nbsp;
       {{ end }}
       <span class="appearance-type">{{ .Params.appearanceType }}</span>
-      &nbsp; <nobr>{{ .Date.Format "2006-01-02" }}</nobr> &nbsp; <nobr>{{ .Params.where }}</nobr> </div>
+      &nbsp; <nobr>{{ .Params.where }}</nobr>
+      <br>
+      &nbsp;<i class="fa-regular fa-calendar"></i>&nbsp;&nbsp;&nbsp;{{ .Date.Format "2006-01-02" }}
+    </div>
   </header>
   <div class="appearance-summary">
     {{ .Summary }}
@@ -21,6 +24,5 @@
     </div>
   {{ end }}
   <footer>
-  <a href='{{ .Permalink }}'><nobr>More →</nobr></a>
   </footer>
 </article>
