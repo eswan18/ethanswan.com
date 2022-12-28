@@ -31,8 +31,6 @@ How can you accomplish these goals? Keeping in mind just a few things can go a l
 - Bring some energy
 - Explain what's next
 
----
-
 #### Keep It Moving
 
 If you are the meeting organizer, it is **your job** to make sure things keep moving. Awkward silence? You need to end it. The meeting trails off and it's unclear if there's more to be discussed? You need to decide: either bring up the next topic or end the meeting. You cannot abdicate responsibility as the emcee. If you sit back and just hope the meeting will run itself, it won't.

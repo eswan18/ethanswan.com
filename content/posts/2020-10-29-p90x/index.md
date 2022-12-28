@@ -103,4 +103,4 @@ One interesting aspect of P90X is the time it spends on flexibility, balance, an
 It's a brutal road but the benefits in self-discipline, physique, and general health make it exceptionally rewarding.
 Wish me luck in sticking with it for 5 more weeks.
 
-![Tony Horton and Me](/images/posts/tony_horton_and_me.jpeg)
+![Tony Horton and Me](tony_horton_and_me.jpeg)

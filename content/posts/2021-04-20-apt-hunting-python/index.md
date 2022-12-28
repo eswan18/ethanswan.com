@@ -4,6 +4,7 @@ date: 2021-04-20
 tags:
 - python
 title: "Apartment Hunting with Python"
+slug: "apt-hunting-python"
 thumbnail-img: "/images/posts/apartment_score_distributions.png"
 ---
 
@@ -25,7 +26,7 @@ Seeing most friends requires a 15+ minute drive or 30+ minute train ride.
 
 <!--more-->
 
-![Chicago Personal Landmarks](/images/posts/chicago-personal-landmarks.png)
+![Chicago Personal Landmarks](chicago-personal-landmarks.png)
 
 On the *other* other hand, I've never lived in my neighborhood during "normal" times, so I'm hardly in a position to render a judgment on it.
 I've recently discovered ultimate frisbee and basketball groups that meet nearby, and as a lover of pickup sports, I would love to attend multiple times a week.
@@ -201,7 +202,7 @@ To start, I typically go to the page in my browser and right click on bits of te
 The "Inspect Element" option brings up the page HTML in a separate pane and highlights what part of that code defines the element in question.
 In this case, I focused on parts of the page that contained information on price, rooms (beds/baths), and square footage.
 
-![Inspecting Zillow Elements](/images/posts/zillow-inspect-element.png)
+![Inspecting Zillow Elements](zillow-inspect-element.png)
 
 If you zoom in, you can see that I've selected the HTML code corresponding to the info for the apartment on the right.
 ```html
@@ -387,12 +388,12 @@ But with a ranking, I was able to decide if my algorithm was biased too much tow
 Indeed, I ended up tweaking the weights and rerunning several times before being happy with my results.
 As I went, I kept track of the distributions of scores.
 
-![Apartment Score Distributions](/images/posts/apartment_score_distributions.png)
+![Apartment Score Distributions](apartment_score_distributions.png)
 
 I also looked at the distribution of total score by zip code, and plotted the scores on a map to see where my preferred properties were clustered.
 But most importantly, I took my rankings and was able to look through them to get a sense of my other options throughout the city.
 
-![Top 10 Apartments](/images/posts/top-10-chi-apts.png)
+![Top 10 Apartments](top-10-chi-apts.png)
 
 ## Epilogue
 
