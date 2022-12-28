@@ -1,5 +1,6 @@
 ---
 title: Too Good To Be True?
+slug: too-good-to-be-true
 thumbnail-img: /images/posts/tgtg-logo.png
 date: 2022-08-16
 ---

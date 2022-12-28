@@ -1,9 +1,9 @@
 ---
-layout: post
+title: Gym Etiquette 101
+slug: gym-etiquette
 date: 2022-12-03
 categories:
 - fitness
-title: Gym Etiquette 101
 ---
 
 When I first started going to the gym, I was self-conscious every second.

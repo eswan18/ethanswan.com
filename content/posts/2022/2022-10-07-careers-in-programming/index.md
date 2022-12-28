@@ -1,5 +1,6 @@
 ---
 title: Careers in Programming
+slug: careers-in-programming
 thumbnail-img: /images/posts/careers-in-programming-slide.png
 date: 2022-10-07
 ---
