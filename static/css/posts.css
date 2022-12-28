@@ -38,3 +38,7 @@
     border-spacing: 15px 5px;
     border-collapse: separate;
 }
+
+.posts-subhead {
+    margin-bottom: 2em;
+}

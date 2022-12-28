@@ -1,0 +1,5 @@
+<div class="subhead posts-subhead">
+  {{ if eq .Page.Kind "page"}}
+  <span class="posts-subhead-date">&nbsp;<i class="fa-regular fa-calendar"></i>&nbsp;&nbsp;{{ .Date.Format "2006-01-02" }}</span>
+  {{ end }}
+</div>

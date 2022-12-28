@@ -15,6 +15,7 @@
       {{ with .Params.bannerImage }}
         {{ partial "images/bannerImage" . }}
       {{ end }}
+      {{ .Render "subhead" }}
       {{.Content}}
     </div>
     <div>
