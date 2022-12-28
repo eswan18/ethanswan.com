@@ -42,6 +42,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 body {
   background-color: var(--bg-color);
   color: var(--font-color);
