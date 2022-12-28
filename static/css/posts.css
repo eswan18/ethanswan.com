@@ -22,7 +22,8 @@
     font-weight: bold;
 }
 
-.highlight pre {
+pre {
+  overflow: scroll;
   padding: 0.5em;
   line-height: 105%;
 }
@@ -42,8 +43,6 @@
 .posts-content th {
     border-bottom: 1px solid var(--font-color);
 }
-
-
 .posts-subhead {
     margin-bottom: 2em;
 }

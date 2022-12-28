@@ -8,6 +8,7 @@
 .content-container {
   flex: 0 1 50rem;
   padding: 1em;
+  overflow: hidden;
 }
 .content-container > main > .content {
   margin-top: 1.5em;
