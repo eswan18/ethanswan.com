@@ -13,7 +13,8 @@
   --secondary-color: #B7999C;
   --font-color: #DFE0E2;
   --bg-color: #071013;
-  --heading-color: #B8B8B8;
+  /*--heading-color: #B8B8B8;*/
+  --heading-color: #B7999C;
 }
 
 @media (min-width: 768px) {
