@@ -88,3 +88,10 @@ hr.content-end-rule {
 code {
   font-size: 0.8em;
 }
+
+.content p img {
+  margin: auto;
+  display: block;
+  max-height: 20rem;
+  max-width: 80%;
+}

@@ -93,8 +93,6 @@ you can't afford to be too late, the weight will drop, but too early is bad too 
 and applying the right amount of force, this requires some skill.
 As long you pay attention, though, you'll rapidly get better with practice.
 
-<br><br>
-
 
 [^1]: Squats and deadlifts are typically the two exercises in which you can move the most weight, and they also require balance, so it's common to start at lower weights and work one's way up to the "full" load over several sets to become comfortable with the movement. That means the total time at the station can go pretty long.
 [^2]: "Spotting" is a term for assisting someone with their lift in case they aren't able to complete it on their own. Usually, you'll stand behind them as they set up (potentially helping them get the weights in the right place to start the move) and then just watch them as they do their set, intervening if necessary.

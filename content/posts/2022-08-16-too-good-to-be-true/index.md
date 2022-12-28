@@ -10,11 +10,11 @@ Too Good To Go lists "bags" that restaurants will sell you at a steep discount, 
 
 <!-- more -->
 
-<center><img src="/images/posts/tgtg-savings.png" alt="Too Good To Go Savings"/></center>
+![Too Good To Go Savings](tgtg-savings.png)
 
 The app leans strongly into the idea of reducing food waste, implying that your purchase of food is having an environmental impact. The time slot offerings do indeed suggest that this food would not be sold otherwise; they typically are scheduled for the last hour or so that the restaurant is open. You can find a dashboard in the app that displays the money you've saved side-by-side with the carbon dioxide equivalents you've "saved". Calculating both of these is a dubious endeavor, since I wouldn't have bought the food without such a steep discount, and the surprise bags aren't strictly replacing food I would have eaten otherwise – I'm not eating croissants as a substitute for dinner (well, usually). Still, I'm happy to be told that I've offset the amount of emissions generated from making 943 cups of coffee, since that's probably about the number of times I've used my aeropress this summer.
 
-<center><img src="/images/posts/tgtg-co2e-savings.png" alt="Too Good To Go CO2e Savings"/></center>
+![Too Good To Go CO2e Savings](tgtg-co2e-savings.png)
 
 Honestly, there's a good reason I've used the app so much: it's a great deal and a ton of fun. I've tried Puerto Rican and Cuban restaurants for the first time, received a random assortment of fruits from a grocery store, and sampled more boutique donut varieties than I knew existed. The thrill of the chase is more than half the fun; the food is good and cheap, but a reason to bike a few miles through the city (especially as someone who spends all day working at home) is just a really pleasant addition to my life. I've found restaurants and even neighborhoods that I probably would never have visited.
 
