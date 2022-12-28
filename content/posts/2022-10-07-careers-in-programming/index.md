@@ -14,4 +14,4 @@ You can read more about the program [here](https://www.hcc-nd.edu/moreau-college
 However, I imagine that an introduction to programming careers, assuming no prior knowledge whatsoever, might be useful for others.
 Feel free to share the linked slides however you wish (clicking on the slide will take you to Dropbox, where you can view or download them).
 
-[![Careers in Programming](/images/posts/careers-in-programming-slide.png)](https://www.dropbox.com/s/7d6km7p8xve91yl/Careers%20in%20Programming.pdf?dl=0)
+[![Careers in Programming](careers-in-programming-slide.png)](https://www.dropbox.com/s/7d6km7p8xve91yl/Careers%20in%20Programming.pdf?dl=0)
