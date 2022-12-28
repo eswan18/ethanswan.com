@@ -4,12 +4,13 @@ date: 2022-02-02
 tags:
 - travel
 title: "On the Road Trip"
-thumbnail-img: "/images/posts/2022-road-trip-route.png"
+slug: road-trip
+thumbnail-img: "2022-road-trip-route.png"
 ---
 
 I recently returned from a 10-day road trip. Nowhere too exciting, just through the middle of the continental US: St. Louis, Memphis, northeast Arkansas, and Champaign (home of the University of Illinois Urbana-Champaign).
 
-![Road Trip Route](/images/posts/2022-road-trip-route.png)
+![Road Trip Route](2022-road-trip-route.png)
 
 People who know me probably wouldn't describe me as the road trip type. But I had a few weeks off before I started a new job and the opportunity to travel without any commitments (or a finite amount of PTO) doesn't present itself often; I figured that there would never be a better time to travel somewhat spontaneously. And spontaneous it was, as for several of my stops, I booked my Airbnb the same day I arrived in the city.
 

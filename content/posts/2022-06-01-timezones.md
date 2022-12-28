@@ -1,6 +1,7 @@
 ---
 title: Timezones
 subtitle: 24+ Places (and Times) to Lose Your Mind
+slug: timezones
 date: 2022-06-01
 ---
 

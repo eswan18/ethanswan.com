@@ -1,6 +1,7 @@
 ---
 title: Crafting Interpreters
 thumbnail-img: /images/posts/crafting-interpreters-cover.png
+slug: crafting-interpreters
 date: 2022-06-07
 ---
 
