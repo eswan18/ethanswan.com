@@ -10,9 +10,16 @@
       <span class="appearance-type">{{ .Params.appearanceType }}</span>
       &nbsp; <nobr>{{ .Date.Format "2006-01-02" }}</nobr> &nbsp; <nobr>{{ .Params.where }}</nobr> </div>
   </header>
-  <div class="post-summary">
+  <div class="appearance-summary">
     {{ .Summary }}
   </div>
+  {{ if isset .Params "links" }}
+    <div class="appearance-links">
+      {{ range $text, $link := .Params.links }}
+        <a class="button caps" href="{{ $link }}">{{ $text }}</a>
+      {{ end }}
+    </div>
+  {{ end }}
   <footer>
   <a href='{{ .Permalink }}'><nobr>More →</nobr></a>
   </footer>
