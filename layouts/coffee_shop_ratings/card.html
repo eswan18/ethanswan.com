@@ -7,10 +7,11 @@
           <div class="coffee-shop-meta">
             <h3>{{ .Params.name }}</h3>
             {{ with .Params.link }}
-              <p><a href='{{ . }}'><i class="fa-solid fa-link"></i>Link</a></p>
+              <p><a href='{{ . }}'><i class="fa-solid fa-link"></i>&nbsp;Link</a></p>
             {{ end }}
           </div>
-          <div class="coffee-shop-rating">
+
+          <div class="coffee-shop-rating-container">
             <h2>{{ .Params.rating }}</h2>
           </div>
         </div>
@@ -19,7 +20,20 @@
         {{ .Content }}
       </div>
       <footer>
-        apple pay etc
+        <div class="coffee-shop-features-container">
+          <div class="coffee-shop-feature">
+            <span class="coffee-shop-feature-name">Apple Pay?</span>
+            {{ if .Params.apple_pay }}
+              <span class="coffee-shop-feature-value">YES</span>
+            {{ else }}
+              <span class="coffee-shop-feature-value">NO</span>
+            {{ end }}
+          </div>
+          <div class="coffee-shop-feature">
+            <span class="coffee-shop-feature-name">Wifi Quality:</span>
+            <span class="coffee-shop-feature-value">{{ .Params.wifi }}</span>
+          </div>
+        </div>
       </footer>
     </article>
   </div>
