@@ -3,8 +3,23 @@
 }
 .appearance-preview .appearance-type {
     font-weight: bold;
+    margin-right: 0.5em;
 }
 .appearance-preview .appearance-summary {
     margin-top: 1em;
     margin-bottom: 0.5em;
+}
+
+.appearance-meta-row {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+}
+
+.appearance-meta-icon {
+    flex: 0 0 1.8em;
+}
+
+.appearance-meta-text {
+    flex: auto;
 }

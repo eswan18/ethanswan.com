@@ -2,15 +2,27 @@
   <header>
     <h2><a href='{{ .Permalink }}'> {{ .Title }}</a></h2>
     <div class="appearance-meta">
-      {{ if hasPrefix .Params.appearanceType "Podcast" }}
-      &nbsp;<i class="fas fa-microphone"></i> &nbsp;&nbsp;
-      {{ else if hasPrefix .Params.appearanceType "Conference" }}
-      &nbsp;<i class="fa-solid fa-person-chalkboard"></i> &nbsp;
-      {{ end }}
-      <span class="appearance-type">{{ .Params.appearanceType }}</span>
-      &nbsp; <nobr>{{ .Params.where }}</nobr>
-      <br>
-      &nbsp;<i class="fa-regular fa-calendar"></i>&nbsp;&nbsp;&nbsp;{{ .Date.Format "2006-01-02" }}
+      <div class="appearance-meta-row">
+        <div class="appearance-meta-icon">
+          {{ if hasPrefix .Params.appearanceType "Podcast" }}
+            <i class="fas fa-microphone"></i>
+          {{ else if hasPrefix .Params.appearanceType "Conference" }}
+            <i class="fa-solid fa-person-chalkboard"></i>
+          {{ end }}
+        </div>
+        <div class="appearance-meta-text">
+          <span class="appearance-type">{{ .Params.appearanceType }}</span>
+          <span class="appearance-where"><nobr>{{ .Params.where }}</nobr></span>
+        </div>
+      </div>
+      <div class="appearance-meta-row">
+        <div class="appearance-meta-icon">
+          <i class="fa-regular fa-calendar"></i>
+        </div>
+        <div class="appearance-meta-text">
+          <span class="appearance-date">{{ .Date.Format "2006-01-02" }}</span>
+        </div>
+      </div>
     </div>
   </header>
   <div class="appearance-summary">
