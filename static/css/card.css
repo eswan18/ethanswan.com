@@ -1,0 +1,23 @@
+.card-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 2rem 2rem;
+}
+
+.card-container .card {
+    flex: 1 0 18rem;
+    height: 12rem;
+    padding: 1rem 1rem;
+    box-shadow: 2px 2px 5px var(--font-color);
+    min-width: 0;
+    max-width: 23rem;
+}
+
+.card-container .card article {
+    margin: 5px 0 0 0;
+}
+
+.card-container .card h3 {
+    margin: auto;
+}

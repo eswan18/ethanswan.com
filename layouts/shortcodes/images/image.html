@@ -1,0 +1,6 @@
+{{ $path := .Get "path" }}
+{{ $alt := .Get "alt" }}
+{{ $class := .Get "class" }}
+{{ with resources.Get $path }}
+  <img src="{{ .RelPermalink }}" alt="{{ $alt }}" class="{{ $class }}">
+{{ end }}

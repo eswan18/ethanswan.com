@@ -1,0 +1,80 @@
+<div class="content-container">
+  <main aria-role="main">
+    <header class="header">
+      <h1>{{.Title}}</h1>
+      {{ with .Params.subtitle }}
+      <span class="subtitle">{{.}}</span>
+      {{ end }}
+    </header>
+    <div class="content {{ .Section }}-content">
+      <!-- include an image inline if one is specified -->
+      {{ with .Params.embeddedImage }}
+        {{ partial "images/embeddedImage" . }}
+      {{ end }}
+      <!-- include a banner-style (100% width) image if one is specified -->
+      {{ with .Params.bannerImage }}
+        {{ partial "images/bannerImage" . }}
+      {{ end }}
+      {{ .Render "subhead" }}
+      {{.Content}}
+    </div>
+    <div>
+      {{ $listSummaryType := .Params.listsummarytype | default "summary" }}
+      {{/* Collections that aren't part of the current page directory need to be labeled. */}}
+      {{ with .Params.listcollection }}
+        <br>
+        <h2>{{ title . }}</h2>
+      {{ end }}
+      <div class="{{ $listSummaryType }}-container">
+        {{/*
+          We can list either the collection in the current directory (with .showList=true) or
+          a different one, by specifying it with .listCollection.
+          Then we need to apply sorting
+        */}}
+        {{/* Start with figuring out what pages we want to list. */}}
+        {{ $pages := "" }}
+        {{ $shouldList := false }}
+        {{ if .Params.showList }}
+          {{ $shouldList = true }}
+          {{ $pages = .Pages }}
+        {{ else if (isset .Params "listcollection") }}
+          {{ $shouldList = true }}
+          {{ $selectedSectionName := .Params.listcollection }}
+          {{ $selectedSection := "" }}
+          {{ range $s := site.Sections }}
+            {{ if eq (lower $s.Name) $selectedSectionName }}
+              {{ $selectedSection = $s }}
+            {{ end}}
+          {{ end }}
+          {{ with $selectedSection }}
+            {{ $pages = .Pages }}
+          {{ end }}
+        {{ end }}
+
+        {{/* Sort and render the list. */}}
+        {{ if $shouldList }}
+          {{ with .Params.sort }}
+            {{ $pages = sort $pages .by .order }}
+          {{ end }}
+          {{ range $pages }}
+            {{ .Render $listSummaryType }}
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+    {{ if (isset .Params "seealso") }}
+      <div class="content-end">
+        <hr class="content-end-rule">
+        {{ with .Params.seeAlso }}
+          <div class="see-also-container" style="display: block; text-align: center;">
+            <p>See also:
+            {{ range $x := . }}
+              <a class="button caps" href="{{ .link }}">{{ .text }}</a>
+            {{ end }}
+            </p>
+          </div>
+        {{ end }}
+      </div>
+    {{ end }}
+  </main>
+</div>

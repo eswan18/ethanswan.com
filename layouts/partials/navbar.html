@@ -1,0 +1,99 @@
+<style>
+.header-navbar {
+    display: flex;
+    width: 100%;
+    border-bottom: 2px solid var(--secondary-color);
+}
+.header-navbar ul {
+    margin: 0.5em;
+    padding: 0em;
+}
+.header-navbar ul li {
+    display: inline-block;
+    padding: 0.5em;
+    margin: 0;
+}
+.header-navbar ul li a {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.main-nav {
+    flex: 1 0 auto;
+    display: flex;
+}
+.dark-mode-switch {
+    flex: 0 0 auto;
+    display: flex;
+    flex-flow: row;
+    align-content: flex-end;
+}
+.main-nav .hamburger-container {
+    margin-left: 0.3em;
+    align-self: flex-end;
+    margin-bottom: 0.3em;
+}
+.nav-hamburger {
+    cursor: pointer;
+    color: var(--primary-color);
+    font-size: 1.8em;
+}
+.main-nav .menu-popover {
+    position: fixed;
+    left: -100%;
+    top: 3em;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    width: 100%;
+    transition: 0.1s;
+    box-shadow:
+        0 10px 27px rgba(0, 0, 0, 0.05);
+}
+.main-nav .menu-popover.active {
+    left: 0;
+}
+.vertical-nav-list {
+    display: flex;
+    flex-direction:column;
+}
+</style>
+
+<div class="header-navbar">
+    <nav class="main-nav">
+        <div class="header-links">
+            <ul class="mobile-no-show">
+            {{ range $navitem := .Site.Params.navbar.links }}
+                {{ with $navitem }}
+                <li><a href="{{ .link }}">{{ .name }}</a></li>
+                {{ end }}
+            {{ end }}
+            </ul>
+        </div>
+        <div class="hamburger-container mobile-only">
+            <span class="nav-hamburger"><i class="fa-solid fa-bars"></i></span>
+        </div>
+        <div class="menu-popover">
+            <ul class="vertical-nav-list">
+            {{ range $navitem := .Site.Params.navbar.links }}
+                {{ with $navitem }}
+                <li><a href="{{ .link }}">{{ .name }}</a></li>
+                {{ end }}
+            {{ end }}
+            </ul>
+        </div>
+    </nav>
+    <div class="dark-mode-switch">
+        {{ partial "darkModeSwitch.html" . }}
+    </div>
+</div>
+
+<script>
+    const hamburger = document.querySelector(".nav-hamburger");
+    const popoverMenu = document.querySelector(".menu-popover");
+
+    hamburger.addEventListener("click", showMenu);
+
+    function showMenu() {
+        hamburger.classList.toggle("active");
+        popoverMenu.classList.toggle("active");
+    }
+</script>

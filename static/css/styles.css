@@ -1,0 +1,106 @@
+:root {
+  --primary-color: #F28F3B;
+  --secondary-color: #468C98;
+  --font-color: #394053;
+  --bg-color: #FDFFFC;
+  --heading-color: #468C98;
+  --alternate-bg-color: #F5F9E9;
+}
+
+/* See article: https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8 */
+[data-theme="dark"] {
+  --primary-color: #EB5160;
+  --secondary-color: #B7999C;
+  --font-color: #DFE0E2;
+  --bg-color: #071013;
+  /*--heading-color: #B8B8B8;*/
+  --heading-color: #B7999C;
+}
+
+@media (min-width: 768px) {
+  .navbar-custom.top-nav-regular .avatar-container {
+    margin-top: 5rem;
+    width: 2.5rem;
+  }
+  .mobile-only {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .mobile-no-show {
+    display: none;
+  }
+}
+
+.float-right {
+  float: right!important;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  font-family: 'Signika Negative', sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+body p {
+  line-height: 1.5em;
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 13px;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+a.button {
+  display: inline-block;
+  font-size: 0.9em;
+  border: 2px solid var(--primary-color);
+  border-radius: 50em;
+  padding: 0.4em 0.8em;
+  margin: 0.5em;
+}
+
+.content-end {
+  width: 75%;
+  margin: auto;
+}
+
+hr.content-end-rule {
+  margin-top: 3em;
+  margin-bottom: 2em;
+}
+
+code {
+  font-size: 0.8em;
+}
+
+.flex-break-row {
+  flex: 0 0 100%;
+  height: 0;
+}
+
+.flex-break-column {
+  flex: 0 0 100%;
+  width: 0;
+}

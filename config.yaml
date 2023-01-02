@@ -1,0 +1,21 @@
+baseURL: https://ethanswan.com/
+params:
+  AuthorName: Ethan Swan
+  navbar:
+    links:
+    - name: About
+      link: /
+    - name: Blog
+      link: /posts
+    - name: Teaching
+      link: /teaching
+    - name: Appearances
+      link: /appearances
+    - name: Nonsense
+      link: /nonsense
+permalinks:
+  posts: /feed/:year/:month/:day/:slug/
+title: ethanswan.com
+markup:
+  highlight:
+    noClasses: false

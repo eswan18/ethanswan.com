@@ -4,3 +4,5 @@ _site/
 .sass-cache
 .DS_Store
 vendor/
+public/
+.hugo_build.lock

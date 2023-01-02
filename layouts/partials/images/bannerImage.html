@@ -1,0 +1,4 @@
+{{ $alt := .alt }}
+{{ with resources.Get .path }}
+    <img alt="{{ $alt }}" src="{{ .RelPermalink }}" class="banner-image">
+{{ end }}

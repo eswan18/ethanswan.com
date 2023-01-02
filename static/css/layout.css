@@ -1,0 +1,15 @@
+.main-container {
+  display: flex;
+  flex-flow: row;
+}
+.left-sidebar, .right-sidebar {
+  flex: 1 1 auto;
+}
+.content-container {
+  flex: 0 1 50rem;
+  padding: 1em;
+  overflow: hidden;
+}
+.content-container > main > .content {
+  margin-top: 1.5em;
+}

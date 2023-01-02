@@ -1,0 +1,48 @@
+.post-preview {
+    margin: 3em 2em;
+}
+.post-preview h2 {
+    margin: 0.5em 0;
+}
+.post-meta {
+    font-style: italic;
+}
+.post-summary {
+    margin: 0.75em 0;
+}
+
+.footnotes hr {
+    margin: 3em 1em;
+    color: var(--secondary-color);
+}
+
+/* This applies to the label (e.g. "1.") of footnotes. */
+.footnotes li::marker {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+pre {
+  overflow: scroll;
+  padding: 0.5em;
+  line-height: 105%;
+}
+
+.posts-content p img {
+  margin: auto;
+  display: block;
+  max-height: 20rem;
+  max-width: 80%;
+}
+
+.posts-content table {
+    border-spacing: 15px 5px;
+    border-collapse: separate;
+}
+
+.posts-content th {
+    border-bottom: 1px solid var(--font-color);
+}
+.posts-subhead {
+    margin-bottom: 2em;
+}

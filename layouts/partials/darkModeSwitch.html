@@ -1,0 +1,113 @@
+<!-- Many thanks to Ananya Neogi for the content of this dark mode stuff. -->
+<!-- https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8 -->
+<style>
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.theme-switch-wrapper em {
+  margin-left: 10px;
+  font-size: 1rem;
+}
+.theme-switch {
+  display: inline-block;
+  height: 26px;
+  position: relative;
+  width: 46px;
+}
+.theme-switch input {
+  display:none;
+}
+.slider {
+  background-color: var(--primary-color);
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 18px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 18px;
+}
+input:checked + .slider {
+  background-color: var(--primary-color);
+}
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+.slider.round {
+  border-radius: 30px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+.dark-mode-status-box {
+  color: var(--heading-color);
+  margin: 0.2em 0.5em;
+}
+.dark-mode-status-box > p {
+  margin: 0em;
+  line-height: 1rem;
+}
+#dark-mode-status-label {
+  font-size: 0.8em;
+}
+#dark-mode-status {
+  font-weight: bold;
+}
+.switch-container > p {
+  margin: 0.5em;
+}
+</style>
+
+<div class="switch-container" style="display: flex; flex-flow: column; flex-wrap: wrap; justify-content: center; text-align: center;">
+  <div class="theme-switch-wrapper">
+      <label class="theme-switch" for="checkbox">
+          <input type="checkbox" id="checkbox" />
+          <div class="slider round"></div>
+    </label>
+    <div class="dark-mode-status-box">
+      <p id="dark-mode-status-label">Dark Mode</p>
+      <p id="dark-mode-status">OFF</p>
+    </div>
+  </div>
+</div>
+
+<script>
+// Note that this script *must* be defined after the above div.
+const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+function switchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.getElementById('dark-mode-status').textContent = 'ON';
+        localStorage.setItem('theme', 'dark'); //add this
+    }
+    else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        document.getElementById('dark-mode-status').textContent = 'OFF';
+        localStorage.setItem('theme', 'light'); //add this
+    }    
+}
+toggleSwitch.addEventListener('change', switchTheme, false);
+
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+
+    if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
+        document.getElementById('dark-mode-status').textContent = 'ON';
+    }
+}
+</script>

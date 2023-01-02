@@ -1,0 +1,19 @@
+{{ $page := . }}
+{{ if not .Params.unlisted }}
+  <div class="card">
+    <article class="appearance-preview">
+      <header>
+        <h3><a href='{{ .Permalink }}'> {{ .Title }}</a></h3>
+        <div class="appearance-meta"></div>
+      </header>
+      <div class="post-summary">
+        {{ with .Params.summary }}
+          {{ $page.RenderString . }}
+        {{ end }}
+      </div>
+      <footer>
+      <a href='{{ .Permalink }}'><nobr>Details →</nobr></a>
+      </footer>
+    </article>
+  </div>
+{{ end }}
