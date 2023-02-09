@@ -27,29 +27,35 @@
     flex-flow: row;
     align-content: flex-end;
 }
-.main-nav .hamburger-container {
+.main-nav .menu-dropdown {
+    position: relative;
+}
+.main-nav .menu-dropdown-button-container {
     margin-left: 0.3em;
     align-self: flex-end;
     margin-bottom: 0.3em;
 }
-.nav-hamburger {
+.menu-dropdown-button {
     cursor: pointer;
     color: var(--primary-color);
     font-size: 1.8em;
+    left: 1em;
 }
-.main-nav .menu-popover {
-    position: fixed;
-    left: -100%;
-    top: 3em;
+.main-nav .menu-dropdown-popover {
+    position: absolute;
+    top: 2.8em;
     flex-direction: column;
     background-color: var(--bg-color);
-    width: 100%;
     transition: 0.1s;
-    box-shadow:
-        0 10px 27px rgba(0, 0, 0, 0.05);
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
 }
-.main-nav .menu-popover.active {
-    left: 0;
+.main-nav .menu-dropdown-popover.active {
+    transform: translateY(0);
+    opacity: 1;
 }
 .vertical-nav-list {
     display: flex;
@@ -68,17 +74,19 @@
             {{ end }}
             </ul>
         </div>
-        <div class="hamburger-container mobile-only">
-            <span class="nav-hamburger"><i class="fa-solid fa-bars"></i></span>
-        </div>
-        <div class="menu-popover">
-            <ul class="vertical-nav-list">
-            {{ range $navitem := .Site.Params.navbar.links }}
-                {{ with $navitem }}
-                <li><a href="{{ .link }}">{{ .name }}</a></li>
+        <div class="menu-dropdown mobile-only">
+            <div class="menu-dropdown-button-container">
+                <span class="menu-dropdown-button"><i class="fa-solid fa-bars"></i></span>
+            </div>
+            <div class="menu-dropdown-popover">
+                <ul class="vertical-nav-list">
+                {{ range $navitem := .Site.Params.navbar.links }}
+                    {{ with $navitem }}
+                    <li><a href="{{ .link }}">{{ .name }}</a></li>
+                    {{ end }}
                 {{ end }}
-            {{ end }}
-            </ul>
+                </ul>
+            </div>
         </div>
     </nav>
     <div class="dark-mode-switch">
@@ -87,8 +95,8 @@
 </div>
 
 <script>
-    const hamburger = document.querySelector(".nav-hamburger");
-    const popoverMenu = document.querySelector(".menu-popover");
+    const hamburger = document.querySelector(".menu-dropdown-button");
+    const popoverMenu = document.querySelector(".menu-dropdown-popover");
 
     hamburger.addEventListener("click", showMenu);
 
