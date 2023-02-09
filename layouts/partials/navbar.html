@@ -95,13 +95,24 @@
 </div>
 
 <script>
-    const hamburger = document.querySelector(".menu-dropdown-button");
-    const popoverMenu = document.querySelector(".menu-dropdown-popover");
+    const dropdownButton = document.querySelector(".menu-dropdown-button");
+    const dropdownPopover = document.querySelector(".menu-dropdown-popover");
 
-    hamburger.addEventListener("click", showMenu);
+    dropdownButton.addEventListener("click", toggleDropdownVisible);
+    document.addEventListener("click", closeDropdownOnClick);
 
-    function showMenu() {
-        hamburger.classList.toggle("active");
-        popoverMenu.classList.toggle("active");
+    function closeDropdownOnClick(event) {
+        if (dropdownPopover.classList.contains("active")) {
+            const inDropdown = dropdownPopover.contains(event.target)
+            const inButton = dropdownButton.contains(event.target)
+            if (!inDropdown && !inButton) {
+                toggleDropdownVisible()
+            }
+        }
     }
+
+    function toggleDropdownVisible() {
+        dropdownPopover.classList.toggle("active");
+    }
+
 </script>
