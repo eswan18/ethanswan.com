@@ -6,6 +6,6 @@ My personal website. Built with [Hugo](https://gohugo.io).
 
 ## Running Locally
 
-`hugo serve` will build the site, serve it on `http://localhost:1313`, and perform automatic rebuilds as you update files.
+Running `hugo serve` will build the site, serve it on `http://localhost:1313`, and perform automatic rebuilds as you update files.
 
-`hugo` will just build the site and store its output in the `public` directory.
+Running just `hugo` will build the site and store its output in the `public` directory.
