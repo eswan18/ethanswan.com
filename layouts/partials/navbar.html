@@ -101,7 +101,15 @@
     const dropdownPopover = document.querySelector(".menu-dropdown-popover");
 
     dropdownButton.addEventListener("click", toggleDropdownVisible);
+    document.addEventListener('keydown', event => {
+        if (dropdownPopover.classList.contains("active")) {
+            if (event.key === 'Escape') {
+                toggleDropdownVisible()
+            }
+        }
+    });
     document.addEventListener("click", closeDropdownOnClick);
+
 
     function closeDropdownOnClick(event) {
         if (dropdownPopover.classList.contains("active")) {
