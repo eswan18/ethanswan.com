@@ -37,12 +37,11 @@ function switchTheme(e) {
 toggleSwitch.addEventListener('click', switchTheme, false);
 
 // Initialize the theme on new page loads.
-const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light';
+const currentTheme = localStorage.getItem('theme') || 'light';
 document.documentElement.setAttribute('data-theme', currentTheme);
 if (currentTheme === 'dark') {
-    document.getElementById('dark-mode-status').textContent = 'ON';
-    toggleSwitch.classList.remove("fa-sun")
-    toggleSwitch.classList.add("fa-moon")
+    toggleSwitch.classList.remove("fa-moon")
+    toggleSwitch.classList.add("fa-sun")
 }
 
 </script>
