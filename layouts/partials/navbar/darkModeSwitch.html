@@ -1,78 +1,18 @@
 <!-- Many thanks to Ananya Neogi for the content of this dark mode stuff. -->
 <!-- https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8 -->
 <style>
-.theme-switch-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.theme-switch-wrapper em {
-  margin-left: 10px;
-  font-size: 1rem;
+.switch-container {
+  font-size: 1.5em;
 }
 .theme-switch {
-  display: inline-block;
-  height: 26px;
-  position: relative;
-  width: 46px;
-}
-.theme-switch input {
-  display:none;
-}
-.slider {
-  background-color: var(--primary-color);
-  bottom: 0;
-  cursor: pointer;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transition: .4s;
-}
-.slider:before {
-  background-color: #fff;
-  bottom: 4px;
-  content: "";
-  height: 18px;
-  left: 4px;
-  position: absolute;
-  transition: .4s;
-  width: 18px;
-}
-input:checked + .slider {
-  background-color: var(--primary-color);
-}
-input:checked + .slider:before {
-  transform: translateX(20px);
-}
-.slider.round {
-  border-radius: 30px;
-}
-.slider.round:before {
-  border-radius: 50%;
-}
-.dark-mode-status-box {
-  color: var(--heading-color);
-  margin: 0.2em 0.5em;
-}
-.dark-mode-status-box > p {
-  margin: 0em;
-  line-height: 1rem;
-}
-#dark-mode-status-label {
-  font-size: 0.8em;
-}
-#dark-mode-status {
-  font-weight: bold;
-}
-.switch-container > p {
-  margin: 0.5em;
+  height: 1em;
+  width: 1em;
+  margin-right: 0.5em;
 }
 </style>
 
 <div class="switch-container" style="display: flex; flex-flow: column; flex-wrap: wrap; justify-content: center; text-align: center;">
-  <i class="fa-regular fa-sun theme-switch"></i>
-  </div>
+  <a><i class="fa-regular fa-moon theme-switch"></i></a>
 </div>
 
 <script>
@@ -83,29 +23,20 @@ function switchTheme(e) {
     if (theme == "dark") {
         // Switch to light theme.
         document.documentElement.setAttribute('data-theme', 'light');
-        toggleSwitch.classList.remove("fa-moon")
-        toggleSwitch.classList.add("fa-sun")
+        toggleSwitch.classList.remove("fa-sun")
+        toggleSwitch.classList.add("fa-moon")
         localStorage.setItem('theme', 'light')
     } else {
         // Switch to dark theme.
         document.documentElement.setAttribute('data-theme', 'dark');
-        toggleSwitch.classList.remove("fa-sun")
-        toggleSwitch.classList.add("fa-moon")
+        toggleSwitch.classList.remove("fa-moon")
+        toggleSwitch.classList.add("fa-sun")
         localStorage.setItem('theme', 'dark')
     }
-    /*if (e.target.checked) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        document.getElementById('dark-mode-status').textContent = 'ON';
-        localStorage.setItem('theme', 'dark');
-    }
-    else {
-        document.documentElement.setAttribute('data-theme', 'light');
-        document.getElementById('dark-mode-status').textContent = 'OFF';
-        localStorage.setItem('theme', 'light');
-    } */   
 }
 toggleSwitch.addEventListener('click', switchTheme, false);
 
+// Initialize the theme on new page loads.
 const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light';
 document.documentElement.setAttribute('data-theme', currentTheme);
 if (currentTheme === 'dark') {
