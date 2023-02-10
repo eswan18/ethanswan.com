@@ -13,14 +13,14 @@
     {{ partial "includes.html" . }}
   </head>
   <body>
-    {{ partial "navbar/navbar.html" . }}
+    {{ partial "navbar/main.html" . }}
     <div style="height: 2em; width: 100%;"></div>
     <div class="main-container">
       <div class="left-sidebar">
         {{ block "left-sidebar" . }}
         {{ end }}
       </div>
-      {{ partial "contentContainer.html" . }}
+      {{ partial "content/main.html" . }}
       <div class="right-sidebar">
         {{ block "right-sidebar" . }}
         {{ end }}

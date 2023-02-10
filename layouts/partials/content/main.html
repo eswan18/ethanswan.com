@@ -1,23 +1,9 @@
 <div class="content-container">
   <main aria-role="main">
     <header class="header">
-      <h1>{{.Title}}</h1>
-      {{ with .Params.subtitle }}
-      <span class="subtitle">{{.}}</span>
-      {{ end }}
+      {{ partial "content/header.html" . }}
     </header>
-    <div class="content {{ .Section }}-content">
-      <!-- include an image inline if one is specified -->
-      {{ with .Params.embeddedImage }}
-        {{ partial "images/embeddedImage" . }}
-      {{ end }}
-      <!-- include a banner-style (100% width) image if one is specified -->
-      {{ with .Params.bannerImage }}
-        {{ partial "images/bannerImage" . }}
-      {{ end }}
-      {{ .Render "subhead" }}
-      {{.Content}}
-    </div>
+    {{ partial "content/content.html" . }}
     <div>
       {{ $listSummaryType := .Params.listsummarytype | default "summary" }}
       {{/* Collections that aren't part of the current page directory need to be labeled. */}}

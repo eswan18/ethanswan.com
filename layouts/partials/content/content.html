@@ -1,0 +1,12 @@
+<div class="content {{ .Section }}-content">
+    <!-- include an image inline if one is specified -->
+    {{ with .Params.embeddedImage }}
+    {{ partial "images/embeddedImage" . }}
+    {{ end }}
+    <!-- include a banner-style (100% width) image if one is specified -->
+    {{ with .Params.bannerImage }}
+    {{ partial "images/bannerImage" . }}
+    {{ end }}
+    {{ .Render "subhead" }}
+    {{.Content}}
+</div>
