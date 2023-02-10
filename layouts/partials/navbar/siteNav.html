@@ -2,10 +2,61 @@
 .site-nav {
     display: flex;
 }
+/* Styles for both the regular link bar and the dropdown menu. */
+.site-nav ul {
+    margin: 0.5em;
+    padding: 0em;
+}
+.site-nav ul li {
+    display: inline-block;
+    padding: 0.5em;
+    margin: 0;
+}
+.site-nav ul li a {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+/* Styles for the mobile-only dropdown menu. */
+.site-nav .site-menu-dropdown {
+    position: relative;
+}
+.site-nav .menu-dropdown-button-container {
+    margin-left: 0.3em;
+    align-self: flex-end;
+    margin-bottom: 0.3em;
+}
+.menu-dropdown-button {
+    cursor: pointer;
+    color: var(--primary-color);
+    font-size: 1.8em;
+    left: 1em;
+}
+.site-nav .menu-dropdown-popover {
+    position: absolute;
+    top: 2.8em;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    transition: 0.1s;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    transform: translateY(-20px);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+    opacity: 0;
+}
+.site-nav .menu-dropdown-popover.active {
+    pointer-events: auto;
+    transform: translateY(0);
+    opacity: 1;
+}
+.vertical-nav-list {
+    display: flex;
+    flex-direction:column;
+}
 </style>
 <nav class="site-nav">
-    <div class="header-links">
-        <ul class="mobile-no-show">
+    <div class="site-menu-bar mobile-no-show">
+        <ul>
         {{ range $navitem := .Site.Params.navbar.links }}
             {{ with $navitem }}
             <li><a href="{{ .link }}">{{ .name }}</a></li>
@@ -13,7 +64,7 @@
         {{ end }}
         </ul>
     </div>
-    <div class="menu-dropdown mobile-only">
+    <div class="site-menu-dropdown mobile-only">
         <div class="menu-dropdown-button-container">
             <span class="menu-dropdown-button"><i class="fa-solid fa-bars"></i></span>
         </div>
