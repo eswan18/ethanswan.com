@@ -1,0 +1,12 @@
+<div class="content-container">
+  <main aria-role="main">
+    <header class="header">
+      {{ partial "pageContent/header.html" . }}
+    </header>
+    {{ partial "pageContent/content.html" . }}
+    {{ partial "pageContent/collectionSummaryTrailer.html" .}}
+    {{ with .Params.seeAlso }}
+      {{ partial "pageContent/seeAlso.html" . }}
+    {{ end }}
+  </main>
+</div>

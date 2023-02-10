@@ -1,0 +1,11 @@
+{{/* Expects an array of objects with .link and .text fields */}}
+<div class="content-end">
+<hr class="content-end-rule">
+<div class="see-also-container" style="display: block; text-align: center;">
+  <p>See also:
+  {{ range $x := . }}
+    <a class="button caps" href="{{ .link }}">{{ .text }}</a>
+  {{ end }}
+  </p>
+</div>
+</div>
