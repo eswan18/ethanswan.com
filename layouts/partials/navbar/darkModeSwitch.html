@@ -71,43 +71,47 @@ input:checked + .slider:before {
 </style>
 
 <div class="switch-container" style="display: flex; flex-flow: column; flex-wrap: wrap; justify-content: center; text-align: center;">
-  <div class="theme-switch-wrapper">
-      <label class="theme-switch" for="checkbox">
-          <input type="checkbox" id="checkbox" />
-          <div class="slider round"></div>
-    </label>
-    <div class="dark-mode-status-box">
-      <p id="dark-mode-status-label">Dark Mode</p>
-      <p id="dark-mode-status">OFF</p>
-    </div>
+  <i class="fa-regular fa-sun theme-switch"></i>
   </div>
 </div>
 
 <script>
 // Note that this script *must* be defined after the above div.
-const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+const toggleSwitch = document.querySelector('.theme-switch');
 function switchTheme(e) {
-    if (e.target.checked) {
+    theme = localStorage.getItem('theme')
+    if (theme == "dark") {
+        // Switch to light theme.
+        document.documentElement.setAttribute('data-theme', 'light');
+        toggleSwitch.classList.remove("fa-moon")
+        toggleSwitch.classList.add("fa-sun")
+        localStorage.setItem('theme', 'light')
+    } else {
+        // Switch to dark theme.
+        document.documentElement.setAttribute('data-theme', 'dark');
+        toggleSwitch.classList.remove("fa-sun")
+        toggleSwitch.classList.add("fa-moon")
+        localStorage.setItem('theme', 'dark')
+    }
+    /*if (e.target.checked) {
         document.documentElement.setAttribute('data-theme', 'dark');
         document.getElementById('dark-mode-status').textContent = 'ON';
-        localStorage.setItem('theme', 'dark'); //add this
+        localStorage.setItem('theme', 'dark');
     }
     else {
         document.documentElement.setAttribute('data-theme', 'light');
         document.getElementById('dark-mode-status').textContent = 'OFF';
-        localStorage.setItem('theme', 'light'); //add this
-    }    
+        localStorage.setItem('theme', 'light');
+    } */   
 }
-toggleSwitch.addEventListener('change', switchTheme, false);
+toggleSwitch.addEventListener('click', switchTheme, false);
 
-const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
-
-if (currentTheme) {
-    document.documentElement.setAttribute('data-theme', currentTheme);
-
-    if (currentTheme === 'dark') {
-        toggleSwitch.checked = true;
-        document.getElementById('dark-mode-status').textContent = 'ON';
-    }
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light';
+document.documentElement.setAttribute('data-theme', currentTheme);
+if (currentTheme === 'dark') {
+    document.getElementById('dark-mode-status').textContent = 'ON';
+    toggleSwitch.classList.remove("fa-sun")
+    toggleSwitch.classList.add("fa-moon")
 }
+
 </script>
