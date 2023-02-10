@@ -49,11 +49,13 @@
     transition: 0.1s;
     border-radius: 0.25rem;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    transform: translateY(-10px);
+    pointer-events: none;
+    transform: translateY(-20px);
     transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+    opacity: 0;
 }
 .main-nav .menu-dropdown-popover.active {
+    pointer-events: auto;
     transform: translateY(0);
     opacity: 1;
 }
