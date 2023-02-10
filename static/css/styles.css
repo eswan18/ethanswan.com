@@ -1,6 +1,7 @@
 :root {
   --primary-color: #F28F3B;
   --secondary-color: #468C98;
+  --trim-color: #d8dee4;
   --font-color: #394053;
   --bg-color: #FDFFFC;
   --heading-color: #468C98;
@@ -11,10 +12,10 @@
 [data-theme="dark"] {
   --primary-color: #EB5160;
   --secondary-color: #B7999C;
+  --trim-color: #373737;
   --font-color: #DFE0E2;
   --bg-color: #071013;
-  /*--heading-color: #B8B8B8;*/
-  --heading-color: #B7999C;
+  --heading-color: #7eafb7;
 }
 
 @media (min-width: 768px) {
