@@ -100,7 +100,14 @@
     const dropdownButton = document.querySelector(".menu-dropdown-button");
     const dropdownPopover = document.querySelector(".menu-dropdown-popover");
 
+    function toggleDropdownVisible() {
+        dropdownPopover.classList.toggle("active");
+    }
+
+    // Open and close the popover when the menu button is pressed
     dropdownButton.addEventListener("click", toggleDropdownVisible);
+
+    // Close the popover if ESC is pressed
     document.addEventListener('keydown', event => {
         if (dropdownPopover.classList.contains("active")) {
             if (event.key === 'Escape') {
@@ -108,10 +115,9 @@
             }
         }
     });
-    document.addEventListener("click", closeDropdownOnClick);
 
-
-    function closeDropdownOnClick(event) {
+    // Close the popover if there's a click outside of it.
+    document.addEventListener("click", event => {
         if (dropdownPopover.classList.contains("active")) {
             const inDropdown = dropdownPopover.contains(event.target)
             const inButton = dropdownButton.contains(event.target)
@@ -119,10 +125,6 @@
                 toggleDropdownVisible()
             }
         }
-    }
-
-    function toggleDropdownVisible() {
-        dropdownPopover.classList.toggle("active");
-    }
+    });
 
 </script>
