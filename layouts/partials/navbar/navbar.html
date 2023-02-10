@@ -17,7 +17,7 @@
 
 <div class="header-navbar">
     <div class="site-nav-container">
-        {{ partial "navbar/siteNav.html" . }}
+        {{ partial "navbar/siteNav.html" .Site.Params.navbar.links }}
     </div>
     <div class="dark-mode-switch-container">
         {{ partial "navbar/darkModeSwitch.html" }}

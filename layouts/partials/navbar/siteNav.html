@@ -1,3 +1,4 @@
+{{/* Expects to be passed an array of objects that have `name` and `link` fields */}}
 <style>
 .site-nav {
     display: flex;
@@ -57,7 +58,7 @@
 <nav class="site-nav">
     <div class="site-menu-bar mobile-no-show">
         <ul>
-        {{ range $navitem := .Site.Params.navbar.links }}
+        {{ range $navitem := .}}
             {{ with $navitem }}
             <li><a href="{{ .link }}">{{ .name }}</a></li>
             {{ end }}
@@ -70,7 +71,7 @@
         </div>
         <div class="menu-dropdown-popover">
             <ul class="vertical-nav-list">
-            {{ range $navitem := .Site.Params.navbar.links }}
+            {{ range $navitem := .}}
                 {{ with $navitem }}
                 <li><a href="{{ .link }}">{{ .name }}</a></li>
                 {{ end }}
