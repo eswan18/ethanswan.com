@@ -1,3 +1,4 @@
+{{/* Expects a "navbar" object that has a links field, which is an array of objects with name & link. */}}
 <style>
 .header-navbar {
     display: flex;
@@ -17,7 +18,7 @@
 
 <div class="header-navbar">
     <div class="site-nav-container">
-        {{ partial "navbar/siteNav.html" .Site.Params.navbar.links }}
+        {{ partial "navbar/siteNav.html" .links }}
     </div>
     <div class="dark-mode-switch-container">
         {{ partial "navbar/darkModeSwitch.html" }}
