@@ -1,0 +1,30 @@
+<style>
+.site-nav {
+    display: flex;
+}
+</style>
+<nav class="site-nav">
+    <div class="header-links">
+        <ul class="mobile-no-show">
+        {{ range $navitem := .Site.Params.navbar.links }}
+            {{ with $navitem }}
+            <li><a href="{{ .link }}">{{ .name }}</a></li>
+            {{ end }}
+        {{ end }}
+        </ul>
+    </div>
+    <div class="menu-dropdown mobile-only">
+        <div class="menu-dropdown-button-container">
+            <span class="menu-dropdown-button"><i class="fa-solid fa-bars"></i></span>
+        </div>
+        <div class="menu-dropdown-popover">
+            <ul class="vertical-nav-list">
+            {{ range $navitem := .Site.Params.navbar.links }}
+                {{ with $navitem }}
+                <li><a href="{{ .link }}">{{ .name }}</a></li>
+                {{ end }}
+            {{ end }}
+            </ul>
+        </div>
+    </div>
+</nav>

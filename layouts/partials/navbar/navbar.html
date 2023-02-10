@@ -17,20 +17,19 @@
     font-weight: bold;
     text-transform: uppercase;
 }
-.main-nav {
+.site-nav-container {
     flex: 1 0 auto;
-    display: flex;
 }
-.dark-mode-switch {
+.dark-mode-switch-container {
     flex: 0 0 auto;
     display: flex;
     flex-flow: row;
     align-content: flex-end;
 }
-.main-nav .menu-dropdown {
+.site-nav .menu-dropdown {
     position: relative;
 }
-.main-nav .menu-dropdown-button-container {
+.site-nav .menu-dropdown-button-container {
     margin-left: 0.3em;
     align-self: flex-end;
     margin-bottom: 0.3em;
@@ -41,7 +40,7 @@
     font-size: 1.8em;
     left: 1em;
 }
-.main-nav .menu-dropdown-popover {
+.site-nav .menu-dropdown-popover {
     position: absolute;
     top: 2.8em;
     flex-direction: column;
@@ -54,7 +53,7 @@
     transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
     opacity: 0;
 }
-.main-nav .menu-dropdown-popover.active {
+.site-nav .menu-dropdown-popover.active {
     pointer-events: auto;
     transform: translateY(0);
     opacity: 1;
@@ -66,33 +65,11 @@
 </style>
 
 <div class="header-navbar">
-    <nav class="main-nav">
-        <div class="header-links">
-            <ul class="mobile-no-show">
-            {{ range $navitem := .Site.Params.navbar.links }}
-                {{ with $navitem }}
-                <li><a href="{{ .link }}">{{ .name }}</a></li>
-                {{ end }}
-            {{ end }}
-            </ul>
-        </div>
-        <div class="menu-dropdown mobile-only">
-            <div class="menu-dropdown-button-container">
-                <span class="menu-dropdown-button"><i class="fa-solid fa-bars"></i></span>
-            </div>
-            <div class="menu-dropdown-popover">
-                <ul class="vertical-nav-list">
-                {{ range $navitem := .Site.Params.navbar.links }}
-                    {{ with $navitem }}
-                    <li><a href="{{ .link }}">{{ .name }}</a></li>
-                    {{ end }}
-                {{ end }}
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div class="dark-mode-switch">
-        {{ partial "darkModeSwitch.html" . }}
+    <div class="site-nav-container">
+        {{ partial "navbar/siteNav.html"}}
+    </div>
+    <div class="dark-mode-switch-container">
+        {{ partial "navbar/darkModeSwitch.html" . }}
     </div>
 </div>
 
@@ -100,9 +77,9 @@
     const dropdownButton = document.querySelector(".menu-dropdown-button");
     const dropdownPopover = document.querySelector(".menu-dropdown-popover");
 
-    function toggleDropdownVisible() {
+    const toggleDropdownVisible = () => {
         dropdownPopover.classList.toggle("active");
-    }
+    };
 
     // Open and close the popover when the menu button is pressed
     dropdownButton.addEventListener("click", toggleDropdownVisible);
@@ -126,5 +103,4 @@
             }
         }
     });
-
 </script>
