@@ -34,10 +34,20 @@
     {{/* Sort and render the list. */}}
     {{ if $shouldList }}
         {{ with .Params.sort }}
-        {{ $pages = sort $pages .by .order }}
+          {{ $pages = sort $pages .by .order }}
         {{ end }}
-        {{ range $pages }}
-        {{ .Render $listSummaryType }}
+        {{ if (isset .Params "paginate") }}
+          {{ $itemsPerPage := .Params.paginate }}
+          {{ range $page := (.Paginate $pages $itemsPerPage).Pages }}
+            {{ $page.Render $listSummaryType }}
+          {{ end }}
+          <div class="pagination-container">
+            {{ template "_internal/pagination.html" . }}
+          </div>
+        {{ else }}
+          {{ range $page := $pages }}
+            {{ $page.Render $listSummaryType }}
+          {{ end }}
         {{ end }}
     {{ end }}
     </div>
