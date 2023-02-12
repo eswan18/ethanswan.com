@@ -18,11 +18,11 @@
   justify-content: center;
   flex-direction: row;
   list-style-type: none;
-  font-size: 1.3em;
+  font-size: 1.2em;
   border-top: 1px solid var(--trim-color);
 }
 .pagination-container ul li {
-  margin: 1em;
+  margin: 0.8em;
 }
 .pagination-container ul li.active {
   font-weight: bold;

@@ -1,5 +1,5 @@
 ---
 title: Blog
 showList: true
-paginate: 8
+paginate: 10
 ---
