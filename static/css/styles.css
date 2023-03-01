@@ -34,8 +34,24 @@
   }
 }
 
-.float-right {
+.embedded-image-right {
   float: right!important;
+  margin-left: 2.5em;
+  margin-bottom: 1em;
+  max-width: calc(60% - 1em);
+}
+
+.embedded-image-mobile {
+  margin: 1em;
+  width: calc(100% - 1em);
+}
+
+.banner-image {
+  width: 95%;
+  display: block;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;  
 }
 
 a {
