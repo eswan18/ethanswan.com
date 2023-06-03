@@ -613,6 +613,10 @@ video {
   margin-top: 2rem;
 }
 
+.ml-3 {
+  margin-left: 0.75rem;
+}
+
 .block {
   display: block;
 }
@@ -690,6 +694,10 @@ video {
   flex-direction: row;
 }
 
+.flex-col {
+  flex-direction: column;
+}
+
 .flex-wrap {
   flex-wrap: wrap;
 }
@@ -758,6 +766,11 @@ video {
   line-height: 1.75rem;
 }
 
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -791,6 +804,10 @@ video {
   transition-duration: 150ms;
 }
 
+.hover\:font-bold:hover {
+  font-weight: 700;
+}
+
 @media (min-width: 1024px) {
   .lg\:m-1 {
     margin: 0.25rem;
@@ -799,6 +816,11 @@ video {
   .lg\:mx-10 {
     margin-left: 2.5rem;
     margin-right: 2.5rem;
+  }
+
+  .lg\:mx-2 {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
   }
 
   .lg\:px-6 {

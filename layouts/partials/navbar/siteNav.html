@@ -1,8 +1,5 @@
 {{/* Expects to be passed an array of objects that have `name` and `link` fields */}}
 <style>
-.site-nav {
-    display: flex;
-}
 /* Styles for both the regular link bar and the dropdown menu. */
 .site-nav ul {
     margin: 0.5em;
@@ -12,10 +9,6 @@
     display: inline-block;
     padding: 0.5em;
     margin: 0;
-}
-.site-nav ul li a {
-    font-weight: bold;
-    text-transform: uppercase;
 }
 /* Styles for the mobile-only dropdown menu. */
 .site-nav .site-menu-dropdown {
@@ -50,17 +43,18 @@
     transform: translateY(0);
     opacity: 1;
 }
-.vertical-nav-list {
-    display: flex;
-    flex-direction:column;
-}
 </style>
-<nav class="site-nav">
-    <div class="site-menu-bar mobile-no-show">
+
+<nav class="site-nav flex">
+    <div class="site-menu-bar mobile-no-show ml-3">
         <ul>
         {{ range $navitem := .}}
             {{ with $navitem }}
-            <li><a href="{{ .link }}">{{ .name }}</a></li>
+            <li class="lg:mx-2">
+                <a class="uppercase text-lg" href="{{ .link }}">
+                    {{ .name }}
+                </a>
+            </li>
             {{ end }}
         {{ end }}
         </ul>
@@ -70,7 +64,7 @@
             <span class="menu-dropdown-button"><i class="fa-solid fa-bars"></i></span>
         </div>
         <div class="menu-dropdown-popover">
-            <ul class="vertical-nav-list">
+            <ul class="flex flex-col">
             {{ range $navitem := .}}
                 {{ with $navitem }}
                 <li><a href="{{ .link }}">{{ .name }}</a></li>
