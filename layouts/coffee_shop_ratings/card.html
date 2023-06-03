@@ -3,13 +3,13 @@
   <div class="flex-auto p-8 lg:mx-10 mx-5 my-4 shadow-md shadow-cyan-800 max-w-lg">
     <article class="coffee-shop-preview">
       <header>
-        <div class="flex flex-row justify-between m-0">
-          <h2 class="font-bold text-3xl">{{ .Params.name }}
+        <div class="flex flex-row justify-between m-0 items-center">
+          <h2 class="font-bold text-3xl h-fit">{{ .Params.name }}
             {{ with .Params.link }}
               <a href='{{ . }}'><i class="fa-solid fa-link"></i></a>
             {{ end }}
           </h2>
-          <h2 class="font-bold text-5xl">{{ .Params.rating }}</h2>
+          <h2 class="font-bold text-5xl h-fit">{{ .Params.rating }}</h2>
         </div>
       </header>
       <section class="px-3 py-5">
