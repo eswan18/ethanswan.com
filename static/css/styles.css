@@ -115,3 +115,7 @@ code {
   flex: 0 0 100%;
   width: 0;
 }
+
+.secondary-color {
+  color: var(--secondary-color);
+}

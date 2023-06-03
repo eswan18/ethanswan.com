@@ -1,49 +1,7 @@
-.coffee-shop-header-container {
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-    margin: 0;
-}
-
-.coffee-shop-header-container h2 {
-    margin: auto 0;
-    font-size: 2em;
-}
-
-.coffee-shop-header-container h3 {
-    margin: 5em auto;
-    font-size: 1.7em;
-}
-
-.coffee-shop-header-container p {
-    margin: 0.5em 0;
-}
-
 .card-container .coffee-shop-card {
     flex: 0 1 40rem;
     height: auto;
     padding: 2rem;
     min-width: 10rem;
     max-width: none;
-}
-
-.card-container .coffee-shop-card:first-of-type  {
-    /* A little bit of a hack, to add space between the first card and the page content. */
-    margin-top: 2em;
-}
-
-.coffee-shop-features-container {
-    display: flex;
-    flex-flow: row;
-}
-
-.coffee-shop-feature {
-    margin: 0em 1em;
-}
-
-.coffee-shop-feature-value {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: var(--secondary-color);
-    margin-left: 0.5em;
 }
