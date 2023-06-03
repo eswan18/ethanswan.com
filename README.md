@@ -6,6 +6,12 @@ My personal website. Built with [Hugo](https://gohugo.io).
 
 ## Running Locally
 
-Running `hugo serve` will build the site, serve it on `http://localhost:1313`, and perform automatic rebuilds as you update files.
+Because I am using both hugo and tailwind, running live rebuilds requires having both active simultaneously.
+My preferred approach is to open two terminal windows (or tmux panes) and run `hugo serve` in one from the base of the repo, while running `npm run watch` in the other from the `tailwind/` folder.
 
-Running just `hugo` will build the site and store its output in the `public` directory.
+Tailwind will rebuild whenever a file in `content/` or `layouts/` has a change that impacts CSS classes, and it puts its output file in `static/css`.
+Hugo is watching that output folder, and will thus rebuild the site when Tailwind updates the file there.
+
+## Preparing for Deployment
+As of now, I don't have anything set up in Netlify related to Tailwind.
+Things should still work fine as long as the `static/css/tailwind-style.css` file is committed, though.
