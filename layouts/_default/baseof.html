@@ -22,14 +22,15 @@
   </head>
   <body>
     {{ partial "navbar/main.html" .Site.Params.navbar }}
-    <div style="height: 2em; width: 100%;"></div>
-    <div class="main-container">
-      <div class="left-sidebar">
+    <div class="flex flex-row mt-8">
+      {{/* Left sidebar */}}
+      <div class="flex-auto">
         {{ block "left-sidebar" . }}
         {{ end }}
       </div>
       {{ partial "pageContent/main.html" . }}
-      <div class="right-sidebar">
+      {{/* Right sidebar */}}
+      <div class="flex-auto">
         {{ block "right-sidebar" . }}
         {{ end }}
       </div>
