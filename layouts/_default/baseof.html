@@ -3,13 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title>{{ block "title" . }} {{ .Site.Title }} {{ end }}</title>
-    {{/* Include all CSS files in "static/css" */}} 
+
+    {{/* Include the tailwind CSS file */}}
     {{ $cssDir := "css" }}
+    {{ $tailwindFile := path.Join "/" $cssDir "tailwind-style.css"}}
+    <link rel="stylesheet" href="{{ $tailwindFile }}">
+
+    {{/* Then (afterwards, so they get precedence) include all the other CSS files in "static/css" */}} 
     {{ $cssDirFullPath := path.Join "static" $cssDir }}
     {{ range $file := readDir $cssDirFullPath }}
-      {{ $cssFile := path.Join "/" $cssDir $file.Name }}
-      <link rel="stylesheet" href="{{ $cssFile }}">
+      {{ if ne $file.Name "tailwind-style.css" }}
+        {{ $cssFile := path.Join "/" $cssDir $file.Name }}
+        <link rel="stylesheet" href="{{ $cssFile }}">
+      {{ end }}
     {{ end }}
+
     {{ partial "includes.html" . }}
   </head>
   <body>
