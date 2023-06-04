@@ -1,16 +1,3 @@
-.post-preview {
-    margin: 3em 2em;
-}
-.post-preview h2 {
-    margin: 0.5em 0;
-}
-.post-meta {
-    font-style: italic;
-}
-.post-summary {
-    margin: 0.75em 0;
-}
-
 .footnotes hr {
     margin: 3em 1em;
     color: var(--secondary-color);
