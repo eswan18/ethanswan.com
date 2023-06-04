@@ -1,8 +1,3 @@
-.content-container {
-  flex: 0 1 50rem;
-  padding: 1em;
-  overflow: hidden;
-}
 .pagination-container ul {
   display: flex;
   justify-content: center;
