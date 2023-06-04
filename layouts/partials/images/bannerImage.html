@@ -1,5 +1,4 @@
 {{ $alt := .alt }}
 {{ with resources.Get .path }}
-    <img alt="{{ $alt }}" src="{{ .RelPermalink }}" class="mobile-no-show rounded-lg drop-shadow-xl">
-    <img alt="{{ $alt }}" src="{{ .RelPermalink }}" class="mobile-only rounded-lg drop-shadow-xl h-auto w-auto">
+    <img alt="{{ $alt }}" src="{{ .RelPermalink }}" class="rounded-lg drop-shadow-xl h-auto w-full">
 {{ end }}
