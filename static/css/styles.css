@@ -6,6 +6,7 @@
   --bg-color: #FDFFFC;
   --heading-color: #468C98;
   --alternate-bg-color: #F5F9E9;
+  --shadow-color: #468C98;
 }
 
 /* See article: https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8 */
@@ -16,6 +17,18 @@
   --font-color: #DFE0E2;
   --bg-color: #071013;
   --heading-color: #7eafb7;
+  --shadow-color: #fff;
+}
+
+.standard-shadow-color {
+  --tw-shadow-color: var(--shadow-color);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.standard-card-bg {
+  background-color: var(--card-bg-color);
+  /* a gradient from card-bg-color to white */
+  background-image: linear-gradient(45deg, var(--bg-color) 80%, #fff 150%);
 }
 
 @media (min-width: 768px) {
