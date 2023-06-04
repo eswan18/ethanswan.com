@@ -1,0 +1,42 @@
+{{ $page := . }}
+<div class="flex-auto max-w-2xl mx-1 my-4 shadow-sm shadow-cyan-800 rounded-lg">
+    <article class="my-5 mx-8">
+        <header>
+        <div class="flex flex-row justify-between m-0 items-center">
+            <h2 class="text-xl h-fit">
+                <a href='{{ .Permalink }}'>{{ .Title }}</a>
+            </h2>
+        </div>
+
+        {{/* Appearance type and location */}}
+        <div class="flex flex-row flex-wrap items-start justify-start gap-x-3 mt-1">
+            <div class="flex-initial flex flex-row flex-nowrap gap-1">
+            {{ if hasPrefix .Params.appearanceType "Podcast" }}
+                <i class="fas fa-microphone translate-y-1 w-6"></i>
+            {{ else if hasPrefix .Params.appearanceType "Conference" }}
+                <i class="fa-solid fa-person-chalkboard translate-y-1 w-6"></i>
+            {{ end }}
+                <span class="font-bold">{{ .Params.appearanceType }}</span>
+            </div>
+            <span class="flex-auto flex flex-row flex-nowrap">
+                {{ .Params.where }}
+            </span>
+        </div>
+            
+        {{/* Appearance when */}}
+        <div class="flex-initial flex flex-row flex-nowrap gap-1">
+          <i class="fa-regular fa-calendar translate-y-1 w-6"></i>
+          <span class="appearance-date">{{ .Date.Format "2006-01-02" }}</span>
+        </div>
+
+        </header>
+        <section class="px-3 py-5">
+            {{ .Summary }}
+        </section>
+        <footer>
+        {{ if isset .Params "links" }}
+        {{ range $text, $link := .Params.links }}<a class="button caps text-xs md:text-sm mx-0.5 my-1" href="{{ $link }}">{{ $text }}</a>{{ end }}
+        {{ end }}
+        </footer>
+    </article>
+</div>
