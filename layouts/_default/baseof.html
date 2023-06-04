@@ -28,7 +28,9 @@
         {{ block "left-sidebar" . }}
         {{ end }}
       </div>
-      {{ partial "pageContent/main.html" . }}
+      <div class="flex-grow-0 flex-shrink-1 md:max-w-3xl overflow-hidden">
+        {{ partial "pageContent/main.html" . }}
+      </div>
       {{/* Right sidebar */}}
       <div class="flex-auto">
         {{ block "right-sidebar" . }}

@@ -89,16 +89,6 @@ code {
   font-size: 0.8em;
 }
 
-.flex-break-row {
-  flex: 0 0 100%;
-  height: 0;
-}
-
-.flex-break-column {
-  flex: 0 0 100%;
-  width: 0;
-}
-
 .primary-color {
   color: var(--primary-color);
 }

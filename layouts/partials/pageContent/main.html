@@ -1,12 +1,10 @@
-<div class="flex flex-initial max-w-3xl">
-  <main aria-role="main">
-    <header class="header my-6">
-      {{ partial "pageContent/header.html" . }}
-    </header>
-    {{ partial "pageContent/content.html" . }}
-    {{ partial "pageContent/collectionSummaryTrailer.html" .}}
-    {{ with .Params.seeAlso }}
-      {{ partial "pageContent/seeAlso.html" . }}
-    {{ end }}
-  </main>
-</div>
+<main aria-role="main">
+  <header class="header my-6">
+    {{ partial "pageContent/header.html" . }}
+  </header>
+  {{ partial "pageContent/content.html" . }}
+  {{ partial "pageContent/collectionSummaryTrailer.html" .}}
+  {{ with .Params.seeAlso }}
+    {{ partial "pageContent/seeAlso.html" . }}
+  {{ end }}
+</main>
