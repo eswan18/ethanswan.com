@@ -16,7 +16,6 @@
 }
 .site-nav .menu-dropdown-button-container {
     margin-left: 0.3em;
-    align-self: flex-end;
     margin-bottom: 0.3em;
 }
 .menu-dropdown-button {
@@ -36,12 +35,14 @@
     pointer-events: none;
     transform: translateY(-20px);
     transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+    transition: z-index 0ms ease-in-out 150ms;
     opacity: 0;
 }
 .site-nav .menu-dropdown-popover.active {
     pointer-events: auto;
     transform: translateY(0);
     opacity: 1;
+    z-index: 1;
 }
 </style>
 
