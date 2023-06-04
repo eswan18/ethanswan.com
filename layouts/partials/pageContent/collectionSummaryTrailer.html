@@ -1,9 +1,8 @@
-<div>
+<div class="mt-8">
     {{ $listSummaryType := .Params.listsummarytype | default "summary" }}
     {{/* Collections that aren't part of the current page directory need to be labeled. */}}
     {{ with .Params.listcollection }}
-    <br>
-    <h2>{{ title . }}</h2>
+    <h2 class="text-3xl">{{ title . }}</h2>
     {{ end }}
     <div class="{{ $listSummaryType }}-container">
     {{/*
