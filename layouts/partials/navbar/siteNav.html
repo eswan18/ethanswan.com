@@ -1,21 +1,13 @@
 {{/* Expects to be passed an array of objects that have `name` and `link` fields */}}
 <style>
 /* Styles for both the regular link bar and the dropdown menu. */
-.site-nav ul li {
-    display: inline-block;
-    margin: 0;
-}
 /* Styles for the mobile-only dropdown menu. */
 .site-nav .site-menu-dropdown {
     position: relative;
 }
-.menu-dropdown-button {
-    font-size: 1.8em;
-    left: 1em;
-}
 .site-nav .menu-dropdown-popover {
     position: absolute;
-    top: 2.8em;
+    top: 2.4em;
     flex-direction: column;
     background-color: var(--bg-color);
     transition: 0.1s;
@@ -37,21 +29,17 @@
 
 <nav class="site-nav flex">
     <div class="site-menu-bar mobile-no-show ml-3">
-        <ul class="m-2">
-        {{ range $navitem := .}}
-            {{ with $navitem }}
-            <li class="m-1 lg:mx-2 py-0.5 px-2 hover:ring-1 ring-[--primary-color] rounded-full">
+        <ul class="mx-1 my-2">
+        {{ range $navitem := .}}{{ with $navitem}}<li class="mx-1 py-0.5 px-2 hover:ring-1 ring-[--primary-color] rounded-full inline-block">
                 <a class="uppercase text-lg hover:no-underline" href="{{ .link }}">
                     {{ .name }}
                 </a>
-            </li>
-            {{ end }}
-        {{ end }}
+        </li>{{ end }}{{ end }}
         </ul>
     </div>
     <div class="site-menu-dropdown mobile-only">
         <div class="m-1 ml-2">
-            <span class="menu-dropdown-button cursor-pointer text-[--primary-color]"><i class="fa-solid fa-bars"></i></span>
+            <span class="menu-dropdown-button text-2xl cursor-pointer text-[--primary-color]"><i class="fa-solid fa-bars"></i></span>
         </div>
         <div class="menu-dropdown-popover">
             <ul class="m-2 flex flex-col">
