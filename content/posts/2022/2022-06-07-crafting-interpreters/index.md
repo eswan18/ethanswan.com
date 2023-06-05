@@ -9,7 +9,7 @@ In January, during some time off between jobs, I started working through [Crafti
 I think I originally discovered the book via [r/ProgrammingLanguages](https://www.reddit.com/r/ProgrammingLanguages/).
 There aren't that many accessible books for programming language design and implementation, so discovering the book (and that it was free to read online![^1]) was very exciting.
 
-![Crafting Interpreters](https://www.craftinginterpreters.com/image/header.png)
+{{< images/image src="https://www.craftinginterpreters.com/image/header.png" alt="Crafting Interpreters" caption="The awesome book cover" class="sm:max-w-lg" >}}
 
 It's an absolutely incredible book, in which you learn about programming languages while implementing your own.
 The author describes himself as having been "bitten by the language bug years ago".

@@ -7,7 +7,7 @@ tags: []
 summary: "Last week, Nvidia's stock exploded.... The AI arms race has heated up and is even getting the attention of normal people through stock prices (among other news), so I'm sure this won't be the last time I explain GPUs to someone without a computer science degree. I'm using this post as a chance to organize my *Chips 101* talking points."
 ---
 
-{{< images/image src="chips.png" alt="Dall-E's take on \"chips\"" class="" caption="Dall-E's take on \"chips\"">}}
+{{< images/image src="chips.png" alt="Dall-E's take on \"chips\"" class="" caption="Dall-E's take on \"chips\"" >}}
 
 
 Last week, Nvidia's stock exploded.
