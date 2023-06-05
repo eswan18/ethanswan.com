@@ -68,17 +68,6 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--heading-color);
 }
 
-.caps {
-  text-transform: uppercase;
-}
-
-a.button {
-  display: inline-block;
-  border: 2px solid var(--primary-color);
-  border-radius: 50em;
-  padding: 0.4em 0.8em;
-}
-
 .content-end {
   width: 75%;
   margin: auto;

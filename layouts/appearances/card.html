@@ -35,7 +35,7 @@
         </section>
         <footer>
         {{ if isset .Params "links" }}
-        {{ range $text, $link := .Params.links }}<a class="button caps text-xs md:text-sm mx-0.5 my-1" href="{{ $link }}">{{ $text }}</a>{{ end }}
+        {{ range $text, $link := .Params.links }}<a class="button uppercase text-xs md:text-sm mx-0.5 my-1" href="{{ $link }}">{{ $text }}</a>{{ end }}
         {{ end }}
         </footer>
     </article>
