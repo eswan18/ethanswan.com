@@ -40,7 +40,14 @@
           {{ range $page := (.Paginate $pages $itemsPerPage).Pages }}
             {{ $page.Render $listSummaryType }}
           {{ end }}
-          <div class="pagination-container">
+          <div class="
+            {{/* Unfortunately, we can't access the pagination component itself so have to use child modifiers to style it. */}}
+            text-base mx-auto mb-4 sm:text-lg sm:max-w-md
+            [&>ul]:flex [&>ul]:flex-row [&>ul]:justify-evenly
+            [&>ul>li>a:not([href])]:text-[--trim-color]
+            [&>ul>li.active>a:not([href])]:font-bold [&>ul>li.active>a:not([href])]:text-[--secondary-color]
+            [&>ul>li>a:not([href])]:cursor-default
+          ">
             {{ template "_internal/pagination.html" . }}
           </div>
         {{ else }}

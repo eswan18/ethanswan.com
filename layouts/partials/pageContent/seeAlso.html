@@ -1,11 +1,8 @@
 {{/* Expects an array of objects with .link and .text fields */}}
-<div class="content-end">
-<hr class="content-end-rule">
-<div class="see-also-container" style="display: block; text-align: center;">
+<div class="w-[75%] mx-auto mt-4 border border-x-0 border-b-0 border-t-gray-300 p-4 text-center">
   <p>See also:
   {{ range $x := . }}
-    <a class="button caps" href="{{ .link }}">{{ .text }}</a>
+    <a class="button uppercase text-xs md:text-sm mx-1 first:ml-2" href="{{ .link }}">{{ .text }}</a>
   {{ end }}
   </p>
-</div>
 </div>
