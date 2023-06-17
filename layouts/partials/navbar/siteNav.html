@@ -30,8 +30,8 @@
 <nav class="site-nav flex">
     <div class="site-menu-bar mobile-no-show ml-3">
         <ul class="mx-1 my-2">
-        {{ range $navitem := .}}{{ with $navitem}}<li class="mx-1 py-0.5 px-2 hover:ring-1 ring-[--primary-color] rounded-full inline-block">
-                <a class="uppercase text-lg hover:no-underline" href="{{ .link }}">
+        {{ range $navitem := .}}{{ with $navitem}}<li class="mx-1 px-1 inline-block">
+                <a class="uppercase text-lg" href="{{ .link }}">
                     {{ .name }}
                 </a>
         </li>{{ end }}{{ end }}
