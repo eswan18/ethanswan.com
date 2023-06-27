@@ -62,3 +62,18 @@ pre {
     font-size: 1.125rem/* 18px */;
     line-height: 1.75rem/* 28px */;
 }
+
+.posts-content ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+
+
+.posts-content ul {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+.posts-content li {
+    display: list-item;
+}
