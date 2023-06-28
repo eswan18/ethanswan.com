@@ -76,4 +76,9 @@ pre {
 
 .posts-content li {
     display: list-item;
+    margin: 1rem;
+}
+
+.posts-content pre {
+    margin: 1rem;
 }
