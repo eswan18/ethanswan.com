@@ -303,6 +303,218 @@ But that's definitely not the world we live in.
 
 ## Errors in Rust
 
+Now let's go back to our earlier example of a script that lets a user input a numerator and denominator to be divided.
+Here's a Rust version:
+
+```rust
+use std::io::{self, Write};
+use std::process;
+
+fn get_number_input(prompt: &str) -> Result<i32, String> {
+    let stdin = io::stdin();
+    let mut stdout = io::stdout();
+    print!("{}", prompt);
+    stdout.flush().map_err(|e| e.to_string())?;
+
+    let mut input_buffer = String::new();
+    stdin.read_line(&mut input_buffer).map_err(|e| e.to_string())?;
+
+    let number = input_buffer.trim().parse::<i32>().map_err(|e| e.to_string())?;
+    Ok(number)
+}
+
+fn main() {
+    let numerator = match get_number_input("numerator: ") {
+        Ok(number) => number,
+        Err(e) => {
+            println!("Exiting due to error: {}", e);
+            process::exit(1);
+        }
+    };
+    let denominator = match get_number_input("denominator: ") {
+        Ok(number) => number,
+        Err(e) => {
+            println!("Exiting due to error: {}", e);
+            process::exit(1);
+        }
+    };
+
+    let quotient = numerator / denominator;
+    println!("Answer: {}", quotient);
+}
+```
+
+It's not hard to follow Go code even if you've never written the language, but Rust has lots of constructs and patterns that aren't obvious until you've seen them.
+Let's break down some potentially-confusing parts of this code.
+
+```rust
+fn get_number_input(prompt: &str) -> Result<i32, String>
+```
+
+Our `get_number_input` function takes a reference to a string and returns a `Result`.
+`Result`s are Rust's convention for returning errors as values, and they're different from any construct in other languages.
+
+A `Result` can either hold an `Ok` value (indicating that the function returned without errors) or an `Err` value (indicating a failure).
+In order to extract either of those values from a `Result`, we have to write code that handles both[^result_handle_both].
+
+That's pretty abstract, so let's look at it in action.
+
+```rust
+let numerator = match get_number_input("numerator: ") {
+	Ok(number) => number,
+	Err(e) => {
+		println!("Exiting due to error: {}", e);
+		process::exit(1);
+	}
+};
+```
+
+This construct is common in Rust but a bit jarring if you come from another language.
+It calls `get_number_input` and then "matches" its `Result`.
+
+If the `Result` contains an `Ok` value – so the function ran successfully – it extracts the returned value from the `Ok`, and that value is what gets assigned to the `numerator` variable.
+If the `Result` was actually an `Err`, it extracts the contents of the error (a string in this case) and prints a message before exiting.
+
+The way I think about this is that a `Result` is actually a data structure containing two of three things: whether the function succeeded, the returned value (if success), and the error value (if error).
+There is no way to have both a return value and an error value present -- every `Result` is *either* an `Ok` with a return value *or* an `Err` with an error value.
+
+This is completely different from Go's approach.
+Remember that in Go, we had to always return an error alongside our regular return values.
+
+```go
+usernames, err := getAllUsernames(db)
+```
+
+In this code, the `usernames` variable will always be created and we could try to read from it without first checking the value of `err`.
+
+```go
+if len(usernames) == 0 {
+	fmt.println("No users, let's shut down the app")
+}
+```
+
+In Rust, a mistake like this doesn't really even make sense because using `match` forces us to explicitly write code for both cases.
+
+```rust
+result = get_usernames(db);
+let usernames = match result {
+	Ok(usernames) => usernames,
+	Err(e) => panic!(e)
+}
+```
+
+The Rust compiler won't even let you write a `match result` construct without checking both cases.
+Say we called `get_numerator` and matched its result without an `Err` case:
+
+```rust
+let numerator = match get_number_input("numerator: ") {
+	Ok(number) => number,
+};
+```
+
+```text
+error[E0004]: non-exhaustive patterns: `Err(_)` not covered
+   --> src/main.rs:18:27
+    |
+18  |     let numerator = match get_number_input("numerator: ") {
+    |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ pattern `Err(_)` not covered
+    |
+note: `Result<i32, String>` defined here
+   --> /Users/eswan18/.rustup/toolchains/stable-aarch64-apple-darwin/lib/rustlib/src/rust/library/core/src/result.rs:512:5
+    |
+503 | pub enum Result<T, E> {
+    | ---------------------
+...
+512 |     Err(#[stable(feature = "rust1", since = "1.0.0")] E),
+    |     ^^^ not covered
+    = note: the matched value is of type `Result<i32, String>`
+help: ensure that all possible cases are being handled by adding a match arm with a wildcard pattern or an explicit pattern as shown
+    |
+19  ~         Ok(number) => number,
+20  ~         Err(_) => todo!(),
+    |
+```
+
+This approach to errors is new to me and I love it.
+
+There are ways to get around it though;
+`match` isn't the only way to convert `Result`s into the values they hold.
+There are numerous methods, the simplest of which is `.unwrap()`.
+"Unwrapping" a result extracts its `Ok` value without acknowledging the `Err` possibility in any way, so the program will just crash if it runs into an `Err` at runtime.
+
+```rust
+// In this case, `numerator` will be the `i32` value returned by the
+// function as long as it doesn't error.
+let numerator = get_number_input("numerator: ").unwrap()
+```
+
+This is handy when you're in a hurry and not trying to write terribly robust code.
+But it still requires explicitly calling an extra method.
+
+Adding `.unwrap()` in Rust is like *omitting* `if err != nil { ... }` in Go.
+What's nice is that while the latter is extra code that needs to be added (and can easily be forgotten), the former is a conscious decision and in some sense an acknowledgement of the consequences.
+
+Rust also has no compunction about adding syntactic sugar (again, in stark contrast to Go).
+It has a wonderfully convenient `?` operator, which we used in our `get_number_input` function.
+
+```rust
+let number = input_buffer.trim().parse::<i32>().map_err(|e| e.to_string())?;
+```
+
+This line gets the user's input, trims whitespace off the sides, and then tries to parse it as an `i32` (an integer).
+`.parse()` returns a `Result` though, not a bare `i32`, so we need to handle that.
+And we do with `.map_err()`, which (if the `Result` is an `Err`) converts the value to a string.
+Then we can use a `?` at the very end, which tells Rust to assign the `Ok` value to the variable or return the `Err` value from the function immediately.
+
+That is, it's the same as this code:
+
+```rust
+let result = input_buffer.trim().parse::<i32>()
+let number = match result {
+	// Extract Ok values to use them in the variable assignment.
+	Ok(number) => number,
+	// If we get an error, just return it immediately.
+	Err(e) => return e.to_string(),
+}
+```
+
+The question mark seems pretty inconsequential but turns out to simplify a lot of code.
+It allows you to handle error cases very tersely, keeping the "happy path" still very apparent to the readers of the code.
+
+Here's a function I wrote recently while working on Advent of Code.
+
+```rust
+pub fn scenic_score(&self, x: usize, y: usize) -> Result<usize, String> {
+	let current_tree = self.at(x, y)?.clone();
+
+	let trees_left = self.left_of(x, y)?;
+	let visible_left = take_until_inclusive(&trees_left, |t| t >= &current_tree);
+	let left_score = visible_left.len();
+
+	let trees_right = self.right_of(x, y)?;
+	let visible_right = take_until_inclusive(&trees_right, |t| t >= &current_tree);
+	let right_score = visible_right.len();
+
+	let trees_above = self.above(x, y)?;
+	let visible_above = take_until_inclusive(&trees_above, |t| t >= &current_tree);
+	let above_score = visible_above.len();
+
+	let trees_below = self.below(x, y)?;
+	let visible_below = take_until_inclusive(&trees_below, |t| t >= &current_tree);
+	let below_score = visible_below.len();
+
+	Ok(left_score * right_score * above_score * below_score)
+}
+```
+
+Look how many question marks are just quietly nestled in there.
+If we had to write a `match` statement every time, this code would be much longer and harder to read.
+As it is though, we can clearly see that the successful result of `self.left_of(x, y)` should be assigned to `trees_left`.
+And the error case is quietly handled with the simple `?`.
+
+Imagine what this would look like in Go!
+It would probably be at least twice as long (and maybe twice as likely to have a mistake).
+
 
 [^1]: The borrow checker is basically a way to encode variable lifetimes as typing information, so that most memory management decisions can be determined at compile time without a garbage collector. If that sounds like gibberish, you can understand why so many people think this is Rust's most intimidating feature.
 [^2]: Though at least some of my productivity in Rust must be attributed to GitHub Copilot, which is a lifesaver when it comes to learning a new language. It has helped me get the hang of a lot of Rust idioms and often autocompletes repetitive code sections.
@@ -312,3 +524,4 @@ But that's definitely not the world we live in.
 [^6]: My overall view of Go is pretty negative at this point, though I reserve the right to change my mind. My thinking: if you want to change the way things have been done for decades, you'd better have good reasons (and turn out to be right). I think Go's error idioms are ultimately bad but reflect some good ideas. Using `iota` instead of `enum` is sort of nifty, though not worth the confusion of introducing an unfamiliar language feature. But its zero values, where anything uninitialized is automatically some default value, cause all kinds of bugs and seem like a worse version of null -- one that doesn't crash your program but instead corrupts all your application data. Even worse are its namespacing decisions: All files in the same package share a single namespace, so variables in different files in the package can be referenced without an import or a prefix (leading to much confusion and searching). And to export an identifier from a package or struct, you start it with a capital letter. That means that you can no longer use uppercase as a clue to what's a type and what's an instance when reading code, hampering readability enormously. And we already had many perfectly-good ways of marking things for export: an `export` or `pub` keyword (lots of languages) or using underscores in front of private fields/names (Python), all of which are more clear in their intent. Last, Go's built-in functionality and standard library are so limited that it can stretch belief. Checking if a slice contains an element requires installing an additional module! The Go community and creators are obsessed with minimalism and simplicity, but it's just not clear to me that limiting your options so substantially actually yields better code, and it certainly makes programming slower and more unpleasant. A lot of things about Go feel like zagging for the sake of it and wanting to claim some kind of language purity, rather than just building the most usable language.
 [^source]: Finding the root cause of errors is especially tricky because errors as values don't automatically wrap themselves in a call stack the way exceptions in most languages do, since the language just passes them around like regular data and mostly doesn't touch them.
 [^slice_strings]: Experienced Go users may correctly disagree with this characterization. In fact, a slice of strings is a pointer value in Go, so it *can* be `nil` – returning `nil, err` in this function would work fine. The problem is that a `nil` value of type `[]string` is nearly indistinguishable from an empty slice, so it doesn't do much good: passing either to `len()` yields 0, and appending to either does the same thing (create a 1-element slice with the new item). This is another odd choice by Go's designers.
+[^result_handle_both]: That's a slight simplification, as you can extract `Ok` values with a method like `.unwrap()`, but doing this means explicitly accepting that your program will crash if the `Result` turns out to hold an `Err` at runtime. So the simple `match` construct is a better starting point for thinking about error handling in Rust.
