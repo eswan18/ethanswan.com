@@ -7,7 +7,7 @@ tags:
 - Rust
 - Go
 - Programming Languages
-summary: "Rust reminds me a lot of Go. Both language eschewd exception-style error handling, a feature present in almost every language that's populate in industry. However, the idioms they use instead are very different."
+summary: "Rust reminds me a lot of Go. Both languages eschewed exception-style error handling, a feature present in almost every language that's popular in industry. However, the idioms they use instead are very different."
 ---
 
 I've been learning Rust in my free time recently.
