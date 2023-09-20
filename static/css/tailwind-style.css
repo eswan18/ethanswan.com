@@ -758,6 +758,10 @@ video {
   display: table;
 }
 
+.grid {
+  display: grid;
+}
+
 .contents {
   display: contents;
 }
@@ -1192,6 +1196,31 @@ video {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
+}
+
+.\[\&\>\*\]\:text-xl>* {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.\[\&\>h2\]\:text-lg>h2 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.\[\&\>h2\]\:text-xl>h2 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.\[\&\>h2\]\:text-2xl>h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.\[\&\>h3\]\:text-xl>h3 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .\[\&\>ul\>li\.active\>a\:not\(\[href\]\)\]\:font-bold>ul>li.active>a:not([href]) {
