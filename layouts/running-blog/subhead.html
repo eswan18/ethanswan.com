@@ -1,0 +1,12 @@
+<div class="subhead posts-subhead">
+  {{ if eq .Page.Kind "page"}}
+    <div class="italic">
+        <span class="ml-1 mr-2 md:mr-4">
+            <i class="fa-regular fa-calendar mr-2"></i>{{ .Date.Format "2006-01-02" }}
+        </span>
+        <span class="mx-3">
+            <i class="fa-solid fa-person-running mr-2"></i>{{ .Params.mileage }} miles
+        </span>
+    </div>
+    {{ end }}
+</div>
