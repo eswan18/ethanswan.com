@@ -10,6 +10,8 @@ seeAlso:
   - text: Office Hours
     link: "/office_hours"
 listCollection: courses
+listCollectionGroupBy: partner
+listCollectionDefaultGroup: Private Teaching
 listSummaryType: card
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Python for Web Scraping
+partner: University of Cincinnati
 subtitle: Offered through the University of Cincinnati's Lindner College of Business
 courseType: Workshop
 category: Python

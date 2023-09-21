@@ -1,5 +1,6 @@
 ---
 title: "Python for Data Science #2 – Intermediate"
+partner: University of Cincinnati
 subtitle: Offered through the University of Cincinnati's Center for Business Analytics
 courseType: Workshop
 series: Python for Data Science Series

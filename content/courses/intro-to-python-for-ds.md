@@ -1,5 +1,6 @@
 ---
 title: "Python for Data Science #1 – Intro"
+partner: University of Cincinnati
 subtitle: Offered through the University of Cincinnati's Center for Business Analytics
 summary: Using Python as a data analysis tool, focusing primarily on data wrangling via the `pandas` library. Includes both lecture and case study.
 courseType: Workshop

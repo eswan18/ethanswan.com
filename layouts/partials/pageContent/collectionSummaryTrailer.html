@@ -35,7 +35,13 @@
         {{ with .Params.sort }}
           {{ $pages = sort $pages .by .order }}
         {{ end }}
+
+
         {{ if (isset .Params "paginate") }}
+          {{ if (isset .Params "listcollectiongroupby") }}
+            {{ errorf "paginate and listcollectiongroupby are mutually exclusive" }}
+          {{ end }}
+
           {{ $itemsPerPage := .Params.paginate }}
           {{ range $page := (.Paginate $pages $itemsPerPage).Pages }}
             {{ $page.Render $listSummaryType }}
@@ -51,8 +57,29 @@
             {{ template "_internal/pagination.html" . }}
           </div>
         {{ else }}
-          {{ range $page := $pages }}
-            {{ $page.Render $listSummaryType }}
+          {{ if (isset .Params "listcollectiongroupby") }}
+            {{ $groupBy := .Params.listcollectiongroupby }}
+
+            {{/* First find the pages that don't have the GroupByParam set and assign them the default value. */}}
+            {{ $defaultHeading := .Params.listCollectionDefaultGroup | default "Other" }}
+            <h2 class="text-xl mt-2">{{ $defaultHeading }}</h2>
+            <hr class="w-full">
+            {{ range where $pages (printf ".Params.%s" $groupBy) "eq" nil }}
+              {{ .Render $listSummaryType }}
+            {{ end }}
+
+            {{/* Then loop over each group. */}}
+            {{ range ($pages.GroupByParam $groupBy).Reverse }}
+              <h2 class="text-xl mt-2">{{ .Key }}</h2>
+              <hr class="w-full">
+              {{ range $page := .Pages }}
+                {{ $page.Render $listSummaryType }}
+              {{ end }}
+            {{ end }}
+          {{ else }}
+            {{ range $page := $pages }}
+              {{ $page.Render $listSummaryType }}
+            {{ end }}
           {{ end }}
         {{ end }}
     {{ end }}
