@@ -1048,10 +1048,6 @@ video {
   color: var(--primary-color);
 }
 
-.underline {
-  text-decoration-line: underline;
-}
-
 .no-underline {
   text-decoration-line: none;
 }
@@ -1200,21 +1196,6 @@ video {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
-}
-
-.\[\&\>\*\]\:text-xl>* {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
-.\[\&\>h2\]\:text-lg>h2 {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
-.\[\&\>h2\]\:text-xl>h2 {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
 }
 
 .\[\&\>h2\]\:text-2xl>h2 {
