@@ -8,7 +8,7 @@ embeddedImage:
 I'm Ethan, a Chicago-based technologist, consultant, and teacher.
 I specialize in Python and data systems.
 
-My day job is as a developer at [ReviewTrackers](https://www.reviewtrackers.com), where I work across various backend microservices in Python, Go, and Ruby.
+My day job is as a developer at Capital One, where I work across various cybersecurity-enabling services.
 
 I also teach Python and related tech.
 You can see what I teach [here](/teaching).
