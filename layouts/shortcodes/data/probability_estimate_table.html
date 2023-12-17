@@ -1,0 +1,77 @@
+{{/* Fetch and parse the CSV */}}
+{{ $data := "" }}
+{{ $p := "probabilities.csv" }}
+{{ with .Page.Resources.Get "probabilities.csv" }}
+  {{ $opts := dict "delimiter" "," }}
+  {{ $data = . | transform.Unmarshal $opts }}
+{{ else }}
+  {{ errorf "Unable to get resource %q" $p }}
+{{ end }}
+
+{{ $nameColName := "What's your name?" }}
+{{ $canTrackColName := "Can I track your answers on my website alongside others'?" }}
+{{ $timeColName := "Timestamp" }}
+
+{{/* Transform this into a dict for each row */}}
+{{ $headers := index $data 0 }}
+{{ $rows := after 1 $data }}
+{{ $mapData := slice }}
+{{ range $rows }}
+  {{ $rowMap := dict }}
+  {{ range $i, $value := . }}
+    {{ $header := index $headers $i }}
+    {{ $rowMap = merge $rowMap (dict $header $value) }}
+  {{ end }}
+  {{ $mapData = $mapData | append $rowMap }}
+{{ end }}
+
+{{/* First off, filter out entries where the "can I track your answers" column isn't "Yes" */}}
+{{ $cleanData := slice }}
+{{ range $mapData }}
+  {{ $canTrack := index . $canTrackColName }}
+  {{ if eq ($canTrack | lower) "yes" }}
+    {{ $cleanData = $cleanData | append . }}
+  {{ end }}
+{{ end }}
+
+{{/* Sort by name */}}
+{{ $cleanData = sort $cleanData $nameColName }}
+
+{{ $names := slice }}
+{{ range $cleanData }}
+  {{ $name := index . $nameColName }}
+  {{ $names = $names | append $name }}
+{{ end }}
+
+{{ $eventKeys := slice }}
+{{ range $key, $value := index $cleanData 0 }}
+    {{ if eq $key $nameColName }}
+      {{ continue }}
+    {{ end }}
+    {{ if eq $key $canTrackColName }}
+      {{ continue }}
+    {{ end }}
+    {{ if eq $key $timeColName }}
+      {{ continue }}
+    {{ end }}
+    {{ $eventKeys = $eventKeys | append $key }}
+{{ end }}
+
+{{/* Now we have a list of names and a list of events, we can build the table */}}
+<table class="text-sm !border-collapse table-fixed">
+  <tr>
+    <th class="font-normal text-base p-3 !border-b-0"></th>
+    {{ range $i, $name := $names }}
+      <th class="text-xs font-normal !border-b-0 !w-[5%] max-w-[5%]"><div class="mt-24 rotate-[70deg] whitespace-nowrap text-right origin-bottom-right align-bottom -translate-x-8">{{ $name }}</div></th>
+    {{ end }}
+  </tr>
+  {{ range $i, $event := $eventKeys }}
+    <tr class="even:bg-slate-50">
+      <td class="w-[30%] border-gray-300 py-4">{{ $event }}</td>
+      {{ range $j, $row := $cleanData }}
+        {{ $value := index $row $event }}
+        <td class="text-right px-2 border-l border-gray-200">{{ $value }}</td>
+      {{ end }}
+    </tr>
+  {{ end }}
+</table>
