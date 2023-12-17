@@ -75,17 +75,17 @@
     </th>
   </tr>
   {{ range $i, $event := $eventKeys }}
-    <tr class="even:bg-slate-50">
+    <tr class="even:bg-[color:var(--table-shade-color)] ">
       {{ $total := 0 }}
       <td class="w-[30%] px-2 py-4">{{ $event }}</td>
       {{ range $j, $row := $cleanData }}
         {{ $value := index $row $event }}
-        <td class="text-right px-2 border-l border-gray-200">{{ $value }}</td>
+        <td class="text-right px-2 border-l border-[color:var(--trim-color)]">{{ $value }}</td>
         {{ $total = add $total ($value | float) }}
       {{ end }}
       {{ $avg := div $total (len $cleanData) }}
       {{ $avg = printf "%.2f" $avg }}
-      <td class="text-right px-2 border-l border-gray-200 font-bold">
+      <td class="text-right px-2 border-l border-[color:var(--trim-color)] font-bold">
         {{ $avg }}
       </td>
     </tr>

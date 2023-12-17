@@ -2,6 +2,7 @@
   --primary-color: #F28F3B;
   --secondary-color: #468C98;
   --trim-color: #d8dee4;
+  --table-shade-color: rgba(216, 222, 228, 0.5);
   --font-color: #394053;
   --bg-color: #FDFFFC;
   --heading-color: #468C98;
@@ -14,6 +15,7 @@
   --primary-color: #EB5160;
   --secondary-color: #B7999C;
   --trim-color: #373737;
+  --table-shade-color: rgba(55, 55, 55, 0.5);
   --font-color: #DFE0E2;
   --bg-color: #071013;
   --heading-color: #7eafb7;
