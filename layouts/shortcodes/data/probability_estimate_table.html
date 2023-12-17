@@ -60,18 +60,34 @@
 {{/* Now we have a list of names and a list of events, we can build the table */}}
 <table class="text-sm !border-collapse table-fixed">
   <tr>
-    <th class="font-normal text-base p-3 !border-b-0"></th>
+    <th class="w-[30%] font-normal text-base p-3 !border-b-0"></th>
     {{ range $i, $name := $names }}
-      <th class="text-xs font-normal !border-b-0 !w-[5%] max-w-[5%]"><div class="mt-24 rotate-[70deg] whitespace-nowrap text-right origin-bottom-right align-bottom -translate-x-8">{{ $name }}</div></th>
+      <th class="text-xs font-normal !border-b-0 !w-[5%] max-w-[5%]">
+        <div class="mt-24 rotate-[70deg] whitespace-nowrap text-right origin-bottom-right align-bottom -translate-x-8">
+          {{ $name }}
+      </div>
+      </th>
     {{ end }}
+    <th class="text-xs font-bold !border-b-0 !w-[5%] max-w-[5%]">
+      <div class="mt-24 rotate-[70deg] whitespace-nowrap text-right origin-bottom-right align-bottom -translate-x-8">
+        Average
+      </div>
+    </th>
   </tr>
   {{ range $i, $event := $eventKeys }}
     <tr class="even:bg-slate-50">
-      <td class="w-[30%] border-gray-300 py-4">{{ $event }}</td>
+      {{ $total := 0 }}
+      <td class="w-[30%] px-2 py-4">{{ $event }}</td>
       {{ range $j, $row := $cleanData }}
         {{ $value := index $row $event }}
         <td class="text-right px-2 border-l border-gray-200">{{ $value }}</td>
+        {{ $total = add $total ($value | float) }}
       {{ end }}
+      {{ $avg := div $total (len $cleanData) }}
+      {{ $avg = printf "%.2f" $avg }}
+      <td class="text-right px-2 border-l border-gray-200 font-bold">
+        {{ $avg }}
+      </td>
     </tr>
   {{ end }}
 </table>
