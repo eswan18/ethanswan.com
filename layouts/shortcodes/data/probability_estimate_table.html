@@ -81,6 +81,19 @@
         <td class="px-2 py-3">{{ $event }}</td>
         {{ range $j, $row := $cleanData }}
           {{ $value := index $row $event }}
+          {{/* Some formatting for consistency. */}}
+          {{ if hasPrefix $value "." }}
+            {{/* Add a 0 to the front if it starts with a decimal point */}}
+            {{ $value = printf "0%s" $value }}
+          {{ end }}
+          {{ if eq $value "1.0" }}
+            {{/* Change 1.0 to just 1 */}}
+            {{ $value = "1" }}
+          {{ end }}
+          {{ if eq $value "0.0" }}
+            {{/* Change 0.0 to just 0 */}}
+            {{ $value = "0" }}
+          {{ end }}
           <td class="text-right px-2 border-l border-[color:var(--trim-color)]">{{ $value }}</td>
           {{ $total = add $total ($value | float) }}
         {{ end }}
