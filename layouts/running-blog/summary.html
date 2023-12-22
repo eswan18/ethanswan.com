@@ -1,6 +1,6 @@
 <article class="post-preview mx-1 my-8">
     <header>
-      <h2 class="text-xl mb-1 md:text-2xl"><a href='{{ .Permalink }}'> {{ .Title }}</a> </h2>
+      <h2 class="mb-2"><a class="text-secondary" href='{{ .Permalink }}'> {{ .Title }}</a> </h2>
       <div class="italic">
         <span class="ml-1 mr-3">
           <i class="fa-regular fa-calendar mr-2"></i>{{ .Date.Format "2006-01-02" }}
@@ -15,7 +15,9 @@
       {{ .Summary }}
     </div>
     </section>
-    <footer>
-    <a class="button text-xs md:text-sm mx-0.5 my-1" href="{{ .Permalink }}">Read more →</a>
+    <footer class="mt-3">
+    <a href="{{ .Permalink }}">
+      <button class="btn btn-secondary btn-sm">Read more →</button>
+    </a>
     </footer>
   </article>

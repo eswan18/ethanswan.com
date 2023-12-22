@@ -13,6 +13,7 @@ listCollection: courses
 listCollectionGroupBy: partner
 listCollectionDefaultGroup: Private Teaching
 listSummaryType: card
+listSummaryContainerClasses: flex flex-row flex-wrap justify-evenly
 ---
 
 I’ve been teaching Python and related technologies professionally for over five years.

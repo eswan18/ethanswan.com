@@ -4,7 +4,14 @@
     {{ with .Params.listcollection }}
     <h2 class="text-3xl">{{ title . }}</h2>
     {{ end }}
-    <div class="{{ $listSummaryType }}-container">
+
+
+    {{/* We can override the default classes for the list summary container in the collection data. */}}
+    {{ $listSummaryContainerClasses := "" }}
+    {{ if .Params.listSummaryContainerClasses }}
+      {{ $listSummaryContainerClasses = .Params.listSummaryContainerClasses }}
+    {{ end }}
+    <div class="{{ $listSummaryContainerClasses }}">
     {{/*
         We can list either the collection in the current directory (with .showList=true) or
         a different one, by specifying it with .listCollection.
@@ -46,13 +53,17 @@
           {{ range $page := (.Paginate $pages $itemsPerPage).Pages }}
             {{ $page.Render $listSummaryType }}
           {{ end }}
+          {{/* Unfortunately, we can't access the pagination component itself so have to use child modifiers to style it. */}}
           <div class="
-            {{/* Unfortunately, we can't access the pagination component itself so have to use child modifiers to style it. */}}
+            not-prose
             text-base mx-auto mb-4 sm:text-lg sm:max-w-md
             [&>ul]:flex [&>ul]:flex-row [&>ul]:justify-evenly
-            [&>ul>li>a:not([href])]:text-[--trim-color]
-            [&>ul>li.active>a:not([href])]:font-bold [&>ul>li.active>a:not([href])]:text-[--secondary-color]
-            [&>ul>li>a:not([href])]:cursor-default
+            [&>ul>li.active>a:not([href])]:font-bold
+            [&>ul>li>a]:btn [&>ul>li>a]:btn-sm [&>ul>li>a]:rounded-md
+            [&>ul>li:not(.active)>a]:btn-ghost
+            [&>ul>li.active>a]:btn-disabled
+            [&>ul>li.disabled>a]:pointer-events-none
+            [&>ul>li.disabled>a]:opacity-50
           ">
             {{ template "_internal/pagination.html" . }}
           </div>
@@ -62,16 +73,18 @@
 
             {{/* First find the pages that don't have the GroupByParam set and assign them the default value. */}}
             {{ $defaultHeading := .Params.listCollectionDefaultGroup | default "Other" }}
-            <h2 class="text-xl mt-2">{{ $defaultHeading }}</h2>
-            <hr class="w-full">
+            {{/* Headings need to be w-full because otherwise they get mixed in like other flex elements. */}}
+            <h2 class="w-full text-xl mt-2">{{ $defaultHeading }}</h2>
+            <hr class="w-full not-prose mb-4 text-primary">
             {{ range where $pages (printf ".Params.%s" $groupBy) "eq" nil }}
               {{ .Render $listSummaryType }}
             {{ end }}
 
             {{/* Then loop over each group. */}}
             {{ range ($pages.GroupByParam $groupBy).Reverse }}
-              <h2 class="text-xl mt-2">{{ .Key }}</h2>
-              <hr class="w-full">
+              {{/* Headings need to be w-full because otherwise they get mixed in like other flex elements. */}}
+              <h2 class="w-full text-xl mt-2">{{ .Key }}</h2>
+              <hr class="w-full not-prose mb-4">
               {{ range $page := .Pages }}
                 {{ $page.Render $listSummaryType }}
               {{ end }}

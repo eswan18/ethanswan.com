@@ -58,27 +58,30 @@
 {{ end }}
 
 {{/* Now we have a list of names and a list of events, we can build the table */}}
- <div class="w-full overflow-x-scroll">
-  <table class="w-full text-sm !border-collapse table-fixed">
-    <tr>
-      <th class="w-64 font-normal text-base p-3 !border-b-0"></th>
-      {{ range $i, $name := $names }}
-        <th class="relative text-xs font-normal !border-b-0 w-12 h-32">
-          <div class="bottom-0 absolute rotate-[290deg] whitespace-nowrap text-left origin-top-left align-bottom translate-x-[1rem]">
-            {{ $name }}
-        </div>
-        </th>
-      {{ end }}
-      <th class="text-xs font-bold !border-b-0 relative w-12 h-32">
-        <div class="bottom-0 absolute rotate-[290deg] whitespace-nowrap text-left origin-top-left align-bottom translate-x-[1rem]">
-          Average
-        </div>
-      </th>
-    </tr>
+ <div class="overflow-x-scroll">
+  <table class="table table-md table-zebra table-pin-cols table-fixed">
+    <thead>
+      <tr>
+        <th class="w-48 sm:w-64 lg:w-80"></th>
+        {{ range $i, $name := $names }}
+          <td class="relative text-xs w-16 h-32">
+            <div class="bottom-0 absolute rotate-[290deg] whitespace-nowrap text-left origin-top-left align-bottom translate-x-[0.5rem]">
+              {{ $name }}
+          </div>
+          </td>
+        {{ end }}
+        <td class="text-xs font-bold relative w-16 h-32">
+          <div class="bottom-0 absolute rotate-[290deg] whitespace-nowrap text-left origin-top-left align-bottom translate-x-[0.5rem]">
+            Average
+          </div>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
     {{ range $i, $event := $eventKeys }}
-      <tr class="even:bg-[color:var(--table-shade-color)] ">
+      <tr>
         {{ $total := 0 }}
-        <td class="px-2 py-3">{{ $event }}</td>
+        <th class="px-2 py-2 text-sm">{{ $event }}</th>
         {{ range $j, $row := $cleanData }}
           {{ $value := index $row $event }}
           {{/* Some formatting for consistency. */}}
@@ -94,15 +97,16 @@
             {{/* Change 0.0 to just 0 */}}
             {{ $value = "0" }}
           {{ end }}
-          <td class="text-right px-2 border-l border-[color:var(--trim-color)]">{{ $value }}</td>
+          <td class="text-right w-full">{{ $value }}</td>
           {{ $total = add $total ($value | float) }}
         {{ end }}
         {{ $avg := div $total (len $cleanData) }}
         {{ $avg = printf "%.2f" $avg }}
-        <td class="text-right px-2 border-l border-[color:var(--trim-color)] font-bold">
+        <td class="text-right font-bold">
           {{ $avg }}
         </td>
       </tr>
     {{ end }}
+    </tbody>
   </table>
 </div>

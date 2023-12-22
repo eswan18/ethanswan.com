@@ -1,7 +1,7 @@
 <!-- Many thanks to Ananya Neogi for the content of this dark mode stuff. -->
 <!-- https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8 -->
 <div class="flex flex-col justify-center text-right">
-  <a><i class="fa-regular fa-moon theme-switch h-auto w-auto text-2xl mr-6 hover:cursor-pointer"></i></a>
+  <button class="btn btn-sm btn-secondary py-1 px-2"><i class="fa-regular fa-moon theme-switch text-xl"></i></button>
 </div>
 
 <script>
@@ -9,26 +9,26 @@
 const toggleSwitch = document.querySelector('.theme-switch');
 function switchTheme(e) {
     theme = localStorage.getItem('theme')
-    if (theme == "dark") {
+    if (theme == "night") {
         // Switch to light theme.
-        document.documentElement.setAttribute('data-theme', 'light');
+        document.documentElement.setAttribute('data-theme', 'fantasy');
         toggleSwitch.classList.remove("fa-sun")
         toggleSwitch.classList.add("fa-moon")
-        localStorage.setItem('theme', 'light')
+        localStorage.setItem('theme', 'fantasy')
     } else {
-        // Switch to dark theme.
-        document.documentElement.setAttribute('data-theme', 'dark');
+        // Switch to dark theme ("night") in DaisyUI.
+        document.documentElement.setAttribute('data-theme', 'night');
         toggleSwitch.classList.remove("fa-moon")
         toggleSwitch.classList.add("fa-sun")
-        localStorage.setItem('theme', 'dark')
+        localStorage.setItem('theme', 'night')
     }
 }
 toggleSwitch.addEventListener('click', switchTheme, false);
 
 // Initialize the theme on new page loads.
-const currentTheme = localStorage.getItem('theme') || 'light';
+const currentTheme = localStorage.getItem('theme') || 'fantasy';
 document.documentElement.setAttribute('data-theme', currentTheme);
-if (currentTheme === 'dark') {
+if (currentTheme === 'night') {
     toggleSwitch.classList.remove("fa-moon")
     toggleSwitch.classList.add("fa-sun")
 }

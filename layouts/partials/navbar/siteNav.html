@@ -1,52 +1,23 @@
 {{/* Expects to be passed an array of objects that have `name` and `link` fields */}}
-<style>
-/* Styles for both the regular link bar and the dropdown menu. */
-/* Styles for the mobile-only dropdown menu. */
-.site-nav .site-menu-dropdown {
-    position: relative;
-}
-.site-nav .menu-dropdown-popover {
-    position: absolute;
-    top: 2.4em;
-    flex-direction: column;
-    background-color: var(--bg-color);
-    transition: 0.1s;
-    border-radius: 0.25rem;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
-    pointer-events: none;
-    transform: translateY(-20px);
-    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
-    transition: z-index 0ms ease-in-out 150ms;
-    opacity: 0;
-}
-.site-nav .menu-dropdown-popover.active {
-    pointer-events: auto;
-    transform: translateY(0);
-    opacity: 1;
-    z-index: 1;
-}
-</style>
 
-<nav class="site-nav flex">
-    <div class="site-menu-bar mobile-no-show ml-3">
-        <ul class="mx-1 my-2 inline-block">
-        {{ range $navitem := .}}{{ with $navitem}}<a class="inline-block uppercase text-lg no-underline hover:no-underline hover:text-[--bg-color] hover:bg-[--primary-color] rounded-sm" href="{{ .link }}">
-                <li class="mx-1 px-0.5 inline-block">{{ .name }}</li>
-            </a>{{ end }}{{ end }}
-        </ul>
+{{/* The standard site nav for full-size screens */}}
+<div class="hidden lg:flex">
+    <ul class="menu menu-horizontal text-lg font-bold text-accent">
+        {{ range $navitem := .}}{{ with $navitem}}
+        <li><a class="rounded-xl" href="{{ .link }}">{{ .name }}</a></li>
+        {{ end }}{{ end }}
+    </ul>
+</div>
+{{/* The mobile-only dropdown menu */}}
+<div class="dropdown">
+    <div tabindex="0" role="button" class="btn btn-ghost btn-sm lg:hidden p-0.5 align-middle">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
     </div>
-    <div class="site-menu-dropdown mobile-only">
-        <div class="m-1 ml-2">
-            <span class="menu-dropdown-button text-2xl cursor-pointer text-[--primary-color]"><i class="fa-solid fa-bars"></i></span>
-        </div>
-        <div class="menu-dropdown-popover">
-            <ul class="m-2 flex flex-col">
-            {{ range $navitem := .}}
-                {{ with $navitem }}
-                <li><a href="{{ .link }}">{{ .name }}</a></li>
-                {{ end }}
-            {{ end }}
-            </ul>
-        </div>
-    </div>
-</nav>
+    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+    {{ range $navitem := .}}
+        {{ with $navitem }}
+        <li><a href="{{ .link }}">{{ .name }}</a></li>
+        {{ end }}
+    {{ end }}
+    </ul>
+</div>

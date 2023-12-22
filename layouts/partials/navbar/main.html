@@ -1,58 +1,8 @@
-{{/* Expects a "navbar" object that has a links field, which is an array of objects with name & link. */}}
-<style>
-.header-navbar {
-    display: flex;
-    width: 100%;
-    border-bottom: 1px solid var(--trim-color);
-}
-.site-nav-container {
-    flex: 1 0 auto;
-}
-.dark-mode-switch-container {
-    flex: 0 0 auto;
-    display: flex;
-    flex-flow: row;
-    align-content: flex-end;
-}
-</style>
-
-<div class="header-navbar">
-    <div class="site-nav-container">
+<div class="navbar h-14 min-h-[3rem]">
+    <div class="navbar-start w-[70%]">
         {{ partial "navbar/siteNav.html" .links }}
     </div>
-    <div class="dark-mode-switch-container">
+    <div class="navbar-end w-[30%]">
         {{ partial "navbar/darkModeSwitch.html" }}
     </div>
 </div>
-
-<script>
-    const dropdownButton = document.querySelector(".menu-dropdown-button");
-    const dropdownPopover = document.querySelector(".menu-dropdown-popover");
-
-    const toggleDropdownVisible = () => {
-        dropdownPopover.classList.toggle("active");
-    };
-
-    // Open and close the popover when the menu button is pressed
-    dropdownButton.addEventListener("click", toggleDropdownVisible);
-
-    // Close the popover if ESC is pressed
-    document.addEventListener('keydown', event => {
-        if (dropdownPopover.classList.contains("active")) {
-            if (event.key === 'Escape') {
-                toggleDropdownVisible()
-            }
-        }
-    });
-
-    // Close the popover if there's a click outside of it.
-    document.addEventListener("click", event => {
-        if (dropdownPopover.classList.contains("active")) {
-            const inDropdown = dropdownPopover.contains(event.target)
-            const inButton = dropdownButton.contains(event.target)
-            if (!inDropdown && !inButton) {
-                toggleDropdownVisible()
-            }
-        }
-    });
-</script>

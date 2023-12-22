@@ -1,20 +1,20 @@
 {{ $page := . }}
 {{ if not .Params.unlisted }}
-  <div class="flex-auto p-4 md:mx-2 my-3 md:my-5 max-w-sm md:max-w-xs shadow-sm standard-shadow-color standard-card-bg rounded-lg overflow-hidden">
-    <article class="course-preview flex flex-col justify-between h-full gap-4">
+  <div class="card card-bordered shadow-lg rounded-lg max-w-xs mb-12">
+    <div class="card-body justify-between">
       <div>
-        <header>
-          <h3 class="text-xl">{{ .Title }}</h3>
-        </header>
-        <section class="mt-2 course-summary">
+        <h4 class="card-title mt-0">{{ .Title }}</h3>
+        <section class="prose text-base">
           {{ with .Params.summary }}
             {{ $page.RenderString . }}
           {{ end }}
         </section>
       </div>
-      <footer class="text-center">
-        <a class="button text-sm md:text-base mx-0.5 my-1" href="{{ $.Permalink }}">Details →</a>
-      </footer>
-    </article>
+      <div class="card-actions text-center justify-center mt-4">
+        <a href="{{ .Permalink }}">
+          <button class="btn btn-secondary btn-sm rounded-lg">Details →</button>
+        </a>
+      </div>
+    </div>
   </div>
 {{ end }}
