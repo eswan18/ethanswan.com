@@ -8,4 +8,4 @@ title: Upskilling Talent Through Tech
 external_link: https://youtu.be/akZuZRgqDxc
 ---
 
-I was recently interviewed for 84.51˚'s podcast on the topic of upskilling the data science function.
+I was recently [interviewed](https://www.8451.com/knowledge-hub/data-science/ethan-swan-upskilling-talent-through-tech/) for 84.51˚'s podcast on the topic of upskilling the data science function.

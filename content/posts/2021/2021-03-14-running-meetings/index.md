@@ -32,13 +32,13 @@ How can you accomplish these goals? Keeping in mind just a few things can go a l
 - Bring some energy
 - Explain what's next
 
-#### Keep It Moving
+## Keep It Moving
 
 If you are the meeting organizer, it is **your job** to make sure things keep moving. Awkward silence? You need to end it. The meeting trails off and it's unclear if there's more to be discussed? You need to decide: either bring up the next topic or end the meeting. You cannot abdicate responsibility as the emcee. If you sit back and just hope the meeting will run itself, it won't.
 
 If you fail to take charge and advance the meeting when it loses direction, you're missing both primary goals – nothing productive is happening, *and* everyone is uncomfortably staring at their feet. Also, some of them are pretty annoyed with you.
 
-#### Make Decisions
+## Make Decisions
 
 "So.... do we want to do that?"
 
@@ -48,13 +48,13 @@ It's common to hear these phrases, which invariably end with silence. Many meeti
 
 This is really just a more specific case of keeping it moving, but even more important to getting something out of a meeting.
 
-#### Ask Things Clearly
+## Ask Things Clearly
 
 Phrase your questions as questions. "So uh, we probably need to figure out whether it makes sense to do more trainings" ought to be: "Does it make sense for us to do more trainings?" Making your questions question-y gives the audience the hint that they're expected to answer; statement-y wonderment is unproductive, because people often only half-listen if they don't sense that they need to be involved.
 
 More generally, just spit it out. Be tactful but clear – meaningless business jargon and overly-delicate language just leads to listeners ignoring your message or question.
 
-#### Don't Ramble
+## Don't Ramble
 
 We all go off on tangents sometimes, but it shouldn't be happening in every meeting you attend, and *never* multiple times in the same meeting. Unfortunately, some people are chronic offenders. How can you tell if people think you're The Rambler? Pay attention to the faces of the other attendees while you speak, and if some lose interest and look away before you've finished, it's probably because they're tuning you out – at this point, whatever you're saying is no longer worth listening to for them.
 
@@ -62,11 +62,11 @@ In general, you should try to be empathetic in discussions. Does this informatio
 
 When in doubt, err on the side of brevity. If others want to know more, they can ask.
 
-#### Bring Some Energy
+## Bring Some Energy
 
 Everyone has wished for death in the meeting that never ends. Monotone, unenthusiastic delivery makes anything feel like a drag. Even if the topic at hand is genuinely boring, the person running the meeting is responsible for making sure nobody passes out from boredom. This is obvious but often ignored.
 
-#### Explain What's Next
+## Explain What's Next
 
 This one isn't universal – there are some meetings, including information gathering, that don't require a clear statement of followups. But most of the time, it's best to clarify who is going to do what next. Ideally, that "who" is you; everyone resents being assigned work by someone who isn't their boss. But sometimes you do need to ask someone else to help, and you should clarify that they are indeed going to provide it (and you should check on their timeline too).
 

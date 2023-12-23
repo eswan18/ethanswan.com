@@ -9,4 +9,4 @@ tags:
 external_link: https://www.8451.com/forward-thinking/automation-at-8451
 ---
 
-My colleague Dominick Ghirardo and I wrote a short piece for our company's tech blog on approaching automation in data science.
+My colleague Dominick Ghirardo and I wrote [a short piece](https://www.8451.com/forward-thinking/automation-at-8451) for our company's tech blog on approaching automation in data science.

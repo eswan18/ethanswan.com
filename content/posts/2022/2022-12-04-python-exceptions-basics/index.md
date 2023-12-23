@@ -139,7 +139,7 @@ def divide(x, y):
         raise ZeroDivisionError("Can't divide by zero")
     return x / y
 ```
-```
+```text
 >>> divide(3, 0)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>

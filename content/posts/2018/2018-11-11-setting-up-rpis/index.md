@@ -72,14 +72,14 @@ Okay, now the command line part.
 First, a warning: we will be using commands that invoke `sudo`, meaning that you take on root privileges and can severely damage your system if you aren't careful.
 Check and double-check the following commands before running them.
 With that ominous introduction, open your terminal and type:
-```
+```bash
 sudo diskutil list
 ```
 You'll see several disks listed, in the form `/dev/disk1`.
 Under each disk, you'll see its partitions, which each start with a number and then a colon.
 Now is the time to insert your SD card.
 Then run the same command again.
-```
+```bash
 sudo diskutil list
 ```
 You should see a new disk listed.
@@ -92,7 +92,7 @@ It's very important for the following steps that you use the correct one!
 If you try to write to the disk of your local computer, very bad things will happen.
 
 Now we're going to unmount the SD card.
-```
+```bash
 diskutil unmountDisk /dev/disk<n>
 # For example, if n=2
 diskutil unmountDisk /dev/disk2
@@ -100,7 +100,7 @@ diskutil unmountDisk /dev/disk2
 And we will now write our disk image to the card.
 Note that in past steps we referred to the card as `/dev/disk<n>`, but here it is `/dev/rdisk<n>`.
 Again, be cautious. 
-```
+```bash
 sudo dd bs=1m if=<path_to_disk_image> of=/dev/rdisk<n> conv=sync
 # In my case:
 sudo dd bs=1m if=~/Downloads/2018-10-09-raspbian-stretch-lite.img of=/dev/rdisk2 conv=sync
@@ -115,11 +115,11 @@ We're going to do it all on the SD card.
 
 The newly burned SD card should show up on your local computer at `/Volumes/boot/`.
 Go there.
-```
+```bash
 cd /Volumes/boot/
 ```
 Now, to enable SSH, we can just place an empty file here.
-```
+```bash
 touch ssh
 ```
 The Pi will read this on startup and enable the sshd service.
@@ -127,7 +127,7 @@ The Pi will read this on startup and enable the sshd service.
 WiFi setup is marginally trickier.
 We need to create a file called `wpa_supplicant.conf` and add our network credentials to it.
 In your favorite editor, create this file in the current folder and add these lines:
-```
+```text
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 network={
     ssid="YOUR_SSID"
@@ -138,11 +138,11 @@ network={
 Obviously replacing YOUR_SSID with the network name and YOUR_WIFI_PASSWORD with the network password.
 
 Now cd out of the card's volume (otherwise you won't be able to eject).
-```
+```bash
 cd ~
 ```
 And eject the card, replacing \<n\> with your disk number again.
-```
+```bash
 sudo diskutil eject /dev/rdisk<n>
 ```
 Done with the SD card! 
@@ -165,7 +165,7 @@ If you're doing that on your router, go right ahead and then skip to the next se
 Otherwise, log into your pi using the keyboard and monitor.
 Username *pi*, password *raspberry*.
 Once you're logged in, run
-```
+```bash
 ifconfig | grep 192
 ```
 You'll see a line like `inet 192.168.200.20  netmask 255.255.255.0  broadcast 192.168.200.255`.
@@ -174,7 +174,7 @@ And now we're done with the keyboard and monitor.
 
 #### Logging In
 On your local machine, run
-```
+```bash
 ssh pi@<ip>
 ```
 where \<ip\> is the IP address we found in the last step.
@@ -187,7 +187,7 @@ The prompt should be something like `pi@raspberrypi`.
 ### 3. Basic Pi Configuration
 Raspbian offers a convenient configuration tool called raspi-config.
 Let's start it up.
-```
+```bash
 sudo raspi-config
 ```
 If prompted for your password, enter *raspberry* again.
@@ -225,7 +225,7 @@ Sometimes, especially if you use 64GB SD cards, the Pi won't recognize the full 
 To make sure the filesystem is "expanded" to the whole card, go to Advanced Options -> Expand Filesystem and run it.
 
 When all of this is complete, exit raspi-config and reboot.
-```
+```bash
 sudo reboot
 ```
 
@@ -234,14 +234,14 @@ sudo reboot
 Log back into the pi and we'll install some basic tools:
 tmux, git, and vim (the full version, as opposed to the one that ships with Raspbian).
 Once logged in, run the following line, enter the password (still *raspberry*) and be prepared to wait a while.
-```
+```bash
 sudo apt-get update && sudo apt-get upgrade
 ```
 This will first *update* the list of available packages based on remote servers, and then *upgrade* the ones that are present on the Pi.
 
 Once everything is upgraded, we'll install the packages for the tools we want.
 Again, this will take some time.
-```
+```bash
 sudo apt-get -y install tmux && sudo apt-get -y install vim && sudo apt-get -y install git
 ```
 
@@ -251,27 +251,27 @@ It's no secret that the standard login info is pi/raspberry, and if anyone gets 
 I believe the best solution is to create a new username with a different password, give that user sudo-privileges (so, like the pi user, it can perform admin tasks), and then delete the pi user entirely.
 
 To do so (starting logged in as pi), select a username for your new user and subsitute it in the following command:
-```
+```bash
 sudo adduser <new_username>
 ```
 You'll be asked for some information about this new username.
 None of it is mandatory, not even the full name.
 Press enter to skip the prompts.
 Once you're finished creating your user, let's add him/her to the sudo group.
-```
+```bash
 sudo usermod -aG sudo <new_username>
 ```
 With that, the new user's profile should be complete.
 Log out and log back in via SSH, but this time as \<new_username\>@\<ip\> instead of pi@\<ip\>.
 Time to test your new user's sudo privileges.
-```
+```bash
 sudo whoami
 ```
 As this is the first time you've invoked `sudo` as this user, you will get the customary warning (it's stolen from Spiderman, right?): "With great power comes great responsibility..."  blah blah.
 Enter the password for your new user, and `whoami` should print "root".
 
 If that worked fine, we can delete the pi user.
-```
+```bash
 sudo deluser --remove-home pi
 ```
 Now you'll always log into your Pi as this new user account.
