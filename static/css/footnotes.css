@@ -19,7 +19,7 @@ Instead, we use this file as a home for the styles of the footnotes section.
 
 /* This applies to the label (e.g. "1.") of footnotes. */
 .footnotes li::marker {
-    color: oklch(var(--s));
+    color: oklch(var(--a));
     display: inline;
     /* Copied from Tailwind text-lg */
     font-size: 1.125rem/* 18px */;
