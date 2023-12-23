@@ -1,34 +1,29 @@
 {{ $page := . }}
 {{ if not .Params.unlisted }}
-  <div class="flex-auto p-8 lg:mx-10 mx-5 my-4 shadow-md max-w-lg rounded-lg standard-shadow-color standard-card-bg">
-    <article class="coffee-shop-preview">
-      <header>
-        <div class="flex flex-row justify-between m-0 items-center">
-          <h2 class="text-3xl h-fit">{{ .Params.name }}
-            {{ with .Params.link }}
-              <a href='{{ . }}'><i class="fa-solid fa-link"></i></a>
-            {{ end }}
-          </h2>
-          <h2 class="text-5xl h-fit">{{ .Params.rating }}</h2>
+  <div class="card card-bordered shadow-lg">
+    <div class="card-body">
+      <div class="flex flex-row flex-wrap gap-y-2 justify-between items-center">
+        <h2 class="card-title my-0 text-4xl">
+            <a class="text-secondary font-bold" href='{{ .Params.link }}'>{{ .Params.name }}</a>
+        </h2>
+        <div class="stats shadow">
+          <div class="stat place-items-center">
+            <div class="stat-title">Apple Pay</div>
+            <div class="stat-value text-2xl">{{ if .Params.apple_pay }}YES{{ else }}NO{{ end }}</div>
+          </div>
+          <div class="stat place-items-center">
+            <div class="stat-title">Wifi</div>
+            <div class="stat-value text-2xl">{{ .Params.wifi }}</div>
+          </div>
+          <div class="stat place-items-end">
+            <div class="stat-title">Overall Rating</div>
+            <div class="stat-value text-[3rem]">{{ .Params.rating }}</div>
+          </div>
         </div>
-      </header>
-      <section class="px-3 py-5">
+      </div>
+      <section class="prose mt-3">
         {{ .Content }}
       </section>
-      <footer>
-        <div class="flex flex-row justify-between mt-2 mx-2 pt-4 px-2 lg:px-6 border-t border-t-cyan-800">
-          <div>
-            <span class="lg:m-1 text-lg">Apple Pay?</span>
-            <span class="lg:m-1 text-lg secondary-color">
-            {{ if .Params.apple_pay }}YES{{ else }}NO{{ end }}
-            </span>
-          </div>
-          <div>
-            <span class="lg:m-1 text-lg">Wifi Quality:</span>
-            <span class="lg:m-1 text-lg secondary-color">{{ .Params.wifi }}</span>
-          </div>
-        </div>
-      </footer>
-    </article>
+    </div>
   </div>
 {{ end }}

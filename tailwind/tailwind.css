@@ -1,9 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer components {
-  .button {
-    @apply inline-block border border-[--primary-color] rounded-full py-1 px-2 hover:ring-1 ring-[--primary-color] hover:no-underline;
-  }
-}

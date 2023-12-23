@@ -5,7 +5,6 @@ Instead, we use this file as a home for the styles of the footnotes section.
 
 .footnotes hr {
     margin: 3em 1em;
-    color: var(--secondary-color);
 }
 
 .footnotes ol {
@@ -20,7 +19,7 @@ Instead, we use this file as a home for the styles of the footnotes section.
 
 /* This applies to the label (e.g. "1.") of footnotes. */
 .footnotes li::marker {
-    color: var(--secondary-color);
+    color: oklch(var(--s));
     display: inline;
     /* Copied from Tailwind text-lg */
     font-size: 1.125rem/* 18px */;

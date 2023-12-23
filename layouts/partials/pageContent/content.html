@@ -1,4 +1,8 @@
-<div class="{{ .Section }}-content">
+{{ $contentType := "page" }}
+{{ with .Section }}
+    {{ $contentType = . }}
+{{ end }}
+<div class="{{ $contentType }}-content prose-a:text-secondary prose-a:no-underline">
     {{/* include an image inline if one is specified */}}
     {{ with .Params.embeddedImage }}
     {{ partial "images/embeddedImage" . }}
