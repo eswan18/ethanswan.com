@@ -2044,6 +2044,14 @@ html {
   font-weight: 800;
 }
 
+.stat-desc {
+  grid-column-start: 1;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: var(--fallback-bc,oklch(var(--bc)/0.6));
+}
+
 .steps {
   display: inline-grid;
   grid-auto-flow: column;
@@ -3905,6 +3913,10 @@ details.collapse summary::-webkit-details-marker {
   height: auto;
 }
 
+.h-6 {
+  height: 1.5rem;
+}
+
 .min-h-\[3rem\] {
   min-height: 3rem;
 }
@@ -4292,6 +4304,11 @@ details.collapse summary::-webkit-details-marker {
   color: rgb(115 115 115 / var(--tw-text-opacity));
 }
 
+.text-red-800 {
+  --tw-text-opacity: 1;
+  color: rgb(153 27 27 / var(--tw-text-opacity));
+}
+
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
@@ -4369,6 +4386,12 @@ details.collapse summary::-webkit-details-marker {
       background-color: var(--fallback-bc,oklch(var(--bc)/0.2));
     }
   }
+
+  .\[\&\>ul\>li\:not\(\.active\)\>a\]\:btn-link>ul>li:not(.active)>a:hover {
+    border-color: transparent;
+    background-color: transparent;
+    text-decoration-line: underline;
+  }
 }
 
 .\[\&\>ul\>li\:not\(\.active\)\>a\]\:btn-ghost>ul>li:not(.active)>a {
@@ -4385,6 +4408,24 @@ details.collapse summary::-webkit-details-marker {
 .\[\&\>ul\>li\:not\(\.active\)\>a\]\:btn-ghost>ul>li:not(.active)>a.btn-active {
   border-color: transparent;
   background-color: var(--fallback-bc,oklch(var(--bc)/0.2));
+}
+
+.\[\&\>ul\>li\:not\(\.active\)\>a\]\:btn-link>ul>li:not(.active)>a {
+  border-color: transparent;
+  background-color: transparent;
+  --tw-text-opacity: 1;
+  color: var(--fallback-p,oklch(var(--p)/var(--tw-text-opacity)));
+  text-decoration-line: underline;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  outline-color: currentColor;
+}
+
+.\[\&\>ul\>li\:not\(\.active\)\>a\]\:btn-link>ul>li:not(.active)>a.btn-active {
+  border-color: transparent;
+  background-color: transparent;
+  text-decoration-line: underline;
 }
 
 .\[\&\>ul\>li\>a\]\:btn>ul>li>a {
@@ -4643,6 +4684,13 @@ details.collapse summary::-webkit-details-marker {
   text-decoration-line: none;
 }
 
+@media (prefers-color-scheme: dark) {
+  .dark\:text-white {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+}
+
 @media (min-width: 640px) {
   .sm\:mx-auto {
     margin-left: auto;
@@ -4723,6 +4771,11 @@ details.collapse summary::-webkit-details-marker {
 
 .\[\&\>ul\>li\.disabled\>a\]\:opacity-50>ul>li.disabled>a {
   opacity: 0.5;
+}
+
+.\[\&\>ul\>li\:not\(\.active\)\:not\(\.disabled\)\>a\]\:text-accent>ul>li:not(.active):not(.disabled)>a {
+  --tw-text-opacity: 1;
+  color: var(--fallback-a,oklch(var(--a)/var(--tw-text-opacity)));
 }
 
 .\[\&\>ul\>li\>a\]\:rounded-md>ul>li>a {
