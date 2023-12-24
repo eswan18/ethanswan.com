@@ -1,10 +1,9 @@
 {{/* Expects an array of objects with .link and .text fields */}}
-<div class="w-[75%] mx-auto mt-4 border border-x-0 border-b-0 border-t-gray-300 p-4 text-center">
-  <p>See also:
+<div class="w-[75%] mx-auto mt-4 border border-x-0 border-b-0 border-t-gray-300 p-4 flex flex-row justify-center items-center gap-3">
+  <p>See also: </p>
   {{ range $x := . }}
-    <a href="{{ .link }}"><button class="btn btn-sm btn-secondary uppercase">
+    <a class="uppercase no-underline text-sm text-secondary" href="{{ .link }}">
       {{ .text }}
-    </button></a>
+    </a>
   {{ end }}
-  </p>
 </div>
