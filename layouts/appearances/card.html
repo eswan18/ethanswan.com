@@ -2,25 +2,28 @@
 <div class="card card-bordered card-compact max-w-xl shadow-lg rounded-lg m-2 sm:mx-auto">
     <div class="card-body collapse collapse-arrow">
         <input type="checkbox" />  {{/* This is the checkbox that toggles the collapse under-the-hood. */}}
-        <div class="collapse-title">
-            <h2 class="card-title my-3">
+        <div class="collapse-title flex flex-row justify-between items-center w-full">
+            <h2 class="card-title !my-0">
                 {{ .Title }}
             </h2>
+            <button class="btn btn-secondary btn-sm">
+                Details
+            </button>
         </div>
                 
         <div class="collapse-content px-8 prose">
-            <section>
-                {{ .Summary }}
-            </section>
-            <div class="card-actions mt-6 px-8">
+            <div class="card-actions mb-4 px-8 flex flex-row justify-center items-center gap-x-8">
                 {{ if isset .Params "links" }}
                 {{ range $text, $link := .Params.links }}
-                    <a class="btn btn-secondary btn-sm rounded-lg uppercase" href="{{ $link }}">
+                    <a class="uppercase text-secondary no-underline" href="{{ $link }}">
                         {{ $text }}
                     </a>
                 {{ end }}
                 {{ end }}
             </div>
+            <section>
+                {{ .Summary }}
+            </section>
         </div>
 
         <div class="px-16 mb-3 text-md">
