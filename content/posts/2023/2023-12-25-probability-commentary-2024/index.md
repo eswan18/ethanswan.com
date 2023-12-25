@@ -2,7 +2,7 @@
 title: "Probability Estimates: 2024 – Commentary"
 slug: probability-commentary-2024
 layout: post
-date: 2023-12-24
+date: 2023-12-25
 tags:
 - Probability
 - World-Events
