@@ -86,7 +86,7 @@ What if the user entered values that aren't integers?
 What if `d` is 0?
 Again: crash!
 
-Ideally, chunks of code that could produce an excption would be wrapped in special handling code at some level.
+Ideally, chunks of code that could produce an exception would be wrapped in special handling code at some level.
 In Python that might look like this:
 
 ```python
