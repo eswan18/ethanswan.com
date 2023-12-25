@@ -43,6 +43,7 @@
   {{ $names = $names | append $name }}
 {{ end }}
 
+{{ $eventKeysByCategory := dict }}
 {{ $eventKeys := slice }}
 {{ range $key, $value := index $cleanData 0 }}
     {{ if eq $key $nameColName }}
@@ -54,8 +55,19 @@
     {{ if eq $key $timeColName }}
       {{ continue }}
     {{ end }}
+    {{/* Events are coded as "<Category> | <Event>" */}}
+    {{ $split := split $key " | " }}
+    {{ $category := index $split 0 }}
+    {{ $event := index $split 1 }}
+    {{/* If this category isn't in the event key map yet, add it */}}
+    {{ if eq (index $eventKeysByCategory $category) nil }}
+      {{ $eventKeysByCategory = merge $eventKeysByCategory (dict $category (slice $key)) }}
+    {{ else }}
+      {{ $eventKeysByCategory = merge $eventKeysByCategory (dict $category (index $eventKeysByCategory $category | append $key)) }}
+    {{ end }}
     {{ $eventKeys = $eventKeys | append $key }}
 {{ end }}
+
 
 {{/* Now we have a list of names and a list of events, we can build the table */}}
  <div class="overflow-x-scroll">
@@ -78,12 +90,22 @@
       </tr>
     </thead>
     <tbody>
-    {{ range $i, $event := $eventKeys }}
+    {{ range $category, $events := $eventKeysByCategory }}
+      <tr>
+        <th class="px-2 py-2 text-sm">{{ $category }}</th>
+        {{ range $cleanData }}
+          <td></td>
+        {{ end }}
+        <td></td>
+      </tr>
+      {{ range $i, $eventKey := $events }}
+      {{ $eventPieces := split $eventKey " | " }}
+      {{ $event := index $eventPieces 1 }}
       <tr>
         {{ $total := 0 }}
-        <th class="px-2 py-2 text-sm">{{ $event }}</th>
+        <th class="px-2 py-2 text-sm font-normal">{{ $event }}</th>
         {{ range $j, $row := $cleanData }}
-          {{ $value := index $row $event }}
+          {{ $value := index $row $eventKey }}
           {{/* Some formatting for consistency. */}}
           {{ if hasPrefix $value "." }}
             {{/* Add a 0 to the front if it starts with a decimal point */}}
@@ -106,6 +128,7 @@
           {{ $avg }}
         </td>
       </tr>
+      {{ end }}
     {{ end }}
     </tbody>
   </table>
