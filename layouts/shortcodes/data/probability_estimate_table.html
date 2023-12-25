@@ -69,9 +69,12 @@
 {{ end }}
 
 
-{{/* Now we have a list of names and a list of events, we can build the table */}}
+
+{{ range $category, $events := $eventKeysByCategory }}
+<h2 class="mt-10 mb-0">{{ $category }}</h3>
+
  <div class="overflow-x-scroll">
-  <table class="table table-md table-zebra table-pin-cols table-fixed">
+  <table class="table table-md table-zebra table-pin-cols table-fixed mt-0">
     <thead>
       <tr>
         <th class="w-48 sm:w-64 lg:w-80"></th>
@@ -90,14 +93,6 @@
       </tr>
     </thead>
     <tbody>
-    {{ range $category, $events := $eventKeysByCategory }}
-      <tr>
-        <th class="px-2 py-2 text-sm">{{ $category }}</th>
-        {{ range $cleanData }}
-          <td></td>
-        {{ end }}
-        <td></td>
-      </tr>
       {{ range $i, $eventKey := $events }}
       {{ $eventPieces := split $eventKey " | " }}
       {{ $event := index $eventPieces 1 }}
@@ -129,7 +124,7 @@
         </td>
       </tr>
       {{ end }}
-    {{ end }}
     </tbody>
   </table>
 </div>
+{{ end }}
