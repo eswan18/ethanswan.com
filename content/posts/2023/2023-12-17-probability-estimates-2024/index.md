@@ -23,7 +23,9 @@ If more than 8/10 happened, then they were underconfident. If fewer, then they w
 
 This exercise is useful not just in checking your fancy statistical models but also in evaluating your own predictions, particularly in ensuring you don't have a bias toward overconfidence (which I suspect is far more common than the opposite).
 I was inspired by Matt Yglesias' annual predictions and self evaluations[^slow-boring-calibration], so this year some friends and I will be "competing" by predicting various 2024 events.
-See our estimates below.
+
+
+See our estimates below – and I explained my own numbers in [this followup post](/feed/2023/12/25/probability-commentary-2024/).
 
 {{< data/probability_estimate_table >}}
 
