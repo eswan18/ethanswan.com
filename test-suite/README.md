@@ -22,7 +22,7 @@ Then (every time) you'll activate it:
 Install this package with:
 
 ```bash
-uv pip install -e .
+uv pip install -e ".[dev]"
 ```
 
 ## Running the suite.
