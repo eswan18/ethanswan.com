@@ -29,6 +29,18 @@ class SiteClient:
         return self._sync_client.get(path, follow_redirects=follow_redirects)
 
 
+@dataclass
+class SiteLinks:
+    internal: set[str]
+    fragment: set[str]
+    external: set[str]
+
+    def __str__(self):
+        internal = '\n    - ' + '\n    - '.join(sorted(self.internal))
+        fragment = '\n    - ' + '\n    - '.join(sorted(self.fragment))
+        external = '\n    - ' + '\n    - '.join(sorted(self.external))
+        return f"SiteLinks\n- internal\n{internal},\n- fragment\n{fragment},\n- external{external}"
+    
 
 @pytest.fixture(scope="session")
 def client() -> SiteClient:
@@ -47,29 +59,57 @@ def links_on_page(page: str | bytes) -> list[str]:
 
 
 @cache
-def get_all_relative_links(client: SiteClient) -> set[str]:
+def get_all_links(client: SiteClient) -> SiteLinks:
     to_process = []
-    processed = set()
+    seen_site_links = set()
+    fragment_links = set()
+    seen_external_links = set()
     # Start at the homepage and work through all the links.
     to_process.append("/")
     while len(to_process) > 0:
         path = to_process.pop()
-        if path in processed:
+        if path in seen_site_links:
             continue
+        seen_site_links.add(path)
+
         response = client.get(path, follow_redirects=True)
-        response.raise_for_status()
 
         # Add all the links on the page to the list of pages to process
-        for link in links_on_page(response.content):
-            if link.startswith("/") and link not in processed:
-                to_process.append(link)
-        # Mark this page as processed.
-        processed.add(path)
-    return processed
+        next_links = links_on_page(response.content)
+        for link in next_links:
+            if link.startswith(client.url):
+                link = link.removeprefix(client.url)
+            if link.startswith("/"):
+                if link not in seen_site_links:
+                    to_process.append(link)
+                    # Mark this page as processed.
+            elif link.startswith("#"):
+                link = path + link
+                fragment_links.add(link)
+            else:
+                if link not in seen_external_links:
+                    if link.strip() != "":
+                        seen_external_links.add(link)
+    links = SiteLinks(seen_site_links, fragment_links, seen_external_links)
+    return links
 
 
 @pytest.fixture
-def all_relative_links(client: SiteClient, capsys) -> set[str]:
+def all_site_links(client: SiteClient, capsys) -> set[str]:
     with capsys.disabled():
-        links = get_all_relative_links(client)
-    return links
+        links = get_all_links(client)
+    return links.internal
+
+
+@pytest.fixture
+def all_external_links(client: SiteClient, capsys) -> set[str]:
+    with capsys.disabled():
+        links = get_all_links(client)
+    return links.external
+
+
+@pytest.fixture
+def all_fragment_links(client: SiteClient, capsys) -> set[str]:
+    with capsys.disabled():
+        links = get_all_links(client)
+    return links.fragment
