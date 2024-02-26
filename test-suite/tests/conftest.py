@@ -60,7 +60,7 @@ def links_on_page(page: str | bytes) -> list[str]:
     if not a_tags:
         return []
     links = [link.get("href") for link in a_tags]
-    links = filter(lambda link: link is not None, links)
+    links = filter(lambda link: link is not None and '@' not in link, links)
     return list(links)
 
 

@@ -50,7 +50,7 @@ async def test_all_external_links_work(all_external_links, client):
     }
     with open(this_dir / 'data' / 'known_dead_links.txt', 'r') as f:
         lines = [line.split(' ') for line in f.readlines()]
-        known_dead_links_and_codes = {line[1]: line[0] for line in lines}
+        known_dead_links_and_codes = {line[1]: int(line[0]) for line in lines}
     tasks = [client.a_get(link, headers=headers, follow_redirects=True) for link in all_external_links]
     dead_links = {}
 
