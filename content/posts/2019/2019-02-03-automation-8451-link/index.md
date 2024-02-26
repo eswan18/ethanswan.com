@@ -6,7 +6,7 @@ date: 2019-02-03
 tags:
 - "8451"
 - appearances
-external_link: https://www.8451.com/forward-thinking/automation-at-8451
+external_link: https://www.8451.com/knowledge-hub/data-science/automation-at-84-51o/
 ---
 
-My colleague Dominick Ghirardo and I wrote [a short piece](https://www.8451.com/forward-thinking/automation-at-8451) for our company's tech blog on approaching automation in data science.
+My colleague Dominick Ghirardo and I wrote [a short piece](https://www.8451.com/knowledge-hub/data-science/automation-at-84-51o/) for our company's tech blog on approaching automation in data science.

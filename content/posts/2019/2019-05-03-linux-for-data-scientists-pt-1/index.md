@@ -6,7 +6,7 @@ date: 2019-05-13
 tags:
 - "8451"
 - technology
-external_link: https://www.8451.com/forward-thinking/automation-at-8451
+external_link: https://www.8451.com/knowledge-hub/data-science/linux-for-data-scientists-part-1/
 ---
 
-I contributed [a walkthrough](https://www.8451.com/forward-thinking/automation-at-8451) to some basic Linux utilities for data scientists to the 84.51˚ tech blog.
+I contributed [a walkthrough](https://www.8451.com/knowledge-hub/data-science/linux-for-data-scientists-part-1/) to some basic Linux utilities for data scientists to the 84.51˚ tech blog.
