@@ -1,9 +1,10 @@
 import os
 from dataclasses import dataclass, field
 from functools import cache
+from typing import Mapping, Coroutine, Any
 
 import pytest
-from httpx import AsyncClient, Client
+from httpx import AsyncClient, Client, Response
 from bs4 import BeautifulSoup
 
 
@@ -22,8 +23,13 @@ class SiteClient:
         self._client.base_url = self.url
         self._sync_client.base_url = self.url
 
-    async def a_get(self, path: str, follow_redirects: bool = False):
-        return await self._client.get(path, follow_redirects=follow_redirects)
+    async def a_get(
+        self,
+        path: str,
+        headers: Mapping[str, str] | None = None,
+        follow_redirects: bool = False
+    ) -> Coroutine[Any, Any, Response]:
+        return await self._client.get(path, headers=headers, follow_redirects=follow_redirects)
     
     def get(self, path: str, follow_redirects: bool = False):
         return self._sync_client.get(path, follow_redirects=follow_redirects)
@@ -95,7 +101,7 @@ def get_all_links(client: SiteClient) -> SiteLinks:
 
 
 @pytest.fixture
-def all_site_links(client: SiteClient, capsys) -> set[str]:
+def all_internal_links(client: SiteClient, capsys) -> set[str]:
     with capsys.disabled():
         links = get_all_links(client)
     return links.internal
