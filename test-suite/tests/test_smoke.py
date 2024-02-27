@@ -7,6 +7,11 @@ from httpx import AsyncClient
 
 this_dir = Path(__file__).parent
 
+# Headers that make the external sites treat us like a real browser.
+EXTERNAL_HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.3.1 Safari/605.1.15',
+}
+
 
 @pytest.mark.asyncio(scope="module")
 async def test_homepage_responds(client: AsyncClient):
@@ -45,13 +50,10 @@ async def test_all_internal_links_work(all_internal_links, client):
 
 @pytest.mark.asyncio(scope="module")
 async def test_all_external_links_work(all_external_links, client):
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.3.1 Safari/605.1.15',
-    }
     with open(this_dir / 'data' / 'known_dead_links.txt', 'r') as f:
         lines = [line.split(' ') for line in f.readlines()]
         known_dead_links_and_codes = {line[1]: int(line[0]) for line in lines}
-    tasks = [client.a_get(link, headers=headers, follow_redirects=True) for link in all_external_links]
+    tasks = [client.a_get(link, headers=EXTERNAL_HEADERS, follow_redirects=True) for link in all_external_links]
     dead_links = {}
 
     for future in asyncio.as_completed(tasks):
