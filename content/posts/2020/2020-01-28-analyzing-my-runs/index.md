@@ -22,7 +22,7 @@ So it was pretty clear to me that the information I wanted was all there, in the
 
 ![UA API Key](UA_API_key.png)
 
-Luckily this roadblock turned out to be a blessing in disguise. Desperate for any other way to get at my data, I simply googled "download mapmyfitness data" and found an [excellent help page](https://support.mapmyfitness.com/hc/en-us/articles/200118594-Export-Workout-Data) that explained how to download all your data as a single, highly-structured and well-labeled CSV. Big props to Under Armour for having such open access for users to get their data! They've definitely engendered a lot of loyalty from me – knowing that I can get an archive of my data anytime is very valuable for a tech nerd.
+Luckily this roadblock turned out to be a blessing in disguise. Desperate for any other way to get at my data, I simply googled "download mapmyfitness data" and found an [excellent help page](https://support.mapmyfitness.com/hc/en-us/articles/200118594-Export-Workout-Data)[^1] that explained how to download all your data as a single, highly-structured and well-labeled CSV. Big props to Under Armour for having such open access for users to get their data! They've definitely engendered a lot of loyalty from me – knowing that I can get an archive of my data anytime is very valuable for a tech nerd.
 
 ## Summary Insights
 
@@ -79,3 +79,5 @@ Going forward, I imagine I'll download a new archive at some point and rerun thi
 Did I learn anything useful about my running habits? Not really. It's interesting how much they've fluctuated over time, and I'm really blown away by seeing my total distance and time. But beyond the summary statistics, the only meaningful takeaway was that time of year and distance don't have a big impact on my speed.
 
 If you're interested in seeing the code, check out the [GitHub repo](https://github.com/eswan18/fitness). If I do indeed come back to this project, I'll add/update code there. And if you do any similar projects with fitness data, I'd love to hear about them.
+
+[^1]: Unfortunately, as of February 2024 this help page has been taken down and I haven't found similar documentation anywhere else. However, the direct link to download your data still works fine: [https://www.mapmyfitness.com/workout/export/csv](https://www.mapmyfitness.com/workout/export/csv)
