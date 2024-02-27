@@ -58,7 +58,7 @@ You'll only really *need* them for about 5 minutes of the process, so it's fine 
 In my opinion, this part seems the hardest but is usually the simplest.
 Don't insert your SD card yet; we'll do that shortly.
 
-First, download the newest image of Raspbian from [here](https://www.raspberrypi.org/downloads/raspbian/).
+First, download the newest image of Raspbian from [here](https://www.raspberrypi.com/software/operating-systems/).[^raspbian]
 Currently, the download options on the page look like this:
 
 ![Raspbian Downloads](raspbian_downloads.png)
@@ -301,3 +301,5 @@ Using SSH keys, you can essentially create a unique and very secure access code 
 If you create such a code, store it in a secure place.
 Then you can disable password-based authentication, making that key (usually very long and basically impossible to guess) the only way to get into the Pi.
 This is highly recommended for devices visible outside of your local network.
+
+[^raspbian]: As of Feburary 2024, Raspbian had been renamed to "Raspberry Pi OS" and the old link on this page no longer worked. I've updated it to point to the current OS downloads page.

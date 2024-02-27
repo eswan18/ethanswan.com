@@ -19,7 +19,7 @@ Of course, unbounded interest isn’t usually the only issue in adjusting to pos
 
 ## Expertise and Tunnel Vision
 
-Meanwhile, a force was also pushing in the opposite direction. In an episode of [one of my favorite podcasts](http://www.earwolf.com/show/question-of-the-day/), writer Stephen Dubner and angel investor James Altucher dispense their favorite life advice. One recommendation they give is to write down your top 25 interests and passions, and then to cross out all but the top 5. Give all of your time to the few things that make you most happy, they say. Put yourself in a silo.
+Meanwhile, a force was also pushing in the opposite direction. In an episode of [one of my favorite podcasts](https://www.earwolf.com/show/question-of-the-day/), writer Stephen Dubner and angel investor James Altucher dispense their favorite life advice. One recommendation they give is to write down your top 25 interests and passions, and then to cross out all but the top 5. Give all of your time to the few things that make you most happy, they say. Put yourself in a silo.
 
 As I’ve transitioned into the professional world, that piece of advice has come up time and time again: “become an expert”. Choose a specialty. Coworkers recommended mastering a narrow field and growing into a “subject matter expert”. University professors with industry experience talked about mastering a discipline to bring more value. Even peers have begun to find a niche and stick to it, as some begin all-consuming graduate school programs and others become entrenched in their chosen industry.
 
