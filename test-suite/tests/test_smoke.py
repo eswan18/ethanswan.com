@@ -84,3 +84,13 @@ async def test_all_external_links_work(all_external_links, known_dead_links, cli
                     continue
             dead_links[link] = (response.status_code, response.reason_phrase)
     assert not dead_links, f"Dead links found: {dead_links}"
+
+
+@pytest.mark.skip("Not implemented")
+def test_fragment_links_work():
+    ...
+
+
+@pytest.mark.skip("Not implemented")
+def test_all_images_work():
+    ...
