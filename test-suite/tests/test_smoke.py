@@ -49,20 +49,20 @@ async def test_main_nav_pages_respond(path: str, async_client: AsyncClient):
 
 
 @pytest.mark.asyncio(scope="module")
-async def test_all_internal_links_work(all_internal_links, async_client: AsyncClient):
+async def test_all_internal_links_work(internal_links: set[str], async_client: AsyncClient):
 
     async def link_is_valid(link: str) -> tuple[str, bool]:
         response = await async_client.get(link, follow_redirects=True)
         return link, response.status_code == 200
 
-    link_validity = await asyncio.gather(*[link_is_valid(link) for link in all_internal_links])
+    link_validity = await asyncio.gather(*[link_is_valid(link) for link in internal_links])
     dead_links = [link for link, valid in link_validity if not valid]
 
     assert not dead_links, f"Dead links found: {dead_links}"
 
 
 @pytest.mark.asyncio(scope="module")
-async def test_all_external_links_work(all_external_links, known_dead_links, async_client: AsyncClient):
+async def test_all_external_links_work(external_links: set[str], known_dead_links, async_client: AsyncClient):
 
     async def link_validity_and_code(link: str) -> tuple[str, bool, int]:
         response = await async_client.get(link, headers=EXTERNAL_HEADERS, follow_redirects=True)
@@ -73,14 +73,14 @@ async def test_all_external_links_work(all_external_links, known_dead_links, asy
             return link, False, response.status_code
         return link, True, response.status_code
 
-    link_validity = await asyncio.gather(*[link_validity_and_code(link) for link in all_external_links])
+    link_validity = await asyncio.gather(*[link_validity_and_code(link) for link in external_links])
     dead_links = [(link, code) for link, valid, code in link_validity if not valid]
 
     assert not dead_links, f"Dead external links found: {dead_links}"
 
 
 @pytest.mark.asyncio(scope="module")
-async def test_fragment_links_work(all_fragment_links, async_client: AsyncClient):
+async def test_fragment_links_work(fragment_links: set[str], async_client: AsyncClient):
 
     async def fragment_is_valid(link: str) -> tuple[str, bool]:
         url, fragment = link.split("#", 1)
@@ -94,7 +94,7 @@ async def test_fragment_links_work(all_fragment_links, async_client: AsyncClient
         target = soup.find(id=fragment)
         return link, target is not None
 
-    fragment_validity = await asyncio.gather(*[fragment_is_valid(link) for link in all_fragment_links])
+    fragment_validity = await asyncio.gather(*[fragment_is_valid(link) for link in fragment_links])
     invalid_fragments = [link for link, valid in fragment_validity if not valid]
 
     assert not invalid_fragments, f"Dead fragment links found: {invalid_fragments}"

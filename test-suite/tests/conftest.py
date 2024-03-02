@@ -24,11 +24,11 @@ class SiteLinks:
         return f"SiteLinks\n- internal\n{internal},\n- fragment\n{fragment},\n- external{external}"
     
 
-@pytest.fixture
+@pytest.fixture(scope="session")
 def client() -> Client:
     return Client(base_url=URL)
 
-@pytest.fixture
+@pytest.fixture(scope="session")
 def async_client() -> AsyncClient:
     return AsyncClient(base_url=URL)
 
@@ -44,8 +44,8 @@ def links_on_page(page: str | bytes) -> list[str]:
     return list(links)
 
 
-@cache
-def get_all_links(client: Client) -> SiteLinks:
+@pytest.fixture(scope="session")
+def all_links(client: Client) -> SiteLinks:
     to_process = []
     seen_site_links = set()
     fragment_links = set()
@@ -80,22 +80,16 @@ def get_all_links(client: Client) -> SiteLinks:
     return links
 
 
-@pytest.fixture
-def all_internal_links(client: Client, capsys) -> set[str]:
-    with capsys.disabled():
-        links = get_all_links(client)
-    return links.internal
+@pytest.fixture(scope="session")
+def internal_links(all_links: SiteLinks) -> set[str]:
+    return all_links.internal
 
 
-@pytest.fixture
-def all_external_links(client: Client, capsys) -> set[str]:
-    with capsys.disabled():
-        links = get_all_links(client)
-    return links.external
+@pytest.fixture(scope="session")
+def external_links(all_links: SiteLinks) -> set[str]:
+    return all_links.external
 
 
-@pytest.fixture
-def all_fragment_links(client: Client, capsys) -> set[str]:
-    with capsys.disabled():
-        links = get_all_links(client)
-    return links.fragment
+@pytest.fixture(scope="session")
+def fragment_links(all_links: SiteLinks) -> set[str]:
+    return all_links.fragment
