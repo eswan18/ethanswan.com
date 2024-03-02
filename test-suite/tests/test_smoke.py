@@ -3,6 +3,7 @@ from pathlib import Path
 
 import pytest
 from httpx import AsyncClient
+from bs4 import BeautifulSoup
 
 
 this_dir = Path(__file__).parent
@@ -83,12 +84,29 @@ async def test_all_external_links_work(all_external_links, known_dead_links, asy
                 if response.status_code == known_dead_links[link]:
                     continue
             dead_links[link] = (response.status_code, response.reason_phrase)
-    assert not dead_links, f"Dead links found: {dead_links}"
+    assert not dead_links, f"Dead external links found: {dead_links}"
 
 
-@pytest.mark.skip("Not implemented")
-def test_fragment_links_work():
-    ...
+@pytest.mark.asyncio(scope="module")
+async def test_fragment_links_work(all_fragment_links, async_client: AsyncClient):
+
+    async def fragment_is_valid(link: str) -> tuple[str, bool]:
+        url, fragment = link.split("#", 1)
+        if url.startswith("/posts"):
+            # We ignore fragment links on the posts pages because those pages show
+            # article excerpts (including footnotes) but not the rest of the article
+            # (where the fragment link leads).
+            return link, True
+        response = await async_client.get(url, follow_redirects=True)
+        soup = BeautifulSoup(response.content, "html.parser")
+        target = soup.find(id=fragment)
+        return link, target is not None
+
+    fragment_validity = await asyncio.gather(*[fragment_is_valid(link) for link in all_fragment_links])
+    invalid_fragments = [link for link, valid in fragment_validity if not valid]
+
+    assert not invalid_fragments, f"Dead fragment links found: {invalid_fragments}"
+
 
 
 @pytest.mark.skip("Not implemented")
