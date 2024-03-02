@@ -51,39 +51,31 @@ async def test_main_nav_pages_respond(path: str, async_client: AsyncClient):
 @pytest.mark.asyncio(scope="module")
 async def test_all_internal_links_work(all_internal_links, async_client: AsyncClient):
 
-    async def get_link(link: str):
+    async def link_is_valid(link: str) -> tuple[str, bool]:
         response = await async_client.get(link, follow_redirects=True)
-        return link, response
+        return link, response.status_code == 200
 
-    tasks = [get_link(link) for link in all_internal_links]
-    dead_links = set()
+    link_validity = await asyncio.gather(*[link_is_valid(link) for link in all_internal_links])
+    dead_links = [link for link, valid in link_validity if not valid]
 
-    for future in asyncio.as_completed(tasks):
-        link, response = await future
-        # If the response isn't a success, add the link to our dead links set.
-        if response.status_code != 200:
-            dead_links.add(link)
     assert not dead_links, f"Dead links found: {dead_links}"
 
 
 @pytest.mark.asyncio(scope="module")
 async def test_all_external_links_work(all_external_links, known_dead_links, async_client: AsyncClient):
-    async def get_link(link: str):
+
+    async def link_validity_and_code(link: str) -> tuple[str, bool, int]:
         response = await async_client.get(link, headers=EXTERNAL_HEADERS, follow_redirects=True)
-        return link, response
-
-    tasks = [get_link(link) for link in all_external_links]
-
-    dead_links = {}
-    for future in asyncio.as_completed(tasks):
-        link, response = await future
-        # If the response isn't a success, add the link to our dead links set.
         if response.status_code != 200:
             # Ignoring known dead links.
-            if link in known_dead_links:
-                if response.status_code == known_dead_links[link]:
-                    continue
-            dead_links[link] = (response.status_code, response.reason_phrase)
+            if link in known_dead_links and response.status_code == known_dead_links[link]:
+                return link, True, response.status_code
+            return link, False, response.status_code
+        return link, True, response.status_code
+
+    link_validity = await asyncio.gather(*[link_validity_and_code(link) for link in all_external_links])
+    dead_links = [(link, code) for link, valid, code in link_validity if not valid]
+
     assert not dead_links, f"Dead external links found: {dead_links}"
 
 
