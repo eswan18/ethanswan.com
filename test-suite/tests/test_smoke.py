@@ -26,8 +26,8 @@ def known_dead_links() -> dict[str, int]:
 
 
 @pytest.mark.asyncio(scope="module")
-async def test_homepage_responds(client: AsyncClient):
-    response = await client.a_get("/")
+async def test_homepage_responds(async_client: AsyncClient):
+    response = await async_client.get("/")
     # Should get a successful response
     response.raise_for_status()
     # Should return some content
@@ -39,8 +39,8 @@ async def test_homepage_responds(client: AsyncClient):
     "path",
     ("/posts/", "/teaching/", "/appearances/", "/running-blog/", "/nonsense/"),
 )
-async def test_main_nav_pages_respond(path: str, client):
-    response = await client.a_get(path)
+async def test_main_nav_pages_respond(path: str, async_client: AsyncClient):
+    response = await async_client.get(path)
     # Should get a successful response
     response.raise_for_status()
     # Should return some content
@@ -48,10 +48,10 @@ async def test_main_nav_pages_respond(path: str, client):
 
 
 @pytest.mark.asyncio(scope="module")
-async def test_all_internal_links_work(all_internal_links, client):
+async def test_all_internal_links_work(all_internal_links, async_client: AsyncClient):
 
     async def get_link(link: str):
-        response = await client.a_get(link, follow_redirects=True)
+        response = await async_client.get(link, follow_redirects=True)
         return link, response
 
     tasks = [get_link(link) for link in all_internal_links]
@@ -66,9 +66,9 @@ async def test_all_internal_links_work(all_internal_links, client):
 
 
 @pytest.mark.asyncio(scope="module")
-async def test_all_external_links_work(all_external_links, known_dead_links, client):
+async def test_all_external_links_work(all_external_links, known_dead_links, async_client: AsyncClient):
     async def get_link(link: str):
-        response = await client.a_get(link, headers=EXTERNAL_HEADERS, follow_redirects=True)
+        response = await async_client.get(link, headers=EXTERNAL_HEADERS, follow_redirects=True)
         return link, response
 
     tasks = [get_link(link) for link in all_external_links]

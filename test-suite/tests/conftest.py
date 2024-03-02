@@ -1,38 +1,14 @@
 import os
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from functools import cache
-from typing import Mapping, Coroutine, Any
 
 import pytest
-from httpx import AsyncClient, Client, Response
+from httpx import AsyncClient, Client
 from bs4 import BeautifulSoup
 
 
 DEFAULT_URL = "https://ethanswan.com"
 URL = os.environ.get("ES_SITE_URL", DEFAULT_URL)
-
-
-@dataclass(eq=True, frozen=True)
-class SiteClient:
-    """A SiteClient is a thin wrapper around an httpx client."""
-    url: str
-    _client: AsyncClient = field(default_factory=AsyncClient, hash=False, compare=False)
-    _sync_client: Client = field(default_factory=Client, hash=False, compare=False)
-
-    def __post_init__(self):
-        self._client.base_url = self.url
-        self._sync_client.base_url = self.url
-
-    async def a_get(
-        self,
-        path: str,
-        headers: Mapping[str, str] | None = None,
-        follow_redirects: bool = False
-    ) -> Coroutine[Any, Any, Response]:
-        return await self._client.get(path, headers=headers, follow_redirects=follow_redirects)
-    
-    def get(self, path: str, follow_redirects: bool = False):
-        return self._sync_client.get(path, follow_redirects=follow_redirects)
 
 
 @dataclass
@@ -48,9 +24,13 @@ class SiteLinks:
         return f"SiteLinks\n- internal\n{internal},\n- fragment\n{fragment},\n- external{external}"
     
 
-@pytest.fixture(scope="session")
-def client() -> SiteClient:
-    return SiteClient(URL)
+@pytest.fixture
+def client() -> Client:
+    return Client(base_url=URL)
+
+@pytest.fixture
+def async_client() -> AsyncClient:
+    return AsyncClient(base_url=URL)
 
 
 def links_on_page(page: str | bytes) -> list[str]:
@@ -65,7 +45,7 @@ def links_on_page(page: str | bytes) -> list[str]:
 
 
 @cache
-def get_all_links(client: SiteClient) -> SiteLinks:
+def get_all_links(client: Client) -> SiteLinks:
     to_process = []
     seen_site_links = set()
     fragment_links = set()
@@ -83,8 +63,8 @@ def get_all_links(client: SiteClient) -> SiteLinks:
         # Add all the links on the page to the list of pages to process
         next_links = links_on_page(response.content)
         for link in next_links:
-            if link.startswith(client.url):
-                link = link.removeprefix(client.url)
+            if link.startswith(URL):
+                link = link.removeprefix(URL)
             if link.startswith("/"):
                 if link not in seen_site_links:
                     to_process.append(link)
@@ -101,21 +81,21 @@ def get_all_links(client: SiteClient) -> SiteLinks:
 
 
 @pytest.fixture
-def all_internal_links(client: SiteClient, capsys) -> set[str]:
+def all_internal_links(client: Client, capsys) -> set[str]:
     with capsys.disabled():
         links = get_all_links(client)
     return links.internal
 
 
 @pytest.fixture
-def all_external_links(client: SiteClient, capsys) -> set[str]:
+def all_external_links(client: Client, capsys) -> set[str]:
     with capsys.disabled():
         links = get_all_links(client)
     return links.external
 
 
 @pytest.fixture
-def all_fragment_links(client: SiteClient, capsys) -> set[str]:
+def all_fragment_links(client: Client, capsys) -> set[str]:
     with capsys.disabled():
         links = get_all_links(client)
     return links.fragment
