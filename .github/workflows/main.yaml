@@ -13,5 +13,7 @@ jobs:
           python-version: '3.11'
       - name: Install package
         run: pip install .
+        working-directory: ./test-suite
       - name: Run tests
         run: pytest
+        working-directory: ./test-suite
