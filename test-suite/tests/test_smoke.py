@@ -1,52 +1,16 @@
-import os
 import asyncio
-from pathlib import Path
-from dataclasses import dataclass
 
 import pytest
 from httpx import AsyncClient
 from bs4 import BeautifulSoup
 
+from .dead_links import known_dead_links
 
-this_dir = Path(__file__).parent
 
 # Headers that make the external sites treat us like a real browser.
 EXTERNAL_HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.3.1 Safari/605.1.15',
 }
-
-IN_CI = os.getenv("CI") == "true"
-ALLOWED_TAGS = ("ci-only")
-
-@dataclass
-class DeadLink:
-    url: str
-    status_codes: list[int]
-    tags: list[str]
-
-    def __post_init__(self):
-        for tag in self.tags:
-            if tag not in ALLOWED_TAGS:
-                raise ValueError(f"Unknown tag: {tag}")
-    
-    @classmethod
-    def from_line(cls, line: str):
-        codes, url, *tags = line.strip().split()
-        return cls(url, [int(c) for c in codes.split(',')], tags)
-
-
-@pytest.fixture(scope="session")
-def known_dead_links() -> dict[str, int]:
-    with open(this_dir / 'data' / 'known_dead_links.txt', 'r') as f:
-        # Remove "comment" lines
-        lines = [line for line in f.readlines() if not line.startswith('#')]
-        # Split the code from the URL.
-        links = [DeadLink.from_line(line) for line in lines]
-        if not IN_CI:
-            links = [link for link in links if "ci-only" not in link.tags]
-        # Create a mapping from URL to expected status code.
-        known_dead_links_and_codes = {link.url: link.status_codes for link in links}
-    return known_dead_links_and_codes
 
 
 @pytest.mark.asyncio(scope="module")
