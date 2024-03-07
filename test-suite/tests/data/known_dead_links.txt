@@ -1,11 +1,11 @@
 # This podcast isn't listed anymore.
 404 https://www.earwolf.com/show/question-of-the-day/
-# This help page has been removed.
-404 https://support.mapmyfitness.com/hc/en-us/articles/200118594-Export-Workout-Data no-ci
+# This help page has been removed so it 404s locally, or 403s on GitHub Actions.
+403,404 https://support.mapmyfitness.com/hc/en-us/articles/200118594-Export-Workout-Data
 # This website redirects to Spotify and 403s.
 403 https://www.benbenandblue.com/episodes/2017/10/20/bbb-6-whats-next-for-ben-eater
 # Cloudflare blocks us because it thinks we're a bot (and it's right). Might be worth toying with headers to try to fix this eventually.
 403 https://www.raspberrypi.com/software/operating-systems/
-# These below are blocked only in github-actions
+# These below are blocked only in github-actions.
 403 https://breakingsmart.substack.com/p/against-waldenponding ci-only
 403 https://www.reddit.com/r/ProgrammingLanguages/ ci-only

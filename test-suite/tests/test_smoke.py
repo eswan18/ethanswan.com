@@ -16,18 +16,23 @@ EXTERNAL_HEADERS = {
 }
 
 IN_CI = os.getenv("CI") == "true"
-ALLOWED_TAGS = ("ci-only", "no-ci")
+ALLOWED_TAGS = ("ci-only")
 
 @dataclass
 class DeadLink:
     url: str
-    status_code: int
+    status_codes: list[int]
     tags: list[str]
 
     def __post_init__(self):
         for tag in self.tags:
             if tag not in ALLOWED_TAGS:
                 raise ValueError(f"Unknown tag: {tag}")
+    
+    @classmethod
+    def from_line(cls, line: str):
+        codes, url, *tags = line.strip().split()
+        return cls(url, [int(c) for c in codes.split(',')], tags)
 
 
 @pytest.fixture(scope="session")
@@ -36,14 +41,11 @@ def known_dead_links() -> dict[str, int]:
         # Remove "comment" lines
         lines = [line for line in f.readlines() if not line.startswith('#')]
         # Split the code from the URL.
-        lines = [line.strip().split(' ') for line in lines]
-        links = [DeadLink(url=line[1], status_code=int(line[0]), tags=line[2:]) for line in lines]
-        if IN_CI:
-            links = [link for link in links if "no-ci" not in link.tags]
-        else:
+        links = [DeadLink.from_line(line) for line in lines]
+        if not IN_CI:
             links = [link for link in links if "ci-only" not in link.tags]
         # Create a mapping from URL to expected status code.
-        known_dead_links_and_codes = {link.url: link.status_code for link in links}
+        known_dead_links_and_codes = {link.url: link.status_codes for link in links}
     return known_dead_links_and_codes
 
 
@@ -89,7 +91,7 @@ async def test_all_external_links_work(external_links: set[str], known_dead_link
         response = await async_client.get(link, headers=EXTERNAL_HEADERS, follow_redirects=True)
         if response.status_code != 200:
             # Ignoring known dead links.
-            if link in known_dead_links and response.status_code == known_dead_links[link]:
+            if link in known_dead_links and response.status_code in known_dead_links[link]:
                 return link, True, response.status_code
             return link, False, response.status_code
         return link, True, response.status_code
