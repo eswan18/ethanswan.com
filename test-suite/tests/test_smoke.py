@@ -16,7 +16,7 @@ EXTERNAL_HEADERS = {
 }
 
 IN_CI = os.getenv("CI") == "true"
-ALLOWED_TAGS = ("ci-only")
+ALLOWED_TAGS = ("ci-only", "no-ci")
 
 @dataclass
 class DeadLink:
@@ -38,7 +38,9 @@ def known_dead_links() -> dict[str, int]:
         # Split the code from the URL.
         lines = [line.strip().split(' ') for line in lines]
         links = [DeadLink(url=line[1], status_code=int(line[0]), tags=line[2:]) for line in lines]
-        if not IN_CI:
+        if IN_CI:
+            links = [link for link in links if "no-ci" not in link.tags]
+        else:
             links = [link for link in links if "ci-only" not in link.tags]
         # Create a mapping from URL to expected status code.
         known_dead_links_and_codes = {link.url: link.status_code for link in links}
