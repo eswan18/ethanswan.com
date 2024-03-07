@@ -1,5 +1,7 @@
+import os
 import asyncio
 from pathlib import Path
+from dataclasses import dataclass
 
 import pytest
 from httpx import AsyncClient
@@ -13,6 +15,20 @@ EXTERNAL_HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.3.1 Safari/605.1.15',
 }
 
+IN_CI = os.getenv("CI") == "true"
+ALLOWED_TAGS = ("ci-only")
+
+@dataclass
+class DeadLink:
+    url: str
+    status_code: int
+    tags: list[str]
+
+    def __post_init__(self):
+        for tag in self.tags:
+            if tag not in ALLOWED_TAGS:
+                raise ValueError(f"Unknown tag: {tag}")
+
 
 @pytest.fixture(scope="session")
 def known_dead_links() -> dict[str, int]:
@@ -21,8 +37,11 @@ def known_dead_links() -> dict[str, int]:
         lines = [line for line in f.readlines() if not line.startswith('#')]
         # Split the code from the URL.
         lines = [line.strip().split(' ') for line in lines]
+        links = [DeadLink(url=line[1], status_code=int(line[0]), tags=line[2:]) for line in lines]
+        if not IN_CI:
+            links = [link for link in links if "ci-only" not in link.tags]
         # Create a mapping from URL to expected status code.
-        known_dead_links_and_codes = {line[1]: int(line[0]) for line in lines}
+        known_dead_links_and_codes = {link.url: link.status_code for link in links}
     return known_dead_links_and_codes
 
 
