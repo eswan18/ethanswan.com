@@ -6,6 +6,7 @@ layout: post
 date: 2024-04-06
 tags:
 - content
+- now-and-here
 summary: "My life is held together with the Todoist app ... but it's just not a good fit for work in the corporate world. And that led me to a practical side project."
 ---
 
