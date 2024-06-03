@@ -9,7 +9,7 @@ tags:
 summary: "Sometimes when you're searching for a digital record, you don't remember the precise wording of the original entry.... Semantic search attempts to compare the meanings of words and phrases instead of the characters."
 ---
 
-Sometimes when you're searching for some text, you don't know or remember the precise wording of what you're looking for.
+Sometimes when I'm searching for some text, I don't know or remember the precise wording of what I'm looking for.
 
 I might be searching in my task manager for the "Take out the trash" task.
 But I type "garbage" instead of "trash", having forgotten the original verbiage.
@@ -107,10 +107,11 @@ Superior models have a few qualities:
 1. They understand how the context around a word influences its semantics. For example, *flute* is related to *clarinet* in one way: as musical instruments.
 *Flute* is also related to *champagne*, though in a very different way.
 Importantly, *clarinet* and *champagne* aren't themselves similar, even though they're both related to *flute*.
-For our search use case, this matters: a query for *clarinet* should score well against a task like *practice the flute*.
+When searching, this matters: a query for *clarinet* should score well against a task like *practice the flute*.
 But a query for *champagne* shouldn't.
-2. They have enough fidelity to disambiguate similar words that are slightly different. Many synonyms carry subtly different connotations, such as "boss" and "manager". If a model is forced to condense semantics too much, or doesn't "understand" words well enough, it won't be able to tease this apart.
-For my use case, this isn't as important, but it matters a lot for large language models.
+2. They have enough fidelity to disambiguate similar words that are slightly different. Many synonyms carry subtly different connotations, such as *boss* and *manager*.
+If a model is forced to condense semantics too much, or doesn't "understand" words well enough, it won't be able to tease this apart.
+For search, this isn't as important, but it matters a lot for large language models.
 Imagine if ChatGPT gave you the advice: "Don't let anyone manager you around."
 Synonyms are rarely interchangeable in *all* situations.
 
