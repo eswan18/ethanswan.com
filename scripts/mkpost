@@ -1,0 +1,50 @@
+#!/usr/bin/env python3
+
+from datetime import date
+from pathlib import Path
+
+MAX_SLUG_LEN = 40
+
+posts_dir = Path("content/posts")
+
+default_date = date.today().strftime("%Y-%m-%d")
+post_date = input(f"Date (default {default_date}): ")
+post_date = post_date if post_date else default_date
+
+# Validate the date is in %Y-%m-%d format
+try:
+    date.fromisoformat(post_date)
+except ValueError:
+    print("Invalid date format. Use YYYY-MM-DD.")
+    exit(1)
+
+year = post_date.split("-")[0]
+
+year_dir = posts_dir / year
+if not year_dir.exists():
+    print(f"{year_dir} doesn't exist. Creating...")
+    year_dir.mkdir()
+
+post_title = input("Title: ")
+slug = post_title.lower().replace(" ", "-")
+if len(slug) > MAX_SLUG_LEN:
+    slug = slug[:MAX_SLUG_LEN].rsplit("-", 1)[0]
+specified_slug = input(f"Slug (default {slug}): ")
+slug = specified_slug if specified_slug else slug
+
+post_dir = year_dir / f"{post_date}-{slug}"
+post_dir.mkdir()
+post_file = post_dir / "index.md"
+with open(post_file, "w") as f:
+    f.write(
+f"""---
+title: "{post_title}"
+# subtitle: ""
+date: {post_date}
+slug: {slug}
+# tags: []
+# summary: "..."
+---
+"""
+)
+print(f"Created post at {post_file}")
