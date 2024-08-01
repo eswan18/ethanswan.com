@@ -67,7 +67,7 @@ def execute(self, stmt: Stmt) -> None:
 
 Here, the statement is passed as an argument to the method (`stmt`), and then passed into a pattern-matching block.
 Depending on the type of `stmt`, we want to take different actions in order to execute it.
-We can unpack the internal components of the `stmt` using the arguments after the subclass names in each case – so `case VarStmt(token, initializer)` actually stores the `stmt`'s `token` attribute in a variable called token and its `initializer` attribute in a variable called `initializer`, both of which we can use within the following block.
+We can unpack the internal components of the `stmt` using the arguments after the subclass names in each case – so `case VarStmt(token, initializer)` actually stores the `stmt`'s `token` attribute in a variable called `token` and its `initializer` attribute in a variable called `initializer`, both of which we can use within the following block.
 A `VarStmt` is something like `var x = 3`, so extracting variable name (the "token") and the initial value makes it simpler to evaluate the initial value and then store it in a variable named with the given token -- which is exactly what the two lines in the `case VarStmt...` clause do.
 
 That feature may seem a bit niche, but when I started this project I didn't really understand the benefit of pattern matching.
@@ -76,7 +76,7 @@ Building an interpreter was such a new problem that I wasn't able to reflexively
 
 Obviously, most of my learnings from the book so far are about interpreters and compilers, not Python language features.
 One takeaway that's really stuck with me is how much simpler things are with stateful code.
-Which is kind of funny, actually, because I've been told that pure functional language like Haskell are good for parsing.
+Which is kind of funny, actually, because I've been told that pure functional languages like Haskell are good for parsing.
 Maybe they are in the abstract, but I suspect that it would be very hard to add good error reporting in a purely functional approach.
 It seems like tracking errors – both in order to report their location and to accumulate as many as possible before failing in earlier stages, like parsing and scanning – requires keeping track of a lot of state.
 
