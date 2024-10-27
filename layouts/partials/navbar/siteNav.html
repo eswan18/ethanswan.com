@@ -1,11 +1,10 @@
 {{/* Expects to be passed the page object. */}}
 
-
 {{ $thisPageLink := .RelPermalink | strings.TrimSuffix "/" }}
 {{ $navLinks := .Site.Params.Navbar.links }}
 {{/* The standard site nav for full-size screens */}}
-<div class="hidden lg:flex bg-base-200">
-    <ul class="menu menu-horizontal font-semibold text-accent">
+<div class="hidden lg:flex">
+    <ul class="menu menu-horizontal font-semibold text-primary">
         {{ range $navItem := $navLinks }}
         {{ if eq $thisPageLink ($navItem.link | strings.TrimSuffix "/") }}
             <li><a class="active" href="{{ $navItem.link }}">{{ $navItem.name }}</a></li>
@@ -15,6 +14,6 @@
     </ul>
 </div>
 {{/* The mobile-only dropdown menu */}}
-<label for="sidebar-drawer" class="lg:hidden drawer-button btn btn-ghost">
+<label for="sidebar-drawer" class="lg:hidden drawer-button btn btn-ghost text-primary">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16" /></svg>
 </label>

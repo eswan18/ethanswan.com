@@ -22,15 +22,15 @@
   </head>
   <body>
     {{ partial "navbar/main.html" page }}
-    <div class="flex flex-row mt-8 mx-4 drawer w-fit">
-      <input id="sidebar-drawer" type="checkbox" class="drawer-toggle" />
-      <div class="drawer-content">
+    <div class="drawer">
+      <input id="sidebar-drawer" type="checkbox" class="drawer-toggle hidden" />
+      <div class="drawer-content flex">
         {{/* Left sidebar */}}
         <div class="flex-auto">
           {{ block "left-sidebar" . }}
           {{ end }}
         </div>
-        <div class="flex-grow-0 flex-shrink-1 md:max-w-3xl overflow-hidden prose">
+        <div class="flex-grow-0 flex-shrink-1 md:max-w-3xl overflow-hidden prose m-4">
           {{ partial "pageContent/main.html" . }}
         </div>
         {{/* Right sidebar */}}
@@ -41,9 +41,14 @@
       </div>
       <div class="drawer-side">
         <label for="sidebar-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
-          <ul tabindex="0" class="menu bg-base-200 text-base-content min-h-full w-64 p-4">
+          <ul tabindex="0" class="menu bg-base-200 min-h-full w-48 p-4 text-lg text-primary">
+          {{ $thisPageLink := .RelPermalink | strings.TrimSuffix "/" }}
           {{ range $navItem := $.Site.Params.navbar.links }}
-              <li><a href="{{ $navItem.link }}">{{ $navItem.name }}</a></li>
+            {{ if eq $thisPageLink ($navItem.link | strings.TrimSuffix "/") }}
+                <li><a class="active" href="{{ $navItem.link }}">{{ $navItem.name }}</a></li>
+            {{ else }}
+                <li><a href="{{ $navItem.link }}">{{ $navItem.name }}</a></li>
+            {{ end }}
           {{ end }}
           </ul>
       </div>

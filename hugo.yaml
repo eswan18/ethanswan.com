@@ -3,7 +3,7 @@ params:
   AuthorName: Ethan Swan
   navbar:
     links:
-    - name: About
+    - name: Home
       link: /
     - name: Blog
       link: /posts
