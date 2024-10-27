@@ -1,23 +1,28 @@
 {{/* Expects to be passed an array of objects that have `name` and `link` fields */}}
 
 {{/* The standard site nav for full-size screens */}}
-<div class="hidden lg:flex">
-    <ul class="menu menu-horizontal text-lg font-bold text-accent">
-        {{ range $navitem := .}}{{ with $navitem}}
-        <li><a class="rounded-xl" href="{{ .link }}">{{ .name }}</a></li>
+<div class="hidden lg:flex bg-base-200">
+    <ul class="menu menu-horizontal font-semibold text-accent">
+        {{ $thisPageLink := .RelPermalink | strings.TrimSuffix "/" }}
+        {{ range $navitem := .Site.Params.Navbar.links }}{{ with $navitem}}
+        {{ if eq $thisPageLink (.link | strings.TrimSuffix "/") }}
+            <li><a class="active" href="{{ .link }}">{{ .name }}</a></li>
+        {{ else }}
+            <li><a href="{{ .link }}">{{ .name }}</a></li>
+        {{ end }}
         {{ end }}{{ end }}
     </ul>
 </div>
 {{/* The mobile-only dropdown menu */}}
-<div class="dropdown">
+<div class="lg:hidden dropdown">
     <div tabindex="0" role="button" class="btn btn-accent btn-sm lg:hidden p-0.5 align-middle dark:text-white">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
     </div>
     <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-    {{ range $navitem := .}}
+    {{/* {{ range $navitem := .}}
         {{ with $navitem }}
         <li><a href="{{ .link }}">{{ .name }}</a></li>
         {{ end }}
-    {{ end }}
+    {{ end }} */}}
     </ul>
 </div>

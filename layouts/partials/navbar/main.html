@@ -1,8 +1,8 @@
-<div class="navbar h-14 min-h-[3rem]">
-    <div class="navbar-start w-[70%]">
-        {{ partial "navbar/siteNav.html" .links }}
+<div class="w-full flex flex-row justify-between items-center bg-base-200">
+    <div>
+        {{ partial "navbar/siteNav.html" . }}
     </div>
-    <div class="navbar-end w-[30%]">
+    <div>
         {{ partial "navbar/darkModeSwitch.html" }}
     </div>
 </div>
