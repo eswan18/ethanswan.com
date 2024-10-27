@@ -1,23 +1,23 @@
 <article class="post-preview">
-    <header>
-      <h2 class="mb-2 mt-2"><a class="text-secondary no-underline" href='{{ .Permalink }}'> {{ .Title }}</a> </h2>
-      <div class="italic">
-        <span class="ml-1 mr-3">
-          <i class="fa-regular fa-calendar mr-2"></i>{{ .Date.Format "2006-01-02" }}
-        </span>
-        <span class="mx-3">
-          <i class="fa-regular fa-file-lines mr-2"></i>~{{ .FuzzyWordCount }} words
-        </span>
-      </div>
-    </header>
-    <section>
+  <header>
+
+    <h2 class="mb-2 mt-2">
+      <a href='{{ .Permalink }}' class="text-secondary">{{ .Title }}</span></a>
+    </h2>
+    <div class="italic">
+      <span class="ml-1 mr-3">
+        <i class="fa-regular fa-calendar mr-2"></i>{{ .Date.Format "2006-01-02" }}
+      </span>
+      <span class="mx-3">
+        <i class="fa-regular fa-file-lines mr-2"></i>~{{ .FuzzyWordCount }} words
+      </span>
+    </div>
+  </header>
+  <section>
     <div class="mt-3 mb-1 prose">
       {{ .Summary }}
     </div>
-    </section>
-    <footer class="mt-3">
-      <a href="{{ .Permalink }}">
-        <button class="btn btn-sm btn-secondary">Read more →</button>
-      </a>
-    </footer>
-  </article>
+  </section>
+  <footer class="mt-3">
+  </footer>
+</article>
