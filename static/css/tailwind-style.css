@@ -4231,6 +4231,10 @@ html:has(.drawer-toggle:checked) {
   height: auto;
 }
 
+.h-9 {
+  height: 2.25rem;
+}
+
 .min-h-full {
   min-height: 100%;
 }
@@ -4257,6 +4261,10 @@ html:has(.drawer-toggle:checked) {
 
 .w-full {
   width: 100%;
+}
+
+.w-9 {
+  width: 2.25rem;
 }
 
 .max-w-full {
@@ -4461,6 +4469,16 @@ html:has(.drawer-toggle:checked) {
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .text-left {
