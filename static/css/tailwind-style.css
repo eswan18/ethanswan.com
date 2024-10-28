@@ -4916,6 +4916,11 @@ html:has(.drawer-toggle:checked) {
   color: var(--fallback-s,oklch(var(--s)/var(--tw-text-opacity)));
 }
 
+.checked\:text-primary:checked {
+  --tw-text-opacity: 1;
+  color: var(--fallback-p,oklch(var(--p)/var(--tw-text-opacity)));
+}
+
 .prose-a\:text-secondary :is(:where(a):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
   --tw-text-opacity: 1;
   color: var(--fallback-s,oklch(var(--s)/var(--tw-text-opacity)));
@@ -4991,6 +4996,13 @@ html:has(.drawer-toggle:checked) {
 
   .lg\:w-80 {
     width: 20rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .dark\:text-secondary {
+    --tw-text-opacity: 1;
+    color: var(--fallback-s,oklch(var(--s)/var(--tw-text-opacity)));
   }
 }
 
