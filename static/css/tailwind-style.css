@@ -5289,6 +5289,16 @@ html:has(.drawer-toggle:checked) {
   color: var(--fallback-a,oklch(var(--a)/var(--tw-text-opacity)));
 }
 
+.\[\&\>ul\>li\:not\(\.active\)\:not\(\.disabled\)\>a\]\:text-secondary>ul>li:not(.active):not(.disabled)>a {
+  --tw-text-opacity: 1;
+  color: var(--fallback-s,oklch(var(--s)/var(--tw-text-opacity)));
+}
+
+.\[\&\>ul\>li\:not\(\.active\)\:not\(\.disabled\)\>a\]\:text-primary>ul>li:not(.active):not(.disabled)>a {
+  --tw-text-opacity: 1;
+  color: var(--fallback-p,oklch(var(--p)/var(--tw-text-opacity)));
+}
+
 .\[\&\>ul\>li\>a\]\:rounded-md>ul>li>a {
   border-radius: 0.375rem;
 }
