@@ -23,8 +23,8 @@ I want to build more toy apps, work through my nonfiction book backlog, visit So
 And after almost a decade of life out of college, I want to figure out what the *next* decade should look like.
 
 Well, now's my chance.
-My last day at Capital One is January 16.
-I fly to Europe on January 17, and I'll spend about a month in Portugal, Spain, and Italy.
+My last day at Capital One is January 17.
+I fly to Europe late that evening, and I'll spend about a month in Portugal, Spain, and Italy.
 I'll be giving a keynote at UC's [Analytics Summit](https://business.uc.edu/about/centers-partnerships/business-analytics/events/analytics-summit.html) in May.
 I'm running several distance races in Chicago next spring, along with the marathon in the fall.
 I might finally sign up for swimming lessons so I can check a triathlon off my bucket list.
