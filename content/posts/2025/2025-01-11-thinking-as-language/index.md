@@ -1,10 +1,16 @@
 ---
 title: "Reflections on Thinking as Language"
-# subtitle: ""
 date: 2025-01-11
 slug: thinking-as-language
-# tags: []
-# summary: "..."
+tags:
+- llm
+- ai
+summary: "Two years of using LLMs regularly has challenged a strong belief of mine: that
+fundamentally, thinking is primarily just language that happens in our heads.
+I'm aware that this wasn't a prevailing view in psychology, but I still want to
+talk about what changed my mind, since it didn't require reading academic
+literature -- just engaging with practical tools and reflecting on the
+experience."
 ---
 
 Two years of using LLMs regularly has challenged a strong belief of mine: that
