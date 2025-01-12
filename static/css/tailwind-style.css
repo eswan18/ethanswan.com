@@ -657,7 +657,42 @@ html {
   --er: 62.0133% 0.208385 28.717543;
 }
 
-[data-theme=cmyk] {
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --b2: 19.3144% 0.037037 265.754874;
+    --b3: 17.8606% 0.034249 265.754874;
+    --bc: 84.1536% 0.007965 265.754874;
+    --pc: 15.0703% 0.027798 232.66148;
+    --sc: 13.6023% 0.031661 276.934902;
+    --ac: 14.4721% 0.035244 350.048739;
+    --nc: 85.5899% 0.00737 260.030984;
+    --suc: 15.6904% 0.026506 181.911977;
+    --wac: 16.6486% 0.027912 82.95003;
+    --erc: 14.3572% 0.034051 13.11834;
+    --rounded-box: 1rem;
+    --rounded-btn: 0.5rem;
+    --rounded-badge: 1.9rem;
+    --animation-btn: 0.25s;
+    --animation-input: .2s;
+    --btn-focus-scale: 0.95;
+    --border-btn: 1px;
+    --tab-border: 1px;
+    --tab-radius: 0.5rem;
+    --p: 75.3513% 0.138989 232.66148;
+    --s: 68.0113% 0.158303 276.934902;
+    --a: 72.3603% 0.176218 350.048739;
+    --n: 27.9495% 0.036848 260.030984;
+    --b1: 20.7682% 0.039824 265.754874;
+    --in: 68.4553% 0.148062 237.25135;
+    --inc: 0% 0 0;
+    --su: 78.452% 0.132529 181.911977;
+    --wa: 83.2428% 0.139558 82.95003;
+    --er: 71.7858% 0.170255 13.11834;
+  }
+}
+
+[data-theme=light] {
   color-scheme: light;
   --b2: 93% 0 0;
   --b3: 86% 0 0;
@@ -690,7 +725,7 @@ html {
   --er: 62.0133% 0.208385 28.717543;
 }
 
-:root:has(input.theme-controller[value=cmyk]:checked) {
+:root:has(input.theme-controller[value=light]:checked) {
   color-scheme: light;
   --b2: 93% 0 0;
   --b3: 86% 0 0;
@@ -723,7 +758,7 @@ html {
   --er: 62.0133% 0.208385 28.717543;
 }
 
-[data-theme=night] {
+[data-theme=dark] {
   color-scheme: dark;
   --b2: 19.3144% 0.037037 265.754874;
   --b3: 17.8606% 0.034249 265.754874;
@@ -756,7 +791,7 @@ html {
   --er: 71.7858% 0.170255 13.11834;
 }
 
-:root:has(input.theme-controller[value=night]:checked) {
+:root:has(input.theme-controller[value=dark]:checked) {
   color-scheme: dark;
   --b2: 19.3144% 0.037037 265.754874;
   --b3: 17.8606% 0.034249 265.754874;
@@ -4602,12 +4637,12 @@ html:has(.drawer-toggle:checked) {
        column-gap: 2rem;
 }
 
-.gap-y-10 {
-  row-gap: 2.5rem;
-}
-
 .gap-y-2 {
   row-gap: 0.5rem;
+}
+
+.gap-y-8 {
+  row-gap: 2rem;
 }
 
 .overflow-hidden {
@@ -4762,6 +4797,10 @@ html:has(.drawer-toggle:checked) {
   font-style: italic;
 }
 
+.text-muted-heading {
+  color: var(--fallback-bc,oklch(var(--bc)/0.5));
+}
+
 .text-primary {
   --tw-text-opacity: 1;
   color: var(--fallback-p,oklch(var(--p)/var(--tw-text-opacity)));
@@ -4770,6 +4809,10 @@ html:has(.drawer-toggle:checked) {
 .text-secondary {
   --tw-text-opacity: 1;
   color: var(--fallback-s,oklch(var(--s)/var(--tw-text-opacity)));
+}
+
+.underline {
+  text-decoration-line: underline;
 }
 
 .no-underline {

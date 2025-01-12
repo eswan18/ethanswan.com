@@ -2,9 +2,26 @@
 
 module.exports = {
   content: ['../content/**/*.md', '../layouts/**/*.html'],
-  theme: {},
+  theme: {
+    extend: {
+      colors: {
+        "muted-heading": "var(--fallback-bc,oklch(var(--bc)/0.5))",
+      },
+    },
+  },
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
   daisyui: {
-    themes: ["cmyk", "night"],
+    themes: [
+      {
+        light: {
+          ...require("daisyui/src/theming/themes")["cmyk"],
+        }
+      },
+      {
+        dark: {
+          ...require("daisyui/src/theming/themes")["night"],
+        }
+      },
+    ],
   },
 }
