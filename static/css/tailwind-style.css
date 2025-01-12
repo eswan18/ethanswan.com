@@ -4464,12 +4464,12 @@ html:has(.drawer-toggle:checked) {
   display: contents;
 }
 
-.hidden {
-  display: none;
-}
-
 .\!hidden {
   display: none !important;
+}
+
+.hidden {
+  display: none;
 }
 
 .h-32 {
@@ -5196,10 +5196,6 @@ html:has(.drawer-toggle:checked) {
   .sm\:mx-auto {
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .sm\:inline-block {
-    display: inline-block;
   }
 
   .sm\:\!inline-block {
