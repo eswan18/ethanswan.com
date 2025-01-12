@@ -4468,6 +4468,10 @@ html:has(.drawer-toggle:checked) {
   display: none;
 }
 
+.\!hidden {
+  display: none !important;
+}
+
 .h-32 {
   height: 8rem;
 }
@@ -4595,6 +4599,10 @@ html:has(.drawer-toggle:checked) {
   align-items: flex-start;
 }
 
+.items-end {
+  align-items: flex-end;
+}
+
 .items-center {
   align-items: center;
 }
@@ -4625,6 +4633,11 @@ html:has(.drawer-toggle:checked) {
 
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-x-2 {
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
 }
 
 .gap-x-3 {
@@ -4809,10 +4822,6 @@ html:has(.drawer-toggle:checked) {
 .text-secondary {
   --tw-text-opacity: 1;
   color: var(--fallback-s,oklch(var(--s)/var(--tw-text-opacity)));
-}
-
-.underline {
-  text-decoration-line: underline;
 }
 
 .no-underline {
@@ -5187,6 +5196,18 @@ html:has(.drawer-toggle:checked) {
   .sm\:mx-auto {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .sm\:inline-block {
+    display: inline-block;
+  }
+
+  .sm\:\!inline-block {
+    display: inline-block !important;
+  }
+
+  .sm\:inline {
+    display: inline;
   }
 
   .sm\:w-64 {

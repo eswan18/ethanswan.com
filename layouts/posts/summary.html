@@ -1,25 +1,31 @@
 <article class="prose">
-  <header class="mb-2">
-    <a href='{{ .Permalink }}' class="no-underline">
-      <h3 class="my-0 text-secondary underline">
-        {{ .Title }}
+  <header class="mb-2 flex flex-col">
+    <div class="flex flex-row justify-between items-end gap-x-2">
+      <h3 class="my-0">
+        <a href='{{ .Permalink }}' class="text-secondary">
+          {{ .Title }}
+        </a>
       </h3>
-      {{ if .Params.subtitle }}
-      <h4 class="no-underline text-secondary mb-0 mt-1">{{ .Params.subtitle }}</h4>
-      {{ end }}
-    </a>
+      <div class="italic mt-2 text-muted-heading">
+        <span class="mr-3 hidden sm:inline">
+          <i class="fa-regular fa-file-lines mr-2"></i>~{{ .FuzzyWordCount }} words
+        </span>
+        <span>
+          <i class="!hidden sm:!inline-block fa-regular fa-calendar mr-2 "></i>{{ .Date.Format "2006-01-02" }}
+        </span>
+      </div>
+    </div>
+    {{ if .Params.subtitle }}
+    <h4 class="no-underline text-secondary mb-0 mt-1">
+      <a href='{{ .Permalink }}' class="text-secondary no-underline">
+        {{ .Params.subtitle }}
+      </a>
+    </h4>
+    {{ end }}
   </header>
   <section>
     <div class="prose">
       {{ .Summary }}
-    </div>
-    <div class="italic mt-2 text-base text-muted-heading">
-      <span class="ml-1 mr-3">
-        <i class="fa-regular fa-calendar mr-2"></i>{{ .Date.Format "2006-01-02" }}
-      </span>
-      <span class="mx-3">
-        <i class="fa-regular fa-file-lines mr-2"></i>~{{ .FuzzyWordCount }} words
-      </span>
     </div>
   </section>
 </article>
