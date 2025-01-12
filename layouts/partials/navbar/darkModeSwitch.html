@@ -20,22 +20,22 @@
     const toggleSwitch = document.querySelector('.theme-controller');
     function switchTheme(e) {
         theme = localStorage.getItem('theme')
-        if (theme == "night") {
+        if (theme == "dark") {
             // Switch to light theme.
-            document.documentElement.setAttribute('data-theme', 'cmyk');
-            localStorage.setItem('theme', 'cmyk')
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light')
         } else {
-            // Switch to dark theme ("night") in DaisyUI.
-            document.documentElement.setAttribute('data-theme', 'night');
-            localStorage.setItem('theme', 'night')
+            // Switch to dark theme.
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark')
         }
     }
     toggleSwitch.addEventListener('click', switchTheme, false);
 
     // Initialize the theme on new page loads.
-    const currentTheme = localStorage.getItem('theme') || 'cmyk';
+    const currentTheme = localStorage.getItem('theme') || 'light';
     document.documentElement.setAttribute('data-theme', currentTheme);
-    if (currentTheme === 'night') {
+    if (currentTheme === 'dark') {
         toggleSwitch.checked = true;
     }
 </script>
