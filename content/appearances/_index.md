@@ -5,5 +5,5 @@ bannerImage:
   path: "images/ethan_speaking.jpeg"
 showList: true
 listSummaryType: card
-listSummaryContainerClasses: flex flex-col flex-nowrap
+listSummaryContainerClasses: flex flex-col flex-nowrap items-start
 ---

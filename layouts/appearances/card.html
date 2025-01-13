@@ -1,18 +1,34 @@
 {{ $page := . }}
-<div class="card card-bordered card-compact max-w-xl shadow-lg rounded-lg m-2 sm:mx-auto">
-    <div class="card-body collapse collapse-arrow">
-        <input type="checkbox" /> {{/* This is the checkbox that toggles the collapse under-the-hood. */}}
-        <div class="collapse-title flex flex-row justify-between items-center w-full">
-            <h2 class="card-title !my-0">
+<div class="my-3">
+    <div tabindex="0" class="collapse collapse-arrow">
+        <div class="collapse-title pb-0">
+            <h2 class="card-title my-0">
                 {{ .Title }}
             </h2>
-            <button class="btn btn-secondary btn-outline btn-sm">
-                Details
-            </button>
+            <div class="flex flex-row justify-start items-end gap-x-8 px-4 prose text-muted-heading">
+                {{/* Appearance date */}}
+                <div class="space-x-2">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>{{ .Date.Format "2006-01-02" }}</span>
+                </div>
+                {{/* Appearance type */}}
+                <div class="space-x-2">
+                    {{ if hasPrefix .Params.appearanceType "Podcast" }}
+                    <i class="fas fa-microphone"></i>
+                    {{ else if hasPrefix .Params.appearanceType "Conference" }}
+                    <i class="fa-solid fa-person-chalkboard"></i>
+                    {{ end }}
+                    <span>{{ .Params.appearanceType }}</span>
+                </div>
+            </div>
         </div>
 
-        <div class="collapse-content px-8 prose">
-            <div class="card-actions mb-4 px-8 flex flex-row justify-center items-center gap-x-8">
+        <div class="collapse-content px-8 prose space-y-2">
+            <span class="text-muted-heading">{{ .Params.where }}</span>
+            <section>
+                {{ .Summary }}
+            </section>
+            <div class="card-actions mb-4 flex flex-row justify-start items-center gap-x-8">
                 {{ if isset .Params "links" }}
                 {{ range $text, $link := .Params.links }}
                 <a class="uppercase text-secondary text-sm" href="{{ $link }}">
@@ -20,29 +36,6 @@
                 </a>
                 {{ end }}
                 {{ end }}
-            </div>
-            <section>
-                {{ .Summary }}
-            </section>
-        </div>
-
-        <div class="px-16 mb-3 text-md">
-            {{/* Appearance type and location */}}
-            <div class="flex flex-row flex-wrap items-start justify-start gap-x-3">
-                <div class="flex-initial flex flex-row flex-nowrap gap-1">
-                    {{ if hasPrefix .Params.appearanceType "Podcast" }}
-                    <i class="fas fa-microphone translate-y-1 w-6"></i>
-                    {{ else if hasPrefix .Params.appearanceType "Conference" }}
-                    <i class="fa-solid fa-person-chalkboard translate-y-1 w-6"></i>
-                    {{ end }}
-                    <span class="font-bold">{{ .Params.appearanceType }}</span>
-                </div>
-                {{ .Params.where }}
-            </div>
-            {{/* Appearance when */}}
-            <div class="flex-initial flex flex-row flex-nowrap gap-1 mt-1">
-                <i class="fa-regular fa-calendar translate-y-1 w-6"></i>
-                <span class="appearance-date">{{ .Date.Format "2006-01-02" }}</span>
             </div>
         </div>
     </div>
