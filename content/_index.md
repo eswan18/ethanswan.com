@@ -9,7 +9,7 @@ I'm Ethan, a Chicago-based technologist.
 I specialize in Python and data systems, especially their use in web applications.
 
 I teach and offer consulting on those topics.
-You can see my course offerings [here](/teaching) and my past conference talks [here](/appearances).
+You can see my course offerings [here](/teaching) and my past conference talks [here](/speaking).
 
 Beyond my professional life, my interests are varied.
 Running and fitness generally have been a big part of my life for many years, but I also enjoy occasional tech projects -- which pop up occasionally in my [blog posts](/posts).

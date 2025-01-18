@@ -9,8 +9,8 @@ params:
       link: /posts
     - name: Teaching
       link: /teaching
-    - name: Appearances
-      link: /appearances
+    - name: Speaking
+      link: /speaking
     - name: Nonsense
       link: /nonsense
 permalinks:
