@@ -11,8 +11,6 @@ params:
       link: /teaching
     - name: Appearances
       link: /appearances
-    - name: Running
-      link: /running-blog
     - name: Nonsense
       link: /nonsense
 permalinks:
