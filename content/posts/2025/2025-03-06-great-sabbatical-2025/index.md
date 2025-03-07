@@ -64,7 +64,7 @@ In the end, I ran 10 times and lifted 11.
 
 ## Expenses
 
-Thanks to YNAB, it was really easy for me to track and categorize my spending in Europe.
+Thanks to [YNAB](https://www.ynab.com), it was really easy for me to track and categorize my spending in Europe.
 
 {{< images/image src="spending.png" alt="Spending Chart" class="w-full sm:max-w-none" >}}
 
