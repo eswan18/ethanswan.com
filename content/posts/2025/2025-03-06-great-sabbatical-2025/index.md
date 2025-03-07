@@ -4,7 +4,7 @@ subtitle: Summary and statistics
 date: 2025-03-06
 slug: great-sabbatical-2025
 # tags: []
-# summary: "..."
+summary: "My sabbatical has come to an end, and that means it's time for a retrospective."
 ---
 
 My sabbatical has come to an end, and that means it's time for a retrospective.
