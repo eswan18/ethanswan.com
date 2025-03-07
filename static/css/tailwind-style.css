@@ -4530,10 +4530,6 @@ html:has(.drawer-toggle:checked) {
   max-width: 20rem;
 }
 
-.max-w-none {
-  max-width: none;
-}
-
 .flex-auto {
   flex: 1 1 auto;
 }
@@ -5259,10 +5255,6 @@ html:has(.drawer-toggle:checked) {
 
   .md\:max-w-md {
     max-width: 28rem;
-  }
-
-  .md\:max-w-none {
-    max-width: none;
   }
 }
 
