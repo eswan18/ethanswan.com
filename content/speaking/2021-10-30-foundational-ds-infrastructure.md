@@ -1,7 +1,6 @@
 ---
 title: Foundational Infrastructure to Create a Successful Data Science Team
 date: 2021-10-30
-params:
 appearanceType: Conference Talk
 where: PyData Global 2021
 links:

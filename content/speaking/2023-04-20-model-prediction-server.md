@@ -1,7 +1,6 @@
 ---
 title: "Deploying a Model Prediction Server (Tutorial)"
 date: 2023-04-20
-params:
 appearanceType: Conference Talk
 where: PyCon 2023
 links:
