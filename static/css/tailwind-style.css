@@ -5287,3 +5287,7 @@ html:has(.drawer-toggle:checked) {
 .\[\&\>ul\]\:justify-evenly>ul {
   justify-content: space-evenly;
 }
+
+.\[\&_ol\]\:ps-8 ol {
+  padding-inline-start: 2rem;
+}
