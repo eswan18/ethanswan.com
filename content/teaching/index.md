@@ -1,6 +1,5 @@
 ---
 title: Teaching
-kind: list
 embeddedImage:
   alt: Ethan Teaching
   path: images/ethan_teaching.jpeg
