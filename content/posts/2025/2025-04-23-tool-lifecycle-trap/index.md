@@ -9,12 +9,12 @@ summary: "Good tools save time and free users from repetitive tasks, but only if
 Across all my jobs, internal tooling has always fascinated me.
 
 In my first job, at 84.51˚, I saw some low-hanging fruit for automation and started developing an internal Python library side-of-desk.
-Over the years, I switched teams a few times, that one Python package turned into several, and eventually toolbuilding became my primary role there.
+Over the years, that one Python package turned into several. By the time I left, toolbuilding had become my primary role.
 
 Everyone dabbled in DevOps here and there at ReviewTrackers, but I especially loved digging through the code for our deployment pipeline and test environment.
 And when I got tired of using curl to interactively test new features in our API layer, I put together a little Python client library.
 
-Capital One wasn't the kind of place that enabled experimental side projects very well, but it introduced me to some genuinely complex internal systems, many of which were mandatory for tasks like deployment and testing.
+Capital One’s culture and bureaucracy made experimental side projects difficult, but it introduced me to some genuinely complex internal systems, many of which were mandatory for tasks like deployment and testing.
 I spent a lot of time dealing with them and just as much thinking about how I'd have done things differently if I were in charge.
 
 My view is that most of the time, investing in internal tools is a big win.
@@ -37,24 +37,26 @@ However, it's hard for leaders to prioritize these because the company is still 
 
 Still, smart companies begin to prioritize toolbuilding over less critical feature work at this stage.
 Good tools are hugely valuable over the medium- and long-term, often requiring just 2-5 engineers to build and saving 10-100x that headcount as the company grows.
-Those developers can measure their success by how many other employees choose to use their tool, and as long as they build something useful, it's an easy sell to internal "customers".
+Those developers can measure their success by how many other employees choose to use their tool;
+as long as they build something useful, it's an easy sell to internal "customers".
 
 As the organization grows more, it keeps adding and enhancing tools that address repetitive tasks.
 Many organizations are then tempted to begin *mandating* the use of certain internal tools.
 It makes sense: these tools can be used to enforce standardization across the enterprise, including methodology or regulatory requirements where applicable.
+
 But my experience is that top-down mandates usually come back to bite the companies that use them.
 
 ## The Trap
 
-Once tools are made mandatory, the tool development team no longer needs to target user experience in any way:
+Once tools are made mandatory, the tool development team no longer needs to target user experience:
 its "customer base" is guaranteed by internal fiat.
 Feature development continues, but with an emphasis on checking boxes rather than building things that users want to use.
 
 **This leads to tools that *technically* work but are confusing, error-prone, underdocumented, and not generalizable to novel use cases[^enterprise-software]**.
 
-Eventually, the hidden costs of these tools cause internal paralysis: building new products is slow and painful because it requires interacting with several flaky and difficult tools.
+Eventually, the hidden costs of these tools cause internal paralysis: building new products is slow and painful because it requires interacting with numerous flaky and difficult tools along the way.
 Blame for this slowdown is hard to attribute.
-Developers and data scientists are complaining about the internal tools, but those tools technically meet all the requirements set forth by leadership.
+Developers and data scientists complain about the internal tools, but those tools technically meet all the requirements set forth by leadership.
 And even if some UX improvements are prioritized for them, it's hard to find a sustainable way to fix the underlying incentives problem, so this will happen again and again.
 
 ## Solutions
