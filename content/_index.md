@@ -7,6 +7,7 @@ embeddedImage:
 
 I'm Ethan, a Chicago-based technologist.
 I specialize in Python and data systems, especially their use in web applications.
+I'm a staff engineer on the platform team at [Valimail](https://www.valimail.com).
 
 I teach and offer consulting on those topics.
 You can see my course offerings [here](/teaching) and my past conference talks [here](/speaking).
