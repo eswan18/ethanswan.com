@@ -8,6 +8,9 @@ summary: "Good tools save time and free users from repetitive tasks, but only if
 
 Across all my jobs, internal tooling has always fascinated me.
 
+Tools make life easier for their users -- at least in theory -- by abstracting tasks behind simpler interfaces.
+They can be web applications, programming libraries, and sometimes just Excel spreadsheets you threw together in 30 spare minutes.
+
 In my first job, at 84.51˚, I saw some low-hanging fruit for automation and started developing an internal Python library side-of-desk.
 Over the years, that one Python package turned into several. By the time I left, toolbuilding had become my primary role.
 
@@ -52,7 +55,8 @@ Once tools are made mandatory, the tool development team no longer needs to targ
 its "customer base" is guaranteed by internal fiat.
 Feature development continues, but with an emphasis on checking boxes rather than building things that users want to use.
 
-**This leads to tools that *technically* work but are confusing, error-prone, underdocumented, and not generalizable to novel use cases[^enterprise-software]**.
+This kind of goal misalignment is a near-inevitable outcome for any application with a captive audience.
+**It leads to tools that *technically* work but are confusing, error-prone, underdocumented, and not generalizable to novel use cases[^enterprise-software]**.
 
 Eventually, the hidden costs of these tools cause internal paralysis: building new products is slow and painful because it requires interacting with numerous flaky and difficult tools along the way.
 Blame for this slowdown is hard to attribute.
@@ -74,7 +78,7 @@ Have regulatory rules?
 Mandate compliance, and make teams *prove it* unless they use your internal tools that handle compliance for them.
 Again, they'll choose to just use the tools unless they're awful.
 
-You can't rely on good product leadership to overcome this problem, although many organizations try to.
+You shouldn't rely on good product leadership alone to overcome this problem, although many organizations try to.
 With external-facing features, product owners are motivated to understand users so they can drive sales (i.e. adoption) of the product.
 But when the product is mandated, as it is in required internal tooling, there's no "ground truth" indicating whether it's any good -- adoption is guaranteed regardless and product owners have no incentive to search for UX issues.
 
@@ -88,7 +92,7 @@ There's no way to make them optional: teams either record their tasks there or d
 And a lot of teams would prefer not to use them.
 
 But that's because project management systems usually aren't "tools" in the sense I've used the word until now.
-The purpose of project management systems, and similar software, is to enable *leadership* to oversee progress throughout the organization.
+The purpose of project management systems, and similar software, isn't really to enable individual contributors; it's to enable *leadership* to oversee their progress.
 
 So yes, you can and probably should mandate them, along with any other systems that are in place for an organizational purpose beyond employee enablement.
 
