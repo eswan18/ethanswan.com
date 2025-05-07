@@ -39,7 +39,7 @@
             <section>
                 {{ .Summary }}
             </section>
-            <div class="card-actions mb-4 flex flex-row justify-center items-center gap-x-8">
+            <div class="card-actions flex flex-row justify-center items-center gap-x-8">
                 {{ if isset .Params "links" }}
                 {{ range $text, $link := .Params.links }}
                 <a class="uppercase text-secondary text-sm" href="{{ $link }}">
