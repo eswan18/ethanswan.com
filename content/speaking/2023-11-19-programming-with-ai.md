@@ -1,5 +1,6 @@
 ---
-title: "Programming with AI: How LLMs are changing the way we write code"
+title: "Programming with AI"
+subtitle: "How LLMs are changing the way we write code"
 date: 2023-11-19
 appearanceType: Conference Talk
 where: University of Cincinnati Data Science Symposium 2023

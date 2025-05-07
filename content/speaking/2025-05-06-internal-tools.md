@@ -1,5 +1,6 @@
 ---
-title: "Moving Faster, Without Breaking Things: Investing in tools that are speedups, not speed bumps"
+title: "Moving Faster, Without Breaking Things"
+subtitle: "Investing in tools that are speedups, not speed bumps"
 date: 2025-05-06
 appearanceType: Conference Talk
 where: University of Cincinnati Analytics Summit 2025

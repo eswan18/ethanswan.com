@@ -1,5 +1,6 @@
 ---
-title: "ML Engineering: From Models to Value"
+title: "ML Engineering"
+subtitle: "From models to value"
 date: 2022-11-08
 appearanceType: Conference Talk
 where: University of Cincinnati Data Science Symposium 2022
