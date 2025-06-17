@@ -4,7 +4,7 @@ subtitle: "It breaks down when you look too close"
 date: 2025-06-17
 slug: tech-debt-is-a-limited-metaphor
 # tags: []
-# summary: "..."
+summary: "Long ago, doing things the fast way instead of the right way was nicknamed “technical debt” in the field of software development. However, analogies have limits."
 ---
 
 Long ago[^citation-needed], doing things the *fast* way instead of the *right* way was nicknamed "technical debt" in the field of software development.
