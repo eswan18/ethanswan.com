@@ -3,7 +3,8 @@ title: "AI 2027 and P(doom)"
 subtitle: The end of humanity has been on my mind, so I made a forecast.
 date: 2025-04-12
 slug: ai-2027-p-doom
-# tags: []
+tags:
+- ai
 summary: "The AI-2027 report, published two weeks ago, is a compelling read. It's been on my mind a lot."
 ---
 

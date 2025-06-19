@@ -3,6 +3,8 @@ title: "Sabbaticaling"
 date: 2025-01-04
 slug: sabbaticaling
 summary: "I'm taking a sabbatical."
+tags:
+- career
 ---
 
 I'm taking a sabbatical.

@@ -3,7 +3,8 @@ title: "No One Can Master Survivor"
 subtitle: "A broken game, sadly"
 date: 2025-04-09
 slug: cant-master-survivor
-tags: ["survivor"]
+tags:
+- survivor
 summary: "Survivor is one of my favorite shows.... But my view is that the game is basically broken."
 ---
 

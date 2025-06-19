@@ -3,7 +3,9 @@ title: "Behavioral Interviews Have Merit After All"
 subtitle: "Changing my mind about whether behavioral interviews are useful"
 date: 2025-03-24
 slug: behavioral-interviews-merit
-# tags: []
+tags:
+- people-management
+- career
 summary: "I always thought certain behavioral questions were silly.... My view has changed."
 ---
 

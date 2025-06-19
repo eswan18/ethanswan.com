@@ -1,11 +1,9 @@
 ---
 title: "What I'm Reading and Listening To, February 2025"
-# subtitle: ""
 date: 2025-02-07
 slug: what-im-reading-feb-2025
 tags:
 - content
-# summary: "..."
 ---
 
 Since [last year](/feed/2024/01/28/what-im-reading-jan-2024/), my content consumption has changed a little bit.

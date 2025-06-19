@@ -3,6 +3,8 @@ title: "The Tool Lifecycle Trap"
 subtitle: Investing in speedups that don't become speed bumps
 date: 2025-04-23
 slug: tool-lifecycle-trap
+tags:
+- tech
 summary: "Good tools save time and free users from repetitive tasks, but only if they're adopted (primarily) organically...."
 ---
 

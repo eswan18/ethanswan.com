@@ -3,7 +3,8 @@ title: "Tech Debt Is a Limited Metaphor"
 subtitle: "It breaks down when you look too close"
 date: 2025-06-17
 slug: tech-debt-is-a-limited-metaphor
-# tags: []
+tags:
+- tech
 summary: "Long ago, doing things the fast way instead of the right way was nicknamed “technical debt” in the field of software development. However, analogies have limits."
 ---
 

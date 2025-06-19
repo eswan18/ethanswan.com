@@ -3,7 +3,8 @@ title: "Southern Europe's Best and Worst"
 subtitle: Contentious thoughts on all the most important things
 date: 2025-03-10
 slug: southern-europe-best-and-worst
-tags: [travel]
+tags:
+- travel
 summary: "Contents: Coffee, Transit, Urban Life, Food, Visitability and Livability"
 ---
 

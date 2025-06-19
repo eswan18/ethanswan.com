@@ -3,7 +3,8 @@ title: "The Great Sabbatical of 2025"
 subtitle: Summary and statistics
 date: 2025-03-06
 slug: great-sabbatical-2025
-tags: [travel]
+tags:
+- travel
 summary: "My sabbatical has come to an end, and that means it's time for a retrospective."
 ---
 

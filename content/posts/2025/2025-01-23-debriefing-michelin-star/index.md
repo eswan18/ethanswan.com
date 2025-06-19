@@ -1,9 +1,10 @@
 ---
 title: "Debriefing on My First Michelin Star Restaurant Visit"
-# subtitle: ""
 date: 2025-01-23
 slug: debriefing-michelin-star
-# tags: []
+tags:
+- food
+- travel
 summary: "While visiting Lisbon, my friend and I happened upon a Michelin Star-winning restaurant very close to our Airbnb.... We decided to take the plunge and make reservations."
 ---
 
