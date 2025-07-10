@@ -5,7 +5,7 @@ from dataclasses import dataclass
 import pytest
 
 
-ALLOWED_TAGS = ("ci-only")
+ALLOWED_TAGS = ("ci-only",)
 IN_CI = os.getenv("CI") == "true"
 THIS_DIR = Path(__file__).parent
 
@@ -28,7 +28,7 @@ class DeadLink:
 
 
 @pytest.fixture(scope="session")
-def known_dead_links() -> dict[str, int]:
+def known_dead_links() -> dict[str, list[int]]:
     with open(THIS_DIR / 'data' / 'known_dead_links.txt', 'r') as f:
         # Remove "comment" lines
         lines = [line for line in f.readlines() if not line.startswith('#')]
