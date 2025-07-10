@@ -39,7 +39,7 @@ Despite some flaws in gameplay itself, I found the game experience incredibly im
 
 So as you've probably gathered, my reviews of "gaming on a gaming rig" are glowing.
 In fact, I think the experience of an RPG on a setup like this is so unexpectedly engrossing that almost anyone would appreciate it.
-What I've spent more time considering recently is the the prescriptive nature of plot design in games, the way battles and challenges are designed, and the atypical ways I found myself approaching those things.
+What I've spent more time considering recently is the prescriptive nature of plot design in games, the way battles and challenges are designed, and the atypical ways I found myself approaching those things.
 
 I should point out (again) that I am not a normal gamer: I consider difficult fights to be tedious, I'm not all that interested in maxing out my alchemy or blacksmithing skill, and I get bored very quickly if it becomes clear that I'm completing quests that fit a template.
 Basically, I'm here for the plot.
