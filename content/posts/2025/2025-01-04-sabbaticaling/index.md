@@ -17,7 +17,7 @@ I went from individual contributor to team lead.
 
 But even so, I've been a little bit more conservative in my career than I wish I'd been.
 
-A reliable job with health insurance is a blessing; one with the perks and pay of the tech industry even moreso.
+A reliable job with health insurance is a blessing; one with the perks and pay of the tech industry even more so.
 But for all the alarmism about AI automating away the whole industry, I'm confident those jobs will still be here in six months.
 
 Like most people, I never have enough time.

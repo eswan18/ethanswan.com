@@ -317,7 +317,7 @@ I think I actually prefer exceptions to this error-handling model.
 Some functions that are useful only for side effects will typically return an error value and nothing else.
 Programmers often forget to assign their output to a variable at all, in my experience, so the side effects may silently fail.
 
-For functions that return additonal data, that additional data will likely come back as the "zero value" of its type – an empty list, a `false`, a `0`, an empty string – because Go doesn't offer any null-like abstraction for most data types.
+For functions that return additional data, that additional data will likely come back as the "zero value" of its type – an empty list, a `false`, a `0`, an empty string – because Go doesn't offer any null-like abstraction for most data types.
 The application will roll along with data that *looks* correct because it has the right type, but is actually completely wrong, and once the bug is discovered it will likely be hard to track down to the source.
 
 Maybe if most languages took this approach then programmers would be so accustomed to it that they'd never forget to check returned errors.

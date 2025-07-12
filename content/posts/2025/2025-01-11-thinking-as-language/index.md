@@ -108,7 +108,7 @@ Higher level math is harder to execute mentally, but the point is **the
 _language_ we use to describe math is not math itself**. Math is an encoding of
 reality, and the correct answer to a math problem is defined by how the world
 behaves in a certain situation. We could try to answer math questions purely
-based on linguistic patterns, but it would be analagous to a calc student who
+based on linguistic patterns, but it would be analogous to a calc student who
 never understands the fundamental theorem of calculus[^me]: they might learn
 patterns well enough to answer many questions, but novel applications would
 stump them. They'd be limited by how much a given math problem resembles ones

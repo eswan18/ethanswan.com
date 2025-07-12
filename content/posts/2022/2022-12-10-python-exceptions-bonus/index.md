@@ -160,7 +160,7 @@ Before moving on from `finally`, I'm obligated to mention that there is a rarely
 It's executed only if the `try` block completes without error.
 That means that in situations where you use both `except` and `else`, exactly one of them will run.
 
-If used in conjunction with with a `finally` clause, the `else` clause runs first.
+If used in conjunction with a `finally` clause, the `else` clause runs first.
 
 When I first heard of it, I couldn't think of any possible use, but it has really come in handy a couple of times in my programming career.
 That said, I wracked my mind for an example and couldn't come up with one.

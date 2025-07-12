@@ -33,7 +33,7 @@ So it has some problems.
 But despite all that, this machine has been a workhorse and endured a huge amount of abuse -- it comes with me everywhere, gets bounced around in my backpack, and serves as a testing-ground for all kinds of software tools I want to try out.
 It's not noticeably worse in any way than the day I bought it, which was over 3 years ago.
 The introduction of Sidecar, the tool for using an iPad as an external display, has made me like my Mac all the more.
-I'll probably upgrade the at the next major Mac update, but more out of curiousity than necessity.
+I'll probably upgrade the at the next major Mac update, but more out of curiosity than necessity.
 
 - **iPad Pro, early 2018** – I have the last iPad Pro without USB-C, meaning it still has bezels and Touch ID.
 It's much less integral to my life than my iPhone or Mac, but I've still loved having it.

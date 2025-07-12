@@ -29,7 +29,7 @@ Incredibly, I found a way to check all those boxes, with just one significant sa
 
 ## Overview
 
-- **Front end** – A NextJS app hosted in [Vercel](https://vercel.com). A great platform with no real issues except some tricky UI.
+- **Front end** – A Next.js app hosted in [Vercel](https://vercel.com). A great platform with no real issues except some tricky UI.
 - **Back end** – A FastAPI app hosted in [Render](https://render.com). Render has some downsides, the most significant of which is that idle apps spin down and take a long time to restart.
 - **Database** - Serverless Postgres offered by [Neon](https://neon.tech). Free database hosting was extremely difficult to find and I only heard about Neon recently, but it's been solid.
 - **DevOps** – For deployment, Vercel and Render handle that automatically. I deploy database changes manually with scripts. For secrets management, I'm using [Infisical](https://infisical.com). It offers integrations with lots of services and has a very clear development/staging/production setup, but is also a little bit unpolished.
@@ -38,8 +38,8 @@ Four platforms, all on the free tier, and the only real issue in this stack is t
 
 ## Front End ([code](https://github.com/eswan18/workout-fe))
 
-The front end is a NextJS app, and that made Vercel a natural first place to look for hosting.
-NextJS is a framework for building React apps, providing a lot of structure and some additional magic around things like routing.
+The front end is a Next.js app, and that made Vercel a natural first place to look for hosting.
+Next.js is a framework for building React apps, providing a lot of structure and some additional magic around things like routing.
 Vercel is the company that maintains it.
 
 Hosting on Vercel's platform was a breeze except for some occasionally confusing UI.
@@ -62,9 +62,9 @@ Overall, using Vercel is a decision I haven't second guessed.
 
 I used Python and FastAPI for the back end, and hosted it with a service I heard about via Reddit: Render.
 
-Render doesn't seem to be affiliated with any particular language or framework -- unlike Vercel, which is clearly dedicated mainly to NextJS.
+Render doesn't seem to be affiliated with any particular language or framework -- unlike Vercel, which is clearly dedicated mainly to Next.js.
 It will build and deploy your app for free, as long as you don't exceed certain limitations on build minutes and uptime minutes.
-I was initally sold on Render because it was one of the only platforms supporting Python 3.11.
+I was initially sold on Render because it was one of the only platforms supporting Python 3.11.
 
 However, Render is clearly my least favorite part of this tech stack.
 It doesn't offer anything like a staging or preview environment, so I had to set up two separate projects and just configure the default GitHub branch differently (one uses `main` and the other `staging`).

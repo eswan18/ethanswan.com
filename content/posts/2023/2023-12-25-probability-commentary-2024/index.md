@@ -45,7 +45,7 @@ However, there's a reasonable chance that even if GPT-5 happens, it's under a di
 
 It's generally pretty rare for US courts/commissions to break up existing companies, and I'm betting that they'll be more conservative than some antitrust advocates believe is warranted.
 
-The more interesting thing here is the relative probabalities within the group.
+The more interesting thing here is the relative probabilities within the group.
 I think that the monopoly power case is much stronger against Google (for search ads) and somewhat stronger against Facebook (some variation on ads) than against Amazon, which competes against many other retailers both physical online.
 Whether you think that's the right market definition or not, I think US courts will use it.
 
@@ -79,7 +79,7 @@ Arguing with a friend about this proposition is how the probability pool started
 I thought the chance of an open military conflict was very low, but it was tough to put my finger on *how* low.
 One in ten was clearly too high.
 One in a hundred was too low.
-5% felt abour right.
+5% felt about right.
 Then [this piece](https://www.noahpinion.blog/p/were-not-ready-for-the-big-one) by Noah Smith convinced me that China would have to pick long, drawn-out fight with American military bases before ever getting troops onto the island of Taiwan, so I adjusted downward a bit.
 
 ### Russia and Ukraine sign a truce to stop all combat operations and honor it until the end of the year: 0.65
@@ -277,6 +277,6 @@ The only other contenders are the Lakers, Suns, and Sixers (and maybe Clippers).
 But the most talented teams with the strongest track records usually figure it out, and this year there are three teams with great bona fides.
 80% seems about right.
 
-[^probability-division]: Yes, probability nerds, I know that you can't divide probabilities like this: if an event has a 7% chance of occuring a year then there's more than a 1% chance of it happening in 1/7 of the year. But it's pretty close with small numbers like this.
+[^probability-division]: Yes, probability nerds, I know that you can't divide probabilities like this: if an event has a 7% chance of occurring a year then there's more than a 1% chance of it happening in 1/7 of the year. But it's pretty close with small numbers like this.
 [^impeaching]: Just a reminder/clarification that this is about *impeachment*, which only requires the House. Conviction would require the Senate and it's not even on this list of probabilities.
 [^looked-into-it]: This is code for "I asked ChatGPT"
