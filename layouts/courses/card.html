@@ -3,7 +3,7 @@
   <div class="card card-bordered shadow-lg rounded-lg max-w-xs mb-12">
     <div class="card-body justify-between">
       <div>
-        <h4 class="card-title mt-0">{{ .Title }}</h3>
+        <h4 class="card-title mt-0">{{ .Title }}</h4>
         <section class="prose text-base">
           {{ with .Params.summary }}
             {{ $page.RenderString . }}
