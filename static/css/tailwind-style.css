@@ -4313,6 +4313,10 @@ html:has(.drawer-toggle:checked) {
   min-height: 100%;
 }
 
+.min-h-screen {
+  min-height: 100vh;
+}
+
 .w-16 {
   width: 4rem;
 }
@@ -4360,6 +4364,10 @@ html:has(.drawer-toggle:checked) {
 
 .flex-shrink-0 {
   flex-shrink: 0;
+}
+
+.flex-grow {
+  flex-grow: 1;
 }
 
 .flex-grow-0 {
@@ -4547,6 +4555,11 @@ html:has(.drawer-toggle:checked) {
   padding-right: 0.5rem;
 }
 
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -4555,6 +4568,11 @@ html:has(.drawer-toggle:checked) {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .text-left {
@@ -4639,6 +4657,15 @@ html:has(.drawer-toggle:checked) {
 
 .italic {
   font-style: italic;
+}
+
+.text-base-content {
+  --tw-text-opacity: 1;
+  color: var(--fallback-bc,oklch(var(--bc)/var(--tw-text-opacity)));
+}
+
+.text-base-content\/70 {
+  color: var(--fallback-bc,oklch(var(--bc)/0.7));
 }
 
 .text-muted-heading {

@@ -130,9 +130,9 @@
 
     {{ partial "includes.html" . }}
   </head>
-  <body>
+  <body class="flex flex-col min-h-screen">
     {{ partial "navbar/main.html" page }}
-    <div class="drawer">
+    <div class="drawer flex-grow">
       <input id="sidebar-drawer" type="checkbox" class="drawer-toggle hidden" />
       <div class="drawer-content flex">
         {{/* Left sidebar */}}
