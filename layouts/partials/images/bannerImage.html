@@ -1,4 +1,0 @@
-{{ $alt := .alt }}
-{{ with resources.Get .path }}
-    <img alt="{{ $alt }}" src="{{ .RelPermalink }}" class="rounded-lg drop-shadow-xl h-auto w-full">
-{{ end }}

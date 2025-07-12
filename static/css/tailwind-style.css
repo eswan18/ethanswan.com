@@ -4154,6 +4154,10 @@ html:has(.drawer-toggle:checked) {
   bottom: 0px;
 }
 
+.float-right {
+  float: right;
+}
+
 .m-0 {
   margin: 0px;
 }

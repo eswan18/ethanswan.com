@@ -1,12 +1,1 @@
-{{ $src := .Get "src" }}
-{{ $alt := .Get "alt" }}
-{{ $class := .Get "class" }}
-{{ $caption := .Get "caption" }}
-{{ $defaultClasses := "block max-w-full sm:max-w-md mx-auto" }}
-{{ $defaultCaptionClasses := "mt-1 text-center italic" }}
-<div class="mb-2">
-<img src="{{ $src }}" alt="{{ $alt }}" class="{{ $defaultClasses }} {{ $class }}">
-{{ with $caption }}
-<figcaption class="{{ $defaultCaptionClasses }}">{{ . }}</figcaption>
-{{ end }}
-</div>
+{{ partial "image" (dict "src" (.Get "src") "alt" (.Get "alt") "class" (.Get "class") "caption" (.Get "caption") "type" "flexible") }}

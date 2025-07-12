@@ -5,12 +5,12 @@
 <div class="{{ $contentType }}-content prose-a:text-secondary prose-a:no-underline [&_ol]:ps-8">
     {{/* include an image inline if one is specified */}}
     {{ with .Params.embeddedImage }}
-    {{ partial "images/embeddedImage" . }}
+    {{ partial "image" (dict "path" .path "alt" .alt "type" "embedded") }}
     {{ end }}
 
     {{/* include a banner-style (100% width) image if one is specified */}}
     {{ with .Params.bannerImage }}
-    {{ partial "images/bannerImage" . }}
+    {{ partial "image" (dict "path" .path "alt" .alt "type" "banner") }}
     {{ end }}
 
     {{ .Render "subhead" }}

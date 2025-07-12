@@ -1,0 +1,37 @@
+{{/*
+Unified image partial that can handle embedded, banner, and shortcode use cases
+Parameters:
+- .src or .path: Image source (shortcode vs partial usage)
+- .alt: Alt text
+- .class: Custom CSS classes
+- .caption: Optional caption
+- .type: "embedded", "banner", or "flexible" (default)
+*/}}
+
+{{ $src := .src | default .path }}
+{{ $alt := .alt }}
+{{ $class := .class }}
+{{ $caption := .caption }}
+{{ $type := .type | default "flexible" }}
+
+{{ if eq $type "embedded" }}
+  {{/* Embedded image: float-right with specific styling */}}
+  {{ with resources.Get $src }}
+    <img alt="{{ $alt }}" src="{{ .RelPermalink }}" class="md:mx-7 mb-5 drop-shadow-xl md:float-right w-full md:max-w-md rounded-lg{{ with $class }} {{ . }}{{ end }}">
+  {{ end }}
+{{ else if eq $type "banner" }}
+  {{/* Banner image: full-width */}}
+  {{ with resources.Get $src }}
+    <img alt="{{ $alt }}" src="{{ .RelPermalink }}" class="rounded-lg drop-shadow-xl h-auto w-full{{ with $class }} {{ . }}{{ end }}">
+  {{ end }}
+{{ else }}
+  {{/* Flexible image: for shortcode usage with optional caption */}}
+  {{ $defaultClasses := "block max-w-full sm:max-w-md mx-auto" }}
+  {{ $defaultCaptionClasses := "mt-1 text-center italic" }}
+  <div class="mb-2">
+    <img src="{{ $src }}" alt="{{ $alt }}" class="{{ $defaultClasses }}{{ with $class }} {{ . }}{{ end }}">
+    {{ with $caption }}
+      <figcaption class="{{ $defaultCaptionClasses }}">{{ . }}</figcaption>
+    {{ end }}
+  </div>
+{{ end }}
