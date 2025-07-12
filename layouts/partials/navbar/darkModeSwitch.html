@@ -19,7 +19,7 @@
     // Note that this script *must* be defined after the above div.
     const toggleSwitch = document.querySelector('.theme-controller');
     function switchTheme(e) {
-        theme = localStorage.getItem('theme')
+        const theme = localStorage.getItem('theme')
         if (theme == "dark") {
             // Switch to light theme.
             document.documentElement.setAttribute('data-theme', 'light');
