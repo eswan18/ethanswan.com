@@ -1,0 +1,16 @@
+{{/*
+Extract configuration and setup for collection display
+Returns: dict with all config values
+*/}}
+
+{{ $config := dict }}
+{{ $config = merge $config (dict "listSummaryType" (.Params.listsummarytype | default "summary")) }}
+{{ $config = merge $config (dict "listSummaryContainerClasses" (.Params.listSummaryContainerClasses | default "")) }}
+{{ $config = merge $config (dict "listCollection" .Params.listcollection) }}
+{{ $config = merge $config (dict "showList" .Params.showList) }}
+{{ $config = merge $config (dict "sort" .Params.sort) }}
+{{ $config = merge $config (dict "paginate" .Params.paginate) }}
+{{ $config = merge $config (dict "groupBy" .Params.listcollectiongroupby) }}
+{{ $config = merge $config (dict "defaultGroup" (.Params.listCollectionDefaultGroup | default "Other")) }}
+
+{{ return $config }}

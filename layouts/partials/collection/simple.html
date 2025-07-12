@@ -1,0 +1,11 @@
+{{/*
+Render simple list without grouping or pagination
+Input: dict with pages, config
+*/}}
+
+{{ $pages := .pages }}
+{{ $config := .config }}
+
+{{ range $page := $pages }}
+  {{ $page.Render $config.listSummaryType }}
+{{ end }}

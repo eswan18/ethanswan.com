@@ -1,0 +1,24 @@
+{{/*
+Render grouped collection with headings
+Input: dict with pages, config
+*/}}
+
+{{ $pages := .pages }}
+{{ $config := .config }}
+{{ $groupBy := $config.groupBy }}
+
+{{/* First render pages without the group parameter */}}
+<h2 class="w-full text-xl mt-2">{{ $config.defaultGroup }}</h2>
+<hr class="w-full not-prose mb-4 text-primary">
+{{ range where $pages (printf ".Params.%s" $groupBy) "eq" nil }}
+  {{ .Render $config.listSummaryType }}
+{{ end }}
+
+{{/* Then render each group */}}
+{{ range ($pages.GroupByParam $groupBy).Reverse }}
+  <h2 class="w-full text-xl mt-2">{{ .Key }}</h2>
+  <hr class="w-full not-prose mb-4">
+  {{ range $page := .Pages }}
+    {{ $page.Render $config.listSummaryType }}
+  {{ end }}
+{{ end }}

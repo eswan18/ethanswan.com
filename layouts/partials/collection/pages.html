@@ -1,0 +1,38 @@
+{{/*
+Get the pages to display based on showList or listCollection params
+Input: page context and config dict
+Returns: pages collection
+*/}}
+
+{{ $config := .config }}
+{{ $context := .context }}
+
+{{ $pages := "" }}
+{{ $shouldList := false }}
+
+{{ if $config.showList }}
+    {{ $shouldList = true }}
+    {{ $pages = $context.Pages }}
+{{ else if $config.listCollection }}
+    {{ $shouldList = true }}
+    {{ $selectedSectionName := $config.listCollection }}
+    {{ $selectedSection := "" }}
+    {{ range $s := site.Sections }}
+    {{ if eq (lower $s.Name) $selectedSectionName }}
+        {{ $selectedSection = $s }}
+    {{ end}}
+    {{ end }}
+    {{ with $selectedSection }}
+    {{ $pages = .Pages }}
+    {{ end }}
+{{ end }}
+
+{{ $result := dict "pages" $pages "shouldList" $shouldList }}
+
+{{/* Apply sorting if specified */}}
+{{ if and $shouldList $config.sort }}
+  {{ $pages = sort $pages $config.sort.by $config.sort.order }}
+  {{ $result = merge $result (dict "pages" $pages) }}
+{{ end }}
+
+{{ return $result }}
