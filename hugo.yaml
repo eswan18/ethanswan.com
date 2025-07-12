@@ -36,5 +36,8 @@ permalinks:
   posts: /feed/:year/:month/:day/:slug/
 title: ethanswan.com
 markup:
+  goldmark:
+    renderer:
+      unsafe: true
   highlight:
     noClasses: false

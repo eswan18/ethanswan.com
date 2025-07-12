@@ -35,9 +35,7 @@ I started in Lisbon, worked my way east through Spain and south through Italy, t
 
 Visually, it looks like this:
 
-{{< rawhtml >}}
 <iframe src="/2025-eurotrip-travel-map.html" width="100%" height="600px" style="border:none;"></iframe>
-{{< /rawhtml >}}
 
 And here I've sorted the cities by where I spent the most total time:
 
