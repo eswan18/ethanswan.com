@@ -1,4 +1,10 @@
 baseURL: https://ethanswan.com/
+defaultContentLanguage: en
+languages:
+  en:
+    languageCode: en-US
+    languageName: English
+    weight: 1
 params:
   AuthorName: Ethan Swan
   navbar:

@@ -1,8 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ .Site.Language.Lang }}">
   <head>
     <meta charset="utf-8">
-    <title>{{ block "title" . }} {{ .Site.Title }} {{ end }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    {{/* Dynamic title generation */}}
+    {{ if .IsHome }}
+      <title>{{ .Site.Title }} - {{ .Site.Params.AuthorName }}</title>
+    {{ else }}
+      <title>{{ .Title }} | {{ .Site.Title }}</title>
+    {{ end }}
+    
+    {{/* Meta description */}}
+    {{ $description := "" }}
+    {{ if .Description }}
+      {{ $description = .Description }}
+    {{ else if .Summary }}
+      {{ $description = .Summary | truncate 160 }}
+    {{ else if .IsHome }}
+      {{ $description = "Chicago-based technologist specializing in Python and data systems. Staff engineer, teacher, and consultant." }}
+    {{ else }}
+      {{ $description = printf "Read %s on ethanswan.com - insights on technology, programming, and more." .Title }}
+    {{ end }}
+    <meta name="description" content="{{ $description }}">
+    
+    {{/* Canonical URL */}}
+    <link rel="canonical" href="{{ .Permalink }}">
+    
+    {{/* Open Graph tags */}}
+    <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+    <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+    <meta property="og:description" content="{{ $description }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:site_name" content="{{ .Site.Title }}">
+    {{ if .Params.embeddedImage }}
+      <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.embeddedImage.path }}">
+      <meta property="og:image:alt" content="{{ .Params.embeddedImage.alt }}">
+    {{ else }}
+      <meta property="og:image" content="{{ .Site.BaseURL }}images/ethan_talking.jpeg">
+      <meta property="og:image:alt" content="Ethan Swan">
+    {{ end }}
+    {{ if .IsPage }}
+      <meta property="article:author" content="{{ .Site.Params.AuthorName }}">
+      <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+      {{ if .Lastmod }}
+        <meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+      {{ end }}
+      {{ range .Params.tags }}
+        <meta property="article:tag" content="{{ . }}">
+      {{ end }}
+    {{ end }}
+    
+    {{/* Twitter Card tags */}}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@eswan18">
+    <meta name="twitter:creator" content="@eswan18">
+    <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+    <meta name="twitter:description" content="{{ $description }}">
+    {{ if .Params.embeddedImage }}
+      <meta name="twitter:image" content="{{ .Site.BaseURL }}{{ .Params.embeddedImage.path }}">
+      <meta name="twitter:image:alt" content="{{ .Params.embeddedImage.alt }}">
+    {{ else }}
+      <meta name="twitter:image" content="{{ .Site.BaseURL }}images/ethan_talking.jpeg">
+      <meta name="twitter:image:alt" content="Ethan Swan">
+    {{ end }}
+    
+    {{/* JSON-LD Structured Data */}}
+    {{ if .IsHome }}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "{{ .Site.Params.AuthorName }}",
+      "url": "{{ .Site.BaseURL }}",
+      "sameAs": [
+        "https://x.com/eswan18"
+      ],
+      "jobTitle": "Staff Engineer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Valimail"
+      },
+      "description": "Chicago-based technologist specializing in Python and data systems"
+    }
+    </script>
+    {{ else if .IsPage }}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "{{ .Title }}",
+      "description": "{{ $description }}",
+      "author": {
+        "@type": "Person",
+        "name": "{{ .Site.Params.AuthorName }}",
+        "url": "{{ .Site.BaseURL }}"
+      },
+      "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+      {{ if .Lastmod }}
+      "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+      {{ end }}
+      "url": "{{ .Permalink }}",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ .Permalink }}"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "{{ .Site.Params.AuthorName }}",
+        "url": "{{ .Site.BaseURL }}"
+      }
+    }
+    </script>
+    {{ end }}
 
     {{/* Include the tailwind CSS file */}}
     {{ $cssDir := "css" }}
