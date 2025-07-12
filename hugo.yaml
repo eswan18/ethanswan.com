@@ -7,6 +7,19 @@ languages:
     weight: 1
 params:
   AuthorName: Ethan Swan
+  
+  # Social/Professional Info
+  twitterHandle: eswan18
+  twitterUrl: https://x.com/eswan18
+  
+  # Professional Details
+  jobTitle: Staff Engineer
+  company: Valimail
+  location: Chicago
+  
+  # Bio/Description
+  shortBio: "Chicago-based technologist specializing in Python and data systems. Staff engineer, teacher, and consultant."
+  tagline: "thoughts on tech, programming, and more"
   navbar:
     links:
     - name: Home

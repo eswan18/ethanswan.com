@@ -18,9 +18,9 @@
     {{ else if .Summary }}
       {{ $description = .Summary | truncate 160 }}
     {{ else if .IsHome }}
-      {{ $description = "Chicago-based technologist specializing in Python and data systems. Staff engineer, teacher, and consultant." }}
+      {{ $description = .Site.Params.shortBio }}
     {{ else }}
-      {{ $description = printf "Read %s on ethanswan.com - insights on technology, programming, and more." .Title }}
+      {{ $description = printf "Read %s on %s - %s." .Title .Site.Title .Site.Params.tagline }}
     {{ end }}
     <meta name="description" content="{{ $description }}">
     
@@ -53,8 +53,8 @@
     
     {{/* Twitter Card tags */}}
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@eswan18">
-    <meta name="twitter:creator" content="@eswan18">
+    <meta name="twitter:site" content="@{{ .Site.Params.twitterHandle }}">
+    <meta name="twitter:creator" content="@{{ .Site.Params.twitterHandle }}">
     <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
     <meta name="twitter:description" content="{{ $description }}">
     {{ if .Params.embeddedImage }}
@@ -74,14 +74,14 @@
       "name": "{{ .Site.Params.AuthorName }}",
       "url": "{{ .Site.BaseURL }}",
       "sameAs": [
-        "https://x.com/eswan18"
+        "{{ .Site.Params.twitterUrl }}"
       ],
-      "jobTitle": "Staff Engineer",
+      "jobTitle": "{{ .Site.Params.jobTitle }}",
       "worksFor": {
         "@type": "Organization",
-        "name": "Valimail"
+        "name": "{{ .Site.Params.company }}"
       },
-      "description": "Chicago-based technologist specializing in Python and data systems"
+      "description": "{{ .Site.Params.shortBio }}"
     }
     </script>
     {{ else if .IsPage }}
