@@ -25,7 +25,7 @@ async def test_homepage_responds(async_client: AsyncClient):
 @pytest.mark.asyncio(scope="module")
 @pytest.mark.parametrize(
     "path",
-    ("/posts/", "/teaching/", "/appearances/", "/running-blog/", "/nonsense/"),
+    ("/posts/", "/teaching/", "/speaking/", "/running-blog/", "/nonsense/"),
 )
 async def test_main_nav_pages_respond(path: str, async_client: AsyncClient):
     response = await async_client.get(path)
