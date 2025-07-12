@@ -2,3 +2,4 @@
 vendor/
 public/
 .hugo_build.lock
+.claude
