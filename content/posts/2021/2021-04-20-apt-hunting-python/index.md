@@ -194,7 +194,7 @@ But if you're just here for the basics, those are rabbit holes you can easily sk
 
 ## Parsing Search Results
 
-So we know the URL that returns the properties we're intersted in, we know how to fetch pages as HTML, and we know (in principle) that we can parse those pages using BeautifulSoup.
+So we know the URL that returns the properties we're interested in, we know how to fetch pages as HTML, and we know (in principle) that we can parse those pages using BeautifulSoup.
 How do we actually do it?
 
 Well, the bad news is that there's a lot of tedious clicking around that goes into it.

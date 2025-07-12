@@ -27,9 +27,9 @@ I think it's in a working state.
 
 ## Slaying Dragons
 
-Finishing the intepreter was a remarkable feeling.
+Finishing the interpreter was a remarkable feeling.
 
-As a new software developer (or anyone who writes code), intepreters are a form of magic.
+As a new software developer (or anyone who writes code), interpreters are a form of magic.
 You can't even begin to ponder them; you're too overwhelmed by the complexity of just getting code that works.
 
 Over time, you start to appreciate the craftsmanship that must go into an application so complex.

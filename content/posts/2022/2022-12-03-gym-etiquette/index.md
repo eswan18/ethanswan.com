@@ -17,7 +17,7 @@ Here's a list I wish someone had given me when I was starting.
 
 ## How to survive and not make a fool of yourself or offend people in a modern weightroom
 
-### Hygeine, Apparel, Propriety, etc.
+### Hygiene, Apparel, Propriety, etc.
 
 1. **Exposed skin** -- Gym apparel varies widely and the limits of "acceptable" don't always make sense. Cutoffs, tanks, sports bras, and other skin-exposing shirts are almost always fine, but going shirtless never is. There's no coherent sanitary or modesty explanation, that's just the deal.
 1. **Wiping equipment** -- Most gyms provide wipes to sanitize equipment after you use it. Some say that doing so is required. But what really matters is whether most people wipe things down. Follow the lead of the majority here, unless you get something *really* sweaty, in which case you should always clean it. But a little bit of perspiration is not a danger to your health or anyone else's, so don't get too worked up if people don't wipe things down -- that's normal.

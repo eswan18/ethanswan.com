@@ -19,7 +19,7 @@ Here are some excerpts:
 Each of the five authors comes with their own claim to credibility.
 To me, the first author's bona fides are most notable, having written a [similar AI forecast](https://www.lesswrong.com/posts/6Xgy6CAf2jqHhynHL/what-2026-looks-like) a few years ago that's turned out [remarkably accurate](https://www.lesswrong.com/posts/u9Kr97di29CkMvjaj/evaluating-what-2026-looks-like-so-far).
 
-A summary lacks oomph without reading or engaging with all the events along the way -- each of which sounds very reasonable based on what preceeded it -- because it's science fiction in every sense except plausibility.
+A summary lacks oomph without reading or engaging with all the events along the way -- each of which sounds very reasonable based on what preceded it -- because it's science fiction in every sense except plausibility.
 Still, here's my summary of it:
 
 The current rate of development in AI isn't slowing down and is in fact accelerating due to compounding.
@@ -39,7 +39,7 @@ This is a far better inside view than I could ever generate myself.
 
 ## On the other hand: the outside view
 
-One useful way to look at predictions is by asssessing both the "inside view" and the "outside view", and then forming a compromise forecast between the two[^inside-outside-view].
+One useful way to look at predictions is by assessing both the "inside view" and the "outside view", and then forming a compromise forecast between the two[^inside-outside-view].
 
 An outside view is a study of similar events and how they turned out -- essentially treating the current situation as just another instance of a dice roll among many similar probability distributions. 
 An inside view is an analysis of the specific situation and how you see each piece of it playing out.

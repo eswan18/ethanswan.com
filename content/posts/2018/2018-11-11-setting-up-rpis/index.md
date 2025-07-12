@@ -250,7 +250,7 @@ In general, it's a pretty bad idea to allow SSH access to the Pi while leaving t
 It's no secret that the standard login info is pi/raspberry, and if anyone gets into your network (or you expose the Pi via port-forwarding) it's a huge security risk.
 I believe the best solution is to create a new username with a different password, give that user sudo-privileges (so, like the pi user, it can perform admin tasks), and then delete the pi user entirely.
 
-To do so (starting logged in as pi), select a username for your new user and subsitute it in the following command:
+To do so (starting logged in as pi), select a username for your new user and substitute it in the following command:
 ```bash
 sudo adduser <new_username>
 ```
@@ -302,4 +302,4 @@ If you create such a code, store it in a secure place.
 Then you can disable password-based authentication, making that key (usually very long and basically impossible to guess) the only way to get into the Pi.
 This is highly recommended for devices visible outside of your local network.
 
-[^raspbian]: As of Feburary 2024, Raspbian had been renamed to "Raspberry Pi OS" and the old link on this page no longer worked. I've updated it to point to the current OS downloads page.
+[^raspbian]: As of February 2024, Raspbian had been renamed to "Raspberry Pi OS" and the old link on this page no longer worked. I've updated it to point to the current OS downloads page.

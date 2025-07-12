@@ -45,7 +45,7 @@ I should point out (again) that I am not a normal gamer: I consider difficult fi
 Basically, I'm here for the plot.
 To me, great video games are just movies, but more interesting and with interactivity that keeps me actively engaged in the story.
 The last game series I enjoyed -- outside of sports franchises -- was Assassin's Creed, games that incrementally reveal to you a complex conspiracy that only your character can help defeat.
-In fact, I think I am particularly attracted to stories that depend on a mythology surrouding the plot, because I find that I can easily get lost in the legends surrounding the game itself (think of the companion lore to the Lord of the Rings, or the mysteries of the Lost TV series).
+In fact, I think I am particularly attracted to stories that depend on a mythology surrounding the plot, because I find that I can easily get lost in the legends surrounding the game itself (think of the companion lore to the Lord of the Rings, or the mysteries of the Lost TV series).
 
 And the Witcher 3 really met my expectations in this department, developing a complex story that made me feel like my actions mattered.
 This is probably where having a book series as a base most helped the game; the world comes complete with a whole history of men, elves, dwarves, and monsters.
