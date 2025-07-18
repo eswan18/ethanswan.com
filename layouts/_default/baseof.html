@@ -5,12 +5,7 @@
     <title>{{ block "title" . }} {{ .Site.Title }} {{ end }}</title>
 
     {{/* Bundle all CSS using Hugo's asset pipeline */}}
-    {{ $tailwind := resources.Get "css/tailwind-style.css" }}
-    {{ $others := resources.Match "css/*.css" | where "Name" "ne" "tailwind-style.css" }}
-    {{ $styles := slice $tailwind }}
-    {{ range $others }}
-      {{ $styles = $styles | append . }}
-    {{ end }}
+    {{ $styles := resources.Match "css/*.css" }}
     {{ $bundle := $styles | resources.Concat "css/bundle.css" | resources.Minify }}
     <link rel="stylesheet" href="{{ $bundle.RelPermalink }}">
 
