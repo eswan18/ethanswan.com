@@ -5,7 +5,9 @@ date: 2025-07-19
 slug: this-week-claude-code
 tags:
 - ai
-# summary: "..."
+summary: "This last week I visited Portland with some friends.
+I had some tremendous coffee, good food, and interesting long runs (using some new shoes!).
+But the main thing on my mind has been AI coding agents..."
 ---
 
 This last week I visited Portland with some friends.
