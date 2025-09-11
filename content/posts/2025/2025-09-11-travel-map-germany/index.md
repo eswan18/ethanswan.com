@@ -3,8 +3,8 @@ title: "Travel Maps Again, but This Time It's Germany"
 subtitle: "More summaries, more stats, more maps"
 date: 2025-09-11
 slug: travel-map-germany
-# tags: []
-# summary: "..."
+tags: [travel]
+summary: "A few days ago I got back from Germany, where I was unintentionally continuing my Year of Europe.... But this isn't a travel blog. That would be boring."
 ---
 
 A few days ago I got back from Germany, where I was unintentionally continuing my Year of Europe.
