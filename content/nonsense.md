@@ -13,7 +13,10 @@ I run a competition based on Philip Tetlock's book *Superforecasting*, in which 
 I built a small app to manage it.
 
 ## [Buy vs Rent NPV Calculator](https://npv-mortgage.vercel.app)
-A web app for computing the net present value of buying vs renting a home, computed based on various inputs.
+Ever wanted to work out the math on buying vs renting, properly discounting future cash flows? I did.
+
+## [Fitness Dashboard](https://fitness.ethanswan.com)
+A dashboard for tracking details about my running, including my current fatigue levels and how many miles I've logged in each pair of shoes.
 
 ## [Service Health Dashboard](https://status.ethanswan.com)
 Dashboard showing the health status of my projects.
