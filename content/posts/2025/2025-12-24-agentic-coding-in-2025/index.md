@@ -45,7 +45,8 @@ I'll talk more about that in a later section.
 These tools are already moving beyond early adopters to regular software developers.
 My colleagues and friends are using them to varying degrees, some having just barely experimented and a few every bit as deep as me.
 
-Another spectrum is *skepticism*: how much you trust the tools to produce good work.
+So adoption is one spectrum.
+Another is *skepticism*: how much you trust the tools to produce good work.
 Together, these two axes help describe how different devs relate to the new agentic tools.
 
 Most people I know fall into one of these buckets:
@@ -53,8 +54,8 @@ Most people I know fall into one of these buckets:
 They love agentic tools and are constantly finding new ways to use them, but sometimes without consideration of how well-suited they are to the task.
 Some devs are only vibecoders for a short time, right after esperiencing the high of some early successes, and then mellow out as they see the limitations.
 Others are just very trusting, or (occasionally) so junior/unskilled that they aren't capable of understanding the ways that models go wrong.
-- **Sweet spot**: High adoption, medium/high skepticism. They've found a lot of uses for agentic tools and employ them for many tasks, but avoid them in certain specific cases. They think that some things (e.g. reimplementing a common pattern) with AI barely even requires a human's lookover, but bespoke solutions in complex systems still need painstaking PR reviews. This is the bucket I'd place mself in.
-- **Reluctant**: Low/medium adoption, high skepticism. They've seen high-profile (and sometimes even publicized) mistakes from AI agents and think they're too risky to trust without great oversight for almost anything, and with that much extra effort the agents just aren't worthwhile. Still, many of these people are being pushed by their employer to use the tools, so they do... a little bit.
+- **Sweet spot**: High adoption, medium/high skepticism. They've found a lot of uses for agentic tools and employ them for many tasks, but avoid them in certain specific cases. They think that some things (e.g. reimplementing a common pattern) with AI barely even requires a human's lookover, but bespoke solutions in complex systems still need painstaking PR reviews. This is the bucket I place myself in.
+- **Dubious**: Low/medium adoption, high skepticism. They've seen high-profile (and sometimes even publicized) mistakes from AI agents and think they're too risky to trust without great oversight for almost anything, and with that much extra effort the agents just aren't worthwhile. Still, many of these people are being pushed by their employer to use the tools, so they do... a little bit.
 - **Artisans**: Low adoption, low/medium skepticism: They're not as troubled by AI errors as by the prospect of letting go of the craft of software development[^sympathy]. They don't like that it's much more challenging to understand codebases if you never actually write any of the code in them. Sometimes they've used AI to add a few features, and along the way they found they encountered the refactoring and vision problems discussed above, and they hate the prospect of letting all their code become spaghetti.
 
 I understand where all these people are coming from, but market pressures are going to rapidly force everyone toward the sweet spot or full-on vibecoding[^vibecoding].
@@ -63,7 +64,7 @@ Other forces will push us toward higher adoption too: the tools will keep improv
 What organizations need to avoid is a holy war.
 Skeptics need to take this seriously as a disruptive technology, but enthusiasts also need to be patient.
 As an enthusiast myself, I feel that the skeptics' critiques are often things you could say just as well about human developers: sloppy, mistake-prone, unaware of the bigger picture.
-But agents do have flaws and they used to have even more, so a little wariness doesn't hurt.
+But agents do have flaws and sometimes fail in unexpected ways, so a little wariness is wise.
 
 ## 2026 and Beyond
 
@@ -71,7 +72,7 @@ But agents do have flaws and they used to have even more, so a little wariness d
 As we discussed above, agents need to be guided in refactoring and adhering to the project vision.
 From my experience, the single most valuable skill you need for agentic development is a clear sense of *should*.
 Agents are good at knowing how to do something, but not what ought be done.
-The system *should* use these frameworks, communicate with this standard, keep these things in this location, test these specific aspects, etc.
+The human has to decide that the system *should* use these frameworks, communicate with this standard, keep these things in this location, test these specific aspects, etc.
 
 Increasingly, I think every good developer will be an engineering lead -- for a team of AI agents. You set expectations for them, check in periodically, and review their output.
 
