@@ -14,13 +14,19 @@ The former was an ICU nurse and the latter a writer and mother of three.
 
 I wasn't able to find a video on YouTube that includes shooting itself, but this one gets within a second of it[^second].
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/zKmCifYp48A?si=BsunoevDhBvjyBtx&amp;start=55" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+src="https://www.youtube.com/embed/zKmCifYp48A?si=BsunoevDhBvjyBtx&amp;start=55" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 In the longer video that includes the shooting, I counted something like ten or eleven shots that rang out.
 
 And here's Greg Bovino, a Border Patrol officer who's been the de facto leader of deployments to major US cities, commenting on the situation.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/h8AzidIuJZM?si=dzfNFrupuMF3VYPS&amp;start=67" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+src="https://www.youtube.com/embed/h8AzidIuJZM?si=dzfNFrupuMF3VYPS&amp;start=67" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 > During this operation, an individual approached US border patrol agents with a 9mm semi-automatic handgun. The agents attempted to disarm the individual, but he violently resisted. Fearing for his life and the lives and safety of fellow officers, a border patrol agent fired defensive shots....
 > The suspect also had two loaded magazines and no accessible ID. This looks like a situation where an individual wanted to do maximum damage and massacre law enforcement.
@@ -31,7 +37,10 @@ And then, Pretti is grabbed by multiple agents and forced to the ground. Another
 
 Kristi Noem, the Secretary of Homeland Security, spoke about it:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bocDdL_a-IM?si=bG0UyeRblZl0MuA-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+src="https://www.youtube.com/embed/bocDdL_a-IM?si=bG0UyeRblZl0MuA-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 > When you perpetuate violence against a government because of ideological reasons – and for reasons to resist and perpetuate violence – that is the definition of domestic terrorism. This individual who came with weapons and ammunition to stop a law enforcement operation of federal law enforcement officers committed an act of domestic terrorism. That's the facts.
 
@@ -132,7 +141,10 @@ Many didn't go home. The FBI estimated [2,000 or more people entered the Capitol
 
 The video is almost beyond imagination.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DXnHIJkZZAs?si=Go4G2JHPXUxqY4Kv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+src="https://www.youtube.com/embed/DXnHIJkZZAs?si=Go4G2JHPXUxqY4Kv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 
 This can't be America, right?
 
