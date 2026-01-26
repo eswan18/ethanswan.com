@@ -2,7 +2,7 @@
 {{ with .Section }}
     {{ $contentType = . }}
 {{ end }}
-<div class="{{ $contentType }}-content prose-a:text-secondary prose-a:no-underline [&_ol]:ps-8">
+<div class="{{ $contentType }}-content prose-a:text-secondary [&_ol]:ps-8">
     {{/* include an image inline if one is specified */}}
     {{ with .Params.embeddedImage }}
     {{ partial "image" (dict "path" .path "alt" .alt "type" "embedded") }}
