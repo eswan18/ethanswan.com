@@ -91,7 +91,7 @@ Trump makes us all look like fools on the world stage, distracting with [rhetori
 
 But the worst thing is January 6th, 2021. [53,000](https://www.govinfo.gov/content/pkg/GPO-J6-REPORT/pdf/GPO-J6-REPORT-2-7.pdf#page=10) people gathered for a Trump rally titled "Save America", after Trump had lost the election and [repeatedly claimed it was stolen](https://en.wikipedia.org/wiki/Attempts_to_overturn_the_2020_United_States_presidential_election).
 It was already looking like a riot well before erupting into violence.
-[The report from the House Comittee](https://www.govinfo.gov/content/pkg/GPO-J6-REPORT/pdf/GPO-J6-REPORT-2-7.pdf) contains text exchanges from Trump allies, who were already alarmed:
+[The report from the House Committee](https://www.govinfo.gov/content/pkg/GPO-J6-REPORT/pdf/GPO-J6-REPORT-2-7.pdf) contains text exchanges from Trump allies, who were already alarmed:
 > Unknown, 3:04 p.m.: “Are you with potus right now? Hearing he is
 in the dining room watching this on TV . . .” “Is he going to say
 anything to de-escalate apart from that Tweet?”
