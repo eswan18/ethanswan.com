@@ -7,6 +7,18 @@ module.exports = {
       colors: {
         "muted-heading": "var(--fallback-bc,oklch(var(--bc)/0.5))",
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            'blockquote p:first-of-type::before': {
+              content: 'none',
+            },
+            'blockquote p:last-of-type::after': {
+              content: 'none',
+            },
+          },
+        },
+      },
     },
   },
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
