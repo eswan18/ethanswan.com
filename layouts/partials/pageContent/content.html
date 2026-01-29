@@ -14,5 +14,17 @@
     {{ end }}
 
     {{ .Render "subhead" }}
-    {{ .Content }}
+    {{ if and (eq .Section "posts") .IsPage }}
+      {{ $subscribe := partial "subscribe.html" }}
+      {{ if findRE `<div class="footnotes"` .Content }}
+        {{ safeHTML (replaceRE `(<div class="footnotes")` (printf "%s$1" $subscribe) .Content) }}
+      {{ else if findRE `<section class="footnotes"` .Content }}
+        {{ safeHTML (replaceRE `(<section class="footnotes")` (printf "%s$1" $subscribe) .Content) }}
+      {{ else }}
+        {{ .Content }}
+        {{ $subscribe }}
+      {{ end }}
+    {{ else }}
+      {{ .Content }}
+    {{ end }}
 </div>

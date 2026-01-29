@@ -1,0 +1,42 @@
+<dialog id="subscribe-modal" class="modal">
+  <div class="modal-box">
+    <h3 class="text-lg font-semibold mb-2">Subscribe to new posts</h3>
+    <p class="text-sm text-base-content/70 mb-4">Get notified when I publish something new.</p>
+    <form id="subscribe-form" class="flex flex-col sm:flex-row gap-2">
+      <input
+        type="email"
+        id="subscribe-email"
+        placeholder="you@example.com"
+        required
+        class="input input-bordered flex-1"
+      />
+      <button type="submit" class="btn btn-secondary">Subscribe</button>
+    </form>
+    <p id="subscribe-message" class="text-sm mt-2" style="display:none;"></p>
+  </div>
+  <form method="dialog" class="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>
+
+<script>
+  document.getElementById("subscribe-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const email = document.getElementById("subscribe-email").value;
+    const msg = document.getElementById("subscribe-message");
+    try {
+      const res = await fetch("https://busk-cats.ethanpswan.workers.dev/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, list: "ethanswan-dot-com" }),
+      });
+      const data = await res.json();
+      msg.textContent = data.ok
+        ? "Check your email to confirm your subscription."
+        : data.error || "Something went wrong.";
+    } catch {
+      msg.textContent = "Something went wrong.";
+    }
+    msg.style.display = "block";
+  });
+</script>

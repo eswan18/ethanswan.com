@@ -1,4 +1,13 @@
+{{ if and (eq .Section "posts") .IsSection }}
+<div class="flex items-baseline justify-between">
+  <h1 class="mb-0">{{.Title}}</h1>
+  <button class="btn btn-primary btn-sm" onclick="document.getElementById('subscribe-modal').showModal()">
+    Subscribe
+  </button>
+</div>
+{{ else }}
 <h1 class="mb-0">{{.Title}}</h1>
+{{ end }}
 {{ with .Params.subtitle }}
 <h2 class="mt-4 font-normal text-xl">{{.}}</h2>
 {{ end }}

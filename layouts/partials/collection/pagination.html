@@ -12,6 +12,12 @@ Input: dict with pages, context, config
   {{ $page.Render $config.listSummaryType }}
 {{ end }}
 
+<div class="mt-0 mb-16 text-center">
+  <button class="btn btn-primary btn-sm" onclick="document.getElementById('subscribe-modal').showModal()">
+    Subscribe
+  </button>
+</div>
+
 {{/* Pagination controls with styling */}}
 <div class="
   not-prose
