@@ -13,6 +13,11 @@
       <button type="submit" class="btn btn-secondary">Subscribe</button>
     </form>
     <p id="subscribe-message" class="text-sm mt-2" style="display:none;"></p>
+    <div class="mt-4 text-center" id="subscribe-done-btn" style="display:none;">
+      <button class="btn btn-secondary" onclick="document.getElementById('subscribe-modal').close()">
+        Done
+      </button>
+    </div>
   </div>
   <form method="dialog" class="modal-backdrop">
     <button>close</button>
@@ -24,6 +29,7 @@
     e.preventDefault();
     const email = document.getElementById("subscribe-email").value;
     const msg = document.getElementById("subscribe-message");
+    const btn = e.target.querySelector("button[type=submit]");
     try {
       const res = await fetch("https://busk-cats.ethanpswan.workers.dev/subscribe", {
         method: "POST",
@@ -31,9 +37,13 @@
         body: JSON.stringify({ email, list: "ethanswan-dot-com" }),
       });
       const data = await res.json();
-      msg.textContent = data.ok
-        ? "Check your email to confirm your subscription."
-        : data.error || "Something went wrong.";
+      if (data.ok) {
+        msg.textContent = "Check your email to confirm your subscription.";
+        btn.disabled = true;
+        document.getElementById("subscribe-done-btn").style.display = "";
+      } else {
+        msg.textContent = data.error || "Something went wrong.";
+      }
     } catch {
       msg.textContent = "Something went wrong.";
     }

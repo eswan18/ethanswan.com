@@ -27,6 +27,7 @@ module.exports = {
       {
         light: {
           ...require("daisyui/src/theming/themes")["cmyk"],
+          "secondary-content": "oklch(100% 0 0)",
         }
       },
       {
