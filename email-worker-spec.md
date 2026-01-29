@@ -2,7 +2,9 @@
 
 ## Overview
 
-A Cloudflare Worker + D1 system that manages email subscriptions for a blog. Users subscribe via a form, confirm via double opt-in, and receive email notifications when new posts are published. The blog owner triggers sends manually via a CLI.
+A Cloudflare Worker + D1 system that manages email subscriptions across multiple mailing lists. Users subscribe via a form, confirm via double opt-in, and receive email notifications when the list owner sends one. The admin triggers sends manually via a CLI.
+
+The system supports multiple independent mailing lists (e.g. `ethanswan.com`, `other-project`) within a single Worker and database.
 
 ## Tech Stack
 
@@ -35,14 +37,18 @@ email-worker/
 ```sql
 CREATE TABLE subscribers (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  email TEXT UNIQUE NOT NULL,
+  email TEXT NOT NULL,
+  list TEXT NOT NULL,
   token TEXT UNIQUE NOT NULL,
   confirmed INTEGER DEFAULT 0,
-  created_at TEXT DEFAULT (datetime('now'))
+  created_at TEXT DEFAULT (datetime('now')),
+  UNIQUE(email, list)
 );
 ```
 
-- `token` is a random UUID generated at subscribe time.
+- `list` identifies which mailing list the subscriber belongs to (e.g. `"ethanswan"`, `"other-project"`).
+- A person can subscribe to multiple lists — the UNIQUE constraint is on `(email, list)`, not just `email`.
+- `token` is globally unique (a random UUID), so confirmation and unsubscribe links work without needing to know the list.
 - `confirmed` is 0 until the user clicks the confirmation link.
 
 ## Worker Endpoints (`src/worker.ts`)
@@ -56,15 +62,17 @@ The worker needs access to the following bindings/env vars:
 
 ### `POST /subscribe` (Public)
 
-- Accepts JSON body: `{ "email": "..." }`
+- Accepts JSON body: `{ "email": "...", "list": "..." }`
 - Validates that the email contains `@`
+- Validates that `list` is a non-empty string
 - Generates a random UUID token
-- Inserts a row into `subscribers` with `confirmed = 0`
+- Inserts a row into `subscribers` with `confirmed = 0` and the given `list`
 - Sends a confirmation email via Resend with a link to `/confirm?token=<token>`
 - Returns `200 { "ok": true }` on success
-- Returns `409 { "error": "Already subscribed" }` if the email already exists (UNIQUE constraint violation)
+- Returns `409 { "error": "Already subscribed" }` if the `(email, list)` pair already exists (UNIQUE constraint violation)
 - Returns `400 { "error": "Invalid email" }` for bad input
-- CORS: Allow `POST` and `OPTIONS` from `https://ethanswan.com`
+- Returns `400 { "error": "Missing list" }` if list is not provided
+- CORS: Allow `POST` and `OPTIONS` from any origin (since multiple sites may use this Worker)
 
 ### `GET /confirm?token=<token>` (Public, token-authenticated)
 
@@ -83,31 +91,33 @@ The worker needs access to the following bindings/env vars:
 ### `POST /send` (Admin, Bearer token auth)
 
 - Requires header: `Authorization: Bearer <SEND_SECRET>`
-- Accepts JSON body: `{ "subject": "...", "html": "..." }`
-- Queries all subscribers where `confirmed = 1`
+- Accepts JSON body: `{ "list": "...", "subject": "...", "html": "..." }`
+- Queries all subscribers where `confirmed = 1` AND `list` matches
 - Sends an email to each via Resend API
 - Each email's HTML should have the subscriber's unsubscribe link appended at the bottom: `<p><a href="https://<WORKER_URL>/unsubscribe?token=<token>">Unsubscribe</a></p>`
 - Returns `200 { "sent": <count> }`
+- Returns `400` if `list` is missing
 - Returns `401` if auth fails
 
 ### `POST /admin/delete` (Admin, Bearer token auth)
 
 - Requires header: `Authorization: Bearer <SEND_SECRET>`
-- Accepts JSON body: `{ "email": "..." }`
-- Deletes the subscriber with that email
+- Accepts JSON body: `{ "email": "...", "list": "..." }`
+- Deletes the subscriber with that `(email, list)` pair
 - Returns `200 { "ok": true }` on success
-- Returns `404` if email not found
+- Returns `404` if not found
 - Returns `401` if auth fails
 
 ### `GET /admin/list` (Admin, Bearer token auth)
 
-- Requires header: `Authorization: Bearer <SEND_SECRET>` (passed as query param `secret` or header — header is preferred)
-- Returns JSON array of all subscribers with their email, confirmed status, and created_at
+- Requires header: `Authorization: Bearer <SEND_SECRET>`
+- Accepts optional query param: `?list=<list>` to filter by list. If omitted, returns all subscribers across all lists.
+- Returns JSON array of all matching subscribers with their email, list, confirmed status, and created_at
 - Returns `401` if auth fails
 
 ### CORS
 
-All responses to public endpoints should include CORS headers allowing `https://ethanswan.com`. Use an `OPTIONS` handler for preflight requests.
+All responses to public endpoints should include CORS headers allowing any origin (`*`), since multiple sites may embed the subscribe form. Use an `OPTIONS` handler for preflight requests.
 
 ### Error Handling
 
@@ -128,32 +138,35 @@ These can be set in a `.env` file (use `dotenv` or similar). Add `.env` to `.git
 #### `send`
 
 ```
-npx tsx src/cli.ts send --subject "New post: Title" --html "<p>Check out <a href='...'>my new post</a></p>"
+npx tsx src/cli.ts send --list ethanswan --subject "New post: Title" --html "<p>Check out <a href='...'>my new post</a></p>"
 ```
 
-Calls `POST /send` with the given subject and HTML body.
+Calls `POST /send` with the given list, subject, and HTML body.
 
 Alternatively, support reading HTML from stdin or a file:
 
 ```
-npx tsx src/cli.ts send --subject "New post: Title" --html-file email.html
+npx tsx src/cli.ts send --list ethanswan --subject "New post: Title" --html-file email.html
 ```
+
+The `--list` flag is required.
 
 #### `list`
 
 ```
 npx tsx src/cli.ts list
+npx tsx src/cli.ts list --list ethanswan
 ```
 
-Calls `GET /admin/list` and prints the subscribers in a readable table format.
+Calls `GET /admin/list` (optionally filtered by list) and prints the subscribers in a readable table format.
 
 #### `delete`
 
 ```
-npx tsx src/cli.ts delete --email "someone@example.com"
+npx tsx src/cli.ts delete --email "someone@example.com" --list ethanswan
 ```
 
-Calls `POST /admin/delete`.
+Calls `POST /admin/delete`. Both `--email` and `--list` are required.
 
 ### CLI dependencies
 
@@ -309,7 +322,7 @@ Add a form to the appropriate Hugo template (e.g. a partial in `layouts/partials
       const res = await fetch("https://email-subscribe.<account>.workers.dev/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, list: "ethanswan" }),
       });
       const data = await res.json();
       if (data.ok) {
@@ -325,15 +338,15 @@ Add a form to the appropriate Hugo template (e.g. a partial in `layouts/partials
 </script>
 ```
 
-Style this with Tailwind as desired.
+Style this with Tailwind as desired. Note the `list: "ethanswan"` in the JSON body — change this value for different sites/lists.
 
 ## 11. Test the Full Flow
 
 1. Subscribe with your own email via the form
 2. Check your email for the confirmation link
 3. Click the confirmation link
-4. Run `npx tsx src/cli.ts list` to verify you're confirmed
-5. Run `npx tsx src/cli.ts send --subject "Test" --html "<p>Hello!</p>"` to send a test email
+4. Run `npx tsx src/cli.ts list --list ethanswan` to verify you're confirmed
+5. Run `npx tsx src/cli.ts send --list ethanswan --subject "Test" --html "<p>Hello!</p>"` to send a test email
 6. Verify you received it and the unsubscribe link works
 
 ## 12. Optional: Cloudflare Rate Limiting
